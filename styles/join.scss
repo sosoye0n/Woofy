@@ -1,0 +1,14 @@
+// reset & variables
+@import "./reset.scss";
+@import "./variables.scss";
+
+// common
+header {
+  z-index: 10;
+}
+
+main {
+  padding: 0 3%;
+}
+
+// contents

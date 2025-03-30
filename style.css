@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Figtree";
+  letter-spacing: -0.2px;
+  background: #ddd;
+}
+
+header {
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 3%;
+  font-size: 1.4rem;
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+          backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgb(106, 106, 106);
+  background: #fff;
+  font-weight: 500;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header.active {
+  top: -60px;
+}
+header #leftGnb {
+  width: 40%;
+}
+header #leftGnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+header #leftGnb ul li:hover a {
+  font-weight: bold;
+}
+header #leftGnb ul li a {
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header #leftGnb .promotionTitle {
+  color: #99bdff;
+}
+header #logo {
+  width: 20%;
+}
+header #logo a {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+header #rightGnb {
+  width: 40%;
+}
+header #rightGnb ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+header #rightGnb ul li:hover a {
+  font-weight: bold;
+}
+header #rightGnb ul li a {
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  font-size: 1.4rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+header #toggleBtn {
+  display: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+header #toggleBtn span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header #toggleBtn span:nth-child(2) {
+  top: 50%;
+}
+header #toggleBtn span:last-child {
+  top: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    z-index: 2;
+    background: transparent;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  header #leftGnb {
+    display: none;
+  }
+  header #logo {
+    width: auto;
+    position: relative;
+    z-index: 3;
+  }
+  header #logo a {
+    font-size: 2.4rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  header #rightGnb {
+    display: none;
+  }
+  header #toggleBtn {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 16px;
+  }
+  header #toggleBtn span {
+    background: #000;
+  }
+  header #toggleBtn.active {
+    z-index: 3;
+  }
+  header #toggleBtn.active span:first-child {
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header #toggleBtn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  header #toggleBtn.active span:last-child {
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  header #toggleBtn.active ~ #leftGnb,
+  header #toggleBtn.active #rightGnb {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    pointer-events: fill;
+  }
+}
+@media screen and (max-width: 375px) {
+  header {
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  header #logo {
+    width: auto;
+  }
+  header #logo a {
+    font-size: 2rem;
+  }
+  header #toggleBtn {
+    width: 20px;
+    height: 12px;
+  }
+}
