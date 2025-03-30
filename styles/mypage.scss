@@ -1,0 +1,173 @@
+// reset & variables
+@import "./reset.scss";
+@import "./variables.scss";
+
+// common
+header {
+  z-index: 10;
+}
+
+main {
+  padding: 0 3%;
+  background: #fff;
+}
+
+// contents
+main {
+  width: 100%;
+  height: 100vh;
+  text-transform: uppercase;
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    .userBox {
+      width: 100%;
+      height: 400px;
+      border-radius: 10px;
+      justify-content: flex-start;
+      background: map-get($map: $color, $key: lightgray);
+      padding: 0 30px;
+      // width: 500px;
+      width: 40%;
+      .userWrapper {
+        height: 100%;
+        .userinfoWrapper {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          span {
+            font-size: 1.6rem;
+            color: map-get($map: $color, $key: point);
+          }
+          h2 {
+            font-size: 3.6rem;
+            font-weight: 700;
+            letter-spacing: normal;
+            margin-top: 14px;
+            margin-bottom: 26px;
+            span {
+              font-size: 3.6rem;
+              color: map-get($map: $color, $key: point);
+            }
+          }
+          .membershipInfo {
+            padding: 14px 20px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            background: map-get($map: $color, $key: point);
+            cursor: pointer;
+            p {
+              font-size: 1.4rem;
+              font-weight: 400;
+            }
+            i {
+              font-size: 1.3rem;
+              padding-left: 4px;
+            }
+          }
+        }
+      }
+    }
+    .infoBox {
+      width: 100%;
+      height: 400px;
+      // justify-content: flex-end;
+      overflow: hidden;
+      .infoBoxWrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .commonBox {
+          background: map-get($map: $color, $key: lightgray);
+          padding: 0 30px;
+          // height: 400px;
+          width: 400px;
+          .infoWrapper {
+            width: 100%;
+            height: 100%;
+            gap: 140px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            h3 {
+              font-size: 2.8rem;
+              font-weight: 400;
+              letter-spacing: -0.7px;
+              font-family: map-get($map: $color, $key: figtree);
+              color: map-get($map: $color, $key: point);
+              cursor: pointer;
+              transition: all 0.3s;
+              &:hover {
+                font-weight: 600;
+              }
+            }
+            .detailInfo {
+              display: flex;
+              align-items: flex-end;
+              gap: 2px;
+              cursor: pointer;
+              p {
+                font-size: 4rem;
+                font-weight: 600;
+                font-family: map-get($map: $color, $key: figtree);
+              }
+              span {
+                font-size: 2.6rem;
+                font-weight: 300;
+                font-family: map-get($map: $color, $key: figtree);
+              }
+            }
+          }
+        }
+        .couponBox {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px 0px 0px 10px;
+        }
+        .pointBox {
+          width: 100%;
+          height: 100%;
+          border-right: 1px solid map-get($map: $color, $key: gray);
+          border-left: 1px solid map-get($map: $color, $key: gray);
+        }
+        .membershipBox {
+          width: 100%;
+          height: 100%;
+          border-radius: 0px 10px 10px 0px;
+        }
+      }
+    }
+  }
+}
+
+// 반응형 tablet
+@media screen and (max-width: 1024px) {
+  #container {
+    gap: 0;
+    // flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    .userBox {
+      height: 360px !important;
+      width: 100% !important;
+    }
+    .infoBox {
+      height: 360px !important;
+    }
+  }
+}
+
+// 반응형 mobile
+@media screen and (max-width: 375px) {
+}

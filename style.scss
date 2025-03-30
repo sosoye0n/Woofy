@@ -1,0 +1,201 @@
+// reset & variables
+@import "./styles/reset.scss";
+@import "./styles/variables.scss";
+
+// common
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Figtree";
+  letter-spacing: -0.2px;
+  background: #ddd;
+}
+
+// Header
+header {
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3%;
+  font-size: 1.4rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(106, 106, 106, 1);
+  background: map-get($map: $color, $key: light);
+  font-weight: 500;
+  transition: all 0.5s;
+  &.active {
+    top: -60px;
+  }
+  #leftGnb {
+    width: 40%;
+    ul {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+      li {
+        &:hover a {
+          font-weight: bold;
+        }
+        a {
+          text-transform: uppercase;
+          display: inline-block;
+          position: relative;
+          font-family: map-get($map: $color, $key: figtree);
+          font-size: 1.4rem;
+          transition: all 0.5s;
+        }
+      }
+    }
+    .promotionTitle {
+      color: map-get($map: $color, $key: point);
+    }
+  }
+  #logo {
+    width: 20%;
+    a {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+  #rightGnb {
+    width: 40%;
+    ul {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      gap: 20px;
+      li {
+        &:hover a {
+          font-weight: bold;
+        }
+        a {
+          text-transform: uppercase;
+          display: inline-block;
+          position: relative;
+          font-family: map-get($map: $color, $key: figtree);
+          font-size: 1.4rem;
+          transition: all 0.5s;
+        }
+      }
+    }
+  }
+  #toggleBtn {
+    display: none;
+    transition: all 0.3s;
+    width: 28px;
+    height: 20px;
+    position: relative;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    span {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: map-get($map: $color, $key: light);
+      width: 100%;
+      height: 2px;
+      transition: all 0.3s;
+      &:nth-child(2) {
+        top: 50%;
+      }
+      &:last-child {
+        top: 100%;
+      }
+    }
+  }
+}
+
+// 반응형 tablet
+@media screen and (max-width: 1024px) {
+  // header
+  header {
+    z-index: 2;
+    background: transparent;
+    // width: 100%;
+    transition: all 0.3s;
+    #leftGnb {
+      display: none;
+    }
+    #logo {
+      width: auto;
+      position: relative;
+      z-index: 3;
+      a {
+        font-size: 2.4rem;
+        justify-content: start;
+      }
+    }
+    #rightGnb {
+      display: none;
+    }
+    #toggleBtn {
+      position: relative;
+      display: block;
+      width: 22px;
+      height: 16px;
+      span {
+        background: map-get($map: $color, $key: dark);
+      }
+      &.active {
+        z-index: 3;
+        span {
+          &:first-child {
+            top: 50%;
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:last-child {
+            top: 50%;
+            transform: rotate(-45deg);
+          }
+        }
+        & ~ #leftGnb,
+        #rightGnb {
+          opacity: 1;
+          visibility: visible;
+          z-index: 2;
+          pointer-events: fill;
+        }
+      }
+    }
+  }
+}
+
+// 반응형 mobile
+@media screen and (max-width: 375px) {
+  // header
+  header {
+    left: 0;
+    transform: none;
+    // width: 100vw;
+    #logo {
+      width: auto;
+      a {
+        font-size: 2rem;
+      }
+    }
+    #toggleBtn {
+      width: 20px;
+      height: 12px;
+    }
+  }
+}
