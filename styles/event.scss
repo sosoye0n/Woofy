@@ -1,0 +1,72 @@
+// reset & variables
+@import "./reset.scss";
+@import "./variables.scss";
+
+// common
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+header {
+  z-index: 10;
+}
+main {
+  // padding: 0 3%;
+  background: #fff;
+}
+
+// contents
+main {
+  width: 100%;
+  #container {
+    .eventHeader {
+      width: 100%;
+      height: 400px;
+      background: #eee;
+      .event {
+        height: 100%;
+        padding: 0 3%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        h3 {
+          font-size: 4rem;
+          font-weight: 900;
+          p {
+            font-size: 1.4rem;
+            font-weight: normal;
+            color: map-get($map: $color, $key: point);
+          }
+        }
+      }
+    }
+    .eventBtn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      a {
+        width: 960px;
+        height: 90px;
+        font-size: 3rem;
+        font-weight: bold;
+        border: 1px solid map-get($map: $color, $key: gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .event01 {
+      width: 100%;
+      height: 100vh;
+    }
+    .event02 {
+      width: 100%;
+      height: 100vh;
+      border: 1px solid #f00;
+    }
+  }
+}
