@@ -31,7 +31,7 @@ const headerInner = `
             <a href="#" title="search">SEACH</a>
           </li>
           <li>
-            <a href="#" title="cart">CART(<spna>0</spna>)</a>
+            <a href="#" title="cart">CART(<span>0</span>)</a>
           </li>
           <li>
             <a href="login.html" title="login">LOGIN</a>
