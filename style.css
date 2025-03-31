@@ -130,6 +130,64 @@ header #toggleBtn span:last-child {
   top: 100%;
 }
 
+footer {
+  z-index: 1;
+  width: 100%;
+  height: 360px;
+  padding: 0 3%;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background: #000;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+footer #footerCategory {
+  font-size: 1.6rem;
+  font-weight: 400;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+footer #footerCategory ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+footer #footerCategory ul li a:hover {
+  font-weight: 700;
+}
+footer #footerInfo {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+footer #footerInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+footer #footerLogo a {
+  font-size: 10rem;
+}
+footer p {
+  font-size: 1rem;
+  font-weight: 100;
+  letter-spacing: 0.75px;
+}
+
 @media screen and (max-width: 1024px) {
   header {
     z-index: 2;
