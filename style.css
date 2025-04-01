@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -37,15 +36,9 @@ header {
   width: 100%;
   height: 70px;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   padding: 0 3%;
   font-size: 1.4rem;
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -53,7 +46,6 @@ header {
   background-color: rgb(106, 106, 106);
   background: #fff;
   font-weight: 500;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 header.active {
@@ -63,15 +55,9 @@ header #leftGnb {
   width: 40%;
 }
 header #leftGnb ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: start;
+  align-items: center;
   gap: 20px;
 }
 header #leftGnb ul li:hover a {
@@ -82,7 +68,6 @@ header #leftGnb ul li a {
   display: inline-block;
   position: relative;
   font-size: 1.4rem;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 header #leftGnb .promotionTitle {
@@ -93,12 +78,8 @@ header #logo {
 }
 header #logo a {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -107,15 +88,9 @@ header #rightGnb {
   width: 40%;
 }
 header #rightGnb ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: end;
+  align-items: center;
   gap: 20px;
 }
 header #rightGnb ul li:hover a {
@@ -126,12 +101,10 @@ header #rightGnb ul li a {
   display: inline-block;
   position: relative;
   font-size: 1.4rem;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 header #toggleBtn {
   display: none;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 28px;
   height: 20px;
@@ -148,7 +121,6 @@ header #toggleBtn span {
   background: #fff;
   width: 100%;
   height: 2px;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 header #toggleBtn span:nth-child(2) {
@@ -167,30 +139,18 @@ footer {
   text-transform: uppercase;
   background: #000;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
 }
 footer #footerCategory {
   font-size: 1.6rem;
   font-weight: 400;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 footer #footerCategory ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
@@ -202,8 +162,6 @@ footer #footerInfo {
   font-weight: 300;
 }
 footer #footerInfo ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
@@ -220,7 +178,6 @@ footer p {
   header {
     z-index: 2;
     background: transparent;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
   header #leftGnb {
@@ -233,9 +190,7 @@ footer p {
   }
   header #logo a {
     font-size: 2.4rem;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+    justify-content: start;
   }
   header #rightGnb {
     display: none;
@@ -254,16 +209,14 @@ footer p {
   }
   header #toggleBtn.active span:first-child {
     top: 50%;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
   }
   header #toggleBtn.active span:nth-child(2) {
     opacity: 0;
   }
   header #toggleBtn.active span:last-child {
     top: 50%;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
   header #toggleBtn.active ~ #leftGnb,
   header #toggleBtn.active #rightGnb {
@@ -276,8 +229,7 @@ footer p {
 @media screen and (max-width: 375px) {
   header {
     left: 0;
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
   header #logo {
     width: auto;
