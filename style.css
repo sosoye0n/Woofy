@@ -18,6 +18,7 @@ a {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: auto !important;
 }
 
 html,
@@ -30,21 +31,16 @@ body {
   font-family: "Figtree";
   letter-spacing: -0.2px;
 }
+body.active {
+  overflow-y: hidden;
+  height: 100vh;
+}
 
 header {
   z-index: 1;
   width: 100%;
   height: 70px;
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 0 3%;
   font-size: 1.4rem;
   -webkit-backdrop-filter: blur(16px) saturate(180%);
@@ -52,14 +48,33 @@ header {
   background-color: rgb(106, 106, 106);
   background: #fff;
   font-weight: 500;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: translate(0);
+          transform: translate(0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 header.active {
-  top: -60px;
+  -webkit-transform: translateY(-70px);
+          transform: translateY(-70px);
+}
+header.blendMode {
+  mix-blend-mode: normal;
+  color: #000;
+  scroll-behavior: none;
 }
 header #leftGnb {
-  width: 40%;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 header #leftGnb ul {
   display: -webkit-box;
@@ -77,9 +92,9 @@ header #leftGnb ul li:hover a {
   font-weight: bold;
 }
 header #leftGnb ul li a {
+  white-space: nowrap;
   text-transform: uppercase;
   display: inline-block;
-  position: relative;
   font-size: 1.4rem;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -87,23 +102,12 @@ header #leftGnb ul li a {
 header #leftGnb .promotionTitle {
   color: #99bdff;
 }
-header #logo {
-  width: 20%;
-}
-header #logo a {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
 header #rightGnb {
-  width: 40%;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 header #rightGnb ul {
   display: -webkit-box;
@@ -117,6 +121,38 @@ header #rightGnb ul {
           align-items: center;
   gap: 20px;
 }
+header #rightGnb ul li:last-child {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+}
+header #rightGnb ul li:last-child #toggleBtn {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+header #rightGnb ul li:last-child #toggleBtn span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header #rightGnb ul li:last-child #toggleBtn span:nth-child(2) {
+  top: 50%;
+}
+header #rightGnb ul li:last-child #toggleBtn span:last-child {
+  top: 100%;
+}
 header #rightGnb ul li:hover a {
   font-weight: bold;
 }
@@ -128,33 +164,37 @@ header #rightGnb ul li a {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-header #toggleBtn {
-  display: none;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  width: 28px;
-  height: 20px;
+header #logo {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header #logo a {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+main {
+  margin-top: 70px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+footer {
+  height: 300px;
+  background: #333;
+  z-index: 1;
   position: relative;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-header #toggleBtn span {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  width: 100%;
-  height: 2px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-header #toggleBtn span:nth-child(2) {
-  top: 50%;
-}
-header #toggleBtn span:last-child {
-  top: 100%;
 }
 
 main {
@@ -226,14 +266,86 @@ footer p {
     background: transparent;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    width: 100%;
+    gap: 20px;
+    mix-blend-mode: difference;
+    color: #fff;
   }
   header #leftGnb {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: auto !important;
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 100% !important;
+    top: 0;
+    height: 100vh;
+    right: -100%;
+    padding-top: 100px;
+    z-index: 2;
+  }
+  header #leftGnb ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    gap: 0;
+  }
+  header #leftGnb ul li {
+    line-height: 80px;
+    width: 100%;
+    text-indent: 3%;
+    width: 100%;
+  }
+  header #leftGnb ul li a {
+    font-size: 1.8rem;
+  }
+  header #leftGnb.active {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+    background: #fff;
+    color: #000;
+  }
+  header #rightGnb {
+    width: auto !important;
+  }
+  header #rightGnb ul li:last-child {
+    opacity: 1;
+    visibility: visible;
+    position: static !important;
+  }
+  header #rightGnb ul li:last-child #toggleBtn {
+    width: 22px;
+    height: 16px;
+    z-index: 3;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span {
+    background: #000;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:first-child {
+    top: 50%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:nth-child(2) {
+    opacity: 0;
+  }
+  header #rightGnb ul li:last-child #toggleBtn.active span:last-child {
+    top: 50%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   header #logo {
     width: auto;
-    position: relative;
     z-index: 3;
+    left: 3%;
   }
   header #logo a {
     font-size: 2.4rem;
@@ -241,40 +353,8 @@ footer p {
         -ms-flex-pack: start;
             justify-content: start;
   }
-  header #rightGnb {
-    display: none;
-  }
-  header #toggleBtn {
-    position: relative;
-    display: block;
-    width: 22px;
-    height: 16px;
-  }
-  header #toggleBtn span {
-    background: #000;
-  }
-  header #toggleBtn.active {
-    z-index: 3;
-  }
-  header #toggleBtn.active span:first-child {
-    top: 50%;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  header #toggleBtn.active span:nth-child(2) {
-    opacity: 0;
-  }
-  header #toggleBtn.active span:last-child {
-    top: 50%;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  header #toggleBtn.active ~ #leftGnb,
-  header #toggleBtn.active #rightGnb {
-    opacity: 1;
-    visibility: visible;
-    z-index: 2;
-    pointer-events: fill;
+  main {
+    margin-top: 0;
   }
 }
 @media screen and (max-width: 375px) {
