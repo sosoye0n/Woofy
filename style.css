@@ -30,7 +30,6 @@ body {
   font-size: 1.6rem;
   font-family: "Figtree";
   letter-spacing: -0.2px;
-  background: #ddd;
 }
 body.active {
   overflow-y: hidden;
@@ -198,6 +197,10 @@ footer {
   position: relative;
 }
 
+main {
+  margin-top: 70px;
+}
+
 footer {
   z-index: 1;
   width: 100%;
@@ -220,13 +223,13 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 footer #footerCategory {
   font-size: 1.6rem;
   font-weight: 400;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  margin-bottom: 16px;
 }
 footer #footerCategory ul {
   display: -webkit-box;
@@ -240,6 +243,7 @@ footer #footerCategory ul li a:hover {
 footer #footerInfo {
   font-size: 1.2rem;
   font-weight: 300;
+  margin-bottom: 20px;
 }
 footer #footerInfo ul {
   display: -webkit-box;
@@ -248,7 +252,7 @@ footer #footerInfo ul {
   gap: 20px;
 }
 footer #footerLogo a {
-  font-size: 10rem;
+  font-size: 14rem;
 }
 footer p {
   font-size: 1rem;
