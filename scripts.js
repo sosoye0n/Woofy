@@ -1,6 +1,7 @@
 // 헤더
 const header = document.querySelector("header");
 const headerInner = `
+<<<<<<< HEAD
         <h1 id="logo">
           <a href="index.html" title="Home">WOOFY©</a>
         </h1>
@@ -43,6 +44,48 @@ const headerInner = `
               </li>
             </ul>
         </nav>
+=======
+      <nav id="leftGnb">
+        <ul>
+          <li>
+            <a href="#" title="clothes">CLOTHES</a>
+          </li>
+          <li>
+            <a href="#" title="acc">ACC</a>
+          </li>
+          <li>
+            <a href="#" title="life">LIFE</a>
+          </li>
+          <li class="promotionTitle">
+            <a href="event.html" title="event">스프링시즌세일</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 id="logo">
+        <a href="index.html" title="Home">WOOFY©</a>
+      </h1>
+      <button id="toggleBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="rightGnb">
+        <ul>
+          <li>
+            <a href="#" title="search">SEACH</a>
+          </li>
+          <li>
+            <a href="#" title="cart">CART(<span>0</span>)</a>
+          </li>
+          <li>
+            <a href="login.html" title="login">LOGIN</a>
+          </li>
+          <li>
+            <a href="mypage.html" title="mypage">mypage</a>
+          </li>
+        </ul>
+      </nav>
+>>>>>>> 613cdede0f0b28b794c3f5f83decf56692bd7e7f
 `;
 header.innerHTML = headerInner;
 

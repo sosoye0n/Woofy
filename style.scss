@@ -137,6 +137,7 @@ header {
     }
   }
 }
+<<<<<<< HEAD
 main {
   margin-top: 70px;
   transition: all 0.5s;
@@ -147,6 +148,61 @@ footer {
   z-index: 1;
   position: relative;
 }
+=======
+
+// Footer
+footer {
+  z-index: 1;
+  width: 100%;
+  height: 360px;
+  padding: 0 3%;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  background: map-get($map: $color, $key: dark);
+  color: map-get($map: $color, $key: light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  #footerCategory {
+    font-size: 1.6rem;
+    font-weight: 400;
+    transition: all 0.5s;
+    // margin-bottom: 10px;
+    ul {
+      display: flex;
+      gap: 20px;
+      li {
+        a {
+          &:hover {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  #footerInfo {
+    font-size: 1.2rem;
+    font-weight: 300;
+    ul {
+      display: flex;
+      gap: 20px;
+    }
+  }
+  #footerLogo {
+    a {
+      font-size: 10rem;
+    }
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.75px;
+  }
+}
+
+>>>>>>> 613cdede0f0b28b794c3f5f83decf56692bd7e7f
 // 반응형 tablet
 @media screen and (max-width: 1024px) {
   // header
