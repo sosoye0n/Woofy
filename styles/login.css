@@ -20,5 +20,110 @@ header {
 }
 
 main {
-  padding: 0 3%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 140px 0;
+  text-transform: uppercase;
+}
+main h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+main #login {
+  width: 420px;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+main #login input:not(input[type=checkbox]) {
+  width: 100%;
+  height: 72px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 0;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+main #login input:not(input[type=checkbox]):focus {
+  outline: none;
+}
+main #login #inputContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+main #login #inputContainer .inputBox {
+  position: relative;
+}
+main #login #inputContainer .inputBox input {
+  padding-left: 20px;
+  background: #f5f5f5;
+  color: #a9a9a9;
+  font-weight: 500;
+  font-size: 1.4rem;
+  font-family: "Figtree";
+}
+main #login #inputContainer .inputBox label {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+main #login #loginBtn {
+  margin-top: 20px;
+}
+main #login #searchInfo {
+  margin-top: 14px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  color: #a9a9a9;
+}
+main #login #join {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+main #login #join #kakaoBtn {
+  background: #fedf32;
+  color: #000;
+}
+main #login #join #joinBtn {
+  background: #dadada;
+  color: #000;
 }

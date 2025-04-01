@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WOOFY©</title>
-    <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- fontawesome -->
-    <script src="https://kit.fontawesome.com/3f2ea24883.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Common CSS & JS -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/index.css" />
@@ -16,10 +16,58 @@
     <script defer src="./scripts/index.js"></script>
     <!-- lenis -->
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header></header>
-    <h1>Hello Woofy</h1>
+    <main>
+      <section id="pinSection">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div id="swiperText">
+                <p>안녕하세요 동호</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div id="swiperText">
+                <p>안녕하세요 안녕하세요</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div id="swiperText">
+                <p>안녕하세요 안녕하세요 안녕하세요</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div id="swiperText">
+                <p>안녕하세요 안녕하세요 안녕하세요 안녕하세요</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div id="swiperText">
+                <p>안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination pagination-progressbar"></div>
+          <div class="swiper-pagination pagination-fraction"></div>
+          <!-- Fraction 추가 -->
+        </div>
+      </section>
+      <section id="scrollSection"></section>
+    </main>
     <footer>
       <nav id="footerCategory">
         <ul>
@@ -58,5 +106,4 @@
       <p>WOOFY© ALL RIGHT RESERVED</p>
     </footer>
   </body>
-  <script></script>
 </html>

@@ -31,7 +31,7 @@ main {
 main {
   top: 70px;
   width: 100%;
-  height: 100vh;
+  padding: 140px 3%;
   text-transform: uppercase;
 }
 main #container {
