@@ -5,6 +5,7 @@
 // common
 html {
   font-size: 62.5%;
+  scroll-behavior: auto !important;
 }
 html,
 body {
@@ -15,6 +16,10 @@ body {
   font-family: "Figtree";
   letter-spacing: -0.2px;
   background: #ddd;
+  &.active {
+    overflow-y: hidden;
+    height: 100vh;
+  }
 }
 
 // Header
@@ -23,21 +28,27 @@ header {
   width: 100%;
   height: 70px;
   position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 0 3%;
   font-size: 1.4rem;
   backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(106, 106, 106, 1);
   background: map-get($map: $color, $key: light);
   font-weight: 500;
-  transition: all 0.5s;
+  transition: all 0.3s;
+  transform: translate(0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   &.active {
-    top: -60px;
+    transform: translateY(-70px);
+  }
+  &.blendMode {
+    mix-blend-mode: normal;
+    color: map-get($map: $color, $key: dark);
+    scroll-behavior: none;
   }
   #leftGnb {
-    width: 40%;
+    order: 1;
     ul {
       display: flex;
       justify-content: start;
@@ -48,9 +59,9 @@ header {
           font-weight: bold;
         }
         a {
+          white-space: nowrap;
           text-transform: uppercase;
           display: inline-block;
-          position: relative;
           font-family: map-get($map: $color, $key: figtree);
           font-size: 1.4rem;
           transition: all 0.5s;
@@ -61,25 +72,45 @@ header {
       color: map-get($map: $color, $key: point);
     }
   }
-  #logo {
-    width: 20%;
-    a {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      font-size: 2rem;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
-  }
   #rightGnb {
-    width: 40%;
+    order: 3;
+    transition: all 0.5s;
     ul {
       display: flex;
       justify-content: end;
       align-items: center;
       gap: 20px;
       li {
+        &:last-child {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+          #toggleBtn {
+            transition: all 0.3s;
+            width: 28px;
+            height: 20px;
+            position: relative;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            span {
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background: map-get($map: $color, $key: light);
+              width: 100%;
+              height: 2px;
+              transition: all 0.3s;
+              &:nth-child(2) {
+                top: 50%;
+              }
+              &:last-child {
+                top: 100%;
+              }
+            }
+          }
+        }
         &:hover a {
           font-weight: bold;
         }
@@ -94,89 +125,119 @@ header {
       }
     }
   }
-  #toggleBtn {
-    display: none;
-    transition: all 0.3s;
-    width: 28px;
-    height: 20px;
-    position: relative;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    span {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: map-get($map: $color, $key: light);
-      width: 100%;
-      height: 2px;
-      transition: all 0.3s;
-      &:nth-child(2) {
-        top: 50%;
-      }
-      &:last-child {
-        top: 100%;
-      }
+  #logo {
+    order: 2;
+    display: flex;
+    align-items: center;
+    a {
+      justify-content: center;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 700;
     }
   }
 }
-
+main {
+  margin-top: 70px;
+  transition: all 0.5s;
+}
+footer {
+  height: 300px;
+  background: #333;
+  z-index: 1;
+  position: relative;
+}
 // 반응형 tablet
 @media screen and (max-width: 1024px) {
   // header
   header {
     z-index: 2;
     background: transparent;
-    // width: 100%;
     transition: all 0.3s;
+    width: 100%;
+    gap: 20px;
+    mix-blend-mode: difference;
+    color: map-get($map: $color, $key: light);
     #leftGnb {
-      display: none;
+      flex-direction: column;
+      width: auto !important;
+      position: fixed;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s;
+      width: 100% !important;
+      top: 0;
+      height: 100vh;
+      right: -100%;
+      padding-top: 100px;
+      z-index: 2;
+      ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+        li {
+          line-height: 80px;
+          width: 100%;
+          text-indent: 3%;
+          width: 100%;
+          a {
+            font-size: 1.8rem;
+          }
+        }
+      }
+      &.active {
+        opacity: 1;
+        visibility: visible;
+        right: 0;
+        background: map-get($map: $color, $key: light);
+        color: map-get($map: $color, $key: dark);
+      }
+    }
+    #rightGnb {
+      width: auto !important;
+      ul {
+        li {
+          &:last-child {
+            opacity: 1;
+            visibility: visible;
+            position: static !important;
+            #toggleBtn {
+              width: 22px;
+              height: 16px;
+              z-index: 3;
+              &.active {
+                span {
+                  background: map-get($map: $color, $key: dark);
+                  &:first-child {
+                    top: 50%;
+                    transform: rotate(45deg);
+                  }
+                  &:nth-child(2) {
+                    opacity: 0;
+                  }
+                  &:last-child {
+                    top: 50%;
+                    transform: rotate(-45deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
     #logo {
       width: auto;
-      position: relative;
       z-index: 3;
+      left: 3%;
       a {
         font-size: 2.4rem;
         justify-content: start;
       }
     }
-    #rightGnb {
-      display: none;
-    }
-    #toggleBtn {
-      position: relative;
-      display: block;
-      width: 22px;
-      height: 16px;
-      span {
-        background: map-get($map: $color, $key: dark);
-      }
-      &.active {
-        z-index: 3;
-        span {
-          &:first-child {
-            top: 50%;
-            transform: rotate(45deg);
-          }
-          &:nth-child(2) {
-            opacity: 0;
-          }
-          &:last-child {
-            top: 50%;
-            transform: rotate(-45deg);
-          }
-        }
-        & ~ #leftGnb,
-        #rightGnb {
-          opacity: 1;
-          visibility: visible;
-          z-index: 2;
-          pointer-events: fill;
-        }
-      }
-    }
+  }
+  main {
+    margin-top: 0;
   }
 }
 
@@ -187,6 +248,7 @@ header {
     left: 0;
     transform: none;
     // width: 100vw;
+
     #logo {
       width: auto;
       a {

@@ -1,0 +1,135 @@
+// reset & variables
+@import "./reset.scss";
+@import "./variables.scss";
+
+main {
+  #pinSection {
+    position: fixed;
+    background: #ccc;
+    width: 35%;
+    height: 100vh;
+    top: 0;
+    .swiper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .swiper-slide {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          position: absolute;
+          background: rgba($color: #000000, $alpha: 0.3);
+          z-index: -1;
+        }
+        #swiperText {
+          position: absolute;
+          bottom: 10%;
+          left: 5%;
+          color: map-get($map: $color, $key: light);
+        }
+        &:nth-child(1) {
+          background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/802a2b3a-0df2-450a-73ff-7d640a25cb00/w=1920,h=2400");
+        }
+        &:nth-child(2) {
+          background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/f697c35d-1c7a-42a9-5235-03da1b8a8900/w=1920,h=2400");
+        }
+        &:nth-child(3) {
+          background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/727ef2ac-e008-4477-8853-5df65f42cf00/w=1920,h=2400");
+        }
+        &:nth-child(4) {
+          background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/0f350642-a05e-438b-7c03-d4b671063300/w=1920,h=2394");
+        }
+        &:nth-child(5) {
+          background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/2af38877-d426-4a41-cd14-13b586e53f00/w=1920,h=2400");
+        }
+      }
+      .swiper-button-prev {
+        top: auto;
+        width: auto;
+        height: auto;
+        bottom: 5%;
+        left: 5%;
+        &::after {
+          font-size: 1.4rem;
+          color: map-get($map: $color, $key: light);
+        }
+      }
+      .swiper-button-next {
+        top: auto;
+        right: auto;
+        width: auto;
+        height: auto;
+        left: 19%;
+        bottom: 5%;
+        &::after {
+          font-size: 1.4rem;
+          color: map-get($map: $color, $key: light);
+        }
+      }
+      .pagination-progressbar {
+        position: absolute;
+        top: auto;
+        width: 50%;
+        height: 1px;
+        bottom: 5.6%;
+        left: 25%;
+        .swiper-pagination-progressbar-fill {
+          background: map-get($map: $color, $key: light);
+        }
+      }
+      .pagination-fraction {
+        color: map-get($map: $color, $key: light);
+        width: auto;
+        height: auto;
+        bottom: 4.8%;
+        left: 9.6%;
+        font-size: 1.6rem;
+      }
+    }
+  }
+  #scrollSection {
+    height: 2000px;
+  }
+}
+
+// 반응형 tablet
+@media screen and (max-width: 1024px) {
+  main {
+    #pinSection {
+      width: 100%;
+      position: static;
+      .swiper {
+        .swiper-slide {
+          #swiperText {
+            bottom: 20%;
+          }
+        }
+        .swiper-button-prev {
+          bottom: 15%;
+          left: 5%;
+        }
+        .swiper-button-next {
+          left: 19%;
+          bottom: 15%;
+        }
+        .pagination-progressbar {
+          width: 50%;
+          height: 1px;
+          bottom: 15.6%;
+          left: 25%;
+        }
+        .pagination-fraction {
+          bottom: 14.8%;
+          left: 9.6%;
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
