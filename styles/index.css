@@ -28,12 +28,12 @@ main #pinSection .swiper {
   height: 100%;
   position: relative;
 }
-main #pinSection .swiper .swiper-slide {
+main #pinSection .swiper .swiper-wrapper .swiper-slide {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-main #pinSection .swiper .swiper-slide::after {
+main #pinSection .swiper .swiper-wrapper .swiper-slide::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -43,25 +43,25 @@ main #pinSection .swiper .swiper-slide::after {
   background: rgba(0, 0, 0, 0.3);
   z-index: -1;
 }
-main #pinSection .swiper .swiper-slide #swiperText {
+main #pinSection .swiper .swiper-wrapper .swiper-slide #swiperText {
   position: absolute;
   bottom: 10%;
   left: 5%;
   color: #fff;
 }
-main #pinSection .swiper .swiper-slide:nth-child(1) {
+main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
   background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/802a2b3a-0df2-450a-73ff-7d640a25cb00/w=1920,h=2400");
 }
-main #pinSection .swiper .swiper-slide:nth-child(2) {
+main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
   background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/f697c35d-1c7a-42a9-5235-03da1b8a8900/w=1920,h=2400");
 }
-main #pinSection .swiper .swiper-slide:nth-child(3) {
+main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(3) {
   background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/727ef2ac-e008-4477-8853-5df65f42cf00/w=1920,h=2400");
 }
-main #pinSection .swiper .swiper-slide:nth-child(4) {
+main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
   background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/0f350642-a05e-438b-7c03-d4b671063300/w=1920,h=2394");
 }
-main #pinSection .swiper .swiper-slide:nth-child(5) {
+main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(5) {
   background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/2af38877-d426-4a41-cd14-13b586e53f00/w=1920,h=2400");
 }
 main #pinSection .swiper .swiper-button-prev {
