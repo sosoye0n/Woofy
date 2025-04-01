@@ -19,7 +19,8 @@ main {
 main {
   top: 70px;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
+  padding: 140px 3%;
   text-transform: uppercase;
   #container {
     display: flex;
@@ -158,7 +159,6 @@ main {
 @media screen and (max-width: 1024px) {
   #container {
     gap: 0;
-    // flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
     height: 100%;
@@ -174,4 +174,10 @@ main {
 
 // 반응형 mobile
 @media screen and (max-width: 375px) {
+  #container {
+    .userBox {
+    }
+    .infoBox {
+    }
+  }
 }
