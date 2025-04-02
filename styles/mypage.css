@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -35,9 +36,15 @@ main {
   text-transform: uppercase;
 }
 main #container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
   width: 100%;
   height: 100%;
@@ -46,7 +53,9 @@ main #container .userBox {
   width: 100%;
   height: 400px;
   border-radius: 10px;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background: #f5f5f5;
   padding: 0 30px;
   width: 40%;
@@ -57,10 +66,19 @@ main #container .userBox .userWrapper {
 main #container .userBox .userWrapper .userinfoWrapper {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 main #container .userBox .userWrapper .userinfoWrapper span {
   font-size: 1.6rem;
@@ -80,8 +98,12 @@ main #container .userBox .userWrapper .userinfoWrapper h2 span {
 main #container .userBox .userWrapper .userinfoWrapper .membershipInfo {
   padding: 14px 20px;
   border-radius: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #99bdff;
   cursor: pointer;
 }
@@ -101,8 +123,12 @@ main #container .infoBox {
 main #container .infoBox .infoBoxWrapper {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 main #container .infoBox .infoBoxWrapper .commonBox {
   background: #f5f5f5;
@@ -113,10 +139,19 @@ main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper {
   width: 100%;
   height: 100%;
   gap: 140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3 {
   font-size: 2.8rem;
@@ -124,14 +159,19 @@ main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3 {
   letter-spacing: -0.7px;
   color: #99bdff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3:hover {
   font-weight: 600;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   gap: 2px;
   cursor: pointer;
 }
@@ -163,7 +203,10 @@ main #container .infoBox .infoBoxWrapper .membershipBox {
 @media screen and (max-width: 1024px) {
   #container {
     gap: 0;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     height: 100%;
   }
