@@ -1,5 +1,7 @@
 // 헤더
 const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+const searchWrap = document.querySelector("#searchWrap");
 const headerInner = `
         <h1 id="logo">
           <a href="index.html" title="Home">WOOFY©</a>
@@ -23,13 +25,16 @@ const headerInner = `
           <nav id="rightGnb">
             <ul>
               <li>
-                <a href="#" title="search">SEACH</a>
+                <a href="#" title="search"><span>SEARCH</span>
+                <i class="fa-solid fa-magnifying-glass"></i></a>
               </li>
               <li>
-                <a href="#" title="cart">CART(<span>0</span>)</a>
+                <a href="#" title="cart"><span>CART</span><i class="fa-solid fa-bag-shopping"></i><span>(0)</span>
+                </a>
               </li>
               <li>
-                <a href="login.html" title="login">LOGIN</a>
+                <a href="login.html" title="login"><span>LOGIN</span>
+                <i class="fa-solid fa-user"></i></a>
               </li>
               <li>
                 <a href="mypage.html" title="mypage">mypage</a>
@@ -44,7 +49,87 @@ const headerInner = `
             </ul>
         </nav>
 `;
+const searchInner = `
+        <div id="searchBg"></div>
+        <form name="shopping-form" action="#" method="get">
+          <div class="search">
+            <input
+              id="search"
+              class="searchBar"
+              type="text"
+              name="search"
+              placeholder="검색"
+            />
+            <button type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+          <div>
+            <ul>
+              <li>POPULAR KEYWORDS</li>
+              <li>
+                <a href="#" title="임시">PAPERBACK</a>
+              </li>
+              <li>
+                <a href="#" title="임시">MI-2</a>
+              </li>
+              <li>
+                <a href="#" title="임시">BR소파</a>
+              </li>
+              <li>
+                <a href="#" title="임시">프레스룸체어</a>
+              </li>
+              <li>
+                <a href="#" title="임시">다이닝체어</a>
+              </li>
+            </ul>
+          </div>
+          <button id="closeBtn">
+              <span></span>
+              <span></span>
+          </button>
+        </form>
+`;
+const footerInner = `
+ <nav id="footerCategory">
+        <ul>
+          <li>
+            <a href="#" title="clothes">CLOTHES</a>
+          </li>
+          <li>
+            <a href="#" title="acc">ACC</a>
+          </li>
+          <li>
+            <a href="#" title="life">LIFE</a>
+          </li>
+          <li class="promotionTitle">
+            <a href="event.html" title="event">promotion</a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="footerInfo">
+        <ul>
+          <li>
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li class="border">|</li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li class="border">|</li>
+          <li>
+            <a href="#">회사소개</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 id="footerLogo">
+        <a href="index.html">WOOFY</a>
+      </h1>
+      <p>WOOFY© ALL RIGHT RESERVED</p>
+`;
 header.innerHTML = headerInner;
+footer.innerHTML = footerInner;
+searchWrap.innerHTML = searchInner;
 
 const toggleBtn = document.querySelector("#toggleBtn");
 const leftGnb = document.querySelector("#leftGnb");
@@ -54,6 +139,20 @@ toggleBtn.addEventListener("click", function () {
   header.classList.toggle("blendMode");
   document.body.classList.toggle("active");
 });
+
+const searchBtn = document.querySelector("#rightGnb ul li:first-child");
+searchBtn.addEventListener("click", () => {
+  const closeBtn = document.querySelector("#closeBtn");
+  const searchBg = document.querySelector("#searchBg");
+  searchWrap.classList.add("active");
+  closeBtn.addEventListener("click", () => {
+    searchWrap.classList.remove("active");
+  });
+  searchBg.addEventListener("click", () => {
+    searchWrap.classList.remove("active");
+  });
+});
+
 // 스크롤 이벤트
 let prevscroll = 0;
 window.addEventListener("scroll", function () {

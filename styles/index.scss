@@ -3,6 +3,8 @@
 @import "./variables.scss";
 
 main {
+  margin-top: 0;
+  background: #fff;
   #pinSection {
     position: fixed;
     background: #ccc;
@@ -96,7 +98,57 @@ main {
     }
   }
   #scrollSection {
+    padding-top: 100px;
+    padding-left: 35%;
+    width: 100%;
     height: 2000px;
+    .flexCon01 {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5%;
+      padding-left: 5%;
+      .flexBox {
+        // border-left: 1px solid #ccc;
+        // border-right: 1px solid #ccc;
+        // padding: 0 30px;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &:nth-child(even) {
+          padding-top: 100px;
+        }
+        .imgBox {
+          border-radius: 10px;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        .textBox {
+        }
+        .itemWrap {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .itemBox {
+            display: flex;
+            align-items: center;
+            .itemImg {
+              flex: 1;
+            }
+            .itemText {
+              flex: 5;
+            }
+            .itemLike {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -109,7 +161,7 @@ main {
       .swiper {
         .swiper-slide {
           #swiperText {
-            bottom: 20%;
+            bottom: 20% !important;
           }
         }
         .swiper-button-prev {
@@ -128,10 +180,14 @@ main {
         }
         .pagination-fraction {
           bottom: 14.8%;
-          left: 9.6%;
+          left: 10%;
           font-size: 1.6rem;
         }
       }
+    }
+    #scrollSection {
+      padding-left: 0;
+      padding-top: 80px;
     }
   }
 }
