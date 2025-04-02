@@ -30,6 +30,7 @@ body {
   font-size: 1.6rem;
   font-family: "Figtree";
   letter-spacing: -0.2px;
+  background: #ddd;
 }
 body.active {
   overflow-y: hidden;
@@ -195,10 +196,6 @@ footer {
   background: #333;
   z-index: 1;
   position: relative;
-}
-
-main {
-  margin-top: 70px;
 }
 
 footer {
