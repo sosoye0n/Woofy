@@ -4,14 +4,14 @@
 
 // common
 header {
-  z-index: 10;
+  z-index: 1;
 }
 footer {
-  z-index: 10;
+  z-index: 1;
 }
 
 main {
-  padding: 0 3%;
+  // padding: 0 3%;
   background: #fff;
 }
 
@@ -19,9 +19,212 @@ main {
 main {
   top: 70px;
   width: 100%;
-  // height: 100vh;
-  padding: 140px 3%;
+  height: 100%;
   text-transform: uppercase;
+  #modal {
+    #membershipModal {
+      width: 100%;
+      z-index: 2;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba($color: #000000, $alpha: 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      .modalWrapperBox {
+        width: 420px;
+        height: 500px;
+        .modalWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          i {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: end;
+            font-size: 2rem;
+            padding: 20px;
+            color: map-get($map: $color, $key: dark);
+            cursor: pointer;
+            top: 0;
+            right: 0;
+          }
+          background: map-get($map: $color, $key: light);
+          border-radius: 18px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          // justify-content: center;
+          .modalTitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            p {
+              font-size: 1.4rem;
+              font-weight: 300;
+              margin-bottom: 6px;
+            }
+            span {
+              font-size: 3rem;
+              font-weight: 700;
+            }
+          }
+          .modalContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            justify-content: space-between;
+            .modalInfoCon {
+              display: flex;
+              gap: 16px;
+              align-items: center;
+              .modalCircle {
+                width: 70px;
+                height: 70px;
+                background: map-get($map: $color, $key: point);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img {
+                  width: 24px;
+                  height: 24px;
+                  object-fit: cover;
+                }
+              }
+              .modalInfo {
+                .membershipInfo {
+                  display: flex;
+                  align-items: center;
+                  font-size: 2rem;
+                  margin-bottom: 8px;
+                  p {
+                    font-weight: 700;
+                  }
+                  span {
+                    font-weight: 600;
+                    padding-left: 8px;
+                    color: map-get($map: $color, $key: point);
+                  }
+                }
+                .subInfo {
+                  font-size: 1.2rem;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #couponModal {
+      width: 100%;
+      z-index: 2;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba($color: #000000, $alpha: 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      .modalWrapperBox {
+        width: 420px;
+        height: 500px;
+        .modalWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          i {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: end;
+            font-size: 2rem;
+            padding: 20px;
+            color: map-get($map: $color, $key: dark);
+            cursor: pointer;
+            top: 0;
+            right: 0;
+          }
+          background: map-get($map: $color, $key: light);
+          border-radius: 18px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .modalTitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            p {
+              font-size: 1.4rem;
+              font-weight: 300;
+              margin-bottom: 6px;
+            }
+            span {
+              font-size: 3rem;
+              font-weight: 700;
+            }
+          }
+          .modalContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            justify-content: space-between;
+            .modalInfoCon {
+              // display: flex;
+              // gap: 16px;
+              // align-items: center;
+              border: 1px solid #f00;
+              .modalCouponBox {
+                width: 100%;
+                height: 100%;
+                .couponInfo {
+                  width: 100px;
+                  gap: 50px;
+                  background: #000;
+                }
+              }
+              .modalInfo {
+                .membershipInfo {
+                  display: flex;
+                  align-items: center;
+                  font-size: 2rem;
+                  margin-bottom: 8px;
+                  p {
+                    font-weight: 700;
+                  }
+                  span {
+                    font-weight: 600;
+                    padding-left: 8px;
+                    color: map-get($map: $color, $key: point);
+                  }
+                }
+                .subInfo {
+                  font-size: 1.2rem;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   #container {
     display: flex;
     justify-content: center;
@@ -29,6 +232,7 @@ main {
     gap: 30px;
     width: 100%;
     height: 100%;
+    padding: 140px 3%;
     .userBox {
       width: 100%;
       height: 400px;

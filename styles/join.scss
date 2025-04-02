@@ -7,8 +7,99 @@ header {
   z-index: 10;
 }
 
+body {
+  background: #fff;
+}
+
 main {
   padding: 0 3%;
 }
 
 // contents
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 140px 0;
+  text-transform: uppercase;
+  h2 {
+    font-size: 2.6rem;
+    font-weight: 600;
+  }
+  p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  #join {
+    transition: all 0.3s;
+    width: 420px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    input:not(input[type="button"]) {
+      width: 420px;
+      height: 72px;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      font-weight: 500;
+      border: none;
+      background: map-get($map: $color, $key: lightgray);
+      color: map-get($map: $color, $key: gray);
+      cursor: pointer;
+      transition: all 0.3s;
+      &:focus {
+        outline: none;
+      }
+    }
+    input[type="button"] {
+      width: 420px;
+      height: 72px;
+      border-radius: 10px;
+      font-size: 1.4rem;
+      font-weight: 600;
+      border: none;
+      background: map-get($map: $color, $key: dark);
+      color: map-get($map: $color, $key: light);
+      cursor: pointer;
+      transition: all 0.3s;
+      &:hover {
+        outline: none;
+        background: map-get($map: $color, $key: point);
+        color: map-get($map: $color, $key: light);
+      }
+    }
+    #joinContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 50px;
+      .joinInput {
+        position: relative;
+        input {
+          padding-left: 20px;
+          transition: all 0.5s;
+          &:hover {
+            border: 1px solid map-get($map: $color, $key: gray);
+            background: map-get($map: $color, $key: light);
+            color: map-get($map: $color, $key: dark);
+            font-weight: 700;
+          }
+        }
+      }
+      #errorPW {
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: map-get($map: $color, $key: point);
+        i {
+          font-size: 1.2rem;
+          padding: 0 2px;
+          color: map-get($map: $color, $key: point);
+        }
+      }
+    }
+  }
+}
