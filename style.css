@@ -29,6 +29,7 @@ body {
   font-size: 1.6rem;
   font-family: "Figtree";
   letter-spacing: -0.2px;
+  background: #ddd;
 }
 body.active {
   overflow-y: hidden;
@@ -40,47 +41,20 @@ header {
   width: 100%;
   height: 70px;
   position: fixed;
-<<<<<<< HEAD
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-=======
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
   padding: 0 3%;
   font-size: 1.4rem;
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  backdrop-filter: blur(16px) saturate(180%);
+          backdrop-filter: blur(16px) saturate(180%);
   background-color: rgb(106, 106, 106);
   background: #fff;
   font-weight: 500;
-<<<<<<< HEAD
-  transition: all 0.5s;
-}
-header.active {
-  top: -60px;
-}
-header #leftGnb {
-  width: 40%;
-}
-header #leftGnb ul {
-  display: flex;
-=======
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  -webkit-transform: translate(0);
   transform: translate(0);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 header.active {
-  -webkit-transform: translateY(-70px);
   transform: translateY(-70px);
 }
 header.blendMode {
@@ -89,13 +63,10 @@ header.blendMode {
   scroll-behavior: none;
 }
 header #leftGnb {
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
   order: 1;
 }
 header #leftGnb ul {
   display: flex;
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
   justify-content: start;
   align-items: center;
   gap: 20px;
@@ -113,25 +84,8 @@ header #leftGnb ul li a {
 header #leftGnb .promotionTitle {
   color: #99bdff;
 }
-<<<<<<< HEAD
-header #logo {
-  width: 20%;
-}
-header #logo a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-=======
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
 header #rightGnb {
-  -webkit-box-ordinal-group: 4;
-  -ms-flex-order: 3;
   order: 3;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 header #rightGnb ul {
@@ -146,7 +100,6 @@ header #rightGnb ul li:last-child {
   position: absolute;
 }
 header #rightGnb ul li:last-child #toggleBtn {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 28px;
   height: 20px;
@@ -181,27 +134,12 @@ header #rightGnb ul li a {
   font-size: 1.4rem;
   transition: all 0.5s;
 }
-<<<<<<< HEAD
-header #toggleBtn {
-  display: none;
-  transition: all 0.3s;
-  width: 28px;
-  height: 20px;
-=======
 header #logo {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
   order: 2;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 header #logo a {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   font-size: 2rem;
   text-transform: uppercase;
@@ -210,7 +148,6 @@ header #logo a {
 
 main {
   margin-top: 70px;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -218,30 +155,7 @@ footer {
   height: 300px;
   background: #333;
   z-index: 1;
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
   position: relative;
-}
-<<<<<<< HEAD
-header #toggleBtn span {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  width: 100%;
-  height: 2px;
-  transition: all 0.3s;
-}
-header #toggleBtn span:nth-child(2) {
-  top: 50%;
-}
-header #toggleBtn span:last-child {
-  top: 100%;
-=======
-
-main {
-  margin-top: 70px;
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
 }
 
 footer {
@@ -254,34 +168,15 @@ footer {
   background: #000;
   color: #fff;
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-=======
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
 }
 footer #footerCategory {
   font-size: 1.6rem;
   font-weight: 400;
-<<<<<<< HEAD
-  transition: all 0.5s;
-=======
   margin-bottom: 16px;
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
 }
 footer #footerCategory ul {
   display: flex;
@@ -319,15 +214,11 @@ footer p {
     color: #fff;
   }
   header #leftGnb {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: auto !important;
     position: fixed;
     opacity: 0;
     visibility: hidden;
-    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     width: 100% !important;
     top: 0;
@@ -337,9 +228,6 @@ footer p {
     z-index: 2;
   }
   header #leftGnb ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
     gap: 0;
@@ -394,49 +282,10 @@ footer p {
   }
   header #logo a {
     font-size: 2.4rem;
-<<<<<<< HEAD
-    justify-content: start;
-  }
-  header #rightGnb {
-    display: none;
-  }
-  header #toggleBtn {
-    position: relative;
-    display: block;
-    width: 22px;
-    height: 16px;
-  }
-  header #toggleBtn span {
-    background: #000;
-  }
-  header #toggleBtn.active {
-    z-index: 3;
-  }
-  header #toggleBtn.active span:first-child {
-    top: 50%;
-    transform: rotate(45deg);
-  }
-  header #toggleBtn.active span:nth-child(2) {
-    opacity: 0;
-  }
-  header #toggleBtn.active span:last-child {
-    top: 50%;
-    transform: rotate(-45deg);
-  }
-  header #toggleBtn.active ~ #leftGnb,
-  header #toggleBtn.active #rightGnb {
-    opacity: 1;
-    visibility: visible;
-    z-index: 2;
-    pointer-events: fill;
-=======
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
     justify-content: start;
   }
   main {
     margin-top: 0;
->>>>>>> 8d9cdbb4a76ad55f98f535265ca7af9b14ba8167
   }
 }
 @media screen and (max-width: 375px) {

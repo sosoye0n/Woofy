@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <script defer src="./scripts.js"></script>
+    <script defer src="./scripts/cart.js"></script>
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <title>Cart©</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <div class="sidebar">
+          <div class="category">
+            <h2>CLOTHES</h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="category">
+            <h2>BRANDS</h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="category">
+            <h2>ACC</h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="category">
+            <h2>COLOR</h2>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <div class="cart-items">
+            <div class="cart-item">
+              <div class="checkbox-container">
+                <input type="checkbox" id="item1" checked />
+                <label type="text"></label>
+              </div>
+              <div class="items">
+                <input type="checkbox" id="item1" checked />
+                <label type="text"></label>
+                <div class="item-image">
+                  <img src="./images/detail/cap.jpg" alt="Beige Cap" />
+                </div>
+                <div class="item-details">
+                  <div class="detail-top">
+                    <h3>FOOT PRINT WAPPEN BALL CAP-PINK</h3>
+                    <p class="price">49,000 KRW</p>
+                  </div>
+                  <div class="detail-bottom">
+                    <p class="option">Option: beige</p>
+                    <div class="quantity-price">
+                      <div class="quantity-selector">
+                        <button class="quantity-btn minus">-</button>
+                        <div class="num">1</div>
+                        <button class="quantity-btn plus">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span class="summary-label">상품가</span>
+              <span class="summary-value">49,000 KRW</span>
+            </div>
+            <div class="summary-row">
+              <span class="summary-label">배송료</span>
+              <span class="summary-value">+ 0 KRW</span>
+            </div>
+            <div class="summary-row total">
+              <span class="summary-label">총 결제 금액</span>
+              <span class="summary-value"> 0 KRW</span>
+            </div>
+          </div>
+          <div class="cart-actions">
+            <button class="btn empty-cart">Empty Cart</button>
+            <button class="btn buy-now">Buy Selected Items</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <nav id="footerCategory">
+        <ul>
+          <li>
+            <a href="#" title="clothes">CLOTHES</a>
+          </li>
+          <li>
+            <a href="#" title="acc">ACC</a>
+          </li>
+          <li>
+            <a href="#" title="life">LIFE</a>
+          </li>
+          <li class="promotionTitle">
+            <a href="event.html" title="event">PROMOTION</a>
+          </li>
+        </ul>
+      </nav>
+      <nav id="footerInfo">
+        <ul>
+          <li>
+            <a href="#">개인정보처리방침</a>
+          </li>
+          <li class="border">|</li>
+          <li>
+            <a href="#">이용약관</a>
+          </li>
+          <li class="border">|</li>
+          <li>
+            <a href="#">회사소개</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 id="footerLogo">
+        <a href="index.html">WOOFY</a>
+      </h1>
+      <p>COPYRIGHT© BE ALL RIGHTS RESERVED.</p>
+    </footer>
+  </body>
+</html>
