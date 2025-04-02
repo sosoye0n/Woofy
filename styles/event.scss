@@ -15,7 +15,7 @@ main {
 // contents
 main {
   width: 100%;
-  #container {
+  #container01 {
     .eventHeader {
       width: 100%;
       height: 400px;
@@ -39,6 +39,80 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+    }
+
+    #eventModal {
+      z-index: 3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      transition: all 0.3s;
+      // opacity: 0;
+      display: none;
+      &.on {
+        display: block;
+        // opacity: 1;
+      }
+      .modalContent {
+        max-width: 500px;
+        width: 100%;
+        height: 300px;
+        border-radius: 18px;
+        background-color: #fff;
+        margin: 16% 34%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        .closeModal {
+          display: flex;
+          justify-content: end;
+          cursor: pointer;
+          .fa-xmark {
+            font-size: 3rem;
+            color: map-get($map: $color, $key: inputs);
+            margin-top: 3%;
+            margin-right: 6%;
+          }
+        }
+        .modalTitle {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h1 {
+            font-size: 5rem;
+            color: map-get($map: $color, $key: point);
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 2.2rem;
+            font-weight: 700;
+          }
+          span {
+            font-size: 1.5rem;
+            padding: 10px 0;
+          }
+          .modalBtn {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            border: none;
+            padding: 8px 30px;
+            border-radius: 24px;
+            background: map-get($map: $color, $key: input);
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+              background: map-get($map: $color, $key: point);
+            }
+          }
+        }
       }
     }
     .event01 {
@@ -82,7 +156,7 @@ main {
               display: flex;
               justify-content: left;
               align-items: center;
-              padding: 20px;
+              padding: 20px 22px;
               border-radius: 40px;
               font: normal 1.8rem/1 map-get($map: $font-family, $key: figtree);
               background: map-get($map: $color, $key: lefttextbg);
@@ -95,13 +169,21 @@ main {
             align-items: end;
             gap: 20px;
             p {
-              padding: 20px;
+              padding: 20px 22px;
               border-radius: 40px;
               font: normal 1.8rem/1 map-get($map: $font-family, $key: figtree);
               background: map-get($map: $color, $key: righttextbg);
               display: flex;
               justify-content: right;
               align-items: center;
+            }
+            .coupon {
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.5s;
+              &:hover {
+                color: map-get($map: $color, $key: light);
+              }
             }
           }
         }
@@ -170,22 +252,18 @@ main {
     .event01-1 {
       width: 100%;
       height: 100vh;
-      background: #d7e5ff;
-      h1 {
-        font: bold 3rem/1 map-get($map: $font-family, $key: figtree);
-        color: map-get($map: $color, $key: point);
-        padding: 4% 3%;
-      }
+      background: #e7effd;
       .conWrapper {
-        width: 100%;
+        gap: 6%;
         display: flex;
         justify-content: center;
         align-items: center;
         .swiper {
           width: 460px;
           height: 560px;
-          top: 8%;
+          border-radius: 18px;
           margin: 0;
+          margin-top: 8%;
           .swiper-wrapper {
             width: 100%;
             height: 100%;
@@ -202,42 +280,61 @@ main {
             }
           }
         }
-        .contentList {
-          width: 460px;
-          height: 560px;
+        .contents {
           display: flex;
+          flex-direction: column;
           justify-content: center;
           align-items: center;
-          text-align: center;
-          .detailImg {
-            width: 160px;
-            height: 200px;
-            .img {
-              width: 100%;
-              height: 100%;
-              background-color: #fff;
-            }
-          }
-          .content {
-            width: 240px;
-            height: 200px;
-            gap: 14px;
+          margin-top: 8%;
+          h1 {
             display: flex;
-            flex-direction: column;
+            justify-content: end;
+            text-align: center;
+            padding-top: 60px;
+            padding-bottom: 30px;
+            font: bold 3.2rem/1 map-get($map: $font-family, $key: figtree);
+            color: map-get($map: $color, $key: point);
+            // padding: 4% 12%;
+          }
+          .contentList {
+            width: 460px;
+            gap: 50px;
+            display: flex;
             justify-content: center;
-            text-align: left;
-            .brand {
-              color: map-get($map: $color, $key: point);
-              font-size: 2rem;
+            align-items: center;
+            text-align: center;
+            .detailImg {
+              width: 86px;
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
             }
-            .name {
-              font-size: 1.6rem;
-            }
-            .sale {
-              b {
+            .content {
+              width: 240px;
+              height: 200px;
+              gap: 14px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              text-align: left;
+              .brand {
                 color: map-get($map: $color, $key: point);
-                font-size: 2.2rem;
-                margin-right: 8px;
+                font-size: 2rem;
+                font-weight: 700;
+              }
+              .name {
+                font-size: 1.6rem;
+                font-weight: 600;
+              }
+              .sale {
+                font-weight: 300;
+                b {
+                  color: map-get($map: $color, $key: point);
+                  font-size: 2.2rem;
+                  margin-right: 8px;
+                  font-weight: 600;
+                }
               }
             }
           }
@@ -260,44 +357,14 @@ main {
         }
       }
     }
-    .event01-3 {
-      width: 100%;
-      height: 100vh;
-      background-color: map-get($map: $color, $key: light);
-      .items {
-        position: relative;
-        top: 20%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10%;
-        .itemImg {
-          width: 300px;
-          height: 400px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          img {
-            height: 100%;
-            object-fit: cover;
-          }
-        }
-        .itemBox {
-          .acc {
-            border: 1px solid #f00;
-            span {
-              border: 1px solid #f00;
-            }
-          }
-          .clothes {
-            border: 1px solid #f00;
-
-            span {
-              border: 1px solid #f00;
-            }
-          }
-        }
-      }
+  }
+  #container02 {
+    width: 100%;
+    height: 100vh;
+    background-color: map-get($map: $color, $key: dark);
+    .event02 {
+      color: map-get($map: $color, $key: light);
+      font-size: 5rem;
     }
   }
 }
