@@ -107,6 +107,13 @@ header #rightGnb ul {
   align-items: center;
   gap: 20px;
 }
+header #rightGnb ul li i {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 header #rightGnb ul li:last-child {
   opacity: 0;
   visibility: hidden;
@@ -167,6 +174,158 @@ header #logo a {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+#searchWrap {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+#searchWrap #searchBg {
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.4);
+}
+#searchWrap form {
+  width: 400px;
+  height: 100vh;
+  position: absolute;
+  right: -100%;
+  top: 0;
+  padding: 100px 20px 0 20px;
+  background: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#searchWrap form .search input {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 20px;
+}
+#searchWrap form .search input::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
+#searchWrap form .search input::-moz-placeholder {
+  opacity: 1;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
+#searchWrap form .search input:-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
+#searchWrap form .search input::-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
+#searchWrap form .search input::placeholder {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
+#searchWrap form .search input:focus {
+  outline: none;
+}
+#searchWrap form .search input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+#searchWrap form .search input:focus::-moz-placeholder {
+  opacity: 0;
+}
+#searchWrap form .search input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+#searchWrap form .search input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+#searchWrap form .search input:focus::placeholder {
+  opacity: 0;
+}
+#searchWrap form .search button {
+  background: none;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  font-size: 1.6rem;
+  color: #dadada;
+}
+#searchWrap form ul {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#searchWrap form ul li:first-child {
+  font-weight: bold;
+  font-size: 2rem;
+}
+#searchWrap form #closeBtn {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 26px;
+  height: 18px;
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+}
+#searchWrap form #closeBtn span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#searchWrap form #closeBtn span:first-child {
+  top: 50%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+#searchWrap form #closeBtn span:last-child {
+  top: 50%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+#searchWrap.active {
+  z-index: 4;
+}
+#searchWrap.active #searchBg {
+  opacity: 1;
+}
+#searchWrap.active form {
+  right: 0;
 }
 
 main {
@@ -300,6 +459,22 @@ footer p {
   header #rightGnb {
     width: auto !important;
   }
+  header #rightGnb ul li i {
+    opacity: 1;
+    visibility: visible;
+    font-size: 2rem;
+    position: static;
+  }
+  header #rightGnb ul li span:not(#toggleBtn span) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
+  header #rightGnb ul li:nth-child(4) {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+  }
   header #rightGnb ul li:last-child {
     opacity: 1;
     visibility: visible;
@@ -334,6 +509,9 @@ footer p {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: start;
+  }
+  #searchWrap form {
+    width: 100%;
   }
   main {
     margin-top: 0;
