@@ -41,15 +41,9 @@ main #modal #membershipModal {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 main #modal #membershipModal .modalWrapperBox {
@@ -57,36 +51,23 @@ main #modal #membershipModal .modalWrapperBox {
   height: 500px;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   position: relative;
   background: #fff;
   border-radius: 18px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   align-items: center;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper i {
   width: 100%;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   font-size: 2rem;
   padding: 20px;
   color: #000;
@@ -95,16 +76,9 @@ main #modal #membershipModal .modalWrapperBox .modalWrapper i {
   right: 0;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 40px;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle p {
@@ -117,41 +91,24 @@ main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle span {
   font-weight: 700;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 28px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalCircle {
   width: 70px;
   height: 70px;
   background: #99bdff;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalCircle img {
@@ -161,12 +118,8 @@ main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .mod
      object-fit: cover;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalInfo .membershipInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 2rem;
   margin-bottom: 8px;
 }
@@ -190,15 +143,9 @@ main #modal #couponModal {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 main #modal #couponModal .modalWrapperBox {
@@ -206,36 +153,23 @@ main #modal #couponModal .modalWrapperBox {
   height: 500px;
 }
 main #modal #couponModal .modalWrapperBox .modalWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   position: relative;
   background: #fff;
   border-radius: 18px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   align-items: center;
 }
 main #modal #couponModal .modalWrapperBox .modalWrapper i {
   width: 100%;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   font-size: 2rem;
   padding: 20px;
   color: #000;
@@ -244,16 +178,9 @@ main #modal #couponModal .modalWrapperBox .modalWrapper i {
   right: 0;
 }
 main #modal #couponModal .modalWrapperBox .modalWrapper .modalTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 40px;
 }
 main #modal #couponModal .modalWrapperBox .modalWrapper .modalTitle p {
@@ -266,17 +193,10 @@ main #modal #couponModal .modalWrapperBox .modalWrapper .modalTitle span {
   font-weight: 700;
 }
 main #modal #couponModal .modalWrapperBox .modalWrapper .modalContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 28px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 main #modal #couponModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon {
   border: 1px solid #f00;
@@ -291,12 +211,8 @@ main #modal #couponModal .modalWrapperBox .modalWrapper .modalContainer .modalIn
   background: #000;
 }
 main #modal #couponModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalInfo .membershipInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 2rem;
   margin-bottom: 8px;
 }
