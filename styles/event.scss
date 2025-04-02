@@ -55,7 +55,8 @@ main {
           height: 700px;
           background: #dce1ec;
           border-radius: 30px 30px 0 0;
-          padding: 20px 30px 0;
+          padding: 2% 6% 0;
+
           h1 {
             width: 100%;
             height: 10%;
@@ -78,21 +79,13 @@ main {
               height: 100px;
             }
             p {
-              height: 16%;
-              padding: 20px 40px;
+              display: flex;
+              justify-content: left;
+              align-items: center;
+              padding: 20px;
               border-radius: 40px;
-              font: normal 1.6rem/1 map-get($map: $font-family, $key: figtree);
+              font: normal 1.8rem/1 map-get($map: $font-family, $key: figtree);
               background: map-get($map: $color, $key: lefttextbg);
-
-              &:first-of-type {
-                width: 20%;
-              }
-              &:nth-of-type(2) {
-                width: 28%;
-              }
-              &:last-of-type {
-                width: 70%;
-              }
             }
           }
           .right {
@@ -102,21 +95,13 @@ main {
             align-items: end;
             gap: 20px;
             p {
-              height: 20%;
-              padding: 20px 40px;
+              padding: 20px;
               border-radius: 40px;
-              font: normal 1.6rem/1 map-get($map: $font-family, $key: figtree);
+              font: normal 1.8rem/1 map-get($map: $font-family, $key: figtree);
               background: map-get($map: $color, $key: righttextbg);
               display: flex;
-              justify-content: center;
+              justify-content: right;
               align-items: center;
-              text-align: center;
-              &:first-of-type {
-                width: 44%;
-              }
-              &:last-of-type {
-                width: 38%;
-              }
             }
           }
         }
@@ -128,53 +113,193 @@ main {
         margin: 8% 0;
         p {
           text-align: center;
-          font: normal 1.8rem/2 map-get($map: $font-family, $key: figtree);
+          font: normal 2rem/2 map-get($map: $font-family, $key: figtree);
           b {
+            text-decoration-line: underline;
             color: map-get($map: $color, $key: point);
           }
         }
       }
       .slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         .imgSlider1 {
-          width: 100%;
-          height: 100vh;
-          flex: 0 0 100%;
           display: flex;
           align-items: center;
           object-fit: cover;
           overflow: hidden;
-          border: 1px solid #f00;
+          &:hover .track1 {
+            animation-play-state: paused;
+          }
           .track1 {
             display: flex;
             will-change: transform;
-            animation: scrolling 10s linear infinite;
+            animation: scrolling 15s linear infinite both;
             img {
-              width: 300px;
-              height: 400px;
+              width: 240px;
+              height: 280px;
+              object-fit: cover;
+            }
+          }
+        }
+        .imgSlider2 {
+          display: flex;
+          align-items: center;
+          object-fit: cover;
+          overflow: hidden;
+          &:hover .track2 {
+            animation-play-state: paused;
+          }
+          .track2 {
+            display: flex;
+            will-change: transform;
+            animation: scrolling-r 18s linear infinite both;
+            img {
+              width: 240px;
+              height: 280px;
               display: flex;
               justify-content: center;
               object-fit: cover;
             }
           }
-          // .track2 {
-          //   display: flex;
-          //   animation: scroll-r 20s linear infinite;
-
-          //   img {
-          //     width: 300px;
-          //     height: 400px;
-          //     display: flex;
-          //     justify-content: center;
-          //     object-fit: cover;
-          //   }
-          // }
         }
       }
     }
-    .event02 {
+    .event01-1 {
       width: 100%;
       height: 100vh;
-      border: 1px solid #f00;
+      background: #d7e5ff;
+      h1 {
+        font: bold 3rem/1 map-get($map: $font-family, $key: figtree);
+        color: map-get($map: $color, $key: point);
+        padding: 4% 3%;
+      }
+      .conWrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .swiper {
+          width: 460px;
+          height: 560px;
+          top: 8%;
+          margin: 0;
+          .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+            .swiper-slide {
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+              &:nth-child(1) {
+                background-image: url("/images/event/2-5.jpg");
+              }
+              &:nth-child(2) {
+                background-image: url("/images/event/1-5.jpg");
+              }
+            }
+          }
+        }
+        .contentList {
+          width: 460px;
+          height: 560px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          .detailImg {
+            width: 160px;
+            height: 200px;
+            .img {
+              width: 100%;
+              height: 100%;
+              background-color: #fff;
+            }
+          }
+          .content {
+            width: 240px;
+            height: 200px;
+            gap: 14px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left;
+            .brand {
+              color: map-get($map: $color, $key: point);
+              font-size: 2rem;
+            }
+            .name {
+              font-size: 1.6rem;
+            }
+            .sale {
+              b {
+                color: map-get($map: $color, $key: point);
+                font-size: 2.2rem;
+                margin-right: 8px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .event01-2 {
+      width: 100%;
+      height: 100vh;
+      background-color: #f7e3bb;
+      position: relative;
+      .conImg {
+        width: 800px;
+        height: 100%;
+        position: absolute;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      img {
+      }
+    }
+    .event01-3 {
+      width: 100%;
+      height: 100vh;
+      background-color: map-get($map: $color, $key: light);
+      .items {
+        position: relative;
+        top: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        .itemImg {
+          width: 300px;
+          height: 400px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .itemBox {
+          .acc {
+            border: 1px solid #f00;
+            span {
+              border: 1px solid #f00;
+            }
+          }
+          .clothes {
+            border: 1px solid #f00;
+
+            span {
+              border: 1px solid #f00;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -185,5 +310,13 @@ main {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-r {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
