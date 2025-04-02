@@ -19,6 +19,10 @@ header {
   z-index: 10;
 }
 
+body {
+  background: #fff;
+}
+
 main {
   width: 100%;
   display: flex;
@@ -43,14 +47,18 @@ main #login input:not(input[type=checkbox]) {
   height: 72px;
   border-radius: 10px;
   font-size: 1.4rem;
-  font-weight: 0;
+  font-weight: 600;
   border: none;
   background: #000;
   color: #fff;
   cursor: pointer;
+  transition: all 0.3s;
 }
 main #login input:not(input[type=checkbox]):focus {
   outline: none;
+}
+main #login input:not(input[type=checkbox]):hover {
+  background: #99bdff;
 }
 main #login #inputContainer {
   display: flex;
@@ -67,6 +75,11 @@ main #login #inputContainer .inputBox input {
   font-weight: 500;
   font-size: 1.4rem;
   font-family: "Figtree";
+  transition: all 0.5s;
+}
+main #login #inputContainer .inputBox input:hover {
+  border: 1px solid #dadada;
+  background: #fff;
 }
 main #login #inputContainer .inputBox label {
   position: absolute;
@@ -84,8 +97,15 @@ main #login #searchInfo {
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   color: #a9a9a9;
+}
+main #login #searchInfo .border {
+  height: 10px;
+  width: 1px;
+  background: #a9a9a9;
+  margin: 0 10px;
 }
 main #login #join {
   display: flex;

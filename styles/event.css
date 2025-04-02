@@ -68,7 +68,7 @@ main #container .event01 .event01Wrapper .textWrapper {
   height: 700px;
   background: #dce1ec;
   border-radius: 30px 30px 0 0;
-  padding: 20px 30px 0;
+  padding: 2% 6% 0;
 }
 main #container .event01 .event01Wrapper .textWrapper h1 {
   width: 100%;
@@ -93,20 +93,13 @@ main #container .event01 .event01Wrapper .textWrapper .left img {
   height: 100px;
 }
 main #container .event01 .event01Wrapper .textWrapper .left p {
-  height: 16%;
-  padding: 20px 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px;
   border-radius: 40px;
-  font: normal 1.6rem/1 "Figtree";
+  font: normal 1.8rem/1 "Figtree";
   background: #f2f2f2;
-}
-main #container .event01 .event01Wrapper .textWrapper .left p:first-of-type {
-  width: 20%;
-}
-main #container .event01 .event01Wrapper .textWrapper .left p:nth-of-type(2) {
-  width: 28%;
-}
-main #container .event01 .event01Wrapper .textWrapper .left p:last-of-type {
-  width: 70%;
 }
 main #container .event01 .event01Wrapper .textWrapper .right {
   display: flex;
@@ -116,21 +109,13 @@ main #container .event01 .event01Wrapper .textWrapper .right {
   gap: 20px;
 }
 main #container .event01 .event01Wrapper .textWrapper .right p {
-  height: 20%;
-  padding: 20px 40px;
+  padding: 20px;
   border-radius: 40px;
-  font: normal 1.6rem/1 "Figtree";
+  font: normal 1.8rem/1 "Figtree";
   background: #3698fb;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-  text-align: center;
-}
-main #container .event01 .event01Wrapper .textWrapper .right p:first-of-type {
-  width: 44%;
-}
-main #container .event01 .event01Wrapper .textWrapper .right p:last-of-type {
-  width: 38%;
 }
 main #container .event01 .event01Wrapper .bottomImg {
   width: 100%;
@@ -140,38 +125,189 @@ main #container .event01 .eventSec {
 }
 main #container .event01 .eventSec p {
   text-align: center;
-  font: normal 1.8rem/2 "Figtree";
+  font: normal 2rem/2 "Figtree";
 }
 main #container .event01 .eventSec p b {
+  text-decoration-line: underline;
   color: #99bdff;
 }
+main #container .event01 .slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 main #container .event01 .slide .imgSlider1 {
-  width: 100%;
-  height: 100vh;
-  flex: 0 0 100%;
   display: flex;
   align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
-  border: 1px solid #f00;
+}
+main #container .event01 .slide .imgSlider1:hover .track1 {
+  animation-play-state: paused;
 }
 main #container .event01 .slide .imgSlider1 .track1 {
   display: flex;
   will-change: transform;
-  animation: scrolling 10s linear infinite;
+  animation: scrolling 15s linear infinite both;
 }
 main #container .event01 .slide .imgSlider1 .track1 img {
-  width: 300px;
-  height: 400px;
+  width: 240px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #container .event01 .slide .imgSlider2 {
+  display: flex;
+  align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+main #container .event01 .slide .imgSlider2:hover .track2 {
+  animation-play-state: paused;
+}
+main #container .event01 .slide .imgSlider2 .track2 {
+  display: flex;
+  will-change: transform;
+  animation: scrolling-r 18s linear infinite both;
+}
+main #container .event01 .slide .imgSlider2 .track2 img {
+  width: 240px;
+  height: 280px;
   display: flex;
   justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main #container .event02 {
+main #container .event01-1 {
   width: 100%;
   height: 100vh;
+  background: #d7e5ff;
+}
+main #container .event01-1 h1 {
+  font: bold 3rem/1 "Figtree";
+  color: #99bdff;
+  padding: 4% 3%;
+}
+main #container .event01-1 .conWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #container .event01-1 .conWrapper .swiper {
+  width: 460px;
+  height: 560px;
+  top: 8%;
+  margin: 0;
+}
+main #container .event01-1 .conWrapper .swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+main #container .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+main #container .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+  background-image: url("/images/event/2-5.jpg");
+}
+main #container .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
+  background-image: url("/images/event/1-5.jpg");
+}
+main #container .event01-1 .conWrapper .contentList {
+  width: 460px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main #container .event01-1 .conWrapper .contentList .detailImg {
+  width: 160px;
+  height: 200px;
+}
+main #container .event01-1 .conWrapper .contentList .detailImg .img {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+main #container .event01-1 .conWrapper .contentList .content {
+  width: 240px;
+  height: 200px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+main #container .event01-1 .conWrapper .contentList .content .brand {
+  color: #99bdff;
+  font-size: 2rem;
+}
+main #container .event01-1 .conWrapper .contentList .content .name {
+  font-size: 1.6rem;
+}
+main #container .event01-1 .conWrapper .contentList .content .sale b {
+  color: #99bdff;
+  font-size: 2.2rem;
+  margin-right: 8px;
+}
+main #container .event01-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: #f7e3bb;
+  position: relative;
+}
+main #container .event01-2 .conImg {
+  width: 800px;
+  height: 100%;
+  position: absolute;
+}
+main #container .event01-2 .conImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #container .event01-3 {
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+main #container .event01-3 .items {
+  position: relative;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+main #container .event01-3 .items .itemImg {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #container .event01-3 .items .itemImg img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #container .event01-3 .items .itemBox .acc {
+  border: 1px solid #f00;
+}
+main #container .event01-3 .items .itemBox .acc span {
+  border: 1px solid #f00;
+}
+main #container .event01-3 .items .itemBox .clothes {
+  border: 1px solid #f00;
+}
+main #container .event01-3 .items .itemBox .clothes span {
   border: 1px solid #f00;
 }
 
@@ -181,5 +317,13 @@ main #container .event02 {
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-r {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
