@@ -186,3 +186,8 @@ window.addEventListener("resize", () => {
     document.body.classList.remove("active");
   }
 });
+
+const closeBtn = document.querySelector("#closeBtn");
+closeBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+});
