@@ -16,13 +16,14 @@
   </head>
   <body>
     <header></header>
+    <div id="searchWrap"></div>
     <main>
       <!-- modal popup -->
       <div id="modal">
-        <div id="membershipModal on">
+        <div id="membershipModal">
           <div class="modalWrapperBox">
             <div class="modalWrapper">
-              <i class="fas fa-xmark"></i>
+              <i class="fas fa-xmark close"></i>
               <div class="modalTitle">
                 <p>멤버십 등급별 혜택</p>
                 <span>Membership</span>
@@ -68,26 +69,61 @@
             </div>
           </div>
         </div>
-        <div id="couponModal on">
-          <div class="modalWrapperBox">
-            <div class="modalWrapper">
-              <i class="fas fa-xmark"></i>
-              <div class="modalTitle">
+        <div id="couponModal">
+          <div class="modalCouponWrapperBox">
+            <div class="modalCouponWrapper">
+              <i class="fas fa-xmark close2"></i>
+              <div class="modalCouponTitle">
                 <p>보유 쿠폰</p>
-                <span>Coupon</span>
+                <span>coupon</span>
               </div>
-              <div class="modalContainer">
-                <div class="modalInfoCon">
-                  <div class="modalCoponBox">
-                    <div class="coponInfo"></div>
-                    <div class="couponDown"></div>
-                  </div>
-                  <div class="modalInfo">
-                    <div class="membershipInfo">
-                      <p>Wag</p>
-                      <span>신규</span>
+              <div class="modalCouponContainer">
+                <div class="modalCouponInfoCon">
+                  <div class="modalCoupon">
+                    <div class="couponBox1">
+                      <div class="modalInfo">
+                        <div class="membershipInfo">
+                          <p>12<b>%</b></p>
+                          <span>[프로모션] 스프링시즌세일</span>
+                        </div>
+                        <p class="subInfo">신규멤버, 첫구매 쿠폰 제공</p>
+                      </div>
                     </div>
-                    <p class="subInfo">신규멤버, 첫구매 쿠폰 제공</p>
+                    <div class="couponBox2">
+                      <i class="fas fa-circle-check"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="modalCouponInfoCon">
+                  <div class="modalCoupon">
+                    <div class="couponBox1">
+                      <div class="modalInfo">
+                        <div class="membershipInfo">
+                          <p>30<b>%</b></p>
+                          <span>[이미스] 브랜드 중복쿠폰</span>
+                        </div>
+                        <p class="subInfo">50,000원 이상 구매시 사용 가능</p>
+                      </div>
+                    </div>
+                    <div class="couponBox2">
+                      <i class="fas fa-circle-check"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="modalCouponInfoCon">
+                  <div class="modalCoupon">
+                    <div class="couponBox1">
+                      <div class="modalInfo">
+                        <div class="membershipInfo">
+                          <p><b>무료배송</b></p>
+                          <span>[멤버십] 가입감사쿠폰</span>
+                        </div>
+                        <p class="subInfo">신규멤버십 가입 회원 대상</p>
+                      </div>
+                    </div>
+                    <div class="couponBox2">
+                      <i class="fas fa-circle-check"></i>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -102,11 +138,11 @@
             <div class="userinfoWrapper">
               <span>my page</span>
               <h2>
-                소연님의 회원등급은
+                소연님, 이번 달
                 <br />
-                <span>furry</span>입니다
+                <span>furry</span>등급 입니다
               </h2>
-              <div class="membershipInfo">
+              <div class="membershipInfoLevel">
                 <p>WOOFY©의 멤버십 등급이 궁금하신가요?</p>
                 <i class="fas fa-chevron-right"></i>
               </div>
