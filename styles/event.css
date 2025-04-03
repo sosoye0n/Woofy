@@ -350,14 +350,15 @@ main #container01 .event01-1 .conWrapper .contents .contentList .content .sale b
 }
 main #container01 .event01-2 {
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background-color: #f7e3bb;
   position: relative;
 }
 main #container01 .event01-2 .conImg {
-  width: 800px;
+  width: 600px;
   height: 100%;
   position: absolute;
+  display: flex;
 }
 main #container01 .event01-2 .conImg img {
   width: 100%;
@@ -365,14 +366,64 @@ main #container01 .event01-2 .conImg img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+main #container01 .event01-2 .cap {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 2%;
+  right: 8%;
+  transform: rotate(-18deg);
+}
+main #container01 .event01-2 .cap:hover {
+  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+  transform: rotate(2deg);
+}
+main #container01 .event01-2 .clothe {
+  position: absolute;
+  width: 140px;
+  top: 44%;
+  right: 6%;
+}
+main #container01 .event01-2 .clothe:hover {
+  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+  transform: rotate(-20deg);
+}
 main #container02 {
   width: 100%;
   height: 100vh;
   background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
 }
-main #container02 .event02 {
+main #container02 .event02 h1 {
   color: #fff;
   font-size: 5rem;
+  padding: 4% 0;
+}
+main #container02 .event02 .count {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #container02 .event02 .count p {
+  font-size: 7rem;
+  color: #fff;
+}
+main #container02 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  padding: 20px 20px;
+  border-radius: 40px;
+  font-size: 2.4rem;
+  font-weight: 600;
+  background: #fff;
 }
 
 @keyframes scrolling {

@@ -343,17 +343,47 @@ main {
     }
     .event01-2 {
       width: 100%;
-      height: 100vh;
+      height: 80vh;
       background-color: #f7e3bb;
       position: relative;
       .conImg {
-        width: 800px;
+        width: 600px;
         height: 100%;
         position: absolute;
+        display: flex;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+      // .frame {
+      //   width: 460px;
+      //   height: 520px;
+      //   left: 53%;
+      //   top: 20%;
+      //   position: absolute;
+      // }
+      .cap {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 2%;
+        right: 8%;
+        transform: rotate(-18deg);
+        &:hover {
+          filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+          transform: rotate(2deg);
+        }
+      }
+      .clothe {
+        position: absolute;
+        width: 140px;
+        top: 44%;
+        right: 6%;
+        &:hover {
+          filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+          transform: rotate(-20deg);
         }
       }
     }
@@ -362,9 +392,40 @@ main {
     width: 100%;
     height: 100vh;
     background-color: map-get($map: $color, $key: dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+
     .event02 {
-      color: map-get($map: $color, $key: light);
-      font-size: 5rem;
+      h1 {
+        color: map-get($map: $color, $key: light);
+        font-size: 5rem;
+        padding: 4% 0;
+      }
+      .count {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p {
+          font-size: 7rem;
+          color: map-get($map: $color, $key: light);
+        }
+      }
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+      padding: 20px 20px;
+      border-radius: 40px;
+      font-size: 2.4rem;
+      font-weight: 600;
+      background: map-get($map: $color, $key: light);
     }
   }
 }
