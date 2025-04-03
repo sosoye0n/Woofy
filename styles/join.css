@@ -30,16 +30,9 @@ main {
 
 main {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   padding: 140px 0;
   text-transform: uppercase;
 }
@@ -53,20 +46,12 @@ main p {
   font-weight: 300;
 }
 main #join {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 420px;
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 main #join input:not(input[type=button]) {
@@ -79,7 +64,6 @@ main #join input:not(input[type=button]) {
   background: #f5f5f5;
   color: #dadada;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #join input:not(input[type=button]):focus {
@@ -95,7 +79,6 @@ main #join input[type=button] {
   background: #000;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #join input[type=button]:hover {
@@ -104,13 +87,8 @@ main #join input[type=button]:hover {
   color: #fff;
 }
 main #join #joinContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 16px;
   margin-bottom: 50px;
 }
@@ -119,7 +97,6 @@ main #join #joinContainer .joinInput {
 }
 main #join #joinContainer .joinInput input {
   padding-left: 20px;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main #join #joinContainer .joinInput input:hover {

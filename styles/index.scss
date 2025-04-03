@@ -108,9 +108,6 @@ main {
       gap: 5%;
       padding-left: 5%;
       .flexBox {
-        // border-left: 1px solid #ccc;
-        // border-right: 1px solid #ccc;
-        // padding: 0 30px;
         width: 45%;
         display: flex;
         flex-direction: column;
@@ -119,31 +116,95 @@ main {
           padding-top: 100px;
         }
         .imgBox {
-          border-radius: 10px;
           overflow: hidden;
+          width: 100%;
+          margin-bottom: 20px;
           img {
             width: 100%;
+            // aspect-ratio: 1 / 1;
+            object-fit: cover;
           }
         }
         .textBox {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          p {
+            font-size: 1.6rem;
+            &:first-child {
+              font-size: 2.2rem;
+              font-weight: bold;
+            }
+          }
+          span {
+            font-weight: bold;
+            &:first-child {
+              color: map-get($map: $color, $key: point);
+            }
+          }
         }
         .itemWrap {
+          border-top: 1px solid #ccc;
+          padding-top: 20px;
           display: flex;
           flex-direction: column;
           gap: 20px;
           .itemBox {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            a {
+              display: flex;
+              height: 70px;
+              gap: 20px;
+              width: 100%;
+            }
             .itemImg {
+              height: 100%;
               flex: 1;
+              img {
+                height: 100%;
+                object-fit: cover;
+                aspect-ratio: 1 / 1;
+              }
             }
             .itemText {
-              flex: 5;
+              flex: 10;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              p {
+                font-size: 1.4rem;
+                font-weight: bold;
+                &:nth-child(2) {
+                  font-size: 1.6rem;
+                  font-weight: normal;
+                }
+                &:last-child {
+                  span {
+                    &:first-child {
+                      color: map-get($map: $color, $key: point);
+                      margin-right: 10px;
+                    }
+                  }
+                }
+              }
             }
             .itemLike {
               display: flex;
               flex-direction: column;
               gap: 4px;
+              align-self: center;
+              cursor: pointer;
+              position: relative;
+              z-index: 1;
+              text-align: center;
+              color: map-get($map: $color, $key: input);
+              i {
+                font-size: 2rem;
+                &.fa-solid {
+                  color: map-get($map: $color, $key: point);
+                }
+              }
             }
           }
         }

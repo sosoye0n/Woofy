@@ -4,6 +4,8 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -56,36 +58,23 @@ main #modal #membershipModal .modalWrapperBox {
   height: 500px;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   position: relative;
   background: #fff;
   border-radius: 18px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   align-items: center;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .fa-xmark {
   width: 100%;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   font-size: 2rem;
   padding: 20px;
   color: #000;
@@ -94,16 +83,9 @@ main #modal #membershipModal .modalWrapperBox .modalWrapper .fa-xmark {
   right: 0;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 40px;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle p {
@@ -116,41 +98,24 @@ main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle span {
   font-weight: 700;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 28px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalCircle {
   width: 70px;
   height: 70px;
   background: #99bdff;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalCircle img {
@@ -160,12 +125,8 @@ main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .mod
      object-fit: cover;
 }
 main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalInfo .membershipInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 2rem;
   margin-bottom: 8px;
 }
@@ -211,33 +172,22 @@ main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
   position: relative;
   background: #fff;
   border-radius: 18px;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   align-items: center;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .fa-xmark {
   width: 100%;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  justify-content: end;
   font-size: 2rem;
   padding: 20px;
   color: #000;
@@ -360,7 +310,15 @@ main #modal #couponModal.on {
 main #container {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -377,6 +335,9 @@ main #container .userBox {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   background: #f5f5f5;
   padding: 0 30px;
   width: 40%;
@@ -389,7 +350,19 @@ main #container .userBox .userWrapper .userinfoWrapper {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -422,7 +395,12 @@ main #container .userBox .userWrapper .userinfoWrapper .membershipInfoLevel {
   border-radius: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -453,7 +431,12 @@ main #container .infoBox .infoBoxWrapper {
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -469,7 +452,19 @@ main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper {
   gap: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -488,6 +483,7 @@ main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3 {
   color: #99bdff;
   cursor: pointer;
   -webkit-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3:hover {
@@ -496,7 +492,12 @@ main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3:hover {
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo {
   display: -webkit-box;
   display: -ms-flexbox;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
