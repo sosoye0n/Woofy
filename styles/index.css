@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -117,23 +116,15 @@ main #scrollSection {
   height: 2000px;
 }
 main #scrollSection .flexCon01 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 5%;
   padding-left: 5%;
 }
 main #scrollSection .flexCon01 .flexBox {
   width: 45%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 20px;
 }
 main #scrollSection .flexCon01 .flexBox:nth-child(even) {
@@ -173,38 +164,12 @@ main #scrollSection .flexCon01 .flexBox .textBox span:first-child {
   color: #99bdff;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap {
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 20px;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 70px;
-  gap: 20px;
-  width: 100%;
-}
-main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemImg {
-  height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemImg img {
   height: 100%;
@@ -213,40 +178,10 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemImg img {
   aspect-ratio: 1/1;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText {
-  -webkit-box-flex: 10;
-      -ms-flex: 10;
-          flex: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText p {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText p:nth-child(2) {
-  font-size: 1.6rem;
-  font-weight: normal;
-}
-main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText p:last-child span:first-child {
-  color: #99bdff;
-  margin-right: 10px;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 4px;
   -ms-flex-item-align: center;
       align-self: center;
