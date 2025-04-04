@@ -14,3 +14,18 @@ const mySwiper = new Swiper(".swiper", {
   //   disableOnInteraction: false,
   // },
 });
+
+const modal = document.querySelector("#eventModal");
+const openModal = document.querySelector(".coupon");
+const modalBtn = document.querySelector(".modalBtn");
+const closeModal = document.querySelector(".closeModal");
+
+openModal.addEventListener("click", function () {
+  modal.classList.add("on");
+});
+closeModal.addEventListener("click", () => {
+  modal.classList.remove("on");
+});
+modalBtn.addEventListener("click", () => {
+  modal.classList.remove("on");
+});
