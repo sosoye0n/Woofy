@@ -2,10 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -45,12 +42,8 @@ main #modal #membershipModal {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 main #modal #membershipModal .modalWrapperBox {
@@ -143,8 +136,6 @@ main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .mod
   font-weight: 300;
 }
 main #modal #membershipModal.on {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 main #modal #couponModal {
@@ -156,12 +147,8 @@ main #modal #couponModal {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 main #modal #couponModal .modalCouponWrapperBox {
@@ -169,8 +156,6 @@ main #modal #couponModal .modalCouponWrapperBox {
   height: 500px;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,16 +181,9 @@ main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .fa-xmark {
   right: 0;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 30px;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponTitle p {
@@ -218,30 +196,17 @@ main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCoupon
   font-weight: 700;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 14px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
 }
@@ -250,22 +215,13 @@ main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCoupon
   height: 92px;
   background: #99bdff;
   border-radius: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 12px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 2px;
   font-size: 2.4rem;
   margin-bottom: 4px;
@@ -291,15 +247,9 @@ main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCoupon
   height: 92px;
   background: #99bdff;
   border-radius: 6px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
   color: #fff;
@@ -308,23 +258,9 @@ main #modal #couponModal.on {
   display: block;
 }
 main #container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
   padding: 140px 3%;
 }
@@ -332,12 +268,7 @@ main #container .userBox {
   width: 100%;
   height: 400px;
   border-radius: 10px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   background: #f5f5f5;
   padding: 0 30px;
   width: 40%;
@@ -348,31 +279,10 @@ main #container .userBox .userWrapper {
 main #container .userBox .userWrapper .userinfoWrapper {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 main #container .userBox .userWrapper .userinfoWrapper span {
   display: inline-block;
@@ -393,22 +303,12 @@ main #container .userBox .userWrapper .userinfoWrapper h2 span {
 main #container .userBox .userWrapper .userinfoWrapper .membershipInfoLevel {
   padding: 14px 20px;
   border-radius: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background: #99bdff;
   cursor: pointer;
 }
 main #container .userBox .userWrapper .userinfoWrapper .membershipInfoLevel:hover {
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   background: #000;
   color: #99bdff;
@@ -429,17 +329,8 @@ main #container .infoBox {
 main #container .infoBox .infoBoxWrapper {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 main #container .infoBox .infoBoxWrapper .commonBox {
   background: #f5f5f5;
@@ -450,31 +341,10 @@ main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper {
   width: 100%;
   height: 100%;
   gap: 140px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3 {
   font-size: 2.8rem;
@@ -482,30 +352,18 @@ main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3 {
   letter-spacing: -0.7px;
   color: #99bdff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3:hover {
   font-weight: 700;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
   gap: 2px;
   cursor: pointer;
 }
 main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo:hover {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: #99bdff;
 }
@@ -536,13 +394,10 @@ main #container .infoBox .infoBoxWrapper .membershipBox {
 
 @media screen and (max-width: 1024px) {
   #container {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   #container .userBox {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
     width: 100%;
   }
   #container .userBox h2 {
