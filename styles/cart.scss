@@ -47,10 +47,10 @@ header {
   background: map-get($map: $color, $key: line);
 }
 .cart-container {
-  width: 1000px;
+  width: 70%;
   height: 1060px;
   margin: 0 auto;
-  padding: 100px;
+  padding: 50px;
   h2 {
     font-size: 2.5rem;
     font-weight: 600;
@@ -62,6 +62,7 @@ header {
   .cart-items {
     width: 100%;
     margin-bottom: 30px;
+    padding: 0 15px;
     .cart-item {
       width: 100%;
       align-items: center;
@@ -122,7 +123,7 @@ header {
           flex: 1;
           height: 150px;
           img {
-            width: 100%;
+            width: 80%;
             height: 100%;
             object-fit: cover;
           }
@@ -169,6 +170,7 @@ header {
     align-items: flex-end;
     flex-direction: column;
     gap: 10px;
+    padding: 0 15px;
     .summary-row {
       display: flex;
       justify-content: space-between;
@@ -200,6 +202,7 @@ header {
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
+    padding: 0 15px;
     button {
       border: none;
       width: 160px;

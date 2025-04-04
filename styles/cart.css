@@ -59,10 +59,10 @@ header {
 }
 
 .cart-container {
-  width: 1000px;
+  width: 70%;
   height: 1060px;
   margin: 0 auto;
-  padding: 100px;
+  padding: 50px;
 }
 .cart-container h2 {
   font-size: 2.5rem;
@@ -74,6 +74,7 @@ header {
 .cart-container .cart-items {
   width: 100%;
   margin-bottom: 30px;
+  padding: 0 15px;
 }
 .cart-container .cart-items .cart-item {
   width: 100%;
@@ -138,7 +139,7 @@ header {
   height: 150px;
 }
 .cart-container .cart-items .cart-item .items .item-image img {
-  width: 100%;
+  width: 80%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -182,6 +183,7 @@ header {
   align-items: flex-end;
   flex-direction: column;
   gap: 10px;
+  padding: 0 15px;
 }
 .cart-container .cart-summary .summary-row {
   display: flex;
@@ -211,6 +213,7 @@ header {
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+  padding: 0 15px;
 }
 .cart-container .cart-actions button {
   border: none;

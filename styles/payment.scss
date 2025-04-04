@@ -1,0 +1,375 @@
+// reset & variables
+@import "./reset.scss";
+@import "./variables.scss";
+
+// common
+header {
+  z-index: 10;
+}
+
+/* 레이아웃 */
+.container {
+  background: map-get($map: $color, $key: light);
+  min-height: 100vh;
+}
+
+.checkout-container {
+  margin: 0 auto;
+  padding: 0 16px;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  .checkout-title {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: map-get($map: $color, $key: dark);
+    margin-bottom: 20px;
+  }
+}
+
+// 섹션 타이틀 공통
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+}
+
+// 섹션 스타일 공통
+section {
+  // margin-bottom: 30px;
+  width: 100%;
+  padding: 20px;
+}
+
+// 배송지
+.checkout-container {
+  width: 100%;
+  .shipping-section {
+    .address-selector {
+      margin-bottom: 20px;
+      padding: 0 15px;
+      .address-label {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+        .recent-address {
+          align-items: center;
+          font-size: 2.2rem;
+          font-weight: 300;
+          font-weight: 400;
+          margin-right: 30px;
+          border-bottom: 1px solid map-get($map: $color, $key: dark);
+        }
+        .direct-input {
+          font-size: 1.8rem;
+          font-weight: 300;
+        }
+      }
+      .address-info {
+        margin-bottom: 20px;
+        color: map-get($map: $color, $key: text);
+        .user-state {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10px;
+          .recipient {
+            font-size: 2rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+          }
+          .address-book-link {
+            font-size: 1.6rem;
+            color: map-get($map: $color, $key: dark);
+          }
+        }
+        .address-detail {
+          font-size: 1.8rem;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+        .phone {
+          font-size: 1.8rem;
+          font-weight: 400;
+          margin-bottom: 10px;
+        }
+      }
+      .delivery-message {
+        width: 100%;
+        select {
+          display: flex;
+          width: 100%;
+          height: 40px;
+          border: 1px solid map-get($map: $color, $key: boxline);
+          background-color: map-get($map: $color, $key: light);
+          border-radius: 3px;
+          appearance: none;
+          background-position: right 8px center;
+          background-size: 16px;
+          padding: 0 20px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          option {
+            font-size: 16px;
+          }
+          option[disabled] {
+            color: map-get($map: $color, $key: gray);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 주문상품
+.order-products {
+  .product-list {
+    margin: 0;
+    padding: 0 10px;
+    .product-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 35px 25px;
+      margin: 5px;
+      border-top: 1px solid map-get($map: $color, $key: boxline);
+      border-bottom: 1px solid map-get($map: $color, $key: boxline);
+      .product-image {
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        margin-right: 50px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .product-info {
+        flex: 1;
+        padding: 0 15px;
+        font-size: 2rem;
+        font-weight: 400;
+        .product-name {
+          margin-bottom: 8px;
+        }
+      }
+      .remove-product {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background: none;
+        font-size: 2.4rem;
+        cursor: pointer;
+        color: map-get($map: $color, $key: dark);
+      }
+    }
+  }
+}
+
+// 할인/부가결제 섹션
+.payment-section {
+  .payment-options {
+    padding: 0 15px;
+    .subsection-title {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-bottom: 15px;
+      color: map-get($map: $color, $key: text);
+    }
+
+    .coupon-row,
+    .points-row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      padding: 0 10px;
+      color: map-get($map: $color, $key: line);
+      .option-label {
+        width: 100px;
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      .option-value {
+        font-size: 1.6rem;
+        margin-right: 10px;
+      }
+
+      .option-button {
+        padding: 5px 10px;
+        border: 1px solid map-get($map: $color, $key: box);
+        background-color: map-get($map: $color, $key: light);
+        border-radius: 3px;
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+    }
+    .option-info {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      font-size: 1.4rem;
+      display: flex;
+      color: map-get($map: $color, $key: gray);
+    }
+  }
+}
+
+// 결제정보 섹션
+.order-summary {
+  .summary-list {
+    padding: 0 20px;
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 0 5%;
+      color: map-get($map: $color, $key: text);
+      .summary-label {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+      .summary-amount {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+
+      &.total {
+        margin-top: 20px;
+        border-top: 1px solid map-get($map: $color, $key: box);
+        color: map-get($map: $color, $key: dark);
+        padding-top: 15px;
+
+        .summary-label,
+        .summary-amount {
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+// 결제수단 섹션
+.payment-methods {
+  margin-bottom: 30px;
+  .payment-options {
+    padding: 0 10px;
+    border: none;
+    border-bottom: 1px solid map-get($map: $color, $key: box);
+    display: flex;
+    align-items: center;
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    .payment-options-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      .payment-option {
+        cursor: pointer;
+        margin-right: 20px;
+        input[type="radio"] {
+          display: none;
+        }
+        input[type="radio"] + .option-text {
+          position: relative;
+          padding-left: 28px;
+          font-size: 1.6rem;
+          &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border: 1px solid map-get($map: $color, $key: line);
+            border-radius: 3px;
+            background: map-get($map: $color, $key: light);
+          }
+        }
+        input[type="radio"]:checked + .option-text:before {
+          background: map-get($map: $color, $key: line);
+          border-color: map-get($map: $color, $key: line);
+        }
+      }
+    }
+  }
+  .terms-agreement {
+    padding: 0 12px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    .agreement-label {
+      cursor: pointer;
+      input[type="checkbox"] {
+        display: none;
+      }
+      input[type="checkbox"] + .agreement-text {
+        position: relative;
+        padding-left: 28px;
+        font-size: 1.4rem;
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 12px;
+          height: 12px;
+          border-radius: 3px;
+          border: 1px solid map-get($map: $color, $key: line);
+          background: map-get($map: $color, $key: light);
+        }
+      }
+      input[type="checkbox"]:checked + .agreement-text:before {
+        background: map-get($map: $color, $key: text);
+        border-color: map-get($map: $color, $key: line);
+      }
+    }
+  }
+}
+
+// 결제하기 버튼
+.checkout-button-container {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  .checkout-button {
+    width: 100%;
+    padding: 15px 0;
+    background: map-get($map: $color, $key: subline);
+    border: none;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 100px;
+    cursor: pointer;
+    transition: background 0.3s;
+    &:hover {
+      background: map-get($map: $color, $key: payment-btn);
+    }
+    &:active {
+      box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
