@@ -17,6 +17,9 @@ const headerInner = `
               <li>
                 <a href="#" title="life">LIFE</a>
               </li>
+              <li>
+              <a href="mypage.html" title="event">MYPAGE</a>
+              </li>
               <li class="promotionTitle">
                 <a href="event.html" title="event">스프링시즌세일</a>
               </li>

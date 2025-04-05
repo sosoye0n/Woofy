@@ -32,9 +32,20 @@ main {
           }
           #swiperText {
             position: absolute;
-            bottom: 10%;
-            left: 5%;
+            bottom: 18%;
+            left: 8%;
             color: map-get($map: $color, $key: light);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            p {
+              &:nth-child(1) {
+                font-size: 3rem;
+              }
+              &:nth-child(2) {
+                font-size: 1.6rem;
+              }
+            }
           }
           &:nth-child(1) {
             background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/802a2b3a-0df2-450a-73ff-7d640a25cb00/w=1920,h=2400");
@@ -53,12 +64,18 @@ main {
           }
         }
       }
+      .swiper-button-next,
+      .swiper-button-prev,
+      .pagination-fraction {
+        width: 20px;
+        height: 30px;
+        line-height: 30px;
+        left: 3%;
+      }
       .swiper-button-prev {
         top: auto;
-        width: auto;
-        height: auto;
-        bottom: 5%;
-        left: 5%;
+        bottom: 10%;
+        left: 8%;
         &::after {
           font-size: 1.4rem;
           color: map-get($map: $color, $key: light);
@@ -67,60 +84,69 @@ main {
       .swiper-button-next {
         top: auto;
         right: auto;
-        width: auto;
-        height: auto;
-        left: 19%;
-        bottom: 5%;
+        bottom: 10%;
+        left: calc(8% + 60px);
         &::after {
           font-size: 1.4rem;
           color: map-get($map: $color, $key: light);
         }
       }
-      .pagination-progressbar {
+      .pgbar {
+        height: 50px;
+        background-color: rgb(67, 71, 72);
         position: absolute;
-        top: auto;
-        width: 50%;
-        height: 1px;
-        bottom: 5.6%;
-        left: 25%;
-        .swiper-pagination-progressbar-fill {
-          background: map-get($map: $color, $key: light);
+        bottom: 8.8%;
+        line-height: 50px;
+        width: 200px;
+        left: calc(8% + 90px);
+        .pagination-progressbar {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          height: 1px;
+          .swiper-pagination-progressbar-fill {
+            background: map-get($map: $color, $key: light);
+          }
         }
       }
       .pagination-fraction {
         color: map-get($map: $color, $key: light);
-        width: auto;
-        height: auto;
-        bottom: 4.8%;
-        left: 9.6%;
+        bottom: 10%;
         font-size: 1.6rem;
+        width: 40px;
+        left: calc(8% + 20px);
       }
     }
   }
   #scrollSection {
-    padding-top: 100px;
+    padding-top: 70px;
     padding-left: 35%;
     width: 100%;
-    height: 2000px;
     .flexCon01 {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
       gap: 5%;
-      padding-left: 5%;
+      padding: 0 5%;
+      .flexLeft,
+      .flexRight {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
       .flexBox {
-        width: 45%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
-        &:nth-child(even) {
-          padding-top: 100px;
-        }
+
         .imgBox {
           overflow: hidden;
           width: 100%;
           margin-bottom: 20px;
           img {
             width: 100%;
+            height: 100%;
             // aspect-ratio: 1 / 1;
             object-fit: cover;
           }
@@ -152,6 +178,7 @@ main {
           .itemBox {
             display: flex;
             justify-content: space-between;
+            position: relative;
             a {
               display: flex;
               height: 70px;
@@ -195,8 +222,10 @@ main {
               gap: 4px;
               align-self: center;
               cursor: pointer;
-              position: relative;
-              z-index: 1;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
               text-align: center;
               color: map-get($map: $color, $key: input);
               i {
@@ -208,6 +237,103 @@ main {
             }
           }
         }
+      }
+    }
+    .flexCon02 {
+      padding: 0 5%;
+      position: relative;
+      margin: 100px 0;
+      z-index: 0;
+      .swiper02 {
+        h2 {
+          margin-bottom: 40px;
+          font-weight: normal;
+        }
+        position: relative;
+        overflow: hidden;
+        .swiper-wrapper {
+          .swiper-slide {
+            .productImg {
+              img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+              }
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            p {
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-top: 10px;
+              &:nth-child(2) {
+                font-size: 1.6rem;
+                font-weight: normal;
+              }
+              &:last-child {
+                span {
+                  &:first-child {
+                    color: map-get($map: $color, $key: point);
+                    margin-right: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+          background: map-get($map: $color, $key: input);
+          border-radius: 50%;
+          width: 36px !important;
+          height: 36px;
+          line-height: 36px;
+          text-align: center;
+          display: block;
+          color: map-get($map: $color, $key: light);
+        }
+        .swiper-button-prev {
+          top: auto;
+          left: auto;
+          width: auto;
+          height: auto;
+          top: 5%;
+          right: 5%;
+          &::after {
+            font-size: 1.4rem;
+          }
+        }
+        .swiper-button-next {
+          top: auto;
+          right: auto;
+          width: auto;
+          height: auto;
+          right: 0;
+          top: 5%;
+          &::after {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+    .marquee {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      will-change: transform;
+      div {
+        will-change: transform;
+        animation: scrolling 60s linear infinite both;
+        font-size: 10rem;
+        font-weight: bold;
+        color: #fff;
+        // -webkit-text-stroke-width: 3px;
+        // -webkit-text-stroke-color: #000000;
+        filter: drop-shadow(-1px -1px 0 #ccc) drop-shadow(1px -1px 0 #ccc)
+          drop-shadow(-1px 1px 0 #ccc) drop-shadow(1px 1px 0 #ccc);
+        transition: all 0.3s;
+        // paint-order: stroke fill;
       }
     }
   }
@@ -222,33 +348,157 @@ main {
       .swiper {
         .swiper-slide {
           #swiperText {
-            bottom: 20% !important;
+            gap: 8px;
+            left: 3% !important;
+            bottom: 23% !important;
+            p {
+              &:first-child {
+                font-size: 2.4rem;
+              }
+              &:last-child {
+                font-size: 1.8rem;
+              }
+            }
           }
         }
         .swiper-button-prev {
           bottom: 15%;
-          left: 5%;
+          left: 3%;
+          &::after {
+            font-size: 2rem;
+          }
         }
         .swiper-button-next {
-          left: 19%;
           bottom: 15%;
+          left: calc(3% + 80px);
+          &::after {
+            font-size: 2rem;
+          }
+        }
+        .pgbar {
+          left: calc(3% + 120px);
+          bottom: 13.8%;
         }
         .pagination-progressbar {
-          width: 50%;
-          height: 1px;
-          bottom: 15.6%;
-          left: 25%;
         }
         .pagination-fraction {
-          bottom: 14.8%;
-          left: 10%;
-          font-size: 1.6rem;
+          left: calc(3% + 30px);
+          bottom: 15%;
+          font-size: 1.8rem;
         }
       }
     }
     #scrollSection {
       padding-left: 0;
       padding-top: 80px;
+      .flexCon02 {
+        margin: 100px 0 !important;
+        .swiper02 {
+          .swiper-button-prev {
+            right: 6%;
+          }
+        }
+      }
     }
+  }
+}
+
+// 반응형 tablet
+@media screen and (max-width: 767px) {
+  main {
+    #pinSection {
+      .swiper {
+        .swiper-slide {
+          #swiperText {
+            bottom: 25% !important;
+          }
+        }
+      }
+    }
+    #scrollSection {
+      padding-top: 30px !important;
+      .flexCon01 {
+        gap: 40px !important;
+      }
+      .flexCon02 {
+        margin: 100px 0 100px !important;
+        .swiper-button-prev {
+          right: 8% !important;
+          top: 6% !important;
+          &::after {
+            font-size: 1.6rem !important;
+          }
+        }
+        .swiper-button-next {
+          top: 6% !important;
+          &::after {
+            font-size: 1.6rem !important;
+          }
+        }
+        .pagination-fraction {
+          font-size: 1.4rem !important;
+        }
+        .productImg {
+          img {
+            height: 250px !important;
+          }
+        }
+      }
+    }
+    .flexCon01 {
+      grid-template-columns: repeat(1, 100%) !important;
+      gap: 2% !important;
+      padding: 0 5%;
+    }
+    .imgBox {
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  main {
+    #pinSection {
+      .swiper {
+        .swiper-slide {
+          #swiperText {
+            bottom: 25% !important;
+          }
+        }
+        .pgbar {
+          width: 180px;
+        }
+      }
+    }
+    #scrollSection {
+      .flexCon02 {
+        // margin: 150px 0 100px !important;
+        .swiper-button-prev {
+          right: 11% !important;
+        }
+      }
+    }
+  }
+
+  .marquee {
+    margin-top: 100px;
+    div {
+      font-size: 7rem !important;
+    }
+  }
+}
+@media screen and (max-width: 380px) {
+  .flexCon02 {
+    .swiper-button-prev {
+      right: 13% !important;
+    }
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
