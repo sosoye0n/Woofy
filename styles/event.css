@@ -305,10 +305,10 @@ main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide {
   background-size: cover;
 }
 main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
-  background-image: url("/images/event/2-5.jpg");
+  background-image: url("/images/event/25.jpg");
 }
 main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
-  background-image: url("/images/event/1-5.jpg");
+  background-image: url("/images/event/15.jpg");
 }
 main #container01 .event01-1 .conWrapper .contents {
   display: flex;
