@@ -15,7 +15,7 @@ body {
   font-size: 1.6rem;
   font-family: "Figtree";
   letter-spacing: -0.2px;
-  background: #ddd;
+  // background: #ddd;
   &.active {
     overflow-y: hidden;
     height: 100vh;
@@ -55,6 +55,11 @@ header {
       align-items: center;
       gap: 20px;
       li {
+        &:nth-child(4) {
+          opacity: 0;
+          visibility: hidden;
+          position: absolute;
+        }
         &:hover a {
           font-weight: bold;
         }
@@ -345,6 +350,11 @@ footer {
           width: 100%;
           text-indent: 3%;
           width: 100%;
+          &:nth-child(4) {
+            opacity: 1;
+            visibility: visible;
+            position: static;
+          }
           a {
             font-size: 1.8rem;
           }

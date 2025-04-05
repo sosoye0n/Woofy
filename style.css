@@ -30,7 +30,6 @@ body {
   font-size: 1.6rem;
   font-family: "Figtree";
   letter-spacing: -0.2px;
-  background: #ddd;
 }
 body.active {
   overflow-y: hidden;
@@ -88,6 +87,11 @@ header #leftGnb ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+}
+header #leftGnb ul li:nth-child(4) {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
 }
 header #leftGnb ul li:hover a {
   font-weight: bold;
@@ -458,6 +462,11 @@ footer p {
     width: 100%;
     text-indent: 3%;
     width: 100%;
+  }
+  header #leftGnb ul li:nth-child(4) {
+    opacity: 1;
+    visibility: visible;
+    position: static;
   }
   header #leftGnb ul li a {
     font-size: 1.8rem;
