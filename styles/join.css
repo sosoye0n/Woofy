@@ -29,10 +29,17 @@ main {
 
 main {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 140px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 0;
   text-transform: uppercase;
 }
 main h2 {
@@ -45,12 +52,20 @@ main p {
   font-weight: 300;
 }
 main #join {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 420px;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 main #join input:not(input[type=button]) {
@@ -63,6 +78,7 @@ main #join input:not(input[type=button]) {
   background: #f5f5f5;
   color: #dadada;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #join input:not(input[type=button]):focus {
@@ -78,6 +94,7 @@ main #join input[type=button] {
   background: #000;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #join input[type=button]:hover {
@@ -86,8 +103,13 @@ main #join input[type=button]:hover {
   color: #fff;
 }
 main #join #joinContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 16px;
   margin-bottom: 50px;
 }
@@ -96,6 +118,7 @@ main #join #joinContainer .joinInput {
 }
 main #join #joinContainer .joinInput input {
   padding-left: 20px;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main #join #joinContainer .joinInput input:hover {
@@ -113,4 +136,47 @@ main #join #joinContainer #errorPW i {
   font-size: 1.2rem;
   padding: 0 2px;
   color: #99bdff;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    padding: 100px 0;
+  }
+  main h2 {
+    font-size: 1.8rem;
+  }
+  main p {
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+  main #join {
+    width: 280px;
+    margin-top: 20px;
+  }
+  main #join input:not(input[type=button]) {
+    width: 280px;
+    height: 64px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+  main #join input[type=button] {
+    width: 280px;
+    height: 64px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+  main #join #joinContainer {
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  main #join #joinContainer #joinInput input {
+    padding-left: 20px;
+  }
+  main #join #joinContainer #errorPW {
+    font-size: 1.1rem;
+  }
+  main #join #joinContainer #errorPW i {
+    font-size: 1rem;
+    padding: 0 1px;
+  }
 }
