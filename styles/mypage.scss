@@ -2,33 +2,267 @@
 @import "./reset.scss";
 @import "./variables.scss";
 
-// common
+// 공통
 header {
-  z-index: 10;
+  z-index: 1;
 }
 footer {
-  z-index: 10;
+  z-index: 1;
 }
-
 main {
-  padding: 0 3%;
+  // padding: 0 3%;
   background: #fff;
 }
 
-// contents
+// 메인 컨텐츠
 main {
   top: 70px;
   width: 100%;
-  // height: 100vh;
-  padding: 140px 3%;
+  height: 100%;
   text-transform: uppercase;
+  #modal {
+    #membershipModal {
+      display: none;
+      width: 100%;
+      z-index: 2;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba($color: #000000, $alpha: 0.5);
+      // display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      .modalWrapperBox {
+        width: 420px;
+        height: 500px;
+        .modalWrapper {
+          .fa-xmark {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: end;
+            font-size: 2rem;
+            padding: 20px;
+            color: map-get($map: $color, $key: dark);
+            cursor: pointer;
+            top: 0;
+            right: 0;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          background: map-get($map: $color, $key: light);
+          border-radius: 18px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .modalTitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            p {
+              font-size: 1.4rem;
+              font-weight: 300;
+              margin-bottom: 4px;
+            }
+            span {
+              font-size: 3rem;
+              font-weight: 700;
+            }
+          }
+          .modalContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            justify-content: space-between;
+            .modalInfoCon {
+              display: flex;
+              gap: 16px;
+              align-items: center;
+              .modalCircle {
+                width: 70px;
+                height: 70px;
+                background: map-get($map: $color, $key: point);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img {
+                  width: 24px;
+                  height: 24px;
+                  object-fit: cover;
+                }
+              }
+              .modalInfo {
+                .membershipInfo {
+                  display: flex;
+                  align-items: center;
+                  font-size: 2rem;
+                  margin-bottom: 8px;
+                  p {
+                    font-weight: 700;
+                  }
+                  span {
+                    font-weight: 600;
+                    padding-left: 8px;
+                    color: map-get($map: $color, $key: point);
+                  }
+                }
+                .subInfo {
+                  font-size: 1.2rem;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #membershipModal.on {
+      display: flex;
+    }
+    #couponModal {
+      display: none;
+      // opacity: 0;
+      width: 100%;
+      z-index: 2;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba($color: #000000, $alpha: 0.5);
+      // display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      // overflow: hidden;
+      .modalCouponWrapperBox {
+        width: 420px;
+        height: 500px;
+        .modalCouponWrapper {
+          .fa-xmark {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: end;
+            font-size: 2rem;
+            padding: 20px;
+            color: map-get($map: $color, $key: dark);
+            cursor: pointer;
+            top: 0;
+            right: 0;
+          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          background: map-get($map: $color, $key: light);
+          border-radius: 18px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .modalCouponTitle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            p {
+              font-size: 1.4rem;
+              font-weight: 300;
+              margin-bottom: 4px;
+            }
+            span {
+              font-size: 3rem;
+              font-weight: 700;
+            }
+          }
+          .modalCouponContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            justify-content: space-between;
+            .modalCouponInfoCon {
+              display: flex;
+              gap: 16px;
+              align-items: center;
+              .modalCoupon {
+                display: flex;
+                cursor: pointer;
+                .couponBox1 {
+                  width: 160px;
+                  height: 92px;
+                  background: map-get($map: $color, $key: point);
+                  border-radius: 6px;
+                  display: flex;
+                  padding-left: 12px;
+                  align-items: center;
+                  .modalInfo {
+                    .membershipInfo {
+                      display: flex;
+                      flex-direction: column;
+                      gap: 2px;
+                      font-size: 2.4rem;
+                      margin-bottom: 4px;
+                      p {
+                        font-weight: 600;
+                        b {
+                          font-size: 1.8rem;
+                          margin-left: 1px;
+                        }
+                      }
+                      span {
+                        font-weight: 600;
+                        font-size: 1.2rem;
+                        color: map-get($map: $color, $key: dark);
+                      }
+                    }
+                    .subInfo {
+                      font-size: 1rem;
+                      font-weight: 300;
+                    }
+                  }
+                }
+                .couponBox2 {
+                  width: 32px;
+                  height: 92px;
+                  background: map-get($map: $color, $key: point);
+                  border-radius: 6px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  .fa-circle-check {
+                    // transform: rotate(90deg);
+                    color: map-get($map: $color, $key: light);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    #couponModal.on {
+      display: block;
+    }
+  }
+
   #container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
+    padding: 140px 3%;
     .userBox {
       width: 100%;
       height: 400px;
@@ -48,6 +282,7 @@ main {
           justify-content: center;
           align-items: flex-start;
           span {
+            display: inline-block;
             font-size: 1.6rem;
             color: map-get($map: $color, $key: point);
           }
@@ -62,13 +297,18 @@ main {
               color: map-get($map: $color, $key: point);
             }
           }
-          .membershipInfo {
+          .membershipInfoLevel {
             padding: 14px 20px;
             border-radius: 40px;
             display: flex;
             align-items: center;
             background: map-get($map: $color, $key: point);
             cursor: pointer;
+            &:hover {
+              transition: all 0.5s;
+              background: map-get($map: $color, $key: dark);
+              color: map-get($map: $color, $key: point);
+            }
             p {
               font-size: 1.4rem;
               font-weight: 400;
@@ -84,7 +324,6 @@ main {
     .infoBox {
       width: 100%;
       height: 400px;
-      // justify-content: flex-end;
       overflow: hidden;
       .infoBoxWrapper {
         width: 100%;
@@ -106,14 +345,14 @@ main {
             align-items: flex-start;
             h3 {
               font-size: 2.8rem;
-              font-weight: 400;
+              font-weight: 300;
               letter-spacing: -0.7px;
               font-family: map-get($map: $color, $key: figtree);
               color: map-get($map: $color, $key: point);
               cursor: pointer;
               transition: all 0.3s;
               &:hover {
-                font-weight: 600;
+                font-weight: 700;
               }
             }
             .detailInfo {
@@ -121,6 +360,10 @@ main {
               align-items: flex-end;
               gap: 2px;
               cursor: pointer;
+              &:hover {
+                transition: all 0.3s;
+                color: map-get($map: $color, $key: point);
+              }
               p {
                 font-size: 4rem;
                 font-weight: 600;
@@ -152,32 +395,244 @@ main {
         }
       }
     }
+    // .infoBox {
+    //   width: 100%;
+    //   height: 400px;
+    //   overflow: hidden;
+    //   .infoBoxWrapper {
+    //     width: 100%;
+    //     height: 100%;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     .commonBox {
+    //       background: map-get($map: $color, $key: lightgray);
+    //       padding: 0 30px;
+    //       // height: 400px;
+    //       width: 400px;
+    //       .infoWrapper {
+    //         width: 100%;
+    //         height: 100%;
+    //         gap: 140px;
+    //         display: flex;
+    //         flex-direction: column;
+    //         justify-content: center;
+    //         align-items: flex-start;
+    //         h3 {
+    //           font-size: 2.8rem;
+    //           font-weight: 400;
+    //           letter-spacing: -0.7px;
+    //           font-family: map-get($map: $color, $key: figtree);
+    //           color: map-get($map: $color, $key: point);
+    //           cursor: pointer;
+    //           transition: all 0.3s;
+    //           &:hover {
+    //             font-weight: 600;
+    //           }
+    //         }
+    //         .detailInfo {
+    //           display: flex;
+    //           align-items: flex-end;
+    //           gap: 2px;
+    //           cursor: pointer;
+    //           p {
+    //             font-size: 4rem;
+    //             font-weight: 600;
+    //             font-family: map-get($map: $color, $key: figtree);
+    //           }
+    //           span {
+    //             font-size: 2.6rem;
+    //             font-weight: 300;
+    //             font-family: map-get($map: $color, $key: figtree);
+    //           }
+    //         }
+    //       }
+    //     }
+    //     .couponBox {
+    //       width: 100%;
+    //       height: 100%;
+    //       border-radius: 10px 0px 0px 10px;
+    //     }
+    //     .pointBox {
+    //       width: 100%;
+    //       height: 100%;
+    //       border-right: 1px solid map-get($map: $color, $key: gray);
+    //       border-left: 1px solid map-get($map: $color, $key: gray);
+    //     }
+    //     .membershipBox {
+    //       width: 100%;
+    //       height: 100%;
+    //       border-radius: 0px 10px 10px 0px;
+    //     }
+    //   }
+    // }
   }
+
+  //이상함
+  // #container {
+  //   display: flex;
+  //   // justify-content: space-between;
+  //   align-items: center;
+  //   gap: 30px;
+  //   // width: 100%;
+  //   // height: 100%;
+  //   padding: 140px 3%;
+  //   .userBox {
+  //     // height: 400px;
+  //     border-radius: 10px;
+  //     // justify-content: flex-start;
+  //     background: map-get($map: $color, $key: lightgray);
+  //     padding: 0 30px;
+  //     // width: 500px;
+  //     border: 1px solid #f00;
+  //     .userWrapper {
+  //       height: 100%;
+  //       .userinfoWrapper {
+  //         width: 100%;
+  //         height: 100%;
+  //         display: flex;
+  //         flex-direction: column;
+  //         justify-content: center;
+  //         align-items: flex-start;
+  //         span {
+  //           display: inline-block;
+  //           font-size: 1.6rem;
+  //           color: map-get($map: $color, $key: point);
+  //         }
+  //         h2 {
+  //           font-size: 3.6rem;
+  //           font-weight: 700;
+  //           letter-spacing: normal;
+  //           margin-top: 14px;
+  //           margin-bottom: 26px;
+  //           span {
+  //             font-size: 3.6rem;
+  //             color: map-get($map: $color, $key: point);
+  //           }
+  //         }
+  //         .membershipInfo {
+  //           padding: 14px 20px;
+  //           border-radius: 40px;
+  //           display: flex;
+  //           align-items: center;
+  //           background: map-get($map: $color, $key: point);
+  //           cursor: pointer;
+  //           p {
+  //             font-size: 1.4rem;
+  //             font-weight: 400;
+  //           }
+  //           i {
+  //             font-size: 1.3rem;
+  //             padding-left: 4px;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  //   .infoBox {
+  //     border: 1px solid #f00;
+  //     display: flex;
+  //     align-items: center;
+  //     // width: 100%;
+
+  //     height: 400px;
+  //     // overflow: hidden;
+  //     .infoBoxWrapper {
+  //       // width: 100%;
+  //       height: 100%;
+  //       display: flex;
+  //       // justify-content: space-between;
+  //       .commonBox {
+  //         background: map-get($map: $color, $key: lightgray);
+  //         .infoWrapper {
+  //           padding: 0 30px;
+  //           height: 400px;
+  //           width: 400px;
+  //           // width: 100%;
+  //           // height: 100%;
+  //           gap: 140px;
+  //           display: flex;
+  //           flex-direction: column;
+  //           justify-content: center;
+  //           align-items: flex-start;
+  //           h3 {
+  //             font-size: 2.8rem;
+  //             font-weight: 400;
+  //             letter-spacing: -0.7px;
+  //             font-family: map-get($map: $color, $key: figtree);
+  //             color: map-get($map: $color, $key: point);
+  //             cursor: pointer;
+  //             transition: all 0.3s;
+  //             &:hover {
+  //               font-weight: 600;
+  //             }
+  //           }
+  //           .detailInfo {
+  //             display: flex;
+  //             align-items: flex-end;
+  //             gap: 2px;
+  //             cursor: pointer;
+  //             p {
+  //               font-size: 4rem;
+  //               font-weight: 600;
+  //               font-family: map-get($map: $color, $key: figtree);
+  //             }
+  //             span {
+  //               font-size: 2.6rem;
+  //               font-weight: 300;
+  //               font-family: map-get($map: $color, $key: figtree);
+  //             }
+  //           }
+  //         }
+  //       }
+  //       .couponBox {
+  //         width: 100%;
+  //         height: 100%;
+  //         border-radius: 10px 0px 0px 10px;
+  //       }
+  //       .pointBox {
+  //         width: 100%;
+  //         height: 100%;
+  //         border-right: 1px solid map-get($map: $color, $key: gray);
+  //         border-left: 1px solid map-get($map: $color, $key: gray);
+  //       }
+  //       .membershipBox {
+  //         border-radius: 0px 10px 10px 0px;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 // 반응형 tablet
 @media screen and (max-width: 1024px) {
   #container {
-    gap: 0;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    // gap: 0;
+    // height: 100%;
     .userBox {
-      height: 360px !important;
-      width: 100% !important;
+      flex: 1;
+      width: 100%;
+      // height: 360px !important;
+      h2 {
+        font-size: 10rem;
+      }
     }
     .infoBox {
-      height: 360px !important;
+      overflow: hidden;
+      width: 100%;
+      .infoBoxWrapper {
+        width: 100%;
+        // overflow: hidden;
+        .commonBox {
+          border: 1px solid #f00;
+          width: 30px;
+        }
+      }
     }
   }
 }
 
 // 반응형 mobile
 @media screen and (max-width: 375px) {
-  #container {
-    .userBox {
-    }
-    .infoBox {
-    }
-  }
 }

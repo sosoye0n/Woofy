@@ -49,9 +49,23 @@ main #pinSection .swiper .swiper-wrapper .swiper-slide::after {
 }
 main #pinSection .swiper .swiper-wrapper .swiper-slide #swiperText {
   position: absolute;
-  bottom: 10%;
-  left: 5%;
+  bottom: 18%;
+  left: 8%;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+main #pinSection .swiper .swiper-wrapper .swiper-slide #swiperText p:nth-child(1) {
+  font-size: 3rem;
+}
+main #pinSection .swiper .swiper-wrapper .swiper-slide #swiperText p:nth-child(2) {
+  font-size: 1.6rem;
 }
 main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
   background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/802a2b3a-0df2-450a-73ff-7d640a25cb00/w=1920,h=2400");
@@ -68,12 +82,18 @@ main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
 main #pinSection .swiper .swiper-wrapper .swiper-slide:nth-child(5) {
   background-image: url("https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/2af38877-d426-4a41-cd14-13b586e53f00/w=1920,h=2400");
 }
+main #pinSection .swiper .swiper-button-next,
+main #pinSection .swiper .swiper-button-prev,
+main #pinSection .swiper .pagination-fraction {
+  width: 20px;
+  height: 30px;
+  line-height: 30px;
+  left: 3%;
+}
 main #pinSection .swiper .swiper-button-prev {
   top: auto;
-  width: auto;
-  height: auto;
-  bottom: 5%;
-  left: 5%;
+  bottom: 10%;
+  left: 8%;
 }
 main #pinSection .swiper .swiper-button-prev::after {
   font-size: 1.4rem;
@@ -82,51 +102,64 @@ main #pinSection .swiper .swiper-button-prev::after {
 main #pinSection .swiper .swiper-button-next {
   top: auto;
   right: auto;
-  width: auto;
-  height: auto;
-  left: 19%;
-  bottom: 5%;
+  bottom: 10%;
+  left: calc(8% + 60px);
 }
 main #pinSection .swiper .swiper-button-next::after {
   font-size: 1.4rem;
   color: #fff;
 }
-main #pinSection .swiper .pagination-progressbar {
+main #pinSection .swiper .pgbar {
+  height: 50px;
+  background-color: rgb(67, 71, 72);
   position: absolute;
-  top: auto;
-  width: 50%;
-  height: 1px;
-  bottom: 5.6%;
-  left: 25%;
+  bottom: 8.8%;
+  line-height: 50px;
+  width: 200px;
+  left: calc(8% + 90px);
 }
-main #pinSection .swiper .pagination-progressbar .swiper-pagination-progressbar-fill {
+main #pinSection .swiper .pgbar .pagination-progressbar {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+  height: 1px;
+}
+main #pinSection .swiper .pgbar .pagination-progressbar .swiper-pagination-progressbar-fill {
   background: #fff;
 }
 main #pinSection .swiper .pagination-fraction {
   color: #fff;
-  width: auto;
-  height: auto;
-  bottom: 4.8%;
-  left: 9.6%;
+  bottom: 10%;
   font-size: 1.6rem;
+  width: 40px;
+  left: calc(8% + 20px);
 }
 main #scrollSection {
-  padding-top: 100px;
+  padding-top: 70px;
   padding-left: 35%;
   width: 100%;
-  height: 2000px;
 }
 main #scrollSection .flexCon01 {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 5%;
+  padding: 0 5%;
+}
+main #scrollSection .flexCon01 .flexLeft,
+main #scrollSection .flexCon01 .flexRight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 5%;
-  padding-left: 5%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
 }
 main #scrollSection .flexCon01 .flexBox {
-  width: 45%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,9 +169,6 @@ main #scrollSection .flexCon01 .flexBox {
           flex-direction: column;
   gap: 20px;
 }
-main #scrollSection .flexCon01 .flexBox:nth-child(even) {
-  padding-top: 100px;
-}
 main #scrollSection .flexCon01 .flexBox .imgBox {
   overflow: hidden;
   width: 100%;
@@ -146,6 +176,7 @@ main #scrollSection .flexCon01 .flexBox .imgBox {
 }
 main #scrollSection .flexCon01 .flexBox .imgBox img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -191,6 +222,7 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox a {
   display: -webkit-box;
@@ -251,8 +283,11 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike {
   -ms-flex-item-align: center;
       align-self: center;
   cursor: pointer;
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   text-align: center;
   color: #a9a9a9;
 }
@@ -262,6 +297,104 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike i {
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike i.fa-solid {
   color: #99bdff;
 }
+main #scrollSection .flexCon02 {
+  padding: 0 5%;
+  position: relative;
+  margin: 100px 0;
+  z-index: 0;
+}
+main #scrollSection .flexCon02 .swiper02 {
+  position: relative;
+  overflow: hidden;
+}
+main #scrollSection .flexCon02 .swiper02 h2 {
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide p:nth-child(2) {
+  font-size: 1.6rem;
+  font-weight: normal;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide p:last-child span:first-child {
+  color: #99bdff;
+  margin-right: 10px;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-button-next,
+main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
+  background: #a9a9a9;
+  border-radius: 50%;
+  width: 36px !important;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
+  top: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  top: 5%;
+  right: 5%;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-button-prev::after {
+  font-size: 1.4rem;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-button-next {
+  top: auto;
+  right: auto;
+  width: auto;
+  height: auto;
+  right: 0;
+  top: 5%;
+}
+main #scrollSection .flexCon02 .swiper02 .swiper-button-next::after {
+  font-size: 1.4rem;
+}
+main #scrollSection .marquee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  will-change: transform;
+}
+main #scrollSection .marquee div {
+  will-change: transform;
+  -webkit-animation: scrolling 60s linear infinite both;
+          animation: scrolling 60s linear infinite both;
+  font-size: 10rem;
+  font-weight: bold;
+  color: #fff;
+  -webkit-filter: drop-shadow(-1px -1px 0 #ccc) drop-shadow(1px -1px 0 #ccc) drop-shadow(-1px 1px 0 #ccc) drop-shadow(1px 1px 0 #ccc);
+          filter: drop-shadow(-1px -1px 0 #ccc) drop-shadow(1px -1px 0 #ccc) drop-shadow(-1px 1px 0 #ccc) drop-shadow(1px 1px 0 #ccc);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 
 @media screen and (max-width: 1024px) {
   main #pinSection {
@@ -269,29 +402,130 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike i.fa-solid 
     position: static;
   }
   main #pinSection .swiper .swiper-slide #swiperText {
-    bottom: 20% !important;
+    gap: 8px;
+    left: 3% !important;
+    bottom: 23% !important;
+  }
+  main #pinSection .swiper .swiper-slide #swiperText p:first-child {
+    font-size: 2.4rem;
+  }
+  main #pinSection .swiper .swiper-slide #swiperText p:last-child {
+    font-size: 1.8rem;
   }
   main #pinSection .swiper .swiper-button-prev {
     bottom: 15%;
-    left: 5%;
+    left: 3%;
+  }
+  main #pinSection .swiper .swiper-button-prev::after {
+    font-size: 2rem;
   }
   main #pinSection .swiper .swiper-button-next {
-    left: 19%;
     bottom: 15%;
+    left: calc(3% + 80px);
   }
-  main #pinSection .swiper .pagination-progressbar {
-    width: 50%;
-    height: 1px;
-    bottom: 15.6%;
-    left: 25%;
+  main #pinSection .swiper .swiper-button-next::after {
+    font-size: 2rem;
+  }
+  main #pinSection .swiper .pgbar {
+    left: calc(3% + 120px);
+    bottom: 13.8%;
   }
   main #pinSection .swiper .pagination-fraction {
-    bottom: 14.8%;
-    left: 10%;
-    font-size: 1.6rem;
+    left: calc(3% + 30px);
+    bottom: 15%;
+    font-size: 1.8rem;
   }
   main #scrollSection {
     padding-left: 0;
     padding-top: 80px;
+  }
+  main #scrollSection .flexCon02 {
+    margin: 100px 0 !important;
+  }
+  main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
+    right: 6%;
+  }
+}
+@media screen and (max-width: 767px) {
+  main #pinSection .swiper .swiper-slide #swiperText {
+    bottom: 25% !important;
+  }
+  main #scrollSection {
+    padding-top: 30px !important;
+  }
+  main #scrollSection .flexCon01 {
+    gap: 40px !important;
+  }
+  main #scrollSection .flexCon02 {
+    margin: 100px 0 100px !important;
+  }
+  main #scrollSection .flexCon02 .swiper-button-prev {
+    right: 8% !important;
+    top: 6% !important;
+  }
+  main #scrollSection .flexCon02 .swiper-button-prev::after {
+    font-size: 1.6rem !important;
+  }
+  main #scrollSection .flexCon02 .swiper-button-next {
+    top: 6% !important;
+  }
+  main #scrollSection .flexCon02 .swiper-button-next::after {
+    font-size: 1.6rem !important;
+  }
+  main #scrollSection .flexCon02 .pagination-fraction {
+    font-size: 1.4rem !important;
+  }
+  main #scrollSection .flexCon02 .productImg img {
+    height: 250px !important;
+  }
+  main .flexCon01 {
+    grid-template-columns: repeat(1, 100%) !important;
+    gap: 2% !important;
+    padding: 0 5%;
+  }
+  main .imgBox {
+    aspect-ratio: 1/1;
+  }
+}
+@media screen and (max-width: 580px) {
+  main #pinSection .swiper .swiper-slide #swiperText {
+    bottom: 25% !important;
+  }
+  main #pinSection .swiper .pgbar {
+    width: 180px;
+  }
+  main #scrollSection .flexCon02 .swiper-button-prev {
+    right: 11% !important;
+  }
+  .marquee {
+    margin-top: 100px;
+  }
+  .marquee div {
+    font-size: 7rem !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  .flexCon02 .swiper-button-prev {
+    right: 13% !important;
+  }
+}
+@-webkit-keyframes scrolling {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes scrolling {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
 }
