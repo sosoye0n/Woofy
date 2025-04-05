@@ -29,12 +29,7 @@ main {
 main #container01 .eventHeader {
   width: 100%;
   height: 400px;
-}
-main #container01 .eventHeader img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background: url("/images/event/pc.png") center/cover no-repeat;
 }
 main #container01 .eventBtn {
   width: 100%;
@@ -43,7 +38,7 @@ main #container01 .eventBtn {
   align-items: center;
 }
 main #container01 .eventBtn p {
-  width: 960px;
+  width: 50%;
   height: 80px;
   font-size: 3rem;
   font-weight: bold;
@@ -246,7 +241,7 @@ main #container01 .event01 .slide .imgSlider1:hover .track1 {
 main #container01 .event01 .slide .imgSlider1 .track1 {
   display: flex;
   will-change: transform;
-  animation: scrolling 15s linear infinite both;
+  animation: scrolling 18s linear infinite both;
 }
 main #container01 .event01 .slide .imgSlider1 .track1 img {
   width: 240px;
@@ -412,7 +407,7 @@ main #container01 .event01-2 .clothe:hover {
 }
 main #container02 {
   width: 100%;
-  height: 150vh;
+  height: 250vh;
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -450,14 +445,21 @@ main #container02 .eventBtn p:nth-child(2) {
   color: #99bdff;
   background: #000;
 }
-main #container02 .event02 {
-  position: absolute;
-  top: 12%;
+main #container02 .event2 {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+main #container02 .event2 .event02 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-main #container02 .event02 ul {
+main #container02 .event2 .event02 ul {
   width: 132%;
   font-weight: 700;
   color: #fff;
@@ -467,36 +469,36 @@ main #container02 .event02 ul {
   display: flex;
   flex-direction: column;
 }
-main #container02 .event02 ul li {
+main #container02 .event2 .event02 ul li {
   font-weight: 800;
   font-style: italic;
 }
-main #container02 .event02 ul li:nth-child(1) {
+main #container02 .event2 .event02 ul li:nth-child(1) {
   display: flex;
   justify-content: start;
   align-items: center;
 }
-main #container02 .event02 ul li:nth-child(2) {
+main #container02 .event2 .event02 ul li:nth-child(2) {
   display: flex;
   justify-content: end;
   align-items: center;
 }
-main #container02 .event02 ul hr {
+main #container02 .event2 .event02 ul hr {
   width: 100%;
   margin-top: 4%;
 }
-main #container02 .event02 .drawImg {
+main #container02 .event2 .event02 .drawImg {
   width: 440px;
   height: 348px;
   margin-top: 8%;
 }
-main #container02 .event02 .drawImg img {
+main #container02 .event2 .event02 .drawImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main #container02 .event02 .countdown {
+main #container02 .event2 .event02 .countdown {
   width: 500px;
   margin: 16% 0;
   display: flex;
@@ -506,12 +508,12 @@ main #container02 .event02 .countdown {
   font-weight: 600;
   color: #fff;
 }
-main #container02 .event02 .countdown span {
+main #container02 .event2 .event02 .countdown span {
   font-size: 2.4rem;
   padding: 0 10px;
   margin-right: 10px;
 }
-main #container02 .event02 .drawBtn {
+main #container02 .event2 .event02 .drawBtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -526,9 +528,40 @@ main #container02 .event02 .drawBtn {
   transition: all 0.5s;
   cursor: pointer;
 }
-main #container02 .event02 .drawBtn:hover {
+main #container02 .event2 .event02 .drawBtn:hover {
   color: #000;
   background: #fff;
+}
+main #container02 .event2 .eventWarning {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #container02 .event2 .eventWarning h1 {
+  width: 100%;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2%;
+}
+main #container02 .event2 .eventWarning ul {
+  color: #fff;
+}
+main #container02 .event2 .eventWarning ul li {
+  position: relative;
+  padding-left: 16px;
+}
+main #container02 .event2 .eventWarning ul li::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  left: 0;
+  top: 7px;
+  background-color: #fff;
+  border-radius: 100%;
 }
 main #container02 #drawModal #modalDrawBg {
   z-index: 3;
@@ -621,5 +654,179 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   }
   100% {
     transform: translateX(0);
+  }
+}
+@media screen and (max-width: 1024px) {
+  main #container01 .eventHeader {
+    background: url("/images/event/tab.png") center/cover no-repeat;
+  }
+  main #container01 .eventBtn p {
+    height: 70px;
+    font-size: 2.4rem;
+  }
+  main #container01 .event01 .event01Wrapper {
+    width: 66%;
+    margin-top: 6%;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper {
+    height: 600px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper h1 {
+    height: 8%;
+    margin-bottom: 4%;
+    font: normal 1.8rem/1 "Figtree";
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .left {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .left img {
+    width: 280px;
+    height: 90px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .left p {
+    padding: 16px 18px;
+    font: normal 1.4rem/1 "Figtree";
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .right {
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .right p {
+    padding: 16px 18px;
+    font: normal 1.4rem/1 "Figtree";
+  }
+  main #container01 .event01 .eventSec {
+    margin: 6% 0;
+  }
+  main #container01 .event01 .eventSec p {
+    font: normal 1.6rem/2 "Figtree";
+  }
+  main #container01 .event01 .slide .imgSlider1 .track1 img {
+    width: 200px;
+    height: 240px;
+  }
+  main #container01 .event01 .slide .imgSlider2 .track2 img {
+    width: 200px;
+    height: 240px;
+  }
+  main #container01 .event01-1 {
+    height: auto;
+  }
+  main #container01 .event01-1 .conWrapper {
+    gap: 4%;
+    padding: 6% 0;
+  }
+  main #container01 .event01-1 .conWrapper .swiper {
+    width: 440px;
+    height: 460px;
+    margin-top: 0;
+  }
+  main #container01 .event01-1 .conWrapper .contents {
+    margin-top: 0;
+  }
+  main #container01 .event01-1 .conWrapper .contents h1 {
+    margin-top: 8%;
+    padding: 0;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList {
+    gap: 40px;
+  }
+  main #container01 .event01-2 {
+    height: 40vh;
+  }
+  main #container01 .event01-2 .conImg {
+    width: 300px;
+  }
+  main #container01 .event01-2 .cap {
+    width: 260px;
+  }
+  main #container01 .event01-2 .clothe {
+    width: 120px;
+  }
+  main #container02 {
+    height: 132vh;
+  }
+  main #container02 .eventBtn p {
+    width: 512px;
+    height: 70px;
+    font-size: 2.4rem;
+  }
+  main #container02 .event2 .event02 {
+    top: 10%;
+  }
+  main #container02 .event2 .event02 ul {
+    width: 120%;
+    font-size: 7rem;
+  }
+  main #container02 .event2 .event02 ul hr {
+    width: 110%;
+  }
+}
+@media screen and (max-width: 767px) {
+  main #container01 .eventHeader {
+    background: url("/images/event/mo.png") center/cover no-repeat;
+  }
+  main #container01 .eventBtn p {
+    height: 60px;
+    font-size: 2rem;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper {
+    height: 500px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .left img {
+    width: 260px;
+    height: 80px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .right img {
+    width: 260px;
+    height: 80px;
+  }
+  main #container01 .event01-1 {
+    padding: 0 3%;
+  }
+  main #container01 .event01-1 .conWrapper {
+    gap: 2%;
+  }
+  main #container01 .event01-1 .conWrapper .swiper {
+    height: 400px;
+  }
+  main #container01 .event01-1 .conWrapper .contents {
+    margin-top: 0;
+    width: 70%;
+  }
+  main #container01 .event01-1 .conWrapper .contents h1 {
+    margin-top: 8%;
+    padding: 0;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList {
+    width: 80%;
+    gap: 40px;
+  }
+  main #container01 .event01-2 .conImg {
+    width: 240px;
+  }
+  main #container01 .event01-2 .cap {
+    width: 180px;
+  }
+  main #container01 .event01-2 .clothe {
+    width: 90px;
+  }
+  main #container02 {
+    height: 150vh;
+  }
+  main #container02 .eventBtn p {
+    height: 70px;
+    font-size: 2.4rem;
+  }
+  main #container02 .event2 {
+    top: 20%;
+  }
+  main #container02 .event2 .event02 ul {
+    width: 120%;
+    font-size: 6rem;
+  }
+  main #container02 .event2 .event02 ul hr {
+    width: 110%;
   }
 }
