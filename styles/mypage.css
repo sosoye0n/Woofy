@@ -254,10 +254,7 @@ main #modalContainer .coupon .modalCouponContents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 14px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -281,9 +278,7 @@ main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoup
   display: -ms-flexbox;
   display: flex;
   padding-left: 12px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
   display: -webkit-box;
@@ -321,12 +316,8 @@ main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoup
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
   color: #fff;
