@@ -71,7 +71,49 @@ main #container01 #eventModal {
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  display: none;
+}
+main #container01 #eventModal.on {
+  display: block;
+}
+main #container01 #eventModal .modalContent {
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  border-radius: 18px;
+  background-color: #fff;
+  margin: 16% 34%;
+}
+main #container01 #eventModal .modalContent .closeModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  cursor: pointer;
+}
+main #container01 #eventModal .modalContent .closeModal .fa-xmark {
+  font-size: 3rem;
+  margin-top: 3%;
+  margin-right: 6%;
+}
 main #container01 #eventModal .modalContent .modalTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -105,6 +147,7 @@ main #container01 #eventModal .modalContent .modalTitle .modalBtn {
   border-radius: 24px;
   background: #a9a9a9;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #container01 #eventModal .modalContent .modalTitle .modalBtn:hover {
@@ -153,6 +196,9 @@ main #container01 .event01 .event01Wrapper .textWrapper h1 {
   font: normal 2rem/1 "Figtree";
   text-shadow: 0px 3px 0px rgba(255, 255, 255, 0.8);
 }
+main #container01 .event01 .event01Wrapper .textWrapper .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -172,14 +218,23 @@ main #container01 .event01 .event01Wrapper .textWrapper .left img {
   height: 100px;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .left p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: left;
-  align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px 22px;
   border-radius: 40px;
   font: normal 1.8rem/1 "Figtree";
   background: #f2f2f2;
 }
+main #container01 .event01 .event01Wrapper .textWrapper .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -201,10 +256,17 @@ main #container01 .event01 .event01Wrapper .textWrapper .right p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right .coupon {
   font-weight: 600;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right .coupon:hover {
@@ -224,7 +286,24 @@ main #container01 .event01 .eventSec p b {
   text-decoration-line: underline;
   color: #99bdff;
 }
+main #container01 .event01 .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 main #container01 .event01 .slide .imgSlider1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -233,6 +312,52 @@ main #container01 .event01 .slide .imgSlider1 {
      object-fit: cover;
   overflow: hidden;
 }
+main #container01 .event01 .slide .imgSlider1:hover .track1 {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+main #container01 .event01 .slide .imgSlider1 .track1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  will-change: transform;
+  -webkit-animation: scrolling 15s linear infinite both;
+          animation: scrolling 15s linear infinite both;
+}
+main #container01 .event01 .slide .imgSlider1 .track1 img {
+  width: 240px;
+  height: 280px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #container01 .event01 .slide .imgSlider2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+}
+main #container01 .event01 .slide .imgSlider2:hover .track2 {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+main #container01 .event01 .slide .imgSlider2 .track2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  will-change: transform;
+  -webkit-animation: scrolling-r 18s linear infinite both;
+          animation: scrolling-r 18s linear infinite both;
+}
+main #container01 .event01 .slide .imgSlider2 .track2 img {
+  width: 240px;
+  height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -247,9 +372,15 @@ main #container01 .event01-1 {
 }
 main #container01 .event01-1 .conWrapper {
   gap: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 .event01-1 .conWrapper .swiper {
   width: 460px;
@@ -274,15 +405,28 @@ main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:n
   background-image: url("/images/event/1-5.jpg");
 }
 main #container01 .event01-1 .conWrapper .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 8%;
 }
 main #container01 .event01-1 .conWrapper .contents h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 30px;
@@ -292,9 +436,15 @@ main #container01 .event01-1 .conWrapper .contents h1 {
 main #container01 .event01-1 .conWrapper .contents .contentList {
   width: 460px;
   gap: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList .detailImg {
@@ -309,9 +459,16 @@ main #container01 .event01-1 .conWrapper .contents .contentList .content {
   width: 240px;
   height: 200px;
   gap: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: left;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList .content .brand {
@@ -380,11 +537,23 @@ main #container02 .event02 {
             transform: translateX(-100%);
   }
 }
-@keyframes scrolling-r {
+@-webkit-keyframes scrolling-r {
   0% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes scrolling-r {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }

@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -22,6 +23,8 @@ header {
 
 /* 레이아웃 */
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 1920px;
   margin: 0 auto;
@@ -35,9 +38,15 @@ header {
   padding-right: 30px;
 }
 .sidebar .category {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid #d3d3d3;
 }
@@ -77,16 +86,27 @@ header {
 }
 .cart-container .cart-items .cart-item {
   width: 100%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 20px;
 }
 .cart-container .cart-items .cart-item .checkbox-container {
   width: 100%;
   height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 .cart-container .cart-items .cart-item .checkbox-container input[type=checkbox] {
   display: none;
@@ -100,15 +120,20 @@ header {
   position: relative;
   cursor: pointer;
   background-color: #fff;
+  -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
 }
 .cart-container .cart-items .cart-item .checkbox-container input[type=checkbox] + label:active {
   background-color: #a9a9a9;
 }
 .cart-container .cart-items .cart-item .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 20px 0;
@@ -128,13 +153,16 @@ header {
   position: relative;
   cursor: pointer;
   background-color: #fff;
+  -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
 }
 .cart-container .cart-items .cart-item .items input[type=checkbox] + label:active {
   background-color: #a9a9a9;
 }
 .cart-container .cart-items .cart-item .items .item-image {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   height: 150px;
 }
 .cart-container .cart-items .cart-item .items .item-image img {
@@ -144,18 +172,35 @@ header {
      object-fit: cover;
 }
 .cart-container .cart-items .cart-item .items .item-details {
-  flex: 4;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .cart-container .cart-items .cart-item .items .item-details .detail-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .cart-container .cart-items .cart-item .items .item-details .detail-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .cart-container .cart-items .cart-item .items .item-details .detail-bottom p {
   color: #999999;
@@ -164,9 +209,13 @@ header {
   line-height: 1;
 }
 .cart-container .cart-items .cart-item .items .item-details .detail-bottom .quantity-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .cart-container .cart-items .cart-item .items .item-details .detail-bottom .quantity-selector button {
   border: none;
@@ -178,15 +227,28 @@ header {
 .cart-container .cart-summary {
   margin: 30px 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
 }
 .cart-container .cart-summary .summary-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 390px;
   padding: 15px 0;
 }
@@ -207,9 +269,15 @@ header {
 .cart-container .cart-actions {
   width: 100%;
   margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
 }
 .cart-container .cart-actions button {
@@ -217,8 +285,12 @@ header {
   width: 160px;
   height: 50px;
   padding: 13px 10px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 13px;
   font-size: 1.5rem;
   border-radius: 30px;
