@@ -3,7 +3,11 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
+<<<<<<< HEAD
+          box-sizing: border-box;
+=======
   box-sizing: border-box;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
 }
 
 ul,
@@ -38,10 +42,16 @@ main {
   align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+<<<<<<< HEAD
+      -ms-flex-direction: column;
+          flex-direction: column;
+=======
   -ms-flex-direction: column;
   flex-direction: column;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   padding: 140px 0;
   text-transform: uppercase;
+  margin-top: 0;
 }
 main h2 {
   font-size: 2.6rem;
@@ -144,24 +154,34 @@ main #join #joinContainer #errorPW i {
     padding: 100px 0;
   }
   main h2 {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
   }
   main p {
     margin-top: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   main #join {
     width: 280px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
+<<<<<<< HEAD
+  main #join input:not(input[type=button]) {
+    width: 320px;
+=======
   main #join input:not(input[type="button"]) {
     width: 280px;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
   }
+<<<<<<< HEAD
+  main #join input[type=button] {
+    width: 320px;
+=======
   main #join input[type="button"] {
     width: 280px;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
