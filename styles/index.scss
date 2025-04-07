@@ -299,7 +299,7 @@ main {
           width: auto;
           height: auto;
           top: 5%;
-          right: 5%;
+          right: 4%;
           &::after {
             font-size: 1.4rem;
           }
@@ -338,7 +338,15 @@ main {
     }
   }
 }
-
+main {
+  .flexCon02 {
+  }
+}
+@media screen and (max-width: 1600px) {
+  .swiper-button-prev {
+    right: 6% !important;
+  }
+}
 // 반응형 tablet
 @media screen and (max-width: 1024px) {
   main {
@@ -423,7 +431,7 @@ main {
       .flexCon02 {
         margin: 100px 0 100px !important;
         .swiper-button-prev {
-          right: 8% !important;
+          right: 7% !important;
           top: 6% !important;
           &::after {
             font-size: 1.6rem !important;
@@ -473,7 +481,7 @@ main {
       .flexCon02 {
         // margin: 150px 0 100px !important;
         .swiper-button-prev {
-          right: 11% !important;
+          right: 10% !important;
         }
       }
     }

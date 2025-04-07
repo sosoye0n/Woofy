@@ -181,13 +181,8 @@ main #scrollSection .flexCon01 .flexBox .imgBox img {
      object-fit: cover;
 }
 main #scrollSection .flexCon01 .flexBox .textBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
 main #scrollSection .flexCon01 .flexBox .textBox p {
@@ -280,8 +275,7 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4px;
-  -ms-flex-item-align: center;
-      align-self: center;
+  align-self: center;
   cursor: pointer;
   position: absolute;
   right: 0;
@@ -359,7 +353,7 @@ main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
   width: auto;
   height: auto;
   top: 5%;
-  right: 5%;
+  right: 4%;
 }
 main #scrollSection .flexCon02 .swiper02 .swiper-button-prev::after {
   font-size: 1.4rem;
@@ -396,6 +390,11 @@ main #scrollSection .marquee div {
   transition: all 0.3s;
 }
 
+@media screen and (max-width: 1600px) {
+  .swiper-button-prev {
+    right: 6% !important;
+  }
+}
 @media screen and (max-width: 1024px) {
   main #pinSection {
     width: 100%;
@@ -460,7 +459,7 @@ main #scrollSection .marquee div {
     margin: 100px 0 100px !important;
   }
   main #scrollSection .flexCon02 .swiper-button-prev {
-    right: 8% !important;
+    right: 7% !important;
     top: 6% !important;
   }
   main #scrollSection .flexCon02 .swiper-button-prev::after {
@@ -495,7 +494,7 @@ main #scrollSection .marquee div {
     width: 180px;
   }
   main #scrollSection .flexCon02 .swiper-button-prev {
-    right: 11% !important;
+    right: 10% !important;
   }
   .marquee {
     margin-top: 100px;

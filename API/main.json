@@ -1,0 +1,359 @@
+{
+  "data01": [
+    {
+      "nameEng": "emis",
+      "name": "이미스",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://cafe24img.poxo.com/kimutaku4/web/upload/NNEditor/20250122/copy-1737536112-22.jpg",
+      "mainTitle": "반려동물과 함께 트윈룩을?",
+      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "imgClass": "thumbnail",
+      "brand": "emis",
+      "brandBanner": "https://emis.kr/image/main-bnr-25ss-2nd.jpg",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://cafe24img.poxo.com/kimutaku4/web/product/medium/202502/02f20b0c91f916145bb28a84493ccd1e.jpg",
+            "itemBrand": "EMIS",
+            "itemTitle": "NEW LOGO BIG HOODIE-NAVY",
+            "itemDc": 12,
+            "itemPrice": "68,000",
+            "like": "1234"
+          },
+          {
+            "itemImg": "https://cafe24img.poxo.com/kimutaku4/web/product/big/202502/49f7d18753b0be605ed7ecb6e8c27052.jpg",
+            "itemBrand": "EMIS",
+            "itemTitle": "FOOT PRINTED SWEAT SHIRT-NAVY",
+            "itemDc": 12,
+            "itemPrice": "90,000",
+            "like": "1234"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다.1"
+    },
+    {
+      "nameEng": "GUCCI",
+      "name": "구찌",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://img.wkorea.com/w/2022/07/style_62e1f2238e4fa-960x1200.jpg",
+      "mainTitle": "개와 고양이 주인공이 되다",
+      "subTitle": "크리에이티브 디렉터가 또 하나의 새로운 방식으로 하우스의 코드를 재해석한 구찌 펫 컬렉션을 공개합니다.",
+      "brand": "GUCCI",
+      "brandBanner": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/deb351a8-3a34-4599-df01-18f63ff44900/w=1920,h=1143",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://media.gucci.com/style/White_South_0_160_470x470/1656336603/692958_2ZGKG_8745_001_088_0000_Light.jpg",
+            "itemBrand": "GUCCI",
+            "itemTitle": "스몰 GG 펫 캐리어",
+            "itemDc": 7,
+            "itemPrice": "4,900,000",
+            "like": "1234"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다.2"
+    },
+    {
+      "nameEng": "KABINE",
+      "name": "까비네",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://kabine.kr/shop/patpat/02_bed/img/02_D-BEDm_new/d-bedm_n07.jpg",
+      "mainTitle": "반려동물과 함께하는 아름다운 공간",
+      "subTitle": "미적으로도 완성도 높게 제작한 펫테리어Peterior",
+      "brand": "kabine",
+      "brandBanner": "http://kabine.speedgabia.com/2024%20Renewal/Main_Banner_Slide/MAIN_SERIES_2.png",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://kabine.kr/web/product/big/202502/e1d9bc0f204872db82662cc076f01d90.jpg",
+            "itemBrand": "KABINE",
+            "itemTitle": "PATPAT D-Bed (Medium)",
+            "itemDc": 15,
+            "itemPrice": "280,500",
+            "like": "1113"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+    }
+  ],
+  "data02": [
+    {
+      "nameEng": "Avie muah",
+      "name": "아비에무아",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://cafe24img.poxo.com/aviemuah2020/web/product/extra/small/202402/71f03072183db9ed1508f2572be8a5e3.jpg",
+      "mainTitle": "펫팸족과 펫미족이라면 주목!",
+      "subTitle": "아비에무아의 국제 강아지의 날 기념, 펫 캡슐 컬렉션",
+      "brand": "aviemuah",
+      "brandBanner": "https://aviemuah.com/web/upload/share-image-1-81d869f59ea3880bda9a4046005787bb.jpg",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://cafe24img.poxo.com/aviemuah2020/web/product/extra/small/202402/f3af9ed2761c6bc4f747ca0e168c6567.jpg",
+            "itemBrand": "Avie muah",
+            "itemTitle": "컬러 블록 스트라이프 티셔츠",
+            "itemDc": 4,
+            "itemPrice": "38,000",
+            "like": "1113"
+          },
+          {
+            "itemImg": "https://cafe24img.poxo.com/aviemuah2020/web/product/extra/small/202402/ad7d945bd035b2bcde07a5b2af0acf51.jpg",
+            "itemBrand": "Avie muah",
+            "itemTitle": "스트라이프 시어서커 셔츠 블루종",
+            "itemDc": 3,
+            "itemPrice": "51,000",
+            "like": "1234"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+    },
+    {
+      "nameEng": "Merlot",
+      "name": "멀로",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://fpost.co.kr/board/data/editor/2403/3e87a0036f25d838232da64b0de6fec0_1711505065_3171.jpg",
+      "mainTitle": "매서운 바람에도 포근하게",
+      "subTitle": "Merlot의 다섯 번째 무브먼트 프로젝트 Snow Pic 캠페인",
+      "brand": "emis05",
+      "brandBanner": "https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/upload/_merlotMain/TopBanner/1202-b-w.jpg",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/product/medium/202408/633580ca51447a1f8c5a6b2103faceb7.png",
+            "itemBrand": "Merlot",
+            "itemTitle": "Ain™ Puffer 3 Olive",
+            "itemDc": 10,
+            "itemPrice": "147,600",
+            "like": "1234"
+          }
+        ]
+      },
+      "desc": "Merlot는 반려견과 함께 움직일 때 가장 깊이 연결된다고 믿습니다. 함께 걷고 움직일 때 우리는 반려견과 강한 영감을 본능적으로 서로 주고 받습니다. 처음 우리를 끌어당긴 순간부터 반려견의 열정은 지금까지도, 앞으로도 끊임없이 우리를 더 새롭고 다양한 영감으로 끌어냅니다. 우리는 반려견이 가진 열정처럼 계속해서 움직이고, 함께 움직이는 모든 순간에 찬란한 영감을 주기 위해 존재합니다."
+    },
+    {
+      "nameEng": "HAH",
+      "name": "하 아카이브",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/upload/_merlotPrd/ArkHarnness/RED/trip.jpg",
+      "mainTitle": "Holy and Harmless",
+      "subTitle": "HAH X Merlot, 일상 속에 작은 여행",
+      "brand": "emis06",
+      "brandBanner": "https://img.29cm.co.kr/next-brand/2019/01/30/8ac8558a5ca140369e2fa885dfef2ad3_20190130154222.jpg",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/product/medium/202408/39b99d9efa02870d6e1d9cb5860194e0.png",
+            "itemBrand": "HAH X MERLOT",
+            "itemTitle": "Ark™ Harness Red",
+            "itemDc": 7,
+            "itemPrice": "77,000",
+            "like": "1113"
+          },
+          {
+            "itemImg": "https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/product/medium/202408/8bb1b8453e0a1dab3f829fc2f8853038.png",
+            "itemBrand": "HAH X MERLOT",
+            "itemTitle": "Ark™ Harness Silver",
+            "itemDc": 7,
+            "itemPrice": "77,000",
+            "like": "1113"
+          }
+        ]
+      },
+      "desc": "하 아카이브는 2019년 시작한 컨템포러리 가방 브랜드입니다. 미니멀하지만 위트 있는 디자인과 실용성을 겸비한 제품을 선보입니다. ‘We never stop perfecting what’s already perfect.‘라는 문장을 슬로건으로 삼고 최고의 가치를 제공하기 위해 끊임없이 나아갑니다."
+    }
+  ],
+  "data03": [
+    {
+      "nameEng": "Dolce&Gabbana",
+      "name": "돌체 앤 가바나",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://dolcegabbana-cdn.thron.com/delivery/public/image/dolcegabbana/88ffd4c7-a7ff-40fa-8145-672e54f21235/mea8ds/std/1385x1760/c1_?format=auto",
+      "mainTitle": "Dolce&Gabbana가 최초로 선보이는 반려견 컬렉션.",
+      "subTitle": "독특하고 세련된 스타일이 사랑스러운 반려 친구의 세계와 만나보세요.",
+      "brand": "Dolce&Gabbana",
+      "brandBanner": "https://dolcegabbana-cdn.thron.com/delivery/public/image/dolcegabbana/0aa5ad9b-1539-478c-86af-16fc3daf7c73/yqxah8/std/1920x1200/a1_2?format=auto",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dw44143e92/images/zoom/BD0020A6456_HA93M_0.jpg",
+            "itemBrand": "Dolce&Gabbana",
+            "itemTitle": "도그 푸드백",
+            "itemDc": 5,
+            "itemPrice": "1,311,000",
+            "like": "1113"
+          },
+          {
+            "itemImg": "https://www.dolcegabbana.com/dw/image/v2/BKDB_PRD/on/demandware.static/-/Sites-15/default/dwf3eeb133/images/zoom/BD0012A6456_HA93M_0.jpg?sw=740&sh=944",
+            "itemBrand": "Dolce&Gabbana",
+            "itemTitle": "도그 캐리어",
+            "itemDc": 5,
+            "itemPrice": "6,650,000",
+            "like": "1234"
+          }
+        ]
+      },
+      "desc": "Dolce & Gabbana는 이탈리아의 감성과 예술성을 담은 세계적인 럭셔리 패션 브랜드입니다. 의류는 물론, 향수, 액세서리, 뷰티 라인까지 다양한 컬렉션을 통해 독창적이고 대담한 스타일을 제안하며, 매 시즌 새로운 트렌드를 이끌고 있습니다. Dolce & Gabbana는 클래식과 현대적인 감각이 공존하는, 가장 이탈리아다운 럭셔리를 표현하는 브랜드입니다."
+    },
+    {
+      "nameEng": "",
+      "name": "헤지스",
+      "href": "https://image.hazzys.com/display/202409/0923TOP%EC%9D%B4%EB%AF%B8%EC%A7%80_%EC%84%B8%EB%A1%9C(585x650)[0].jpg",
+      "mainImg": "https://image.hazzys.com/display/202409/0923TOP%EC%9D%B4%EB%AF%B8%EC%A7%80_%EC%84%B8%EB%A1%9C(585x650)[0].jpg",
+      "mainTitle": "하루하루 특별한 경험",
+      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "brand": "emis08",
+      "brandBanner": "",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1234"
+          },
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1113"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+    },
+    {
+      "nameEng": "",
+      "name": "이미스",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/d139d1a0-127c-4a45-e84d-f6cc70d15f00/w=1920,h=2400",
+      "mainTitle": "하루하루 특별한 경험",
+      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "brand": "emis09",
+      "brandBanner": "",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1113"
+          },
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1113"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+    }
+  ],
+  "data04": [
+    {
+      "nameEng": "",
+      "name": "이미스",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/531fcbd9-328d-4d8e-e3bf-cc900bd65a00/w=1696,h=2407",
+      "mainTitle": "하루하루 특별한 경험",
+      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "brand": "emis10",
+      "brandBanner": "",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1113"
+          },
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1234"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+    },
+    {
+      "nameEng": "",
+      "name": "이미스",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/087e7efb-3e78-4103-be01-a47afa12da00/w=1920,h=2400",
+      "mainTitle": "하루하루 특별한 경험",
+      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "brand": "emis11",
+      "brandBanner": "",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1234"
+          },
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1113"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+    },
+    {
+      "nameEng": "",
+      "name": "이미스",
+      "href": "https://emis.kr/#none",
+      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/d139d1a0-127c-4a45-e84d-f6cc70d15f00/w=1920,h=2400",
+      "mainTitle": "하루하루 특별한 경험",
+      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "brand": "emis12",
+      "brandBanner": "",
+      "brandItem": {
+        "subItems": [
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1113"
+          },
+          {
+            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
+            "itemBrand": "이미스",
+            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemDc": 7,
+            "itemPrice": "185,000",
+            "like": "1113"
+          }
+        ]
+      },
+      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+    }
+  ]
+}

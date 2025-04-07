@@ -123,7 +123,141 @@ main #couponModal .coupon .couponContents {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
   gap: 10px;
+=======
+  gap: 16px;
+}
+main #modalContainer .membership .modalContents > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+main #modalContainer .membership .modalContents .modalCircle {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: #99bdff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+main #modalContainer .membership .modalContents .modalCircle img {
+  width: 24px;
+  height: 24px;
+}
+main #modalContainer .membership .modalContents .membershipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  gap: 4px;
+}
+main #modalContainer .membership .modalContents .membershipInfo p {
+  font-weight: 700;
+}
+main #modalContainer .membership .modalContents .membershipInfo p b {
+  display: inline-block;
+  font-weight: 600;
+  padding-left: 8px;
+  color: #99bdff;
+}
+main #modalContainer .membership .modalContents .membershipInfo .subInfo {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+main #modalContainer .point .modalPointContents {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+main #modalContainer .point .modalPointContents > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+main #modalContainer .point .modalPointContents .modalCircle {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: #99bdff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+main #modalContainer .point .modalPointContents .modalCircle i {
+  font-size: 2.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #modalContainer .point .modalPointContents .membershipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  gap: 6px;
+}
+main #modalContainer .point .modalPointContents .membershipInfo p {
+  font-weight: 600;
+}
+main #modalContainer .point .modalPointContents .membershipInfo b {
+  display: inline-block;
+  font-weight: 600;
+  color: #99bdff;
+}
+main #modalContainer .coupon .modalCouponContents {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
