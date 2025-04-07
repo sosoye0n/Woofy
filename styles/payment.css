@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -32,7 +33,12 @@ header {
   width: 100%;
   max-width: 1000px;
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
 }
 .checkout-container .checkout-title {
@@ -62,11 +68,21 @@ section {
   padding: 0 15px;
 }
 .checkout-container .shipping-section .address-selector .address-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
-.checkout-container .shipping-section .address-selector .address-label .recent-address {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-label
+  .recent-address {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   font-size: 2.2rem;
   font-weight: 300;
@@ -74,7 +90,11 @@ section {
   margin-right: 30px;
   border-bottom: 1px solid #000;
 }
-.checkout-container .shipping-section .address-selector .address-label .direct-input {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-label
+  .direct-input {
   font-size: 1.8rem;
   font-weight: 300;
 }
@@ -82,23 +102,51 @@ section {
   margin-bottom: 20px;
   color: #a7a7a8;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-bottom: 10px;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .recipient {
   font-size: 2rem;
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-book-link {
   font-size: 1.6rem;
   color: #000;
 }
-.checkout-container .shipping-section .address-selector .address-info .address-detail {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .address-detail {
   font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 10px;
@@ -111,7 +159,13 @@ section {
 .checkout-container .shipping-section .address-selector .delivery-message {
   width: 100%;
 }
-.checkout-container .shipping-section .address-selector .delivery-message select {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .delivery-message
+  select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 40px;
@@ -119,18 +173,28 @@ section {
   background-color: #fff;
   border-radius: 3px;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-position: right 8px center;
   background-size: 16px;
   padding: 0 20px;
   font-size: 1.5rem;
   cursor: pointer;
 }
-.checkout-container .shipping-section .address-selector .delivery-message select option {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .delivery-message
+  select
+  option {
   font-size: 16px;
 }
-.checkout-container .shipping-section .address-selector .delivery-message select option[disabled] {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .delivery-message
+  select
+  option[disabled] {
   color: #dadada;
 }
 
@@ -139,8 +203,14 @@ section {
   padding: 0 10px;
 }
 .order-products .product-list .product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
   padding: 35px 25px;
   margin: 5px;
@@ -157,9 +227,11 @@ section {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .order-products .product-list .product-item .product-info {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   padding: 0 15px;
   font-size: 2rem;
@@ -190,9 +262,16 @@ section {
 .payment-section .payment-options .coupon-row,
 .payment-section .payment-options .points-row {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin-bottom: 15px;
   padding: 0 10px;
@@ -220,7 +299,11 @@ section {
 }
 .payment-section .payment-options .option-info {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
   margin-bottom: 20px;
   font-size: 1.4rem;
@@ -232,7 +315,11 @@ section {
   padding: 0 20px;
 }
 .order-summary .summary-list .summary-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 15px;
   padding: 0 5%;
@@ -265,7 +352,11 @@ section {
   padding: 0 10px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .payment-methods .payment-options .visually-hidden {
@@ -279,26 +370,45 @@ section {
   border: 0;
 }
 .payment-methods .payment-options .payment-options-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .payment-methods .payment-options .payment-options-list .payment-option {
   cursor: pointer;
   margin-right: 20px;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio] {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"] {
   display: none;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"]
+  + .option-text {
   position: relative;
   padding-left: 28px;
   font-size: 1.6rem;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"]
+  + .option-text:before {
   content: "";
   position: absolute;
   left: 0;
@@ -309,28 +419,45 @@ section {
   border-radius: 3px;
   background: #fff;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio]:checked + .option-text:before {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"]:checked
+  + .option-text:before {
   background: #999999;
   border-color: #999999;
 }
 .payment-methods .terms-agreement {
   padding: 0 12px;
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 .payment-methods .terms-agreement .agreement-label {
   cursor: pointer;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox] {
+.payment-methods .terms-agreement .agreement-label input[type="checkbox"] {
   display: none;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
+.payment-methods
+  .terms-agreement
+  .agreement-label
+  input[type="checkbox"]
+  + .agreement-text {
   position: relative;
   padding-left: 28px;
   font-size: 1.4rem;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
+.payment-methods
+  .terms-agreement
+  .agreement-label
+  input[type="checkbox"]
+  + .agreement-text:before {
   content: "";
   position: absolute;
   left: 0;
@@ -341,7 +468,11 @@ section {
   border: 1px solid #999999;
   background: #fff;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox]:checked + .agreement-text:before {
+.payment-methods
+  .terms-agreement
+  .agreement-label
+  input[type="checkbox"]:checked
+  + .agreement-text:before {
   background: #a7a7a8;
   border-color: #999999;
 }
@@ -349,7 +480,11 @@ section {
 .checkout-button-container {
   width: 90%;
   margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 .checkout-button-container .checkout-button {
@@ -362,733 +497,13 @@ section {
   border-radius: 10px;
   margin-bottom: 100px;
   cursor: pointer;
+  -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
 .checkout-button-container .checkout-button:hover {
   background: #ecff0b;
 }
 .checkout-button-container .checkout-button:active {
+  -webkit-box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 1024px) {
-  /* 레이아웃 변경 */
-  .container {
-    max-width: 100%;
-    margin-top: 80px;
-  }
-  /* 체크아웃 컨테이너 조정 */
-  .checkout-container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-  }
-  /* 섹션 타이틀 조정 */
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 14px;
-    padding-bottom: 8px;
-  }
-  /* 섹션 패딩 조정 */
-  section {
-    padding: 15px;
-  }
-  /* 배송지 섹션 */
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 2rem;
-    margin-right: 25px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.6rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
-    font-size: 1.8rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
-    font-size: 1.5rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
-    font-size: 1.6rem;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 38px;
-    font-size: 1.4rem;
-  }
-  /* 주문상품 섹션 */
-  .order-products .product-list {
-    padding: 0 8px;
-  }
-  .order-products .product-list .product-item {
-    padding: 25px 15px;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 80px;
-    height: 80px;
-    margin-right: 30px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.8rem;
-  }
-  .order-products .product-list .product-item .product-info .product-name {
-    margin-bottom: 6px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    font-size: 2.2rem;
-  }
-  /* 할인/부가결제 섹션 */
-  .payment-section .payment-options {
-    padding: 0 10px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.8rem;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    padding: 0 5px;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 80px;
-    font-size: 1.5rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.5rem;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    font-size: 1.3rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1.3rem;
-  }
-  /* 결제정보 섹션 */
-  .order-summary .summary-list {
-    padding: 0 15px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 12px;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.6rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.5rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 15px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.7rem;
-  }
-  /* 결제수단 섹션 */
-  .payment-methods {
-    margin-bottom: 25px;
-  }
-  .payment-methods .payment-options {
-    padding: 0 8px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option {
-    margin-right: 15px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.5rem;
-    padding-left: 25px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 14px;
-    height: 14px;
-  }
-  .payment-methods .terms-agreement {
-    padding: 0 10px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1.3rem;
-  }
-  /* 결제하기 버튼 */
-  .checkout-button-container {
-    width: 80%;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.8rem;
-    padding: 12px 0;
-    margin-bottom: 80px;
-  }
-}
-@media screen and (max-width: 768px) {
-  /* 레이아웃 변경 */
-  .container {
-    padding: 10px 0;
-    margin-top: 60px;
-  }
-  .checkout-container {
-    padding: 0 15px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    padding-left: 6px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  /* 섹션 타이틀 조정 */
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-    text-align: left;
-  }
-  /* 섹션 패딩 조정 */
-  section {
-    padding: 12px 8px;
-  }
-  /* 배송지 섹션 */
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 12px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 1.8rem;
-    margin-right: 20px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.5rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 12px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state {
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
-    font-size: 1.6rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
-    font-size: 1.4rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 36px;
-    font-size: 1.3rem;
-    padding: 0 15px;
-  }
-  /* 주문상품 섹션 */
-  .order-products .product-list {
-    padding: 0 5px;
-  }
-  .order-products .product-list .product-item {
-    padding: 20px 10px;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 70px;
-    height: 70px;
-    margin-right: 20px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.6rem;
-    padding: 0 8px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    width: 25px;
-    height: 25px;
-    font-size: 2rem;
-  }
-  /* 할인/부가결제 섹션 */
-  .payment-section .payment-options {
-    padding: 0 8px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.7rem;
-    margin-bottom: 12px;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    margin-bottom: 12px;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 70px;
-    font-size: 1.4rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.4rem;
-    margin-right: 8px;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    padding: 4px 8px;
-    font-size: 1.2rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-  /* 결제정보 섹션 */
-  .order-summary .summary-list {
-    padding: 0 10px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 10px;
-    padding: 0 3%;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.5rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.4rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 12px;
-    padding-top: 10px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.6rem;
-  }
-  /* 결제수단 섹션 */
-  .payment-methods {
-    margin-bottom: 20px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option {
-    margin-right: 10px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.4rem;
-    padding-left: 22px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 13px;
-    height: 13px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1.2rem;
-    padding-left: 22px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
-    width: 11px;
-    height: 11px;
-  }
-  /* 결제하기 버튼 */
-  .checkout-button-container {
-    width: 90%;
-    margin: 25px auto;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.7rem;
-    padding: 12px 0;
-    margin-bottom: 60px;
-  }
-}
-@media screen and (max-width: 580px) {
-  /* 레이아웃 변경 */
-  .container {
-    padding: 5px 0;
-    margin-top: 70px;
-  }
-  .checkout-container {
-    padding: 0 10px;
-    margin-top: 10px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  /* 섹션 타이틀 조정 */
-  .section-title {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-  }
-  /* 섹션 패딩 조정 */
-  section {
-    padding: 10px 5px;
-    margin-bottom: 10px;
-  }
-  /* 배송지 섹션 */
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 5px;
-    margin-bottom: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 1.6rem;
-    margin-right: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.4rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state {
-    margin-bottom: 5px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
-    font-size: 1.3rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 34px;
-    font-size: 1.2rem;
-    padding: 0 10px;
-  }
-  /* 주문상품 섹션 */
-  .order-products .product-list {
-    padding: 0;
-  }
-  .order-products .product-list .product-item {
-    padding: 15px 5px;
-    margin: 3px 0;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.5rem;
-    padding: 0 5px;
-  }
-  .order-products .product-list .product-item .product-info .product-name {
-    margin-bottom: 5px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    width: 22px;
-    height: 22px;
-    font-size: 1.8rem;
-  }
-  /* 할인/부가결제 섹션 */
-  .payment-section .payment-options {
-    padding: 0 5px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    margin-bottom: 10px;
-    padding: 0;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 60px;
-    font-size: 1.3rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.3rem;
-    margin-right: 5px;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    padding: 3px 6px;
-    font-size: 1.1rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    text-align: right;
-  }
-  /* 결제정보 섹션 */
-  .order-summary .summary-list {
-    padding: 0 5px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 8px;
-    padding: 0;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.4rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.3rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 10px;
-    padding-top: 8px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.5rem;
-  }
-  /* 결제수단 섹션 */
-  .payment-methods {
-    margin-bottom: 15px;
-  }
-  .payment-methods .payment-options {
-    padding: 0 5px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 5px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option {
-    margin-right: 0;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.3rem;
-    padding-left: 20px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 12px;
-    height: 12px;
-  }
-  .payment-methods .terms-agreement {
-    padding: 0 5px;
-    margin-top: 8px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1.1rem;
-    padding-left: 20px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
-    width: 10px;
-    height: 10px;
-  }
-  /* 결제하기 버튼 */
-  .checkout-button-container {
-    width: 100%;
-    margin: 20px auto;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.6rem;
-    padding: 10px 0;
-    margin-bottom: 50px;
-    border-radius: 8px;
-  }
-}
-@media screen and (max-width: 375px) {
-  /* 레이아웃 변경 */
-  .container {
-    padding: 3px 0;
-    margin-top: 70px;
-  }
-  .checkout-container {
-    padding: 0 8px;
-    margin-top: 5px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    padding-left: 5px;
-  }
-  /* 섹션 타이틀 조정 */
-  .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    padding-bottom: 3px;
-  }
-  /* 섹션 패딩 조정 */
-  section {
-    padding: 8px 3px;
-    margin-bottom: 8px;
-  }
-  /* 배송지 섹션 */
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 3px;
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 1.3rem;
-    margin-right: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.2rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state {
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
-    font-size: 1.3rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
-    font-size: 1.4rem;
-    margin-bottom: 3px;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 28px;
-    font-size: 1.2rem;
-    padding: 0 8px;
-  }
-  /* 주문상품 섹션 */
-  .order-products .product-list {
-    padding: 0;
-  }
-  .order-products .product-list .product-item {
-    padding: 12px 3px;
-    margin: 2px 0;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.4rem;
-    padding: 0 3px;
-  }
-  .order-products .product-list .product-item .product-info .product-name {
-    margin-bottom: 3px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    width: 20px;
-    height: 20px;
-    font-size: 1.6rem;
-  }
-  /* 할인/부가결제 섹션 */
-  .payment-section .payment-options {
-    padding: 0 3px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    margin-bottom: 8px;
-    padding: 0;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 55px;
-    font-size: 1.2rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.2rem;
-    margin-right: 3px;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    padding: 2px 5px;
-    font-size: 1rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-align: right;
-  }
-  /* 결제정보 섹션 */
-  .order-summary .summary-list {
-    padding: 0 3px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 6px;
-    padding: 0;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.3rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.2rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 8px;
-    padding-top: 6px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.4rem;
-  }
-  /* 결제수단 섹션 */
-  .payment-methods {
-    margin-bottom: 12px;
-  }
-  .payment-methods .payment-options {
-    padding: 0 3px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 6px 3px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.2rem;
-    padding-left: 18px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 11px;
-    height: 11px;
-  }
-  .payment-methods .terms-agreement {
-    padding: 0 3px;
-    margin-top: 6px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1rem;
-    padding-left: 18px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
-    width: 9px;
-    height: 9px;
-  }
-  /* 결제하기 버튼 */
-  .checkout-button-container {
-    width: 100%;
-    margin: 15px auto;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.5rem;
-    padding: 8px 0;
-    margin-bottom: 40px;
-    border-radius: 6px;
-  }
 }
