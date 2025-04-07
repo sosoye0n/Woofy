@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -24,394 +25,731 @@ footer {
 }
 
 main {
+  padding: 0 3%;
   background: #fff;
 }
 
 main {
-  top: 70px;
+  margin-top: 70px;
   width: 100%;
-  height: 100%;
   text-transform: uppercase;
 }
-main #modal #membershipModal {
-  display: none;
-  width: 100%;
+main #modalContainer {
+  opacity: 0;
+  visibility: hidden;
   z-index: 2;
+  width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   cursor: pointer;
 }
-main #modal #membershipModal .modalWrapperBox {
+main #modalContainer .modal {
+  opacity: 0;
+  visibility: hidden;
   width: 420px;
   height: 500px;
-}
-main #modal #membershipModal .modalWrapperBox .modalWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: #fff;
   border-radius: 18px;
+  background: #fff;
+  padding: 73px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .fa-xmark {
-  width: 100%;
+main #modalContainer .modal .modalHeader .fa-xmark {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   font-size: 2rem;
-  padding: 20px;
   color: #000;
   cursor: pointer;
-  top: 0;
-  right: 0;
+  top: 20px;
+  right: 20px;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle {
+main #modalContainer .modal .modalHeader .modalTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 40px;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle p {
+main #modalContainer .modal .modalHeader .modalTitle p {
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 4px;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalTitle span {
+main #modalContainer .modal .modalHeader .modalTitle span {
   font-size: 3rem;
   font-weight: 700;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-  justify-content: space-between;
+main #modalContainer .modal .on {
+  opacity: 1;
+  visibility: visible;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon {
+main #modalContainer .membership .modalContents {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 16px;
-  align-items: center;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalCircle {
+main #modalContainer .membership .modalContents > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+main #modalContainer .membership .modalContents .modalCircle {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   width: 70px;
   height: 70px;
   background: #99bdff;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalCircle img {
+main #modalContainer .membership .modalContents .modalCircle img {
   width: 24px;
   height: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalInfo .membershipInfo {
+main #modalContainer .membership .modalContents .membershipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 2rem;
-  margin-bottom: 8px;
+  gap: 4px;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalInfo .membershipInfo p {
+main #modalContainer .membership .modalContents .membershipInfo p {
   font-weight: 700;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalInfo .membershipInfo span {
+main #modalContainer .membership .modalContents .membershipInfo p b {
+  display: inline-block;
   font-weight: 600;
   padding-left: 8px;
   color: #99bdff;
 }
-main #modal #membershipModal .modalWrapperBox .modalWrapper .modalContainer .modalInfoCon .modalInfo .subInfo {
+main #modalContainer .membership .modalContents .membershipInfo .subInfo {
   font-size: 1.2rem;
   font-weight: 300;
 }
-main #modal #membershipModal.on {
+main #modalContainer .point .modalPointContents {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-}
-main #modal #couponModal {
-  display: none;
-  width: 100%;
-  z-index: 2;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-main #modal #couponModal .modalCouponWrapperBox {
-  width: 420px;
-  height: 500px;
-}
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: #fff;
-  border-radius: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .fa-xmark {
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: end;
-  font-size: 2rem;
-  padding: 20px;
-  color: #000;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-}
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponTitle {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
-}
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponTitle p {
-  font-size: 1.4rem;
-  font-weight: 300;
-  margin-bottom: 4px;
-}
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponTitle span {
-  font-size: 3rem;
-  font-weight: 700;
-}
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  justify-content: space-between;
-}
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon {
-  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 16px;
-  align-items: center;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon {
+main #modalContainer .point .modalPointContents > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+main #modalContainer .point .modalPointContents .modalCircle {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: #99bdff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+main #modalContainer .point .modalPointContents .modalCircle i {
+  font-size: 2.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #modalContainer .point .modalPointContents .membershipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  gap: 6px;
+}
+main #modalContainer .point .modalPointContents .membershipInfo p {
+  font-weight: 600;
+}
+main #modalContainer .point .modalPointContents .membershipInfo b {
+  display: inline-block;
+  font-weight: 600;
+  color: #99bdff;
+}
+main #modalContainer .coupon .modalCouponContents {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 14px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   cursor: pointer;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox1 {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
   width: 160px;
   height: 92px;
   background: #99bdff;
-  border-radius: 6px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding-left: 12px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 2.4rem;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p {
   font-weight: 600;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
   font-size: 1.8rem;
   margin-left: 1px;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
   font-weight: 600;
   font-size: 1.2rem;
   color: #000;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
   font-size: 1rem;
   font-weight: 300;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox2 {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
   width: 32px;
   height: 92px;
   background: #99bdff;
-  border-radius: 6px;
+  border-radius: 4px;
+  border-left: 0.2px dashed #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-main #modal #couponModal .modalCouponWrapperBox .modalCouponWrapper .modalCouponContainer .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
+main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
   color: #fff;
 }
-main #modal #couponModal.on {
-  display: block;
+main #modalContainer .membership .modalContents .on {
+  opacity: 1;
+  visibility: visible;
 }
-main #container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 140px 3%;
+main #modalContainer .point .modalPointContents .on {
+  opacity: 1;
+  visibility: visible;
 }
-main #container .userBox {
+main #modalContainer .coupon .modalCouponContents .on {
+  opacity: 1;
+  visibility: visible;
+}
+main #modalContainer .on {
+  opacity: 1;
+  visibility: visible;
+}
+main #mypage {
   width: 100%;
-  height: 400px;
+  padding: 100px 0;
+}
+main #mypage .mypageContainer {
+  display: grid;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  grid-template-columns: 5fr 12fr;
+}
+main #mypage .mypageContainer .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   border-radius: 10px;
-  justify-content: flex-start;
   background: #f5f5f5;
-  padding: 0 30px;
-  width: 40%;
+  padding: 60px 5%;
 }
-main #container .userBox .userWrapper {
-  height: 100%;
-}
-main #container .userBox .userWrapper .userinfoWrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-main #container .userBox .userWrapper .userinfoWrapper span {
-  display: inline-block;
-  font-size: 1.6rem;
+main #mypage .mypageContainer .userInfo .infoTitle {
+  font-size: 2rem;
   color: #99bdff;
 }
-main #container .userBox .userWrapper .userinfoWrapper h2 {
-  font-size: 3.6rem;
+main #mypage .mypageContainer .userInfo h4 {
+  font-size: 4rem;
   font-weight: 700;
   letter-spacing: normal;
   margin-top: 14px;
   margin-bottom: 26px;
 }
-main #container .userBox .userWrapper .userinfoWrapper h2 span {
-  font-size: 3.6rem;
+main #mypage .mypageContainer .userInfo h4 .enter {
+  display: none;
+}
+main #mypage .mypageContainer .userInfo h4 .userMembership {
   color: #99bdff;
 }
-main #container .userBox .userWrapper .userinfoWrapper .membershipInfoLevel {
-  padding: 14px 20px;
+main #mypage .mypageContainer .userInfo .membershipLevel {
+  padding: 18px 20px;
+  margin-right: auto;
   border-radius: 40px;
-  display: flex;
-  align-items: center;
+  color: #000;
   background: #99bdff;
   cursor: pointer;
-}
-main #container .userBox .userWrapper .userinfoWrapper .membershipInfoLevel:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+main #mypage .mypageContainer .userInfo .membershipLevel i {
+  font-size: 1.6rem;
+}
+main #mypage .mypageContainer .userInfo .membershipLevel:hover {
   background: #000;
   color: #99bdff;
 }
-main #container .userBox .userWrapper .userinfoWrapper .membershipInfoLevel p {
-  font-size: 1.4rem;
-  font-weight: 400;
+main #mypage .mypageContainer .detailInfoWrapper {
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-main #container .userBox .userWrapper .userinfoWrapper .membershipInfoLevel i {
-  font-size: 1.3rem;
-  padding-left: 4px;
-}
-main #container .infoBox {
-  width: 100%;
-  height: 400px;
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 5%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #f5f5f5;
   overflow: hidden;
 }
-main #container .infoBox .infoBoxWrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-main #container .infoBox .infoBoxWrapper .commonBox {
-  background: #f5f5f5;
-  padding: 0 30px;
-  width: 400px;
-}
-main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper {
-  width: 100%;
-  height: 100%;
-  gap: 140px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3 {
-  font-size: 2.8rem;
-  font-weight: 300;
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailTitle {
+  font-size: 3.4rem;
+  font-weight: 400;
   letter-spacing: -0.7px;
   color: #99bdff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper h3:hover {
-  font-weight: 700;
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailTitle:hover {
+  font-weight: 600;
 }
-main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo {
-  display: flex;
-  align-items: flex-end;
-  gap: 2px;
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText {
   cursor: pointer;
+  margin-top: 150px;
+  letter-spacing: -1px;
 }
-main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo:hover {
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold {
+  font-size: 5rem;
+  font-weight: 600;
+  gap: 2px;
+}
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold:hover {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: #99bdff;
 }
-main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo p {
-  font-size: 4rem;
-  font-weight: 600;
-}
-main #container .infoBox .infoBoxWrapper .commonBox .infoWrapper .detailInfo span {
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold b {
   font-size: 2.6rem;
   font-weight: 300;
 }
-main #container .infoBox .infoBoxWrapper .couponBox {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px 0px 0px 10px;
-}
-main #container .infoBox .infoBoxWrapper .pointBox {
-  width: 100%;
-  height: 100%;
-  border-right: 1px solid #dadada;
+main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
   border-left: 1px solid #dadada;
-}
-main #container .infoBox .infoBoxWrapper .membershipBox {
-  width: 100%;
-  height: 100%;
-  border-radius: 0px 10px 10px 0px;
+  border-right: 1px solid #dadada;
 }
 
 @media screen and (max-width: 1024px) {
-  #container {
-    flex-wrap: wrap;
+  main #modalContainer .modal {
+    width: 330px;
+    height: 410px;
+    border-radius: 14px;
+    padding: 30px 0;
   }
-  #container .userBox {
-    flex: 1;
-    width: 100%;
+  main #modalContainer .modal .modalHeader .modalTitle {
+    margin-bottom: 30px;
   }
-  #container .userBox h2 {
-    font-size: 10rem;
+  main #modalContainer .modal .modalHeader .modalTitle p {
+    font-size: 1.2rem;
   }
-  #container .infoBox {
-    overflow: hidden;
-    width: 100%;
+  main #modalContainer .modal .modalHeader .modalTitle span {
+    font-size: 2.6rem;
   }
-  #container .infoBox .infoBoxWrapper {
-    width: 100%;
+  main #modalContainer .membership .modalContents {
+    gap: 12px;
   }
-  #container .infoBox .infoBoxWrapper .commonBox {
-    border: 1px solid #f00;
-    width: 30px;
+  main #modalContainer .membership .modalContents > li {
+    gap: 10px;
+  }
+  main #modalContainer .membership .modalContents .modalCircle {
+    width: 64px;
+    height: 64px;
+  }
+  main #modalContainer .membership .modalContents .modalCircle img {
+    width: 20px;
+    height: 20px;
+  }
+  main #modalContainer .membership .modalContents .membershipInfo {
+    font-size: 1.8rem;
+    gap: 6px;
+  }
+  main #modalContainer .membership .modalContents .membershipInfo p b {
+    padding-left: 4px;
+  }
+  main #modalContainer .membership .modalContents .subInfo {
+    font-size: 0.8rem;
+  }
+  main #modalContainer .point .modalPointContents {
+    gap: 12px;
+  }
+  main #modalContainer .point .modalPointContents > li {
+    gap: 10px;
+  }
+  main #modalContainer .point .modalPointContents .modalCircle {
+    width: 64px;
+    height: 64px;
+  }
+  main #modalContainer .point .modalPointContents .modalCircle img {
+    width: 20px;
+    height: 20px;
+  }
+  main #modalContainer .point .modalPointContents .membershipInfo {
+    font-size: 1.8rem;
+    gap: 6px;
+  }
+  main #modalContainer .point .modalPointContents .membershipInfo p b {
+    padding-left: 4px;
+  }
+  main #modalContainer .coupon .modalCouponContents {
+    gap: 8px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
+    width: 130px;
+    height: 74px;
+    padding-left: 10px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
+    font-size: 2.2rem;
+    margin-bottom: 2px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
+    font-size: 1.4rem;
+    margin-left: 1px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
+    font-size: 0.9rem;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
+    width: 32px;
+    height: 74px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
+    font-size: 1.4rem;
+  }
+  main #mypage {
+    padding: 50px;
+  }
+  main #mypage .mypageContainer {
+    row-gap: 20px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailTitle {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: -0.7px;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText {
+    margin-top: 100px;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold {
+    font-size: 4rem;
+    gap: 2px;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold b {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  main #modalContainer .modal {
+    width: 250px;
+    height: 330px;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+  main #modalContainer .modal .modalHeader .fa-xmark {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    font-size: 1.6rem;
+    color: #000;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+  }
+  main #modalContainer .modal .modalHeader .modalTitle {
+    margin-bottom: 20px;
+  }
+  main #modalContainer .modal .modalHeader .modalTitle p {
+    font-size: 1.2rem;
+  }
+  main #modalContainer .modal .modalHeader .modalTitle span {
+    font-size: 2.2rem;
+  }
+  main #modalContainer .membership .modalContents {
+    gap: 12px;
+  }
+  main #modalContainer .membership .modalContents > li {
+    gap: 8px;
+  }
+  main #modalContainer .membership .modalContents .modalCircle {
+    width: 54px;
+    height: 54px;
+  }
+  main #modalContainer .membership .modalContents .modalCircle img {
+    width: 18px;
+    height: 18px;
+  }
+  main #modalContainer .membership .modalContents .membershipInfo {
+    font-size: 1.6rem;
+    gap: 4px;
+  }
+  main #modalContainer .membership .modalContents .membershipInfo p b {
+    padding-left: 3px;
+  }
+  main #modalContainer .membership .modalContents .membershipInfo .subInfo {
+    font-size: 0.9rem;
+  }
+  main #modalContainer .point .modalPointContents {
+    gap: 12px;
+  }
+  main #modalContainer .point .modalPointContents > li {
+    gap: 8px;
+  }
+  main #modalContainer .point .modalPointContents .modalCircle {
+    width: 54px;
+    height: 54px;
+  }
+  main #modalContainer .point .modalPointContents .modalCircle img {
+    width: 18px;
+    height: 18px;
+  }
+  main #modalContainer .point .modalPointContents .modalCircle i {
+    font-size: 2rem;
+  }
+  main #modalContainer .point .modalPointContents .membershipInfo {
+    font-size: 1.5rem;
+    gap: 2px;
+  }
+  main #modalContainer .point .modalPointContents .membershipInfo p b {
+    padding-left: 3px;
+  }
+  main #modalContainer .coupon .modalCouponContents {
+    gap: 6px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
+    width: 110px;
+    height: 60px;
+    padding-left: 8px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
+    font-size: 2rem;
+    margin-bottom: 3px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
+    font-size: 1.2rem;
+    margin-left: 2px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
+    font-size: 0.9rem;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
+    font-size: 0.6rem;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
+    width: 24px;
+    height: 60px;
+  }
+  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
+    font-size: 1rem;
+  }
+  main #mypage .mypageContainer {
+    row-gap: 20px;
+  }
+  main #mypage .mypageContainer .userInfo {
+    padding: 60px 10%;
+  }
+  main #mypage .mypageContainer .userInfo .infoTitle {
+    font-size: 1.4rem;
+  }
+  main #mypage .mypageContainer .userInfo h4 {
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  main #mypage .mypageContainer .userInfo h4 .enter {
+    display: block;
+  }
+  main #mypage .mypageContainer .userInfo h4 br {
+    display: none;
+  }
+  main #mypage .mypageContainer .userInfo .membershipLevel {
+    font-size: 1rem;
+    padding: 12px 16px;
+  }
+  main #mypage .mypageContainer .userInfo .membershipLevel i {
+    display: none;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo {
+    padding: 60px 10%;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailTitle {
+    font-size: 2.6rem;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText {
+    margin-top: 40px;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold {
+    font-size: 3.6rem;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold b {
+    font-size: 2.4rem;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
   }
 }
