@@ -1,0 +1,60 @@
+@import "./reset.scss";
+@import "./variables.scss";
+
+main {
+  height: 2000px;
+  background: skyblue;
+  .brandBanner {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-attachment: fixed;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    &::after {
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba($color: #000000, $alpha: 0.6);
+    }
+    .brandText {
+      width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      position: relative;
+      z-index: 1;
+      p {
+        color: map-get($map: $color, $key: light);
+        &:first-child {
+          font-size: 2rem;
+        }
+        &:nth-child(2) {
+          font-size: 4rem;
+          font-weight: bold;
+        }
+        &:last-child {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+// 반응형 tablet
+@media screen and (max-width: 1024px) {
+  main {
+    .brandBanner {
+      height: 800px;
+      object-fit: cover;
+      background-attachment: inherit;
+    }
+  }
+}

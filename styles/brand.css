@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  height: 2000px;
+  background: skyblue;
+}
+main .brandBanner {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-attachment: fixed;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .brandBanner::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+main .brandBanner .brandText {
+  width: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+}
+main .brandBanner .brandText p {
+  color: #fff;
+}
+main .brandBanner .brandText p:first-child {
+  font-size: 2rem;
+}
+main .brandBanner .brandText p:nth-child(2) {
+  font-size: 4rem;
+  font-weight: bold;
+}
+main .brandBanner .brandText p:last-child {
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1024px) {
+  main .brandBanner {
+    height: 800px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    background-attachment: inherit;
+  }
+}
