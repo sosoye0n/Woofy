@@ -132,7 +132,6 @@ main #container01 #eventModal #modalBg .modalContent .modalTitle .modalBtn {
   transition: all 0.3s;
 }
 main #container01 #eventModal #modalBg .modalContent .modalTitle .modalBtn:hover {
-main #container01 #eventModal #modalBg .modalContent .modalTitle .modalBtn:hover {
   background: #000;
   color: #99bdff;
 }
@@ -234,7 +233,6 @@ main #container01 .event01 .slide .imgSlider1 {
   align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
-     object-fit: cover;
   overflow: hidden;
 }
 main #container01 .event01 .slide .imgSlider1:hover .track1 {
@@ -243,21 +241,18 @@ main #container01 .event01 .slide .imgSlider1:hover .track1 {
 main #container01 .event01 .slide .imgSlider1 .track1 {
   display: flex;
   will-change: transform;
-  -webkit-animation: scrolling 18s linear infinite both;
-          animation: scrolling 18s linear infinite both;
+  animation: scrolling 18s linear infinite both;
 }
 main #container01 .event01 .slide .imgSlider1 .track1 img {
   width: 240px;
   height: 280px;
   -o-object-fit: cover;
      object-fit: cover;
-     object-fit: cover;
 }
 main #container01 .event01 .slide .imgSlider2 {
   display: flex;
   align-items: center;
   -o-object-fit: cover;
-     object-fit: cover;
      object-fit: cover;
   overflow: hidden;
 }
@@ -275,7 +270,6 @@ main #container01 .event01 .slide .imgSlider2 .track2 img {
   display: flex;
   justify-content: center;
   -o-object-fit: cover;
-     object-fit: cover;
      object-fit: cover;
 }
 main #container01 .event01-1 {
@@ -306,10 +300,8 @@ main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide {
   background-size: cover;
 }
 main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
-main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
   background-image: url("/images/event/25.jpg");
 }
-main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
 main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
   background-image: url("/images/event/15.jpg");
 }
@@ -344,7 +336,6 @@ main #container01 .event01-1 .conWrapper .contents .contentList .detailImg img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-     object-fit: cover;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList .content {
   width: 240px;
@@ -355,7 +346,6 @@ main #container01 .event01-1 .conWrapper .contents .contentList .content {
   justify-content: center;
   text-align: left;
 }
-main #container01 .event01-1 .conWrapper .contents .contentList .content .brand {
 main #container01 .event01-1 .conWrapper .contents .contentList .content .brand {
   color: #99bdff;
   font-size: 2rem;
@@ -368,7 +358,6 @@ main #container01 .event01-1 .conWrapper .contents .contentList .content .name {
 main #container01 .event01-1 .conWrapper .contents .contentList .content .sale {
   font-weight: 300;
 }
-main #container01 .event01-1 .conWrapper .contents .contentList .content .sale b {
 main #container01 .event01-1 .conWrapper .contents .contentList .content .sale b {
   color: #99bdff;
   font-size: 2.2rem;
@@ -392,13 +381,11 @@ main #container01 .event01-2 .conImg img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-     object-fit: cover;
 }
 main #container01 .event01-2 .cap {
   position: absolute;
   width: 300px;
   -o-object-fit: cover;
-     object-fit: cover;
      object-fit: cover;
   top: 3%;
   right: 8%;
@@ -462,35 +449,17 @@ main #container02 .eventBtn p:nth-child(2) {
 main #container02 .event2 {
   margin-top: 10%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10%;
 }
 main #container02 .event2 .event02 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 main #container02 .event2 .event02 ul {
   width: 132%;
@@ -507,15 +476,11 @@ main #container02 .event2 .event02 ul li {
   font-style: italic;
 }
 main #container02 .event2 .event02 ul li:nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: start;
   align-items: center;
 }
 main #container02 .event2 .event02 ul li:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -534,7 +499,6 @@ main #container02 .event2 .event02 .drawImg img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-     object-fit: cover;
 }
 main #container02 .event2 .event02 .countdown {
   width: 500px;
@@ -552,8 +516,6 @@ main #container02 .event2 .event02 .countdown span {
   margin-right: 10px;
 }
 main #container02 .event2 .event02 .drawBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -575,19 +537,10 @@ main #container02 .event2 .event02 .drawBtn:hover {
 main #container02 .event2 .eventWarning {
   width: 60%;
   height: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 main #container02 .event2 .eventWarning h1 {
   width: 100%;
@@ -648,7 +601,6 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .closeDrawModal {
   cursor: pointer;
 }
 main #container02 #drawModal #modalDrawBg .modalDrawContent .closeDrawModal .fa-xmark {
-main #container02 #drawModal #modalDrawBg .modalDrawContent .closeDrawModal .fa-xmark {
   font-size: 3rem;
   margin-top: 3%;
   margin-right: 6%;
@@ -670,11 +622,9 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle p {
   margin-bottom: 10px;
 }
 main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle span {
-main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle span {
   font-size: 1.4rem;
   font-weight: 300;
 }
-main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .modalDrawBtn {
 main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .modalDrawBtn {
   font-size: 1.4rem;
   font-weight: 600;
@@ -687,7 +637,6 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   cursor: pointer;
   transition: all 0.3s;
 }
-main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .modalDrawBtn:hover {
 main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .modalDrawBtn:hover {
   background: #99bdff;
   color: #000;
