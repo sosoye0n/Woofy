@@ -30,7 +30,6 @@ main {
 
 main {
   width: 100%;
-  height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,4 +73,21 @@ main input[type=button]:hover {
   outline: none;
   background: #99bdff;
   color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  main h2 {
+    font-size: 1.8rem;
+  }
+  main p {
+    margin-top: 6px;
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  main input[type=button] {
+    width: 280px;
+    height: 64px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
 }

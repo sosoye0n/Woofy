@@ -152,3 +152,29 @@ main #login #join #joinBtn {
   background: #dadada;
   color: #000;
 }
+
+@media screen and (max-width: 767px) {
+  main {
+    padding: 100px 0;
+  }
+  main h2 {
+    font-size: 1.8rem;
+  }
+  main #login {
+    width: 280px;
+    margin-top: 20px;
+  }
+  main #login input:not(input[type=checkbox]) {
+    height: 64px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  main #login #inputContainer {
+    gap: 8px;
+  }
+  main #login #inputContainer .inputBox input {
+    padding-left: 20px;
+    font-size: 1.2rem;
+  }
+}

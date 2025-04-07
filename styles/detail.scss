@@ -2,7 +2,7 @@
 @import "./reset.scss";
 @import "./variables.scss";
 
-// common
+// common styles
 header {
   z-index: 10;
   height: 70px;
@@ -73,7 +73,6 @@ header {
           border-radius: 3px;
         }
       }
-
       .color-dot {
         width: 20px;
         height: 20px;
@@ -81,7 +80,6 @@ header {
         display: inline-block;
         margin-right: 10px;
         border: 1px solid #ccc;
-
         &.black {
           background-color: #000;
         }

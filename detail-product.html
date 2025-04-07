@@ -15,7 +15,134 @@
     <script defer src="./scripts/detail-product.js"></script>
     <!-- lenis -->
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
-    <title>Detail</title>
+    <title>Detail-Product©</title>
   </head>
-  <body></body>
+  <body>
+    <header></header>
+    <main class="container">
+      <div class="product-detail">
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <img src="./images/detail/dog1.png" alt="강아지1" />
+            <div class="gallery-controls">
+              <button class="prev-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="next-btn">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <h1 class="product-title">LOREM LOREM, LOREM</h1>
+          <div class="product-price-info">
+            <div class="price-label">판매가</div>
+            <div class="price-value">KRW 75,000</div>
+          </div>
+          <div class="product-options">
+            <div class="option-item">
+              <div class="option-label">SIZE</div>
+              <div class="option-select">
+                <select>
+                  <option selected disabled>
+                    -[필수] 옵션을 선택해주세요 -
+                  </option>
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="product-accordion">
+            <section class="category">
+              <div class="title-top">
+                <h2>DESCRIPTION</h2>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <div class="subcategory description-content">
+                <p>
+                  고급스러운 소재로 제작된 강아지용 후드입니다. 부드러운 촉감과
+                  따뜻한 보온성을 갖추고 있으며, 활동성을 고려한 디자인으로
+                  편안한 착용감을 제공합니다.
+                </p>
+              </div>
+            </section>
+            <section class="category">
+              <div class="title-top">
+                <h2>GUIDE</h2>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <div class="subcategory guide-content">
+                <p>사이즈 안내: S(소형견), M(중형견), L(대형견)</p>
+                <p>세탁 방법: 손세탁 권장, 중성세제 사용</p>
+              </div>
+            </section>
+          </div>
+          <div class="product-actions">
+            <button class="buy-now-btn">BUY NOW</button>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+            <button class="kakao-pay-btn">KAKAO PAY</button>
+          </div>
+        </div>
+      </div>
+      <div class="share-moment">
+        <h2 class="section-title">Share Your Moment</h2>
+        <div class="moment-grid">
+          <div class="moment-row">
+            <div class="moment-item">
+              <a href="#" class="moment-link">
+                <div class="moment-image">
+                  <span>@insta-user-name</span>
+                  <img
+                    src="./images/detail/cap-dog1.png"
+                    alt="인스타-강아지1"
+                  />
+                </div>
+                <div class="moment-tags">
+                  <span class="tag">#하네스</span>
+                  <span class="tag">#모자</span>
+                  <span class="tag">#배변봉투</span>
+                </div>
+              </a>
+            </div>
+            <div class="moment-item">
+              <a href="#" class="moment-link">
+                <div class="moment-image">
+                  <span>@insta-user-name</span>
+                  <img
+                    src="./images/detail/cap-dog2.png"
+                    alt="인스타-강아지2"
+                  />
+                </div>
+                <div class="moment-tags">
+                  <span class="tag">#하네스</span>
+                  <span class="tag">#모자</span>
+                  <span class="tag">#배변봉투</span>
+                </div>
+              </a>
+            </div>
+            <div class="moment-item">
+              <a href="#" class="moment-link">
+                <div class="moment-image">
+                  <span>@insta-user-name</span>
+                  <img
+                    src="./images/detail/cap-dog3.png"
+                    alt="인스타-강아지3"
+                  />
+                </div>
+                <div class="moment-tags">
+                  <span class="tag">#하네스</span>
+                  <span class="tag">#모자</span>
+                  <span class="tag">#배변봉투</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
 </html>

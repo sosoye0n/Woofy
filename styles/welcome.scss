@@ -6,18 +6,16 @@
 header {
   z-index: 10;
 }
-
 body {
   background: #fff;
 }
-
 main {
   padding: 0 3%;
 }
 
+// contetns
 main {
   width: 100%;
-  height: 800px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,6 +47,26 @@ main {
       outline: none;
       background: map-get($map: $color, $key: point);
       color: map-get($map: $color, $key: light);
+    }
+  }
+}
+
+// 반응형 mobile
+@media screen and (max-width: 767px) {
+  main {
+    h2 {
+      font-size: 1.8rem;
+    }
+    p {
+      margin-top: 6px;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+    input[type="button"] {
+      width: 280px;
+      height: 64px;
+      border-radius: 8px;
+      font-size: 1.2rem;
     }
   }
 }
