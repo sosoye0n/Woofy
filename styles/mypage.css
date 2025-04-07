@@ -17,7 +17,7 @@ a {
 }
 
 header {
-  z-index: 1;
+  z-index: 2;
 }
 
 footer {
@@ -30,20 +30,19 @@ main {
 }
 
 main {
-  margin-top: 70px;
   width: 100%;
   text-transform: uppercase;
 }
-main #modalContainer {
+main #couponModal {
   opacity: 0;
   visibility: hidden;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 2;
   width: 100%;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,13 +52,12 @@ main #modalContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-main #modalContainer .modal {
-  opacity: 0;
-  visibility: hidden;
-  width: 420px;
-  height: 500px;
+main #couponModal .coupon {
+  width: 380px;
+  height: 460px;
   border-radius: 18px;
   background: #fff;
   padding: 73px 0;
@@ -78,7 +76,7 @@ main #modalContainer .modal {
       -ms-flex-pack: center;
           justify-content: center;
 }
-main #modalContainer .modal .modalHeader .fa-xmark {
+main #couponModal .coupon .modalHeader .fa-xmark {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,7 +90,10 @@ main #modalContainer .modal .modalHeader .fa-xmark {
   top: 20px;
   right: 20px;
 }
-main #modalContainer .modal .modalHeader .modalTitle {
+main #couponModal .coupon .modalHeader .fa-xmark:hover {
+  color: #99bdff;
+}
+main #couponModal .coupon .modalHeader .modalTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,24 +104,18 @@ main #modalContainer .modal .modalHeader .modalTitle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-main #modalContainer .modal .modalHeader .modalTitle p {
+main #couponModal .coupon .modalHeader .modalTitle p {
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 4px;
 }
-main #modalContainer .modal .modalHeader .modalTitle span {
+main #couponModal .coupon .modalHeader .modalTitle span {
   font-size: 3rem;
   font-weight: 700;
 }
-main #modalContainer .modal .on {
-  opacity: 1;
-  visibility: visible;
-}
-main #modalContainer .membership .modalContents {
-  opacity: 0;
-  visibility: hidden;
+main #couponModal .coupon .couponContents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,6 +123,9 @@ main #modalContainer .membership .modalContents {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+<<<<<<< HEAD
+  gap: 10px;
+=======
   gap: 16px;
 }
 main #modalContainer .membership .modalContents > li {
@@ -259,6 +257,7 @@ main #modalContainer .coupon .modalCouponContents {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 14px;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -266,13 +265,12 @@ main #modalContainer .coupon .modalCouponContents {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  cursor: pointer;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
   width: 160px;
   height: 92px;
   background: #99bdff;
@@ -285,7 +283,7 @@ main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoup
       -ms-flex-align: center;
           align-items: center;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -296,23 +294,23 @@ main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoup
   font-size: 2.4rem;
   margin-bottom: 6px;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p {
   font-weight: 600;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
   font-size: 1.8rem;
   margin-left: 1px;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
   font-weight: 600;
   font-size: 1.2rem;
   color: #000;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
   font-size: 1rem;
   font-weight: 300;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
   width: 32px;
   height: 92px;
   background: #99bdff;
@@ -328,22 +326,302 @@ main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoup
       -ms-flex-pack: center;
           justify-content: center;
 }
-main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
+main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
   color: #fff;
 }
-main #modalContainer .membership .modalContents .on {
-  opacity: 1;
-  visibility: visible;
+main #pointModal {
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-main #modalContainer .point .modalPointContents .on {
-  opacity: 1;
-  visibility: visible;
+main #pointModal .point {
+  width: 380px;
+  height: 460px;
+  border-radius: 18px;
+  background: #fff;
+  padding: 73px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-main #modalContainer .coupon .modalCouponContents .on {
-  opacity: 1;
-  visibility: visible;
+main #pointModal .point .modalHeader .fa-xmark {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
 }
-main #modalContainer .on {
+main #pointModal .point .modalHeader .fa-xmark:hover {
+  color: #99bdff;
+}
+main #pointModal .point .modalHeader .modalTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+main #pointModal .point .modalHeader .modalTitle p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+main #pointModal .point .modalHeader .modalTitle span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+main #pointModal .point .pointContents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+main #pointModal .point .pointContents > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+main #pointModal .point .pointContents .modalCircle {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: #99bdff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+main #pointModal .point .pointContents .modalCircle i {
+  font-size: 2.6rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #pointModal .point .pointContents .membershipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  gap: 6px;
+}
+main #pointModal .point .pointContents .membershipInfo p {
+  font-weight: 600;
+}
+main #pointModal .point .pointContents .membershipInfo b {
+  display: inline-block;
+  font-weight: 600;
+  color: #99bdff;
+}
+main #membershipModal {
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+main #membershipModal .membership {
+  width: 380px;
+  height: 460px;
+  border-radius: 18px;
+  background: #fff;
+  padding: 73px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main #membershipModal .membership .modalHeader .fa-xmark {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+}
+main #membershipModal .membership .modalHeader .fa-xmark:hover {
+  color: #99bdff;
+}
+main #membershipModal .membership .modalHeader .modalTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+main #membershipModal .membership .modalHeader .modalTitle p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+main #membershipModal .membership .modalHeader .modalTitle span {
+  font-size: 3rem;
+  font-weight: 700;
+}
+main #membershipModal .membership .membershipContents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+main #membershipModal .membership .membershipContents > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+main #membershipModal .membership .membershipContents .modalCircle {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 70px;
+  height: 70px;
+  background: #99bdff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+main #membershipModal .membership .membershipContents .modalCircle img {
+  width: 24px;
+  height: 24px;
+}
+main #membershipModal .membership .membershipContents .membershipInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 2rem;
+  gap: 4px;
+}
+main #membershipModal .membership .membershipContents .membershipInfo p {
+  font-weight: 700;
+}
+main #membershipModal .membership .membershipContents .membershipInfo p b {
+  display: inline-block;
+  font-weight: 600;
+  padding-left: 8px;
+  color: #99bdff;
+}
+main #membershipModal .membership .membershipContents .membershipInfo .subInfo {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+main #couponModal.on,
+main #pointModal.on,
+main #membershipModal.on {
   opacity: 1;
   visibility: visible;
 }
@@ -478,98 +756,152 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
 }
 
 @media screen and (max-width: 1024px) {
-  main #modalContainer .modal {
+  main #couponModal .coupon {
     width: 330px;
     height: 410px;
     border-radius: 14px;
     padding: 30px 0;
   }
-  main #modalContainer .modal .modalHeader .modalTitle {
+  main #couponModal .coupon .modalHeader .fa-xmark {
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+  }
+  main #couponModal .coupon .modalHeader .modalTitle {
     margin-bottom: 30px;
   }
-  main #modalContainer .modal .modalHeader .modalTitle p {
+  main #couponModal .coupon .modalHeader .modalTitle p {
     font-size: 1.2rem;
   }
-  main #modalContainer .modal .modalHeader .modalTitle span {
+  main #couponModal .coupon .modalHeader .modalTitle span {
     font-size: 2.6rem;
   }
-  main #modalContainer .membership .modalContents {
+  main #couponModal .coupon .couponContents {
     gap: 12px;
   }
-  main #modalContainer .membership .modalContents > li {
+  main #couponModal .coupon .couponContents > li {
     gap: 10px;
   }
-  main #modalContainer .membership .modalContents .modalCircle {
-    width: 64px;
-    height: 64px;
-  }
-  main #modalContainer .membership .modalContents .modalCircle img {
-    width: 20px;
-    height: 20px;
-  }
-  main #modalContainer .membership .modalContents .membershipInfo {
-    font-size: 1.8rem;
-    gap: 6px;
-  }
-  main #modalContainer .membership .modalContents .membershipInfo p b {
-    padding-left: 4px;
-  }
-  main #modalContainer .membership .modalContents .subInfo {
-    font-size: 0.8rem;
-  }
-  main #modalContainer .point .modalPointContents {
-    gap: 12px;
-  }
-  main #modalContainer .point .modalPointContents > li {
-    gap: 10px;
-  }
-  main #modalContainer .point .modalPointContents .modalCircle {
-    width: 64px;
-    height: 64px;
-  }
-  main #modalContainer .point .modalPointContents .modalCircle img {
-    width: 20px;
-    height: 20px;
-  }
-  main #modalContainer .point .modalPointContents .membershipInfo {
-    font-size: 1.8rem;
-    gap: 6px;
-  }
-  main #modalContainer .point .modalPointContents .membershipInfo p b {
-    padding-left: 4px;
-  }
-  main #modalContainer .coupon .modalCouponContents {
-    gap: 8px;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
     width: 130px;
     height: 74px;
     padding-left: 10px;
   }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
     font-size: 2.2rem;
     margin-bottom: 2px;
   }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
     font-size: 1.4rem;
     margin-left: 1px;
   }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
     font-weight: 600;
     font-size: 1rem;
   }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
     font-size: 0.9rem;
   }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
     width: 32px;
     height: 74px;
   }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
     font-size: 1.4rem;
   }
-  main #mypage {
-    padding: 50px;
+  main #pointModal .point {
+    width: 330px;
+    height: 410px;
+    border-radius: 14px;
+    padding: 30px 0;
+  }
+  main #pointModal .point .modalHeader .fa-xmark {
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+  }
+  main #pointModal .point .modalHeader .modalTitle {
+    margin-bottom: 30px;
+  }
+  main #pointModal .point .modalHeader .modalTitle p {
+    font-size: 1.2rem;
+  }
+  main #pointModal .point .modalHeader .modalTitle span {
+    font-size: 2.6rem;
+  }
+  main #pointModal .point .pointContents {
+    gap: 12px;
+  }
+  main #pointModal .point .pointContents > li {
+    gap: 10px;
+  }
+  main #pointModal .point .pointContents .modalCircle {
+    width: 64px;
+    height: 64px;
+  }
+  main #pointModal .point .pointContents .modalCircle img {
+    width: 20px;
+    height: 20px;
+  }
+  main #pointModal .point .pointContents .membershipInfo {
+    font-size: 1.8rem;
+    gap: 6px;
+  }
+  main #pointModal .point .pointContents .membershipInfo p b {
+    padding-left: 4px;
+  }
+  main #pointModal .point .pointContents .subInfo {
+    font-size: 0.8rem;
+  }
+  main #membershipModal .membership {
+    width: 330px;
+    height: 410px;
+    border-radius: 14px;
+    padding: 30px 0;
+  }
+  main #membershipModal .membership .modalHeader .fa-xmark {
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+    top: 15px;
+    right: 15px;
+  }
+  main #membershipModal .membership .modalHeader .modalTitle {
+    margin-bottom: 30px;
+  }
+  main #membershipModal .membership .modalHeader .modalTitle p {
+    font-size: 1.2rem;
+  }
+  main #membershipModal .membership .modalHeader .modalTitle span {
+    font-size: 2.6rem;
+  }
+  main #membershipModal .membership .membershipContents {
+    gap: 12px;
+  }
+  main #membershipModal .membership .membershipContents > li {
+    gap: 10px;
+  }
+  main #membershipModal .membership .membershipContents .modalCircle {
+    width: 64px;
+    height: 64px;
+  }
+  main #membershipModal .membership .membershipContents .modalCircle img {
+    width: 20px;
+    height: 20px;
+  }
+  main #membershipModal .membership .membershipContents .membershipInfo {
+    font-size: 1.8rem;
+    gap: 6px;
+  }
+  main #membershipModal .membership .membershipContents .membershipInfo p b {
+    padding-left: 4px;
+  }
+  main #membershipModal .membership .membershipContents .subInfo {
+    font-size: 0.8rem;
   }
   main #mypage .mypageContainer {
     row-gap: 20px;
@@ -592,117 +924,14 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
   }
 }
 @media screen and (max-width: 767px) {
-  main #modalContainer .modal {
-    width: 250px;
-    height: 330px;
-    border-radius: 10px;
-    padding: 10px 0;
-  }
-  main #modalContainer .modal .modalHeader .fa-xmark {
-    position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: end;
-    font-size: 1.6rem;
-    color: #000;
-    cursor: pointer;
-    top: 10px;
-    right: 10px;
-  }
-  main #modalContainer .modal .modalHeader .modalTitle {
-    margin-bottom: 20px;
-  }
-  main #modalContainer .modal .modalHeader .modalTitle p {
-    font-size: 1.2rem;
-  }
-  main #modalContainer .modal .modalHeader .modalTitle span {
-    font-size: 2.2rem;
-  }
-  main #modalContainer .membership .modalContents {
-    gap: 12px;
-  }
-  main #modalContainer .membership .modalContents > li {
-    gap: 8px;
-  }
-  main #modalContainer .membership .modalContents .modalCircle {
-    width: 54px;
-    height: 54px;
-  }
-  main #modalContainer .membership .modalContents .modalCircle img {
-    width: 18px;
-    height: 18px;
-  }
-  main #modalContainer .membership .modalContents .membershipInfo {
-    font-size: 1.6rem;
-    gap: 4px;
-  }
-  main #modalContainer .membership .modalContents .membershipInfo p b {
-    padding-left: 3px;
-  }
-  main #modalContainer .membership .modalContents .membershipInfo .subInfo {
-    font-size: 0.9rem;
-  }
-  main #modalContainer .point .modalPointContents {
-    gap: 12px;
-  }
-  main #modalContainer .point .modalPointContents > li {
-    gap: 8px;
-  }
-  main #modalContainer .point .modalPointContents .modalCircle {
-    width: 54px;
-    height: 54px;
-  }
-  main #modalContainer .point .modalPointContents .modalCircle img {
-    width: 18px;
-    height: 18px;
-  }
-  main #modalContainer .point .modalPointContents .modalCircle i {
-    font-size: 2rem;
-  }
-  main #modalContainer .point .modalPointContents .membershipInfo {
-    font-size: 1.5rem;
-    gap: 2px;
-  }
-  main #modalContainer .point .modalPointContents .membershipInfo p b {
-    padding-left: 3px;
-  }
-  main #modalContainer .coupon .modalCouponContents {
-    gap: 6px;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
-    width: 110px;
-    height: 60px;
-    padding-left: 8px;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
-    font-size: 2rem;
-    margin-bottom: 3px;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
-    font-size: 1.2rem;
-    margin-left: 2px;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
-    font-size: 0.9rem;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
-    font-size: 0.6rem;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
-    width: 24px;
-    height: 60px;
-  }
-  main #modalContainer .coupon .modalCouponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
-    font-size: 1rem;
+  main #mypage {
+    padding: 80px 5%;
   }
   main #mypage .mypageContainer {
-    row-gap: 20px;
+    row-gap: 15px;
   }
   main #mypage .mypageContainer .userInfo {
-    padding: 60px 10%;
+    padding: 60px 5%;
   }
   main #mypage .mypageContainer .userInfo .infoTitle {
     font-size: 1.4rem;
@@ -710,7 +939,7 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
   main #mypage .mypageContainer .userInfo h4 {
     font-size: 3rem;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   main #mypage .mypageContainer .userInfo h4 .enter {
     display: block;
@@ -719,8 +948,8 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
     display: none;
   }
   main #mypage .mypageContainer .userInfo .membershipLevel {
-    font-size: 1rem;
-    padding: 12px 16px;
+    font-size: 1.2rem;
+    padding: 12px 20px;
   }
   main #mypage .mypageContainer .userInfo .membershipLevel i {
     display: none;
@@ -732,7 +961,7 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
             flex-direction: column;
   }
   main #mypage .mypageContainer .detailInfoWrapper .detailInfo {
-    padding: 60px 10%;
+    padding: 60px 5%;
   }
   main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailTitle {
     font-size: 2.6rem;
@@ -751,5 +980,217 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
     border-right: none;
     border-top: 1px solid #dadada;
     border-bottom: 1px solid #dadada;
+  }
+}
+@media screen and (max-width: 430px) {
+  main #couponModal .coupon {
+    width: 240px;
+    height: 310px;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+  main #couponModal .coupon .modalHeader .fa-xmark {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    font-size: 1.6rem;
+    color: #000;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+  }
+  main #couponModal .coupon .modalHeader .modalTitle {
+    margin-bottom: 20px;
+  }
+  main #couponModal .coupon .modalHeader .modalTitle p {
+    font-size: 1rem;
+  }
+  main #couponModal .coupon .modalHeader .modalTitle span {
+    font-size: 2rem;
+  }
+  main #couponModal .coupon .couponContents {
+    gap: 8px;
+  }
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
+    width: 105px;
+    height: 60px;
+    padding-left: 6px;
+  }
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
+    font-size: 1.6rem;
+    margin-bottom: 3px;
+  }
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo p b {
+    font-size: 1.2rem;
+    margin-left: 2px;
+  }
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo span {
+    font-size: 0.9rem;
+  }
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .subInfo {
+    font-size: 0.6rem;
+  }
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox2 {
+    width: 24px;
+    height: 60px;
+  }
+  main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox2 .fa-circle-check {
+    font-size: 1rem;
+  }
+  main #pointModal .point {
+    width: 240px;
+    height: 310px;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+  main #pointModal .point .modalHeader .fa-xmark {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    font-size: 1.6rem;
+    color: #000;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+  }
+  main #pointModal .point .modalHeader .modalTitle {
+    margin-bottom: 20px;
+  }
+  main #pointModal .point .modalHeader .modalTitle p {
+    font-size: 1rem;
+  }
+  main #pointModal .point .modalHeader .modalTitle span {
+    font-size: 2rem;
+  }
+  main #pointModal .point .pointContents {
+    gap: 12px;
+  }
+  main #pointModal .point .pointContents > li {
+    gap: 8px;
+  }
+  main #pointModal .point .pointContents .modalCircle {
+    width: 50px;
+    height: 50px;
+  }
+  main #pointModal .point .pointContents .modalCircle img {
+    width: 18px;
+    height: 18px;
+  }
+  main #pointModal .point .pointContents .modalCircle i {
+    font-size: 2rem;
+  }
+  main #pointModal .point .pointContents .membershipInfo {
+    font-size: 1.2rem;
+    gap: 4px;
+  }
+  main #pointModal .point .pointContents .membershipInfo p b {
+    padding-left: 3px;
+  }
+  main #pointModal .point .pointContents .membershipInfo .subInfo {
+    font-size: 0.9rem;
+  }
+  main #membershipModal .membership {
+    width: 240px;
+    height: 310px;
+    border-radius: 10px;
+    padding: 10px 0;
+  }
+  main #membershipModal .membership .modalHeader .fa-xmark {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    font-size: 1.6rem;
+    color: #000;
+    cursor: pointer;
+    top: 10px;
+    right: 10px;
+  }
+  main #membershipModal .membership .modalHeader .modalTitle {
+    margin-bottom: 20px;
+  }
+  main #membershipModal .membership .modalHeader .modalTitle p {
+    font-size: 1rem;
+  }
+  main #membershipModal .membership .modalHeader .modalTitle span {
+    font-size: 2rem;
+  }
+  main #membershipModal .membership .membershipContents {
+    gap: 12px;
+  }
+  main #membershipModal .membership .membershipContents > li {
+    gap: 8px;
+  }
+  main #membershipModal .membership .membershipContents .modalCircle {
+    width: 50px;
+    height: 50px;
+  }
+  main #membershipModal .membership .membershipContents .modalCircle img {
+    width: 18px;
+    height: 18px;
+  }
+  main #membershipModal .membership .membershipContents .membershipInfo {
+    font-size: 1.2rem;
+    gap: 4px;
+  }
+  main #membershipModal .membership .membershipContents .membershipInfo p b {
+    padding-left: 3px;
+  }
+  main #membershipModal .membership .membershipContents .membershipInfo .subInfo {
+    font-size: 0.9rem;
+  }
+  main #mypage {
+    padding: 70px 8%;
+  }
+  main #mypage .mypageContainer .userInfo {
+    padding: 40px 10%;
+  }
+  main #mypage .mypageContainer .userInfo .infoTitle {
+    font-size: 1.4rem;
+  }
+  main #mypage .mypageContainer .userInfo h4 {
+    font-size: 2.8rem;
+  }
+  main #mypage .mypageContainer .userInfo h4 .enter {
+    display: none;
+  }
+  main #mypage .mypageContainer .userInfo .membershipLevel {
+    font-size: 1.2rem;
+    padding: 10px 18px;
+  }
+  main #mypage .mypageContainer .userInfo .membershipLevel i {
+    display: none;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo {
+    padding: 40px 10%;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailTitle {
+    font-size: 2rem;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText {
+    margin-top: 40px;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold {
+    font-size: 2.6rem;
+  }
+  main #mypage .mypageContainer .detailInfoWrapper .detailInfo .detailText .bold b {
+    font-size: 2rem;
   }
 }
