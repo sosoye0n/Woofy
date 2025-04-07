@@ -407,8 +407,9 @@ main {
   }
   #container02 {
     width: 100%;
-    height: 250vh;
+    height: 200vh;
     background-color: map-get($map: $color, $key: dark);
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -447,6 +448,7 @@ main {
       }
     }
     .event2 {
+      margin-top: 10%;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -775,7 +777,7 @@ main {
       }
     }
     #container02 {
-      height: 132vh;
+      // height: 132vh;
       .eventBtn {
         p {
           width: 512px;
@@ -784,6 +786,7 @@ main {
         }
       }
       .event2 {
+        margin-top: 0;
         .event02 {
           top: 10%;
           ul {
@@ -864,7 +867,6 @@ main {
       }
     }
     #container02 {
-      height: 150vh;
       .eventBtn {
         p {
           height: 70px;
@@ -872,15 +874,20 @@ main {
         }
       }
       .event2 {
-        top: 20%;
+        position: relative;
         .event02 {
+          position: absolute;
+          top: 0;
           ul {
-            width: 120%;
+            width: 100%;
             font-size: 6rem;
             hr {
-              width: 110%;
+              width: 100%;
             }
           }
+        }
+        .eventWarning {
+          margin-top: 132%;
         }
       }
     }
@@ -888,4 +895,168 @@ main {
 }
 
 @media screen and (max-width: 375px) {
+  main {
+    #container01 {
+      .eventBtn {
+        p {
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+      .event01 {
+        .event01Wrapper {
+          width: 90%;
+          .textWrapper {
+            height: 340px;
+            border-radius: 20px 20px 0 0;
+
+            h1 {
+              font: normal 1.4rem/1 map-get($map: $font-family, $key: figtree);
+              text-shadow: 0px 3px 0px rgba($color: #fff, $alpha: 0.6);
+            }
+            .left {
+              gap: 8px;
+              img {
+                width: 190px;
+                height: 70px;
+              }
+              p {
+                padding: 10px 10px;
+                font: normal 1rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+            .right {
+              gap: 8px;
+              p {
+                padding: 10px 10px;
+                font: normal 1rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+          }
+        }
+        .eventSec {
+          p {
+            font: normal 1.2rem/1.6 map-get($map: $font-family, $key: figtree);
+          }
+        }
+        .slide {
+          .imgSlider1 {
+            .track1 {
+              img {
+                width: 140px;
+                height: 160px;
+              }
+            }
+          }
+          .imgSlider2 {
+            .track2 {
+              img {
+                width: 140px;
+                height: 160px;
+              }
+            }
+          }
+        }
+      }
+      .event01-1 {
+        .conWrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .swiper {
+            width: 80%;
+            height: 280px;
+          }
+          .contents {
+            width: 80%;
+            h1 {
+              display: none;
+            }
+            .contentList {
+              width: 100%;
+              gap: 4px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              .detailImg {
+                width: 42px;
+                margin: 12px;
+              }
+              .content {
+                gap: 8px;
+                height: 120px;
+                .brand {
+                  font-size: 1.4rem;
+                }
+                .name {
+                  font-size: 1.2rem;
+                }
+                .sale {
+                  font-size: 1.4rem;
+
+                  b {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .event01-2 {
+        height: 30vh;
+        .conImg {
+          width: 120px;
+          height: 100%;
+        }
+        .cap {
+          width: 120px;
+        }
+        .clothe {
+          width: 68px;
+        }
+      }
+    }
+    #container02 {
+      position: relative;
+      height: 140vh;
+      .eventBtn {
+        p {
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+      .event2 {
+        position: absolute;
+        top: 6%;
+        .event02 {
+          ul {
+            width: 50%;
+            font-size: 2.2rem;
+          }
+          .drawImg {
+            width: 240px;
+            height: 280px;
+            margin-top: 2%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .countdown {
+            font-size: 3.2rem;
+          }
+        }
+        .eventWarning {
+          ul {
+            li {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }

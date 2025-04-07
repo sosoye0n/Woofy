@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -52,13 +51,8 @@ main #pinSection .swiper .swiper-wrapper .swiper-slide #swiperText {
   bottom: 18%;
   left: 8%;
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
 main #pinSection .swiper .swiper-wrapper .swiper-slide #swiperText p:nth-child(1) {
@@ -121,8 +115,7 @@ main #pinSection .swiper .pgbar {
 main #pinSection .swiper .pgbar .pagination-progressbar {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 100%;
   height: 1px;
 }
@@ -149,24 +142,14 @@ main #scrollSection .flexCon01 {
 }
 main #scrollSection .flexCon01 .flexLeft,
 main #scrollSection .flexCon01 .flexRight {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 40px;
 }
 main #scrollSection .flexCon01 .flexBox {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 20px;
 }
 main #scrollSection .flexCon01 .flexBox .imgBox {
@@ -201,27 +184,16 @@ main #scrollSection .flexCon01 .flexBox .textBox span:first-child {
 main #scrollSection .flexCon01 .flexBox .itemWrap {
   border-top: 1px solid #ccc;
   padding-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 20px;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: relative;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 70px;
   gap: 20px;
@@ -229,9 +201,7 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox a {
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemImg {
   height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemImg img {
   height: 100%;
@@ -240,19 +210,10 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemImg img {
   aspect-ratio: 1/1;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText {
-  -webkit-box-flex: 10;
-      -ms-flex: 10;
-          flex: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex: 10;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText p {
   font-size: 1.4rem;
@@ -267,21 +228,15 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText p:last-chil
   margin-right: 10px;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 4px;
   align-self: center;
   cursor: pointer;
   position: absolute;
   right: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   text-align: center;
   color: #a9a9a9;
 }
@@ -306,16 +261,9 @@ main #scrollSection .flexCon02 .swiper02 h2 {
   font-weight: normal;
 }
 main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
   width: 100%;
@@ -370,8 +318,6 @@ main #scrollSection .flexCon02 .swiper02 .swiper-button-next::after {
   font-size: 1.4rem;
 }
 main #scrollSection .marquee {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   white-space: nowrap;
@@ -379,14 +325,11 @@ main #scrollSection .marquee {
 }
 main #scrollSection .marquee div {
   will-change: transform;
-  -webkit-animation: scrolling 60s linear infinite both;
-          animation: scrolling 60s linear infinite both;
+  animation: scrolling 60s linear infinite both;
   font-size: 10rem;
   font-weight: bold;
   color: #fff;
-  -webkit-filter: drop-shadow(-1px -1px 0 #ccc) drop-shadow(1px -1px 0 #ccc) drop-shadow(-1px 1px 0 #ccc) drop-shadow(1px 1px 0 #ccc);
-          filter: drop-shadow(-1px -1px 0 #ccc) drop-shadow(1px -1px 0 #ccc) drop-shadow(-1px 1px 0 #ccc) drop-shadow(1px 1px 0 #ccc);
-  -webkit-transition: all 0.3s;
+  filter: drop-shadow(-1px -1px 0 #ccc) drop-shadow(1px -1px 0 #ccc) drop-shadow(-1px 1px 0 #ccc) drop-shadow(1px 1px 0 #ccc);
   transition: all 0.3s;
 }
 
@@ -508,23 +451,11 @@ main #scrollSection .marquee div {
     right: 13% !important;
   }
 }
-@-webkit-keyframes scrolling {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
 @keyframes scrolling {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 }

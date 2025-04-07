@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -33,16 +32,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 140px 0;
   text-transform: uppercase;
 }
@@ -56,7 +48,7 @@ main p {
   font-weight: 300;
   margin-bottom: 50px;
 }
-main input[type=button] {
+main input[type="button"] {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -66,10 +58,9 @@ main input[type=button] {
   background: #000;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-main input[type=button]:hover {
+main input[type="button"]:hover {
   outline: none;
   background: #99bdff;
   color: #fff;
@@ -84,7 +75,7 @@ main input[type=button]:hover {
     font-size: 1rem;
     margin-bottom: 30px;
   }
-  main input[type=button] {
+  main input[type="button"] {
     width: 280px;
     height: 64px;
     border-radius: 8px;
