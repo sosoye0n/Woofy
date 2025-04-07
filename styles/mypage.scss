@@ -4,7 +4,7 @@
 
 // 공통
 header {
-  z-index: 1;
+  z-index: 2;
 }
 footer {
   z-index: 1;
@@ -15,14 +15,14 @@ main {
 }
 // 메인 컨텐츠
 main {
-  margin-top: 70px;
+  // margin-top: 70px;
   width: 100%;
   text-transform: uppercase;
   // 모달
   #couponModal {
     opacity: 0;
     visibility: hidden;
-    background: rgba($color: #000000, $alpha: 0.5);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
     width: 100%;
     height: 100vh;
@@ -32,7 +32,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    // cursor: pointer;
     transition: all 0.3s;
     .coupon {
       width: 380px;
@@ -55,6 +55,9 @@ main {
           cursor: pointer;
           top: 20px;
           right: 20px;
+          &:hover {
+            color: map-get($map: $color, $key: point);
+          }
         }
         .modalTitle {
           display: flex;
@@ -81,7 +84,7 @@ main {
         .modalCouponInfoCon {
           .modalCoupon {
             display: flex;
-            cursor: pointer;
+            // cursor: pointer;
             .couponBox1 {
               width: 160px;
               height: 92px;
@@ -133,10 +136,10 @@ main {
       }
     }
   }
-  #pointpModal {
+  #pointModal {
     opacity: 0;
     visibility: hidden;
-    background: rgba($color: #000000, $alpha: 0.5);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
     width: 100%;
     height: 100vh;
@@ -146,7 +149,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     transition: all 0.3s;
     .point {
       width: 380px;
@@ -169,6 +171,9 @@ main {
           cursor: pointer;
           top: 20px;
           right: 20px;
+          &:hover {
+            color: map-get($map: $color, $key: point);
+          }
         }
         .modalTitle {
           display: flex;
@@ -274,7 +279,7 @@ main {
   #membershipModal {
     opacity: 0;
     visibility: hidden;
-    background: rgba($color: #000000, $alpha: 0.5);
+    background: rgba(0, 0, 0, 0.4);
     z-index: 2;
     width: 100%;
     height: 100vh;
@@ -284,7 +289,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     transition: all 0.3s;
     .membership {
       width: 380px;
@@ -307,6 +311,9 @@ main {
           cursor: pointer;
           top: 20px;
           right: 20px;
+          &:hover {
+            color: map-get($map: $color, $key: point);
+          }
         }
         .modalTitle {
           display: flex;
@@ -370,23 +377,26 @@ main {
       }
     }
   }
+  // .bg {
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   z-index: 1;
+  //   width: 100%;
+  //   height: 100vh;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   cursor: pointer;
+  //   transition: all 0.3s;
+  //   background: rgba(0, 0, 0, 0.4);
+  // }
 
   // 가상클래스
-  // #couponModal.on {
-  //   opacity: 1;
-  //   visibility: visible;
-  // }
-  // #pointpModal.on {
-  //   opacity: 1;
-  //   visibility: visible;
-  // }
-  // #membershipModal .on {
-  //   opacity: 1;
-  //   visibility: visible;
-  // }
-  // 수정 추천
   #couponModal.on,
-  #pointpModal.on,
+  #pointModal.on,
   #membershipModal.on {
     opacity: 1;
     visibility: visible;
@@ -566,7 +576,7 @@ main {
         }
       }
     }
-    #pointpModal {
+    #pointModal {
       .point {
         width: 330px;
         height: 410px;
@@ -672,7 +682,6 @@ main {
     }
 
     #mypage {
-      padding: 50px 10px;
       .mypageContainer {
         row-gap: 20px;
         grid-template-columns: repeat(1, 1fr);
@@ -702,6 +711,65 @@ main {
 
 // 반응형 mobile
 @media screen and (max-width: 767px) {
+  main {
+    #mypage {
+      padding: 80px 5%;
+      .mypageContainer {
+        row-gap: 15px;
+        .userInfo {
+          padding: 60px 5%;
+          .infoTitle {
+            font-size: 1.4rem;
+          }
+          h4 {
+            font-size: 3rem;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            .enter {
+              display: block;
+            }
+            br {
+              display: none;
+            }
+          }
+          .membershipLevel {
+            font-size: 1.2rem;
+            padding: 12px 20px;
+            i {
+              display: none;
+            }
+          }
+        }
+        .detailInfoWrapper {
+          flex-direction: column;
+          .detailInfo {
+            padding: 60px 5%;
+            .detailTitle {
+              font-size: 2.6rem;
+            }
+            .detailText {
+              margin-top: 40px;
+              .bold {
+                font-size: 3.6rem;
+                b {
+                  font-size: 2.4rem;
+                }
+              }
+            }
+            &:nth-child(2) {
+              border-left: none;
+              border-right: none;
+              border-top: 1px solid map-get($map: $color, $key: gray);
+              border-bottom: 1px solid map-get($map: $color, $key: gray);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
   main {
     #couponModal {
       .coupon {
@@ -769,7 +837,7 @@ main {
         }
       }
     }
-    #pointpModal {
+    #pointModal {
       .point {
         width: 240px;
         height: 310px;
@@ -884,28 +952,22 @@ main {
     }
 
     #mypage {
-      // padding: 10px 10px;
+      padding: 70px 8%;
       .mypageContainer {
-        row-gap: 15px;
         .userInfo {
-          padding: 60px 5%;
+          padding: 40px 10%;
           .infoTitle {
             font-size: 1.4rem;
           }
           h4 {
-            font-size: 3rem;
-            margin-top: 10px;
-            margin-bottom: 20px;
+            font-size: 2.8rem;
             .enter {
-              display: block;
-            }
-            br {
               display: none;
             }
           }
           .membershipLevel {
             font-size: 1.2rem;
-            padding: 12px 20px;
+            padding: 10px 18px;
             i {
               display: none;
             }
@@ -914,24 +976,18 @@ main {
         .detailInfoWrapper {
           flex-direction: column;
           .detailInfo {
-            padding: 60px 5%;
+            padding: 40px 10%;
             .detailTitle {
-              font-size: 2.6rem;
+              font-size: 2rem;
             }
             .detailText {
               margin-top: 40px;
               .bold {
-                font-size: 3.6rem;
+                font-size: 2.6rem;
                 b {
-                  font-size: 2.4rem;
+                  font-size: 2rem;
                 }
               }
-            }
-            &:nth-child(2) {
-              border-left: none;
-              border-right: none;
-              border-top: 1px solid map-get($map: $color, $key: gray);
-              border-bottom: 1px solid map-get($map: $color, $key: gray);
             }
           }
         }
@@ -939,7 +995,3 @@ main {
     }
   }
 }
-
-// // phone - mini size
-// @media screen and (max-width: 375px) {
-// }

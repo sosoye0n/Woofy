@@ -38,9 +38,10 @@ main {
           flex-direction: column;
   padding: 140px 0;
   text-transform: uppercase;
+  margin-top: 0;
 }
 main h2 {
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 main #login {
@@ -175,10 +176,10 @@ main #login #join #joinBtn {
     padding: 100px 0;
   }
   main h2 {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
   }
   main #login {
-    width: 280px;
+    width: 320px;
     margin-top: 20px;
   }
   main #login input:not(input[type=checkbox]) {

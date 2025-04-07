@@ -17,7 +17,7 @@ findUserInfo.addEventListener("click", () => {
 const id = document.getElementById("id");
 const password = document.getElementById("password");
 const login = document.getElementById("loginBtn");
-let errStack = 0;
+// let errStack = 0;
 
 // console.log(id, password, login);
 
@@ -30,7 +30,7 @@ login.addEventListener("click", () => {
       // location.href = "../index.html";
     } else {
       alert("아이디, 비밀번호를 다시 확인해주세요✋🏻");
-      errStack++;
+      // errStack++;
     }
   } else {
     alert("계정이 존재하지 않습니다");
