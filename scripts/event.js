@@ -1,6 +1,3 @@
-const uploadEvent = document.querySelector(".e01");
-const drawEvent = document.querySelector(".e02");
-
 const mySwiper = new Swiper(".swiper", {
   // slidesPerView: 1,
   // loop: true,
@@ -37,23 +34,6 @@ modal.addEventListener("click", closeModalHandler);
 function closeModalHandler() {
   modal.classList.remove("on");
 }
-
-// const drawModal = document.querySelector("#modalDrawBg");
-// const openDrawModal = document.querySelector(".drawBtn");
-// const closeDrawModal = document.querySelector(".closeDrawModal");
-// const confirmBtn = document.querySelector(".modalDrawBtn");
-// openDrawModal.addEventListener("click", function () {
-//   drawModal.classList.add("open");
-// });
-// closeDrawModal.addEventListener("click", () => {
-//   drawModal.classList.remove("open");
-// });
-// confirmBtn.addEventListener("click", () => {
-//   drawModal.classList.remove("open");
-// });
-// drawModal.addEventListener("click", () => {
-//   drawModal.classList.remove("open");
-// });
 
 // event2 modal
 const drawModal = document.querySelector("#modalDrawBg");
@@ -122,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const timer = setInterval(updateCountdown, 1000);
   }
 
-  // const targetDate = new Date("2025-04-04T19:05:00").getTime();
   const targetDate = new Date("2025-04-11T14:30:00").getTime();
   startCountdown(targetDate);
 });
