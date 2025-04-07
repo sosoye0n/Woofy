@@ -94,7 +94,7 @@ const searchInner = `
         </form>
 `;
 const footerInner = `
- <nav id="footerCategory">
+<nav id="footerCategory">
         <ul>
           <li>
             <a href="#" title="clothes">CLOTHES</a>

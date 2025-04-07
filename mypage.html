@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/3f2ea24883.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/3f2ea24883.js" crossorigin="anonymous"></script>
     <!-- CSS & JS -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/mypage.css" />
@@ -22,8 +19,8 @@
     <div id="searchWrap"></div>
     <main>
       <!-- modal popup -->
-      <div id="modalContainer">
-        <div class="modal coupon">
+      <div id="couponModal" class="">
+        <div class="coupon">
           <div class="modalHeader">
             <i class="fas fa-xmark close"></i>
             <div class="modalTitle">
@@ -31,7 +28,7 @@
               <span>coupon</span>
             </div>
           </div>
-          <ul class="modalCouponContents">
+          <ul class="couponContents">
             <li class="modalCouponInfoCon">
               <div class="modalCoupon">
                 <div class="couponBox1">
@@ -82,53 +79,17 @@
             </li>
           </ul>
         </div>
-        <div class="modal membership">
-          <div class="modalHeader">
-            <i class="fas fa-xmark close"></i>
-            <div class="modalTitle">
-              <p>멤버십 등급별 혜택</p>
-              <span>Membership</span>
-            </div>
-          </div>
-          <ul class="modalContents">
-            <li>
-              <div class="modalCircle">
-                <img src="./images/login/membership_1.png" alt="membership1" />
-              </div>
-              <div class="membershipInfo">
-                <p>Wag <b>신규</b></p>
-                <p class="subInfo">신규멤버, 첫구매 쿠폰 제공</p>
-              </div>
-            </li>
-            <li>
-              <div class="modalCircle">
-                <img src="./images/login/membership_2.png" alt="membership1" />
-              </div>
-              <div class="membershipInfo">
-                <p>Opulent<b>프리미엄</b></p>
-                <p class="subInfo">더 높은 할인율, 전용 이벤트 초대</p>
-              </div>
-            </li>
-            <li>
-              <div class="modalCircle">
-                <img src="./images/login/membership_3.png" alt="membership1" />
-              </div>
-              <div class="membershipInfo">
-                <p>Furry <b>vip</b></p>
-                <p class="subInfo">한정판 상품 우선 구매, 프리미엄 서비스</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="modal point">
+      </div>
+      <div id="pointpModal">
+        <div class="point">
           <div class="modalHeader">
             <i class="fas fa-xmark close"></i>
             <div class="modalTitle">
               <p>보유포인트</p>
-              <span>woofy point</span>
+              <span>point</span>
             </div>
           </div>
-          <ul class="modalPointContents">
+          <ul class="pointContents">
             <li>
               <div class="modalCircle">
                 <i class="fa-solid fa-piggy-bank"></i>
@@ -159,6 +120,46 @@
           </ul>
         </div>
       </div>
+      <div id="membershipModal">
+        <div class="membership">
+          <div class="modalHeader">
+            <i class="fas fa-xmark close"></i>
+            <div class="modalTitle">
+              <p>멤버십 등급별 혜택</p>
+              <span>Membership</span>
+            </div>
+          </div>
+          <ul class="membershipContents">
+            <li>
+              <div class="modalCircle">
+                <img src="./images/login/membership_1.png" alt="membership1" />
+              </div>
+              <div class="membershipInfo">
+                <p>Wag <b>신규</b></p>
+                <p class="subInfo">신규멤버, 첫구매 쿠폰 제공</p>
+              </div>
+            </li>
+            <li>
+              <div class="modalCircle">
+                <img src="./images/login/membership_2.png" alt="membership1" />
+              </div>
+              <div class="membershipInfo">
+                <p>Opulent<b>프리미엄</b></p>
+                <p class="subInfo">더 높은 할인율, 전용 이벤트 초대</p>
+              </div>
+            </li>
+            <li>
+              <div class="modalCircle">
+                <img src="./images/login/membership_3.png" alt="membership1" />
+              </div>
+              <div class="membershipInfo">
+                <p>Furry <b>vip</b></p>
+                <p class="subInfo">한정판 상품 우선 구매, 프리미엄 서비스</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <!-- main contents -->
       <div id="mypage">
@@ -175,19 +176,19 @@
             </div>
           </div>
           <div class="detailInfoWrapper">
-            <div class="detailInfo">
+            <div class="detailInfo couponOpen">
               <p class="detailTitle">Coupon</p>
               <div class="detailText">
                 <p class="bold">3<b>개</b></p>
               </div>
             </div>
-            <div class="detailInfo">
+            <div class="detailInfo pointOpen">
               <p class="detailTitle">Point</p>
               <div class="detailText">
                 <p class="bold">28,000<b>p</b></p>
               </div>
             </div>
-            <div class="detailInfo">
+            <div class="detailInfo memberhsipOpen">
               <p class="detailTitle">membership</p>
               <div class="detailText">
                 <p class="bold">furry</p>

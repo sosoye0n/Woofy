@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -32,8 +33,13 @@ header {
   width: 100%;
   max-width: 1000px;
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .checkout-container .checkout-title {
   font-size: 2.4rem;
@@ -62,12 +68,18 @@ section {
   padding: 0 15px;
 }
 .checkout-container .shipping-section .address-selector .address-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .checkout-container .shipping-section .address-selector .address-label .recent-address {
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 2.2rem;
   font-weight: 300;
   font-weight: 400;
@@ -83,16 +95,26 @@ section {
   color: #a7a7a8;
 }
 .checkout-container .shipping-section .address-selector .address-info .user-state {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 10px;
 }
 .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
   font-size: 2rem;
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
   font-size: 1.6rem;
@@ -112,6 +134,8 @@ section {
   width: 100%;
 }
 .checkout-container .shipping-section .address-selector .delivery-message select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 40px;
@@ -139,9 +163,15 @@ section {
   padding: 0 10px;
 }
 .order-products .product-list .product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 35px 25px;
   margin: 5px;
   border-top: 1px solid #d9d9d9;
@@ -160,7 +190,9 @@ section {
      object-fit: cover;
 }
 .order-products .product-list .product-item .product-info {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0 15px;
   font-size: 2rem;
   font-weight: 400;
@@ -190,10 +222,17 @@ section {
 .payment-section .payment-options .coupon-row,
 .payment-section .payment-options .points-row {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 15px;
   padding: 0 10px;
   color: #999999;
@@ -220,8 +259,12 @@ section {
 }
 .payment-section .payment-options .option-info {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 20px;
   font-size: 1.4rem;
   display: flex;
@@ -232,8 +275,12 @@ section {
   padding: 0 20px;
 }
 .order-summary .summary-list .summary-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 15px;
   padding: 0 5%;
   color: #a7a7a8;
@@ -265,8 +312,12 @@ section {
   padding: 0 10px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .payment-options .visually-hidden {
   position: absolute;
@@ -279,12 +330,17 @@ section {
   border: 0;
 }
 .payment-methods .payment-options .payment-options-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .payment-options .payment-options-list .payment-option {
   cursor: pointer;
@@ -316,8 +372,12 @@ section {
 .payment-methods .terms-agreement {
   padding: 0 12px;
   margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .terms-agreement .agreement-label {
   cursor: pointer;
@@ -349,8 +409,12 @@ section {
 .checkout-button-container {
   width: 90%;
   margin: 30px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .checkout-button-container .checkout-button {
   width: 100%;
@@ -362,11 +426,13 @@ section {
   border-radius: 10px;
   margin-bottom: 100px;
   cursor: pointer;
+  -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
 .checkout-button-container .checkout-button:hover {
   background: #ecff0b;
 }
 .checkout-button-container .checkout-button:active {
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
