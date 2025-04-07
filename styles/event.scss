@@ -7,6 +7,7 @@
 header {
   z-index: 10;
 }
+
 main {
   // padding: 0 3%;
   background: #fff;
@@ -19,97 +20,114 @@ main {
     .eventHeader {
       width: 100%;
       height: 400px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+      background: url("/images/event/pc.png") center/cover no-repeat;
     }
     .eventBtn {
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      a {
-        width: 960px;
-        height: 90px;
+      p {
+        width: calc(100% / 2);
+        height: 80px;
         font-size: 3rem;
         font-weight: bold;
-        border: 1px solid map-get($map: $color, $key: gray);
+        border-bottom: 1px solid map-get($map: $color, $key: gray);
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: all 0.5s;
+        cursor: pointer;
+        &:hover {
+          background: map-get($map: $color, $key: dark);
+          color: map-get($map: $color, $key: point);
+        }
+        &:nth-child(1) {
+          background: map-get($map: $color, $key: dark);
+          color: map-get($map: $color, $key: point);
+        }
       }
     }
 
     #eventModal {
-      z-index: 3;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgba($color: #000000, $alpha: 0.5);
-      transition: all 0.3s;
-      // opacity: 0;
-      display: none;
-      &.on {
-        display: block;
-        // opacity: 1;
-      }
-      .modalContent {
-        max-width: 500px;
+      #modalBg {
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 300px;
-        border-radius: 18px;
-        background-color: #fff;
-        margin: 16% 34%;
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        .closeModal {
-          display: flex;
-          justify-content: end;
-          cursor: pointer;
-          .fa-xmark {
-            font-size: 3rem;
-            color: map-get($map: $color, $key: inputs);
-            margin-top: 3%;
-            margin-right: 6%;
-          }
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        transition: all 0.3s;
+        // opacity: 0;
+        display: none;
+        &.on {
+          display: block;
+          // opacity: 1;
         }
-        .modalTitle {
+        .modalContent {
+          max-width: 500px;
+          width: 100%;
+          height: 300px;
+          border-radius: 18px;
+          background-color: #fff;
+          margin: 16% 34%;
           display: flex;
-          flex-direction: column;
           justify-content: center;
           align-items: center;
-          h1 {
-            font-size: 5rem;
-            color: map-get($map: $color, $key: point);
-            margin-bottom: 10px;
-          }
-          p {
-            font-size: 2.2rem;
-            font-weight: 700;
-          }
-          span {
-            font-size: 1.5rem;
-            padding: 10px 0;
-          }
-          .modalBtn {
-            font-size: 1.4rem;
-            margin-top: 20px;
-            border: none;
-            padding: 8px 30px;
-            border-radius: 24px;
-            background: map-get($map: $color, $key: input);
+          position: relative;
+          .closeModal {
+            position: absolute;
+            top: 5%;
+            right: 5%;
             cursor: pointer;
-            transition: all 0.3s;
-            &:hover {
+            .fa-xmark {
+              font-size: 3rem;
+              color: map-get($map: $color, $key: inputs);
+              margin-top: 3%;
+              margin-right: 6%;
+            }
+          }
+          .modalTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+              font-size: 7rem;
+              font-weight: 700;
+              color: map-get($map: $color, $key: point);
+              margin-bottom: 10px;
+              b {
+                font-size: 5.2rem;
+              }
+            }
+            p {
+              font-size: 3rem;
+              font-weight: 700;
+            }
+            span {
+              font-size: 1.4rem;
+              font-weight: 300;
+              margin-bottom: 4px;
+            }
+            .modalBtn {
+              font-size: 1.4rem;
+              font-weight: 600;
+              // margin-top: 20px;
+              border: none;
+              padding: 14px 30px;
+              border-radius: 12px;
               background: map-get($map: $color, $key: point);
+              cursor: pointer;
+              transition: all 0.3s;
+              &:hover {
+                background: map-get($map: $color, $key: dark);
+                color: map-get($map: $color, $key: point);
+              }
             }
           }
         }
@@ -130,7 +148,6 @@ main {
           background: #dce1ec;
           border-radius: 30px 30px 0 0;
           padding: 2% 6% 0;
-
           h1 {
             width: 100%;
             height: 10%;
@@ -218,7 +235,7 @@ main {
           .track1 {
             display: flex;
             will-change: transform;
-            animation: scrolling 15s linear infinite both;
+            animation: scrolling 18s linear infinite both;
             img {
               width: 240px;
               height: 280px;
@@ -272,10 +289,10 @@ main {
               background-position: center;
               background-size: cover;
               &:nth-child(1) {
-                background-image: url("/images/event/2-5.jpg");
+                background-image: url("/images/event/25.jpg");
               }
               &:nth-child(2) {
-                background-image: url("/images/event/1-5.jpg");
+                background-image: url("/images/event/15.jpg");
               }
             }
           }
@@ -343,28 +360,294 @@ main {
     }
     .event01-2 {
       width: 100%;
-      height: 100vh;
-      background-color: #f7e3bb;
+      height: 80vh;
+      background-color: #e0e8fc;
       position: relative;
       .conImg {
-        width: 800px;
+        width: 500px;
         height: 100%;
         position: absolute;
+        display: flex;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
+      // .frame {
+      //   width: 460px;
+      //   height: 520px;
+      //   left: 53%;
+      //   top: 20%;
+      //   position: absolute;
+      // }
+      .cap {
+        position: absolute;
+        width: 300px;
+        object-fit: cover;
+        top: 3%;
+        right: 8%;
+        transform: rotate(4deg);
+        &:hover {
+          filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+          transform: rotate(14deg);
+        }
+      }
+      .clothe {
+        position: absolute;
+        width: 140px;
+        top: 44%;
+        right: 6%;
+        &:hover {
+          filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+          transform: rotate(-14deg);
+        }
+      }
     }
   }
   #container02 {
     width: 100%;
-    height: 100vh;
+    height: 250vh;
     background-color: map-get($map: $color, $key: dark);
-    .event02 {
-      color: map-get($map: $color, $key: light);
-      font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .eventBtn {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        width: 960px;
+        height: 80px;
+        font-size: 3rem;
+        font-weight: bold;
+        border-bottom: 0.2px solid map-get($map: $color, $key: gray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: map-get($map: $color, $key: light);
+        transition: all 0.5s;
+        cursor: pointer;
+        &:nth-child(1) {
+          &:hover {
+            color: map-get($map: $color, $key: point);
+            background: map-get($map: $color, $key: dark);
+          }
+        }
+        &:nth-child(2) {
+          color: map-get($map: $color, $key: point);
+          background: map-get($map: $color, $key: dark);
+        }
+      }
+    }
+    .event2 {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10%;
+      .event02 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        ul {
+          width: 132%;
+          font-weight: 700;
+          color: map-get($map: $color, $key: light);
+          font-size: 9rem;
+          margin-top: 3%;
+          margin-bottom: 8%;
+          display: flex;
+          flex-direction: column;
+          li {
+            font-weight: 800;
+            font-style: italic;
+            &:nth-child(1) {
+              display: flex;
+              justify-content: start;
+              align-items: center;
+            }
+            &:nth-child(2) {
+              display: flex;
+              justify-content: end;
+              align-items: center;
+            }
+          }
+          hr {
+            width: 100%;
+            margin-top: 4%;
+          }
+        }
+        .drawImg {
+          width: 440px;
+          height: 348px;
+          margin-top: 8%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .countdown {
+          width: 500px;
+          margin: 16% 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 7rem;
+          font-weight: 600;
+          color: map-get($map: $color, $key: light);
+          span {
+            font-size: 2.4rem;
+            padding: 0 10px;
+            margin-right: 10px;
+          }
+        }
+
+        .drawBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 280px;
+          padding: 16px 20px;
+          border-radius: 40px;
+          font-size: 2.2rem;
+          font-weight: 600;
+          background: inherit;
+          color: map-get($map: $color, $key: light);
+          border: 1px solid map-get($map: $color, $key: light);
+          transition: all 0.5s;
+          cursor: pointer;
+          &:hover {
+            color: map-get($map: $color, $key: dark);
+            background: map-get($map: $color, $key: light);
+          }
+        }
+      }
+      .eventWarning {
+        width: 60%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          width: 100%;
+          font-size: 2rem;
+          color: map-get($map: $color, $key: light);
+          margin-bottom: 2%;
+        }
+        ul {
+          color: map-get($map: $color, $key: light);
+          li {
+            position: relative;
+            padding-left: 16px;
+            &::before {
+              content: "";
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              left: 0;
+              top: 7px;
+              background-color: map-get($map: $color, $key: light);
+              border-radius: 100%;
+            }
+          }
+        }
+      }
+    }
+    #drawModal {
+      #modalDrawBg {
+        z-index: 3;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        transition: all 0.3s;
+        // opacity: 0;
+        display: none;
+        &.open {
+          display: block;
+          // opacity: 1;
+        }
+        .modalDrawContent {
+          max-width: 500px;
+          width: 100%;
+          height: 300px;
+          border-radius: 18px;
+          background-color: #fff;
+          margin: 16% 34%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .closeDrawModal {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            cursor: pointer;
+            .fa-xmark {
+              font-size: 3rem;
+              color: map-get($map: $color, $key: inputs);
+              margin-top: 3%;
+              margin-right: 6%;
+            }
+          }
+          .modalDrawTitle {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+              font-size: 1.8rem;
+              font-weight: 200;
+            }
+            p {
+              // font-size: 2.7rem;
+              font-size: 4rem;
+              font-weight: 800;
+              margin-top: 6px;
+              margin-bottom: 10px;
+            }
+            span {
+              font-size: 1.4rem;
+              font-weight: 300;
+              // margin-top: 20px;
+            }
+            .modalDrawBtn {
+              font-size: 1.4rem;
+              font-weight: 600;
+              margin-top: 30px;
+              border: none;
+              padding: 14px 30px;
+              border-radius: 12px;
+              background: map-get($map: $color, $key: dark);
+              color: map-get($map: $color, $key: point);
+              // background: map-get($map: $color, $key: point);
+              cursor: pointer;
+              transition: all 0.3s;
+              &:hover {
+                background: map-get($map: $color, $key: point);
+                // background: map-get($map: $color, $key: dark);
+                color: map-get($map: $color, $key: dark);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -384,4 +667,225 @@ main {
   100% {
     transform: translateX(0);
   }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    #container01 {
+      .eventHeader {
+        background: url("/images/event/tab.png") center/cover no-repeat;
+      }
+      .eventBtn {
+        p {
+          height: 70px;
+          font-size: 2.4rem;
+        }
+      }
+      .event01 {
+        .event01Wrapper {
+          width: 66%;
+          margin-top: 6%;
+          .textWrapper {
+            height: 600px;
+            h1 {
+              height: 8%;
+              margin-bottom: 4%;
+              font: normal 1.8rem/1 map-get($map: $font-family, $key: figtree);
+            }
+            .left {
+              gap: 16px;
+              margin-bottom: 16px;
+              img {
+                width: 280px;
+                height: 90px;
+              }
+              p {
+                padding: 16px 18px;
+                font: normal 1.4rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+            .right {
+              gap: 16px;
+              margin-bottom: 16px;
+              p {
+                padding: 16px 18px;
+                font: normal 1.4rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+          }
+        }
+        .eventSec {
+          margin: 6% 0;
+          p {
+            font: normal 1.6rem/2 map-get($map: $font-family, $key: figtree);
+          }
+        }
+        .slide {
+          .imgSlider1 {
+            .track1 {
+              img {
+                width: 200px;
+                height: 240px;
+              }
+            }
+          }
+          .imgSlider2 {
+            .track2 {
+              img {
+                width: 200px;
+                height: 240px;
+              }
+            }
+          }
+        }
+      }
+      .event01-1 {
+        height: auto;
+        .conWrapper {
+          gap: 4%;
+          padding: 6% 0;
+          .swiper {
+            width: 440px;
+            height: 460px;
+            margin-top: 0;
+          }
+          .contents {
+            margin-top: 0;
+            h1 {
+              margin-top: 8%;
+              padding: 0;
+            }
+            .contentList {
+              gap: 40px;
+            }
+          }
+        }
+      }
+      .event01-2 {
+        height: 40vh;
+        .conImg {
+          width: 300px;
+        }
+        .cap {
+          width: 260px;
+        }
+        .clothe {
+          width: 120px;
+        }
+      }
+    }
+    #container02 {
+      height: 132vh;
+      .eventBtn {
+        p {
+          width: 512px;
+          height: 70px;
+          font-size: 2.4rem;
+        }
+      }
+      .event2 {
+        .event02 {
+          top: 10%;
+          ul {
+            width: 120%;
+            font-size: 7rem;
+            hr {
+              width: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    #container01 {
+      .eventHeader {
+        background: url("/images/event/mo.png") center/cover no-repeat;
+      }
+      .eventBtn {
+        p {
+          height: 60px;
+          font-size: 2rem;
+        }
+      }
+      .event01 {
+        .event01Wrapper {
+          .textWrapper {
+            height: 500px;
+            .left {
+              img {
+                width: 260px;
+                height: 80px;
+              }
+            }
+            .right {
+              img {
+                width: 260px;
+                height: 80px;
+              }
+            }
+          }
+        }
+      }
+      .event01-1 {
+        padding: 0 3%;
+        .conWrapper {
+          gap: 2%;
+          .swiper {
+            height: 400px;
+          }
+          .contents {
+            margin-top: 0;
+            width: 70%;
+            h1 {
+              margin-top: 8%;
+              padding: 0;
+            }
+            .contentList {
+              width: 80%;
+              gap: 40px;
+            }
+          }
+        }
+      }
+      .event01-2 {
+        .conImg {
+          width: 240px;
+        }
+        .cap {
+          width: 180px;
+        }
+        .clothe {
+          width: 90px;
+        }
+      }
+    }
+    #container02 {
+      height: 150vh;
+      .eventBtn {
+        p {
+          height: 70px;
+          font-size: 2.4rem;
+        }
+      }
+      .event2 {
+        top: 20%;
+        .event02 {
+          ul {
+            width: 120%;
+            font-size: 6rem;
+            hr {
+              width: 110%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
 }
