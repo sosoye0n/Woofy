@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/3f2ea24883.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/3f2ea24883.js" crossorigin="anonymous"></script>
     <!-- CSS & JS -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/mypage.css" />
@@ -22,8 +19,9 @@
     <div id="searchWrap"></div>
     <main>
       <!-- modal popup -->
-      <div id="modalContainer">
-        <div class="modal coupon">
+      <!-- <div id="couponModal"></div> -->
+      <div id="couponModal">
+        <div class="coupon">
           <div class="modalHeader">
             <i class="fas fa-xmark close"></i>
             <div class="modalTitle">
@@ -31,7 +29,7 @@
               <span>coupon</span>
             </div>
           </div>
-          <ul class="modalCouponContents">
+          <ul class="couponContents">
             <li class="modalCouponInfoCon">
               <div class="modalCoupon">
                 <div class="couponBox1">
@@ -82,7 +80,50 @@
             </li>
           </ul>
         </div>
-        <div class="modal membership">
+      </div>
+
+      <div id="pointModal">
+        <div class="point">
+          <div class="modalHeader">
+            <i class="fas fa-xmark close"></i>
+            <div class="modalTitle">
+              <p>보유포인트</p>
+              <span>point</span>
+            </div>
+          </div>
+          <ul class="pointContents">
+            <li>
+              <div class="modalCircle">
+                <i class="fa-solid fa-piggy-bank"></i>
+              </div>
+              <div class="membershipInfo">
+                <p>보유포인트</p>
+                <b>138,000p</b>
+              </div>
+            </li>
+            <li>
+              <div class="modalCircle">
+                <i class="fa-solid fa-sack-dollar"></i>
+              </div>
+              <div class="membershipInfo">
+                <p>적립예정</p>
+                <b>+3,000p</b>
+              </div>
+            </li>
+            <li>
+              <div class="modalCircle">
+                <i class="fa-solid fa-sack-xmark"></i>
+              </div>
+              <div class="membershipInfo">
+                <p>소멸예정</p>
+                <b>-200p</b>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="membershipModal">
+        <div class="membership">
           <div class="modalHeader">
             <i class="fas fa-xmark close"></i>
             <div class="modalTitle">
@@ -90,7 +131,7 @@
               <span>Membership</span>
             </div>
           </div>
-          <ul class="modalContents">
+          <ul class="membershipContents">
             <li>
               <div class="modalCircle">
                 <img src="./images/login/membership_1.png" alt="membership1" />
@@ -120,44 +161,6 @@
             </li>
           </ul>
         </div>
-        <div class="modal point">
-          <div class="modalHeader">
-            <i class="fas fa-xmark close"></i>
-            <div class="modalTitle">
-              <p>보유포인트</p>
-              <span>woofy point</span>
-            </div>
-          </div>
-          <ul class="modalPointContents">
-            <li>
-              <div class="modalCircle">
-                <i class="fa-solid fa-piggy-bank"></i>
-              </div>
-              <div class="membershipInfo">
-                <p>보유포인트</p>
-                <b>138,000p</b>
-              </div>
-            </li>
-            <li>
-              <div class="modalCircle">
-                <i class="fa-solid fa-sack-dollar"></i>
-              </div>
-              <div class="membershipInfo">
-                <p>적립예정</p>
-                <b>30,000p</b>
-              </div>
-            </li>
-            <li>
-              <div class="modalCircle">
-                <i class="fa-solid fa-sack-xmark"></i>
-              </div>
-              <div class="membershipInfo">
-                <p>소멸예정</p>
-                <b>200p</b>
-              </div>
-            </li>
-          </ul>
-        </div>
       </div>
 
       <!-- main contents -->
@@ -178,19 +181,19 @@
             </div>
           </div>
           <div class="detailInfoWrapper">
-            <div class="detailInfo">
+            <div class="detailInfo couponOpen">
               <p class="detailTitle">Coupon</p>
               <div class="detailText">
                 <p class="bold">3<b>개</b></p>
               </div>
             </div>
-            <div class="detailInfo">
+            <div class="detailInfo pointOpen">
               <p class="detailTitle">Point</p>
               <div class="detailText">
                 <p class="bold">28,000<b>p</b></p>
               </div>
             </div>
-            <div class="detailInfo">
+            <div class="detailInfo memberhshipOpen">
               <p class="detailTitle">membership</p>
               <div class="detailText">
                 <p class="bold">furry</p>

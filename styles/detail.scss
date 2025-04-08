@@ -10,10 +10,8 @@ header {
 
 /* 레이아웃 */
 .container {
-  display: flex;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 20px;
+  // max-width: 1920px;
+  padding-bottom: 100px;
   background: map-get($map: $color, $key: light);
   position: relative;
 }
@@ -189,11 +187,12 @@ header {
 
 /* 사이드바 */
 .sidebar {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 20px;
   width: 350px;
   padding-right: 30px;
-  top: 60px;
-  left: 0;
+  z-index: 1000;
   background: map-get($map: $color, $key: light);
   section {
     margin-bottom: 20px;
@@ -273,15 +272,14 @@ header {
   }
 }
 
-/* 콘텐츠 영역 */
-.content-inner {
-  flex: 1;
-  margin-left: 250px;
-  padding: 0 40px;
-}
-
+// content
 .content-area {
-  width: 100%;
+  width: calc(100% - 400px);
+  height: 3000px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
   .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -394,53 +392,7 @@ header {
   }
   .page-numbers {
     display: flex;
-    list-style: none;
-    li {
-      margin: 0 8px;
-      a {
-        display: inline-block;
-        width: 26px;
-        height: 26px;
-        line-height: 26px;
-        text-align: center;
-        color: map-get($map: $color, $key: text);
-        text-decoration: none;
-        font-size: 1.3rem;
-        &:hover {
-          color: map-get($map: $color, $key: dark);
-        }
-      }
-      &.active a {
-        color: map-get($map: $color, $key: point);
-        font-weight: bold;
-      }
-    }
-  }
-}
-
-/* 기본 유틸리티 */
-.line {
-  width: 100%;
-  height: 1px;
-  background: map-get($map: $color, $key: line);
-}
-
-// 반응형 태블릿 코드 (1024px 이하)
-@media screen and (max-width: 1024px) {
-  .container {
     flex-direction: column;
-    padding: 0;
-    margin-top: 70px;
-  }
-
-  /* 사이드바 숨기기 */
-  .sidebar {
-    display: none;
-  }
-
-  /* 태블릿 내비게이션 표시 */
-  .tablet-navigation {
-    display: block;
     width: 100%;
     margin-bottom: 20px;
   }

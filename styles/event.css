@@ -407,8 +407,9 @@ main #container01 .event01-2 .clothe:hover {
 }
 main #container02 {
   width: 100%;
-  height: 250vh;
+  height: 200vh;
   background-color: #000;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -446,6 +447,7 @@ main #container02 .eventBtn p:nth-child(2) {
   background: #000;
 }
 main #container02 .event2 {
+  margin-top: 10%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -744,13 +746,13 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   main #container01 .event01-2 .clothe {
     width: 120px;
   }
-  main #container02 {
-    height: 132vh;
-  }
   main #container02 .eventBtn p {
     width: 512px;
     height: 70px;
     font-size: 2.4rem;
+  }
+  main #container02 .event2 {
+    margin-top: 0;
   }
   main #container02 .event2 .event02 {
     top: 10%;
@@ -812,21 +814,160 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   main #container01 .event01-2 .clothe {
     width: 90px;
   }
-  main #container02 {
-    height: 150vh;
-  }
   main #container02 .eventBtn p {
     height: 70px;
     font-size: 2.4rem;
   }
   main #container02 .event2 {
-    top: 20%;
+    position: relative;
+  }
+  main #container02 .event2 .event02 {
+    position: absolute;
+    top: 0;
   }
   main #container02 .event2 .event02 ul {
-    width: 120%;
+    width: 100%;
     font-size: 6rem;
   }
   main #container02 .event2 .event02 ul hr {
-    width: 110%;
+    width: 100%;
+  }
+  main #container02 .event2 .eventWarning {
+    margin-top: 132%;
+  }
+}
+@media screen and (max-width: 375px) {
+  main #container01 .eventBtn p {
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  main #container01 .event01 .event01Wrapper {
+    width: 90%;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper {
+    height: 340px;
+    border-radius: 20px 20px 0 0;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper h1 {
+    font: normal 1.4rem/1 "Figtree";
+    text-shadow: 0px 3px 0px rgba(255, 255, 255, 0.6);
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .left {
+    gap: 8px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .left img {
+    width: 190px;
+    height: 70px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .left p {
+    padding: 10px 10px;
+    font: normal 1rem/1 "Figtree";
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .right {
+    gap: 8px;
+  }
+  main #container01 .event01 .event01Wrapper .textWrapper .right p {
+    padding: 10px 10px;
+    font: normal 1rem/1 "Figtree";
+  }
+  main #container01 .event01 .eventSec p {
+    font: normal 1.2rem/1.6 "Figtree";
+  }
+  main #container01 .event01 .slide .imgSlider1 .track1 img {
+    width: 140px;
+    height: 160px;
+  }
+  main #container01 .event01 .slide .imgSlider2 .track2 img {
+    width: 140px;
+    height: 160px;
+  }
+  main #container01 .event01-1 .conWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main #container01 .event01-1 .conWrapper .swiper {
+    width: 80%;
+    height: 280px;
+  }
+  main #container01 .event01-1 .conWrapper .contents {
+    width: 80%;
+  }
+  main #container01 .event01-1 .conWrapper .contents h1 {
+    display: none;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList {
+    width: 100%;
+    gap: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList .detailImg {
+    width: 42px;
+    margin: 12px;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList .content {
+    gap: 8px;
+    height: 120px;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList .content .brand {
+    font-size: 1.4rem;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList .content .name {
+    font-size: 1.2rem;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList .content .sale {
+    font-size: 1.4rem;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList .content .sale b {
+    font-size: 1.6rem;
+  }
+  main #container01 .event01-2 {
+    height: 30vh;
+  }
+  main #container01 .event01-2 .conImg {
+    width: 120px;
+    height: 100%;
+  }
+  main #container01 .event01-2 .cap {
+    width: 120px;
+  }
+  main #container01 .event01-2 .clothe {
+    width: 68px;
+  }
+  main #container02 {
+    position: relative;
+    height: 140vh;
+  }
+  main #container02 .eventBtn p {
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  main #container02 .event2 {
+    position: absolute;
+    top: 6%;
+  }
+  main #container02 .event2 .event02 ul {
+    width: 50%;
+    font-size: 2.2rem;
+  }
+  main #container02 .event2 .event02 .drawImg {
+    width: 240px;
+    height: 280px;
+    margin-top: 2%;
+  }
+  main #container02 .event2 .event02 .drawImg img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main #container02 .event2 .event02 .countdown {
+    font-size: 3.2rem;
+  }
+  main #container02 .event2 .eventWarning ul li {
+    font-size: 1.2rem;
   }
 }

@@ -46,7 +46,7 @@ main p {
   font-weight: 300;
   margin-bottom: 50px;
 }
-main input[type=button] {
+main input[type="button"] {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -58,7 +58,7 @@ main input[type=button] {
   cursor: pointer;
   transition: all 0.3s;
 }
-main input[type=button]:hover {
+main input[type="button"]:hover {
   outline: none;
   background: #99bdff;
   color: #fff;
@@ -73,7 +73,7 @@ main input[type=button]:hover {
     font-size: 1rem;
     margin-bottom: 30px;
   }
-  main input[type=button] {
+  main input[type="button"] {
     width: 280px;
     height: 64px;
     border-radius: 8px;

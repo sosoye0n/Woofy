@@ -32,8 +32,9 @@ main {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 100px 0;
+  padding: 140px 0;
   text-transform: uppercase;
+  margin-top: 0;
 }
 main h2 {
   font-size: 2.6rem;
@@ -120,24 +121,24 @@ main #join #joinContainer #errorPW i {
     padding: 100px 0;
   }
   main h2 {
-    font-size: 1.8rem;
+    font-size: 2.6rem;
   }
   main p {
     margin-top: 8px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   main #join {
     width: 280px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   main #join input:not(input[type=button]) {
-    width: 280px;
+    width: 320px;
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
   }
   main #join input[type=button] {
-    width: 280px;
+    width: 320px;
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
