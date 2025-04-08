@@ -18,6 +18,71 @@ header {
   position: relative;
 }
 
+/*모달창*/
+.cart-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    p {
+      font-size: 1.8rem;
+      margin-bottom: 25px;
+      font-weight: map-get($map: $font-family, $key: figtree);
+    }
+    .modal-buttons {
+      display: flex;
+      width: 100%;
+      height: 50px;
+      gap: 10px;
+      button {
+        flex: 1;
+        padding: 12px 0;
+        border-radius: 30px;
+        font-size: 1.4rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .move-to-cart-btn {
+        background-color: #f0f0f0;
+        color: map-get($map: $color, $key: modal-btn);
+        border: none;
+        &:hover {
+          background-color: #e0e0e0;
+        }
+      }
+      .continue-shopping-btn {
+        background-color: map-get($map: $color, $key: dark);
+        color: map-get($map: $color, $key: light);
+        border: none;
+        &:hover {
+          background-color: map-get($map: $color, $key: modal-btn);
+        }
+      }
+    }
+  }
+  &.show {
+    display: flex;
+  }
+}
+
 /* 내비게이션 공통 스타일 */
 .tablet-navigation {
   display: none;
@@ -27,6 +92,7 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
+
     .tablet-nav-headers {
       display: flex;
       justify-content: space-between;
@@ -41,85 +107,79 @@ header {
         padding-bottom: 5px;
         &:hover {
           color: map-get($map: $color, $key: point);
-          &::after {
-            width: 50%;
+          &:active {
+            color: map-get($map: $color, $key: point);
           }
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0%;
-          height: 2px;
-          background: map-get($map: $color, $key: point);
-          transform-origin: center;
-          transform: translateX(-50%);
-          transition: width 0.3s;
         }
       }
     }
     .tablet-nav-content {
       display: flex;
       width: 100%;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10%;
       .nav-column {
-        flex: 1;
-        padding: 10px;
-        &:last-child {
-          border-right: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &:first-child {
+          width: 40%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+          text-align: left;
         }
-        .nav-item {
-          padding: 8px 0;
-          font-size: 1.5rem;
-          text-align: center;
-          position: relative;
-          cursor: pointer;
-          &:hover {
+        &:last-child {
+          width: 40%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+      }
+      .nav-item {
+        padding: 8px 0;
+        font-size: 1.5rem;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+        &:hover {
+          color: map-get($map: $color, $key: point);
+          &:active {
             color: map-get($map: $color, $key: point);
-            &::after {
-              width: 30%;
-            }
           }
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 1px;
-            background: map-get($map: $color, $key: point);
-            transform: translateX(-50%);
-            transition: width 0.3s ease;
+        }
+        &.with-dot {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .color-dot {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 10px;
+          border: 1px solid map-get($map: $color, $key: boxline);
+          &.black {
+            background-color: #000;
           }
-          &.with-dot {
-            display: flex;
-            align-items: center;
+          &.white {
+            background-color: #fff;
           }
-          .color-dot {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 10px;
-            border: 1px solid map-get($map: $color, $key: boxline);
-            &.black {
-              background-color: #000;
-            }
-            &.white {
-              background-color: #fff;
-            }
-            &.blue {
-              background-color: blue;
-            }
-            &.red {
-              background-color: red;
-            }
-            &.brown {
-              background-color: brown;
-            }
-            &.pink {
-              background-color: pink;
-            }
+          &.blue {
+            background-color: blue;
+          }
+          &.red {
+            background-color: red;
+          }
+          &.brown {
+            background-color: brown;
+          }
+          &.pink {
+            background-color: pink;
           }
         }
       }
@@ -178,6 +238,9 @@ header {
           border: 1px solid #d3d3d3;
           padding: 10px;
           border-radius: 3px;
+          &:hover {
+            color: map-get($map: $color, $key: point);
+          }
         }
       }
       .color-dot {
@@ -223,7 +286,7 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-left: 50px;
-    gap: 10px;
+    gap: 20px;
     .product-row {
       display: contents;
       .product-item {
@@ -237,7 +300,6 @@ header {
             position: relative;
             padding-top: 100%;
             overflow: hidden;
-            // background-color: #f8f8f8;
             margin-bottom: 15px;
             img {
               position: absolute;
@@ -245,27 +307,66 @@ header {
               left: 0;
               width: 100%;
               height: 100%;
-              object-fit: contain;
-              transition: transform 0.3s ease;
+              object-fit: cover;
+              transition: opacity 0.5s ease;
             }
-            &:hover img {
-              transform: scale(1.03);
+            .first-img {
+              opacity: 1;
+            }
+            .second-img {
+              opacity: 0;
+            }
+            &:hover {
+              .first-img {
+                opacity: 0;
+              }
+              .second-img {
+                opacity: 1;
+              }
             }
           }
           .product-info {
             padding: 5px 0;
-            .product-title {
-              font-size: 1.4rem;
-              font-weight: 400;
-              margin-bottom: 8px;
-              color: map-get($map: $color, $key: dark);
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
+            text-align: left;
+            position: relative;
+            .product-inner {
+              .product-brand {
+                font-size: 1.3rem;
+                color: map-get($map: $color, $key: point);
+                margin-bottom: 5px;
+                font-weight: 600;
+              }
+              .product-title {
+                font-size: 1.6rem;
+                font-weight: 400;
+                margin-bottom: 10px;
+                color: map-get($map: $color, $key: dark);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+              .product-price {
+                font-size: 1.5rem;
+                color: map-get($map: $color, $key: input);
+              }
             }
-            .product-price {
-              font-size: 1.4rem;
-              color: map-get($map: $color, $key: input);
+            i {
+              position: absolute;
+              right: 70px;
+              bottom: 5px;
+              font-size: 1.6rem;
+              width: 24px;
+              height: 24px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: map-get($map: $color, $key: boxline);
+              color: map-get($map: $color, $key: light);
+              border-radius: 50%;
+              transition: all 0.3s;
+              &:hover {
+                background: map-get($map: $color, $key: point);
+              }
             }
           }
         }
@@ -348,15 +449,40 @@ header {
   .content-inner {
     margin-left: 0;
     padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
   .content-area {
+    margin: 0 auto;
     .product-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
       margin-left: 0;
       .product-row {
+        margin-bottom: 20px;
         .product-item {
-          margin-bottom: 30px;
+          .product-link {
+            .product-info {
+              .product-inner {
+                .product-brand {
+                  font-size: 1.9rem;
+                }
+                .product-title {
+                  font-size: 1.8rem;
+                }
+                .product-price {
+                  font-size: 1.8rem;
+                }
+              }
+              .fa-plus {
+                font-size: 1.7rem;
+                width: 25px;
+                height: 25px;
+                right: 50px;
+                bottom: 5px;
+              }
+            }
+          }
         }
       }
     }
@@ -369,17 +495,45 @@ header {
   .tablet-navigation {
     .tablet-nav-container {
       .tablet-nav-headers {
-        padding: 10px 0;
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        justify-content: space-between;
+        padding: 10px 5px;
         .nav-header {
           font-size: 1.6rem;
+          flex: 1;
+          padding: 0 15px;
+          text-align: center;
+          white-space: nowrap;
         }
       }
       .tablet-nav-content {
         .nav-column {
           padding: 8px;
+          min-width: 25%;
+          flex: 1;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
           .nav-item {
-            padding: 6px 0;
             font-size: 1.4rem;
+            padding: 8px 0;
+            text-align: center;
+            width: 50%;
+            &.with-dot {
+              padding-left: 10px;
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: center;
+              .color-dot {
+                width: 18px;
+                height: 18px;
+                margin-right: 5px;
+                border-radius: 50%;
+              }
+            }
           }
         }
       }
@@ -390,6 +544,32 @@ header {
     .product-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 15px;
+      .product-row {
+        .product-item {
+          .product-link {
+            .product-info {
+              .product-inner {
+                .product-brand {
+                  font-size: 1.6rem;
+                }
+                .product-title {
+                  font-size: 1.5rem;
+                }
+                .product-price {
+                  font-size: 1.5rem;
+                }
+              }
+              .fa-plus {
+                font-size: 1.4rem;
+                width: 20px;
+                height: 20px;
+                right: 30px;
+                bottom: 5px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -428,11 +608,13 @@ header {
           min-width: 25%;
           flex: 1;
           padding: 0;
+          display: flex;
+          flex-wrap: wrap;
           .nav-item {
-            white-space: nowrap;
             font-size: 1.4rem;
             padding: 8px 0;
             text-align: center;
+            width: 50%;
             &.with-dot {
               padding-left: 10px;
               display: flex;
@@ -456,19 +638,34 @@ header {
   .content-inner {
     padding: 0 15px;
   }
-
   .content-area {
     .product-grid {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(1, 1fr);
       gap: 20px;
-
       .product-row {
         .product-item {
           margin-bottom: 20px;
-
           .product-link {
-            .product-image {
-              padding-top: 100%; /* 1:1 비율 유지 */
+            .product-info {
+              text-align: center;
+              .product-inner {
+                margin-left: 0;
+                text-align: center;
+                .product-brand {
+                  font-size: 1.6rem;
+                }
+                .product-title {
+                  font-size: 1.5rem;
+                }
+                .product-price {
+                  font-size: 1.5rem;
+                }
+              }
+              .fa-plus {
+                font-size: 1.4rem;
+                right: 10px;
+                bottom: 3px;
+              }
             }
           }
         }
@@ -547,11 +744,20 @@ header {
           margin-bottom: 15px;
           .product-link {
             .product-info {
-              .product-title {
-                font-size: 1.3rem;
+              .product-inner {
+                margin-left: 0;
+                text-align: center;
+                .product-title {
+                  font-size: 1.3rem;
+                }
+                .product-price {
+                  font-size: 1.3rem;
+                }
               }
-              .product-price {
-                font-size: 1.3rem;
+              .fa-plus {
+                font-size: 1.4rem;
+                right: 10px;
+                bottom: 0;
               }
             }
           }

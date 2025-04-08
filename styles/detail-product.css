@@ -55,36 +55,34 @@ header {
 .product-gallery .gallery-main {
   width: 80%;
 }
-.product-gallery .gallery-main img {
+.product-gallery .gallery-main .swiper {
   width: 100%;
-  height: auto;
-  display: block;
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-height: 700px;
+  height: 800px;
 }
-.product-gallery .gallery-main .gallery-controls {
-  position: absolute;
-  width: 80%;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
+.product-gallery .gallery-main .swiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
 }
-.product-gallery .gallery-main .gallery-controls button {
-  background: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 10px;
+.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.product-gallery .gallery-main .gallery-controls button i {
-  font-size: 20px;
+.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
+  background-image: url("../images/detail/cap-4.jpg");
+}
+.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
+  background-image: url("../images/detail/cap-dog4.jpg");
+}
+.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(3) {
+  background-image: url("../images/detail/slide-dog1.jpg");
+}
+.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
+  background-image: url("../images/detail/slide-dog2.jpg");
+}
+.product-gallery .gallery-main .swiper .swiper-button-prev,
+.product-gallery .gallery-main .swiper .swiper-button-next {
   color: #000;
-  transition: all 0.3s ease;
-}
-.product-gallery .gallery-main .gallery-controls button i:hover {
   opacity: 0.7;
 }
 
@@ -309,15 +307,6 @@ header {
   .product-gallery .gallery-main {
     width: 100%;
   }
-  .product-gallery .gallery-main img {
-    max-height: 600px;
-  }
-  .product-gallery .gallery-main .gallery-controls {
-    width: 80%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
   /* 상품 정보 영역 */
   .product-info {
     width: 80%;
@@ -381,8 +370,8 @@ header {
     gap: 25px;
   }
   /* 갤러리 영역 */
-  .product-gallery .gallery-main img {
-    max-height: 600px;
+  .product-gallery .gallery-main {
+    width: 100%;
   }
   /* 상품 정보 영역 - 작은 태블릿 */
   .product-info {
@@ -431,8 +420,11 @@ header {
     gap: 22px;
   }
   /* 갤러리 영역 - 모바일 중간 사이즈 */
-  .product-gallery .gallery-main img {
-    max-height: 450px;
+  .product-gallery .gallery-main {
+    width: 100%;
+  }
+  .product-gallery .gallery-main .swiper {
+    height: 500px;
   }
   /* 상품 정보 영역 - 모바일 중간 사이즈 */
   .product-info {
@@ -500,13 +492,8 @@ header {
   .product-gallery .gallery-main {
     width: 100%;
   }
-  .product-gallery .gallery-main img {
-    max-height: 400px;
-  }
-  .product-gallery .gallery-main .gallery-controls {
-    width: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .product-gallery .gallery-main .swiper {
+    height: 450px;
   }
   /* 상품 정보 영역 - 모바일 */
   .product-info {

@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- fontawesome -->
     <script
       src="https://kit.fontawesome.com/3f2ea24883.js"
@@ -13,24 +14,32 @@
     <link rel="stylesheet" href="./styles/detail-product.css" />
     <script defer src="./scripts.js"></script>
     <script defer src="./scripts/detail-product.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- lenis -->
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
     <title>Detail-Product©</title>
   </head>
   <body>
     <header></header>
+    <div id="searchWrap"></div>
     <main class="container">
       <div class="product-detail">
         <div class="product-gallery">
           <div class="gallery-main">
-            <img src="./images/detail/dog1.png" alt="강아지1" />
-            <div class="gallery-controls">
-              <button class="prev-btn">
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <button class="next-btn">
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
         </div>
@@ -96,7 +105,7 @@
                 <div class="moment-image">
                   <span>@insta-user-name</span>
                   <img
-                    src="./images/detail/cap-dog1.png"
+                    src="./images/detail/insta-dog1.png"
                     alt="인스타-강아지1"
                   />
                 </div>
@@ -112,7 +121,7 @@
                 <div class="moment-image">
                   <span>@insta-user-name</span>
                   <img
-                    src="./images/detail/cap-dog2.png"
+                    src="./images/detail/insta-dog2.png"
                     alt="인스타-강아지2"
                   />
                 </div>
@@ -128,7 +137,7 @@
                 <div class="moment-image">
                   <span>@insta-user-name</span>
                   <img
-                    src="./images/detail/cap-dog3.png"
+                    src="./images/detail/insta-dog3.png"
                     alt="인스타-강아지3"
                   />
                 </div>

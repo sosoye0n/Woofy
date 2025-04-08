@@ -17,32 +17,34 @@
     <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
     <title>Detail©</title>
   </head>
+  <div id="cart-modal" class="cart-modal">
+    <div class="modal-content">
+      <p>상품이 카트에 담겼습니다.</p>
+      <div class="modal-buttons">
+        <button class="move-to-cart-btn">Move To Cart</button>
+        <button class="continue-shopping-btn">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
   <body>
     <header></header>
     <main class="container">
       <div class="tablet-navigation">
         <div class="tablet-nav-container">
           <div class="tablet-nav-headers">
-            <div class="nav-header">CLOTHES</div>
             <div class="nav-header">BRANDS</div>
-            <div class="nav-header">ACC</div>
             <div class="nav-header">COLOR</div>
           </div>
           <div class="tablet-nav-content">
             <div class="nav-column">
-              <div class="nav-item">Dog</div>
-              <div class="nav-item">Cat</div>
-              <div class="nav-item">Fammily</div>
-            </div>
-            <div class="nav-column">
               <div class="nav-item">Gucci</div>
               <div class="nav-item">BYC</div>
               <div class="nav-item">emis</div>
-              <div class="nav-item">Black</div>
-            </div>
-            <div class="nav-column">
-              <div class="nav-item">Life</div>
-              <div class="nav-item">Stuff</div>
+              <div class="nav-item">JACQUEMUS</div>
+              <div class="nav-item">Gucci</div>
+              <div class="nav-item">BYC</div>
+              <div class="nav-item">emis</div>
+              <div class="nav-item">JACQUEMUS</div>
             </div>
             <div class="nav-column">
               <div class="nav-item with-dot">
@@ -57,6 +59,12 @@
               <div class="nav-item with-dot">
                 <span class="color-dot black"></span>Black
               </div>
+              <div class="nav-item with-dot">
+                <span class="color-dot white"></span>White
+              </div>
+              <div class="nav-item with-dot">
+                <span class="color-dot red"></span>Red
+              </div>
             </div>
           </div>
         </div>
@@ -64,37 +72,20 @@
       <div class="sidebar">
         <section class="category">
           <div class="title-top">
-            <h2>CLOTHES</h2>
-            <i class="fa-solid fa-chevron-up"></i>
-          </div>
-          <div class="subcategory">
-            <div class="item"><a href="#">DOG</a></div>
-            <div class="item"><a href="#">CAT</a></div>
-            <div class="item"><a href="#">FAMMILY</a></div>
-          </div>
-        </section>
-        <section class="category">
-          <div class="title-top">
             <h2>BRANDS</h2>
             <i class="fa-solid fa-chevron-up"></i>
           </div>
           <div class="subcategory">
-            <div class="item"><a href="#">emis</a></div>
-            <div class="item"><a href="#">Lovis Vitton</a></div>
-            <div class="item"><a href="#">Gucci</a></div>
-            <div class="item"><a href="#">BYC</a></div>
-            <div class="item"><a href="#">emis</a></div>
-            <div class="item"><a href="#">emis</a></div>
-          </div>
-        </section>
-        <section class="category">
-          <div class="title-top">
-            <h2>ACC</h2>
-            <i class="fa-solid fa-chevron-up"></i>
-          </div>
-          <div class="subcategory">
-            <div class="item"><a href="#">LIFE</a></div>
-            <div class="item"><a href="#">STUFF</a></div>
+            <div class="subcategory">
+              <div class="item"><a href="#">emis</a></div>
+              <div class="item"><a href="#">Lovis Vitton</a></div>
+              <div class="item"><a href="#">Gucci</a></div>
+              <div class="item"><a href="#">BYC</a></div>
+              <div class="item"><a href="#">emis</a></div>
+              <div class="item"><a href="#">JACQUEMUS</a></div>
+              <div class="item"><a href="#">JACQUEMUS</a></div>
+              <div class="item"><a href="#">JACQUEMUS</a></div>
+            </div>
           </div>
         </section>
         <section class="category">
@@ -130,41 +121,80 @@
             <!-- 첫 번째 줄 제품 -->
             <div class="product-row">
               <div class="product-item">
-                <a href="#" class="product-link">
+                <a href="./detail-product.html" class="product-link">
                   <div class="product-image">
-                    <img src="./images/detail/dog1.png" alt="강아지1" />
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog4.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-4.jpg"
+                      alt="모자1"
+                    />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>
               <div class="product-item">
-                <a href="#" class="product-link">
+                <a href="./detail-product.html" class="product-link">
                   <div class="product-image">
-                    <img src="./images/detail/dog2.png" alt="강아지2" />
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog2.jpg"
+                      alt="강아지2"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-2.jpg"
+                      alt="모자2"
+                    />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>
               <div class="product-item">
-                <a href="#" class="product-link">
+                <a href="./detail-product.html" class="product-link">
                   <div class="product-image">
-                    <img src="./images/detail/dog3.png" alt="강아지3" />
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog3.jpg"
+                      alt="강아지3"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-3.jpg"
+                      alt="모자3"
+                    />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>
@@ -175,28 +205,25 @@
                 <a href="#" class="product-link">
                   <div class="product-image">
                     <img
-                      src="./images/detail/dog1.png"
-                      alt="강아지 회색 후드티"
+                      class="first-img"
+                      src="./images/detail/cap-dog1.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-1.jpg"
+                      alt="모자1"
                     />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
-                  </div>
-                </a>
-              </div>
-              <div class="product-item">
-                <a href="#" class="product-link">
-                  <div class="product-image">
-                    <img src="./images/detail/dog2.png" alt="강아지 모자" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>
@@ -204,15 +231,51 @@
                 <a href="#" class="product-link">
                   <div class="product-image">
                     <img
-                      src="./images/detail/dog3.png"
-                      alt="하얀 강아지 파란 후드티"
+                      class="first-img"
+                      src="./images/detail/cap-dog5.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-5.jpg"
+                      alt="모자1"
                     />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="product-item">
+                <a href="#" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog6.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-6.jpg"
+                      alt="모자1"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>
@@ -220,50 +283,80 @@
             <!-- 세 번째 줄 제품 -->
             <div class="product-row">
               <div class="product-item">
-                <a href="#" class="product-link">
+                <a href="./detail-product.html" class="product-link">
                   <div class="product-image">
                     <img
-                      src="./images/detail/dog1.png"
-                      alt="강아지 회색 후드티"
+                      class="first-img"
+                      src="./images/detail/cap-dog4.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-4.jpg"
+                      alt="모자1"
                     />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>
               <div class="product-item">
-                <a href="#" class="product-link">
+                <a href="./detail-product.html" class="product-link">
                   <div class="product-image">
                     <img
-                      src="./images/detail/dog2.png"
-                      alt="강아지 보라색 상의"
+                      class="first-img"
+                      src="./images/detail/cap-dog2.jpg"
+                      alt="강아지2"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-2.jpg"
+                      alt="모자2"
                     />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>
               <div class="product-item">
-                <a href="#" class="product-link">
+                <a href="./detail-product.html" class="product-link">
                   <div class="product-image">
                     <img
-                      src="./images/detail/dog3.png"
-                      alt="하얀 강아지 파란 후드티"
+                      class="first-img"
+                      src="./images/detail/cap-dog3.jpg"
+                      alt="강아지3"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-3.jpg"
+                      alt="모자3"
                     />
                   </div>
                   <div class="product-info">
-                    <h3 class="product-title">
-                      [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
-                    </h3>
-                    <p class="product-price">68,000 KRW</p>
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
                   </div>
                 </a>
               </div>

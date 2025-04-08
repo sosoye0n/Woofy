@@ -276,6 +276,7 @@ header {
 }
 .cart-container .cart-inner .cart-items .cart-item .checkbox-container input[type=checkbox] {
   display: none;
+  /* 체크된 상태일 때 배경색을 변경 */
 }
 .cart-container .cart-inner .cart-items .cart-item .checkbox-container input[type=checkbox] + label {
   display: inline-block;
@@ -291,6 +292,9 @@ header {
 .cart-container .cart-inner .cart-items .cart-item .checkbox-container input[type=checkbox] + label:active {
   background-color: #a9a9a9;
 }
+.cart-container .cart-inner .cart-items .cart-item .checkbox-container input[type=checkbox]:checked + label {
+  background-color: #a9a9a9;
+}
 .cart-container .cart-inner .cart-items .cart-item .items {
   display: flex;
   gap: 20px;
@@ -298,12 +302,14 @@ header {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 20px 0;
+  position: relative;
 }
 .cart-container .cart-inner .cart-items .cart-item .items input[type=checkbox] {
   position: absolute;
-  top: 0;
+  top: 20px;
   left: 0;
   display: none;
+  /* 체크된 상태일 때 배경색을 변경 */
 }
 .cart-container .cart-inner .cart-items .cart-item .items input[type=checkbox] + label {
   display: inline-block;
@@ -311,12 +317,17 @@ header {
   height: 20px;
   border: 1px solid #a9a9a9;
   border-radius: 2px;
-  position: relative;
+  position: absolute;
+  top: 20px;
+  left: 0;
   cursor: pointer;
   background-color: #fff;
   transition: background-color 0.2s ease;
 }
 .cart-container .cart-inner .cart-items .cart-item .items input[type=checkbox] + label:active {
+  background-color: #a9a9a9;
+}
+.cart-container .cart-inner .cart-items .cart-item .items input[type=checkbox]:checked + label {
   background-color: #a9a9a9;
 }
 .cart-container .cart-inner .cart-items .cart-item .items .item-image {
@@ -585,6 +596,10 @@ header {
   .cart-container .cart-inner .cart-items .cart-item .items {
     flex-direction: column;
     gap: 15px;
+  }
+  .cart-container .cart-inner .cart-items .cart-item .items input[type=checkbox] + label {
+    top: 15px;
+    left: 0;
   }
   .cart-container .cart-inner .cart-items .cart-item .items .item-image {
     display: flex;
