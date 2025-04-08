@@ -127,8 +127,20 @@ fetch("./API/main.json").then((response) =>
         conBox.append(flexBox); // 해당 영역에 append
       });
     }
-    const itemLike = document.querySelectorAll(".itemLike i");
+    var image = document.getElementsByClassName("thumbnail");
+    new simpleParallax(image, {
+      scale: 1.2,
+      orientation: "up",
+      delay: 1,
+    });
+    var image = document.getElementsByClassName("thumbnail2");
+    new simpleParallax(image, {
+      scale: 1.2,
+      orientation: "down",
+      delay: 1,
+    });
 
+    const itemLike = document.querySelectorAll(".itemLike i");
     itemLike.forEach((item) => {
       item.addEventListener("click", function () {
         const likeVal = this.parentElement.querySelector(".itemLike span");
@@ -148,16 +160,3 @@ fetch("./API/main.json").then((response) =>
     });
   })
 );
-
-var image = document.getElementsByClassName("thumbnail");
-new simpleParallax(image, {
-  scale: 1.2,
-  orientation: "up",
-  delay: 1,
-});
-var image = document.getElementsByClassName("thumbnail2");
-new simpleParallax(image, {
-  scale: 1.2,
-  orientation: "down",
-  delay: 1,
-});

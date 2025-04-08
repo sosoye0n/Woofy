@@ -30,10 +30,10 @@ main {
             background: rgba($color: #000000, $alpha: 0.3);
             z-index: -1;
           }
-          #swiperText {
+          .swiperText {
             position: absolute;
             bottom: 18%;
-            left: 8%;
+            padding: 0 8%;
             color: map-get($map: $color, $key: light);
             display: flex;
             flex-direction: column;
@@ -124,22 +124,22 @@ main {
     padding-left: 35%;
     width: 100%;
     .flexCon01 {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      gap: 5%;
-      padding: 0 5%;
+      width: 100%;
+      display: flex;
+      gap: 3%;
+      padding: 0 3%;
       .flexLeft,
       .flexRight {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        width: 50%;
       }
       .flexBox {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
-
         .imgBox {
           overflow: hidden;
           width: 100%;
@@ -199,12 +199,19 @@ main {
               display: flex;
               flex-direction: column;
               justify-content: space-between;
+              position: relative;
               p {
                 font-size: 1.4rem;
                 font-weight: bold;
                 &:nth-child(2) {
                   font-size: 1.6rem;
                   font-weight: normal;
+                  padding-right: 40px;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 1;
+                  -webkit-box-orient: vertical;
                 }
                 &:last-child {
                   span {
@@ -225,6 +232,7 @@ main {
               position: absolute;
               right: 0;
               top: 50%;
+              width: 30px;
               transform: translateY(-50%);
               text-align: center;
               color: map-get($map: $color, $key: input);
@@ -240,7 +248,7 @@ main {
       }
     }
     .flexCon02 {
-      padding: 0 5%;
+      padding: 0 3%;
       position: relative;
       margin: 100px 0;
       z-index: 0;
@@ -338,13 +346,69 @@ main {
     }
   }
 }
-main {
-  .flexCon02 {
+@media screen and (max-width: 1700px) {
+  main {
+    #scrollSection {
+      .flexCon02 {
+        .swiper02 {
+          .swiper-button-prev {
+            right: 5% !important;
+          }
+        }
+      }
+    }
   }
-}
-@media screen and (max-width: 1600px) {
-  .swiper-button-prev {
-    right: 6% !important;
+  @media screen and (max-width: 1600px) {
+    main {
+      #scrollSection {
+        .flexCon02 {
+          .swiper02 {
+            .swiper-button-prev {
+              right: 5% !important;
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1400px) {
+      main {
+        #scrollSection {
+          .flexCon02 {
+            .swiper02 {
+              .swiper-button-prev {
+                right: 6% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1300px) {
+      main {
+        #scrollSection {
+          .flexCon02 {
+            .swiper02 {
+              .swiper-button-prev {
+                right: 6% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 1100px) {
+      main {
+        #scrollSection {
+          .flexCon02 {
+            .swiper02 {
+              .swiper-button-prev {
+                right: 7% !important;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 // 반응형 tablet
@@ -355,9 +419,9 @@ main {
       position: static;
       .swiper {
         .swiper-slide {
-          #swiperText {
+          .swiperText {
             gap: 8px;
-            left: 3% !important;
+            padding: 0 3% !important;
             bottom: 23% !important;
             p {
               &:first-child {
@@ -399,11 +463,14 @@ main {
     #scrollSection {
       padding-left: 0;
       padding-top: 80px;
+      .flexCon01 {
+        padding: 0 3%;
+      }
       .flexCon02 {
         margin: 100px 0 !important;
         .swiper02 {
           .swiper-button-prev {
-            right: 6%;
+            right: 6% !important;
           }
         }
       }
@@ -411,13 +478,13 @@ main {
   }
 }
 
-// 반응형 tablet
+// 반응형 모바일
 @media screen and (max-width: 767px) {
   main {
     #pinSection {
       .swiper {
         .swiper-slide {
-          #swiperText {
+          .swiperText {
             bottom: 25% !important;
           }
         }
@@ -426,15 +493,24 @@ main {
     #scrollSection {
       padding-top: 30px !important;
       .flexCon01 {
-        gap: 40px !important;
+        flex-wrap: wrap;
+        .flexLeft,
+        .flexRight {
+          width: 100%;
+        }
+        .flexRight {
+          margin-top: 40px;
+        }
       }
       .flexCon02 {
         margin: 100px 0 100px !important;
-        .swiper-button-prev {
-          right: 7% !important;
-          top: 6% !important;
-          &::after {
-            font-size: 1.6rem !important;
+        .swiper02 {
+          .swiper-button-prev {
+            right: 8% !important;
+            top: 6% !important;
+            &::after {
+              font-size: 1.6rem !important;
+            }
           }
         }
         .swiper-button-next {
@@ -459,7 +535,7 @@ main {
       padding: 0 5%;
     }
     .imgBox {
-      aspect-ratio: 1 / 1;
+      // aspect-ratio: 1 / 1;
     }
   }
 }
@@ -468,7 +544,7 @@ main {
     #pinSection {
       .swiper {
         .swiper-slide {
-          #swiperText {
+          .swiperText {
             bottom: 25% !important;
           }
         }
@@ -480,8 +556,10 @@ main {
     #scrollSection {
       .flexCon02 {
         // margin: 150px 0 100px !important;
-        .swiper-button-prev {
-          right: 10% !important;
+        .swiper02 {
+          .swiper-button-prev {
+            right: 10% !important;
+          }
         }
       }
     }
@@ -494,10 +572,44 @@ main {
     }
   }
 }
-@media screen and (max-width: 380px) {
-  .flexCon02 {
-    .swiper-button-prev {
-      right: 13% !important;
+@media screen and (max-width: 480px) {
+  main {
+    #scrollSection {
+      .flexCon01 {
+        .flexBox {
+          .textBox {
+            p {
+              &:first-child {
+                font-size: 2rem;
+              }
+              &:last-child {
+                font-size: 1.4rem;
+              }
+            }
+          }
+          .itemWrap {
+            .itemBox {
+              .itemText {
+                p {
+                  &:nth-child(2) {
+                    font-size: 1.4rem !important;
+                  }
+                }
+              }
+            }
+          }
+          .itemLike {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .flexCon02 {
+        .swiper02 {
+          .swiper-button-prev {
+            right: 13% !important;
+          }
+        }
+      }
     }
   }
 }

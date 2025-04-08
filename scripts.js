@@ -94,7 +94,7 @@ const searchInner = `
         </form>
 `;
 const footerInner = `
- <nav id="footerCategory">
+<nav id="footerCategory">
         <ul>
           <li>
             <a href="#" title="clothes">CLOTHES</a>
@@ -140,7 +140,7 @@ toggleBtn.addEventListener("click", function () {
   this.classList.toggle("active");
   leftGnb.classList.toggle("active");
   header.classList.toggle("blendMode");
-  document.body.classList.toggle("active");
+  header.style.transform = "none";
 });
 
 const searchBtn = document.querySelector("#rightGnb ul li:first-child");

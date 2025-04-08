@@ -39,6 +39,7 @@
       "mainImg": "https://img.wkorea.com/w/2022/07/style_62e1f2238e4fa-960x1200.jpg",
       "mainTitle": "개와 고양이 주인공이 되다",
       "subTitle": "크리에이티브 디렉터가 또 하나의 새로운 방식으로 하우스의 코드를 재해석한 구찌 펫 컬렉션을 공개합니다.",
+      "imgClass": "thumbnail",
       "brand": "GUCCI",
       "brandBanner": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/deb351a8-3a34-4599-df01-18f63ff44900/w=1920,h=1143",
       "brandItem": {
@@ -62,6 +63,7 @@
       "mainImg": "https://kabine.kr/shop/patpat/02_bed/img/02_D-BEDm_new/d-bedm_n07.jpg",
       "mainTitle": "반려동물과 함께하는 아름다운 공간",
       "subTitle": "미적으로도 완성도 높게 제작한 펫테리어Peterior",
+      "imgClass": "thumbnail",
       "brand": "kabine",
       "brandBanner": "http://kabine.speedgabia.com/2024%20Renewal/Main_Banner_Slide/MAIN_SERIES_2.png",
       "brandItem": {
@@ -87,6 +89,7 @@
       "mainImg": "https://cafe24img.poxo.com/aviemuah2020/web/product/extra/small/202402/71f03072183db9ed1508f2572be8a5e3.jpg",
       "mainTitle": "펫팸족과 펫미족이라면 주목!",
       "subTitle": "아비에무아의 국제 강아지의 날 기념, 펫 캡슐 컬렉션",
+      "imgClass": "thumbnail2",
       "brand": "aviemuah",
       "brandBanner": "https://aviemuah.com/web/upload/share-image-1-81d869f59ea3880bda9a4046005787bb.jpg",
       "brandItem": {
@@ -118,6 +121,7 @@
       "mainImg": "https://fpost.co.kr/board/data/editor/2403/3e87a0036f25d838232da64b0de6fec0_1711505065_3171.jpg",
       "mainTitle": "매서운 바람에도 포근하게",
       "subTitle": "Merlot의 다섯 번째 무브먼트 프로젝트 Snow Pic 캠페인",
+      "imgClass": "thumbnail2",
       "brand": "emis05",
       "brandBanner": "https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/upload/_merlotMain/TopBanner/1202-b-w.jpg",
       "brandItem": {
@@ -141,6 +145,7 @@
       "mainImg": "https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/upload/_merlotPrd/ArkHarnness/RED/trip.jpg",
       "mainTitle": "Holy and Harmless",
       "subTitle": "HAH X Merlot, 일상 속에 작은 여행",
+      "imgClass": "thumbnail2",
       "brand": "emis06",
       "brandBanner": "https://img.29cm.co.kr/next-brand/2019/01/30/8ac8558a5ca140369e2fa885dfef2ad3_20190130154222.jpg",
       "brandItem": {
@@ -174,6 +179,7 @@
       "mainImg": "https://dolcegabbana-cdn.thron.com/delivery/public/image/dolcegabbana/88ffd4c7-a7ff-40fa-8145-672e54f21235/mea8ds/std/1385x1760/c1_?format=auto",
       "mainTitle": "Dolce&Gabbana가 최초로 선보이는 반려견 컬렉션.",
       "subTitle": "독특하고 세련된 스타일이 사랑스러운 반려 친구의 세계와 만나보세요.",
+      "imgClass": "thumbnail",
       "brand": "Dolce&Gabbana",
       "brandBanner": "https://dolcegabbana-cdn.thron.com/delivery/public/image/dolcegabbana/0aa5ad9b-1539-478c-86af-16fc3daf7c73/yqxah8/std/1920x1200/a1_2?format=auto",
       "brandItem": {
@@ -199,161 +205,166 @@
       "desc": "Dolce & Gabbana는 이탈리아의 감성과 예술성을 담은 세계적인 럭셔리 패션 브랜드입니다. 의류는 물론, 향수, 액세서리, 뷰티 라인까지 다양한 컬렉션을 통해 독창적이고 대담한 스타일을 제안하며, 매 시즌 새로운 트렌드를 이끌고 있습니다. Dolce & Gabbana는 클래식과 현대적인 감각이 공존하는, 가장 이탈리아다운 럭셔리를 표현하는 브랜드입니다."
     },
     {
-      "nameEng": "",
+      "nameEng": "HAZZYS",
       "name": "헤지스",
       "href": "https://image.hazzys.com/display/202409/0923TOP%EC%9D%B4%EB%AF%B8%EC%A7%80_%EC%84%B8%EB%A1%9C(585x650)[0].jpg",
       "mainImg": "https://image.hazzys.com/display/202409/0923TOP%EC%9D%B4%EB%AF%B8%EC%A7%80_%EC%84%B8%EB%A1%9C(585x650)[0].jpg",
-      "mainTitle": "하루하루 특별한 경험",
-      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "mainTitle": "헤지스펫 신규 론칭",
+      "subTitle": "귀여운 펫웨어부터 펫툴까지🐾",
+      "imgClass": "thumbnail",
       "brand": "emis08",
-      "brandBanner": "",
+      "brandBanner": "https://image.hazzys.com/contents/202503/202503271018250.jpg",
       "brandItem": {
         "subItems": [
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://nimg.lfmall.co.kr/file/product/prd/HZ/2024/375/HZLG4E202IV_00.jpg/dims/format/avif;stillonly;fallback=webp/optimize",
+            "itemBrand": "헤지스",
+            "itemTitle": "아이보리 바람막이",
+            "itemDc": 14,
+            "itemPrice": "93,190",
             "like": "1234"
           },
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://nimg.lfmall.co.kr/file/product/prd/HZ/2024/375/HZLG4F401K2_00.jpg/dims/format/avif;stillonly;fallback=webp/optimize",
+            "itemBrand": "헤지스",
+            "itemTitle": "이동용 캐어 가방",
+            "itemDc": 14,
+            "itemPrice": "247,090",
             "like": "1113"
           }
         ]
       },
-      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+      "desc": "영국 감성의 프리미엄 캐주얼 브랜드입니다. 브리티시 트래디셔널 스타일을 현대적으로 재해석하여 고급스럽고 세련된 일상복을 제안하며, 남성복을 시작으로 여성복, 골프웨어, 액세서리까지 폭넓은 라인업을 전개하고 있습니다."
     },
     {
-      "nameEng": "",
-      "name": "이미스",
+      "nameEng": "Yale",
+      "name": "예일",
       "href": "https://emis.kr/#none",
-      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/d139d1a0-127c-4a45-e84d-f6cc70d15f00/w=1920,h=2400",
-      "mainTitle": "하루하루 특별한 경험",
-      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
-      "brand": "emis09",
-      "brandBanner": "",
+      "mainImg": "./images/index/yale.png",
+      "mainTitle": "반려동물과 함께하는 예일의 펫웨어",
+      "subTitle": "펫과 함께하는 일상, 더 특별하게",
+      "imgClass": "thumbnail",
+      "brand": "yale",
+      "brandBanner": "https://img.29cm.co.kr/next-brand/2025/02/19/c325f44df1f945428a4b4198f694fe2a_20250219175405.jpg?width=1200&format=webp",
       "brandItem": {
         "subItems": [
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://image.msscdn.net/thumbnails/images/goods_img/20240807/4306482/4306482_17235427424577_big.jpg?w=780",
+            "itemBrand": "예일",
+            "itemTitle": "노르딕 댄 도기 후드",
+            "itemDc": 30,
+            "itemPrice": "20,300",
             "like": "1113"
           },
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
+            "itemImg": "https://image.msscdn.net/thumbnails/images/goods_img/20240807/4306489/4306489_17235427547369_big.jpg?w=780",
+            "itemBrand": "예일",
+            "itemTitle": "투톤아치 풋볼 도기 후드",
             "itemDc": 7,
             "itemPrice": "185,000",
             "like": "1113"
           }
         ]
       },
-      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+      "desc": "예일(YALE)은 'Make Your Mark'를 슬로건으로, 예일의 전통과 지성을 패션에 담아 시대를 초월한 가치와 품격을 제공하는 브랜드입니다. 전통과 현대, 남성과 여성, 캐주얼과 포멀의 경계를 허물며, 새로운 가능성을 제시합니다. 전통적인 프레피 룩을 현대 트렌드에 맞춰 재해석한 ‘뉴 프레피 스타일’ 을 통해 자연스럽고 감각적인 스타일을 선보입니다. 또한, 다양한 제품들과 조화롭게 어우러질 수 있는 레이어링을 목표로 디자인하며, 기존의 옷들과도 완벽하게 어울리는 유연한 스타일을 지향합니다."
     }
   ],
   "data04": [
     {
-      "nameEng": "",
-      "name": "이미스",
+      "nameEng": "MLB",
+      "name": "엠엘비",
       "href": "https://emis.kr/#none",
-      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/531fcbd9-328d-4d8e-e3bf-cc900bd65a00/w=1696,h=2407",
-      "mainTitle": "하루하루 특별한 경험",
-      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
+      "mainImg": "./images/index/mlb.png",
+      "mainTitle": "펫도 힙하게, MLB STYLE",
+      "subTitle": "MLB 감성을 입은 펫웨어, 지금 만나보세요.",
+      "imgClass": "thumbnail2",
       "brand": "emis10",
-      "brandBanner": "",
+      "brandBanner": "https://cdn-onlinemall.mlb-korea.com/cdn-cgi/image/q=88,w=2746,format=auto,fit=scale-down,onerror=redirect/images/0d5bf8eb-0336-438f-87c2-64946e5113b7.png",
       "brandItem": {
         "subItems": [
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://image.msscdn.net/thumbnails/images/goods_img/20210914/2129412/2129412_1_big.jpg?w=1200",
+            "itemBrand": "엠엘비",
+            "itemTitle": "PET MLB LIKE 맨투맨 NY",
+            "itemDc": 5,
+            "itemPrice": "46,550",
             "like": "1113"
           },
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://image.msscdn.net/thumbnails/images/goods_img/20210514/1951233/1951233_2_big.jpg?w=1200",
+            "itemBrand": "엠엘비",
+            "itemTitle": "PET 빅로고 맨투맨 LA",
+            "itemDc": 5,
+            "itemPrice": "46,550",
             "like": "1234"
           }
         ]
       },
-      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+      "desc": "MLB(엠엘비)는 148년 전통의 American Sports Lifestyle을 상징하는Major League Baseball의 클래식 헤리티지를 현대적으로 재해석하여 Technical Street Casual을 지향하고 있으며, Active한 라이프 스타일을 즐기는 Young Generation의 패션 아이콘으로 다양한 스타일에 믹스 앤 매치가 가능한 스타일링 아이템들이 오랫동안 사랑 받고있는 브랜드입니다."
     },
     {
-      "nameEng": "",
-      "name": "이미스",
+      "nameEng": "Polo Ralph Lauren",
+      "name": "폴로 랄프 로렌",
       "href": "https://emis.kr/#none",
-      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/087e7efb-3e78-4103-be01-a47afa12da00/w=1920,h=2400",
-      "mainTitle": "하루하루 특별한 경험",
-      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
-      "brand": "emis11",
-      "brandBanner": "",
+      "mainImg": "https://www.kanine.com/cdn/shop/collections/alternate1_1370660.jpg?v=1734267089",
+      "mainTitle": "폴로와 함께 걷는 하루",
+      "subTitle": "반려동물을 위한 클래식 웨어",
+      "imgClass": "thumbnail2",
+      "brand": "poloralphlauren",
+      "brandBanner": "https://media.endclothing.com/end-features/f_auto,q_auto:eco,w_1520/prodfeatures/4fd5626c-b091-45b1-bc9c-6cf8de532782_02-08-22_ENDxPoloRalphLauren_1_DesktopSlideshow_1600x900.jpg?auto=compress,format",
       "brandItem": {
         "subItems": [
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1489056_alternate1?$plpDeskRF$",
+            "itemBrand": "Polo Ralph Lauren",
+            "itemTitle": "폴로 베어 울 캐시미어 도그 스웨터",
+            "itemDc": 5,
+            "itemPrice": "369,000",
             "like": "1234"
           },
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1489060_lifestyle?$plpDeskRF$",
+            "itemBrand": "Polo Ralph Lauren",
+            "itemTitle": "캔버스 로고 도그 레인코트",
+            "itemDc": 5,
+            "itemPrice": "399,000",
             "like": "1113"
           }
         ]
       },
-      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+      "desc": "폴로 랄프 로렌(POLO RALPH LAUREN)은 미국을 대표하는 디자이너 랄프 로렌이 1967년에 시작한 브랜드입니다. 폴로 랄프 로렌의 제품은 실용적이면서 품격을 갖춰 꾸준한 인기와 사랑을 받고 있습니다."
     },
     {
-      "nameEng": "",
-      "name": "이미스",
+      "nameEng": "LOUIS VUITTON",
+      "name": "루이 비통",
       "href": "https://emis.kr/#none",
-      "mainImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/d139d1a0-127c-4a45-e84d-f6cc70d15f00/w=1920,h=2400",
-      "mainTitle": "하루하루 특별한 경험",
-      "subTitle": "데일리로 하기 좋은 이미스의 아이템을 만나보세요.",
-      "brand": "emis12",
-      "brandBanner": "",
+      "mainImg": "https://www.louisvuitton.com/images/is/image/lv/U_BC_GI_PETS_06_DII.jpg?wid=2400",
+      "mainTitle": "함께하는 하이엔드",
+      "subTitle": "루이비통이 담아낸 반려의 순간",
+      "imgClass": "thumbnail2",
+      "brand": "louisvuitton",
+      "brandBanner": "https://www.louisvuitton.com/images/is/image/lv/U_BC_GI_PETS_02_DI3.jpg?wid=2400",
       "brandItem": {
         "subItems": [
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-waterproof-dog-coat-mm--GI1226_PM1_Cropped%20worn%20view.png?wid=1090&hei=1090",
+            "itemBrand": "LOUIS VUITTON",
+            "itemTitle": "워터프루프 도그 코트 MM",
+            "itemDc": 5,
+            "itemPrice": "1,960,000",
             "like": "1113"
           },
           {
-            "itemImg": "https://imagedelivery.net/djfufN1Ft6CV8Emdrip5jA/1fc4e38b-6641-42e6-304a-0935d67e9e00/w=1920,h=2416",
-            "itemBrand": "이미스",
-            "itemTitle": "이미스 펫웨어 컬렉션",
-            "itemDc": 7,
-            "itemPrice": "185,000",
+            "itemImg": "https://kr.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-dog-bandana-mm--GI1261_PM1_Worn%20view.png?wid=1090&hei=1090",
+            "itemBrand": "LOUIS VUITTON",
+            "itemTitle": "도그 반다나 MM",
+            "itemDc": 5,
+            "itemPrice": "540,000",
             "like": "1113"
           }
         ]
       },
-      "desc": "쎄미는 지나치거나 모자람이 없는, '반'이라는 의미의 영단어에서 시작되었습니다. 스트릿, 클래식 등 한 가지 스타일에만 얽매이지 않고 유연하게 경계를 넘나들어 쎄미만의 고유한 감성을 담아냅니다. 유행을 초월하여 오랫동안 사랑받는 옷을 만들고자 합니다."
+      "desc": "1854년 프랑스 파리에서 시작된 루이비통은 장인정신과 혁신적인 디자인을 바탕으로 세계적인 명품 브랜드로 자리매김했습니다. 여행용 트렁크로 시작된 헤리티지는 시대의 흐름에 맞춰 진화하며, 가방과 의류, 액세서리, 라이프스타일까지 다양한 영역에서 클래식과 현대적 감각이 조화를 이루는 스타일을 제안합니다."
     }
   ]
 }

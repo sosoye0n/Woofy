@@ -3,6 +3,7 @@ fetch("./API/main.json").then((response) =>
     const keys = Object.keys(data);
     let products = null;
     const params = new URLSearchParams(window.location.search);
+    console.log(params);
     const brand = params.get("brand");
     for (let i = 0; i < keys.length; i++) {
       const key = keys[i];

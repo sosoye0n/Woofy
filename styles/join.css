@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -34,13 +34,13 @@ main {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  padding: 140px 0;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 100px 0;
   text-transform: uppercase;
 }
 main h2 {
@@ -62,14 +62,14 @@ main #join {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
-main #join input:not(input[type="button"]) {
+main #join input:not(input[type=button]) {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -82,10 +82,10 @@ main #join input:not(input[type="button"]) {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-main #join input:not(input[type="button"]):focus {
+main #join input:not(input[type=button]):focus {
   outline: none;
 }
-main #join input[type="button"] {
+main #join input[type=button] {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -98,7 +98,7 @@ main #join input[type="button"] {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-main #join input[type="button"]:hover {
+main #join input[type=button]:hover {
   outline: none;
   background: #99bdff;
   color: #fff;
@@ -109,8 +109,8 @@ main #join #joinContainer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 16px;
   margin-bottom: 50px;
 }
@@ -154,13 +154,13 @@ main #join #joinContainer #errorPW i {
     width: 280px;
     margin-top: 20px;
   }
-  main #join input:not(input[type="button"]) {
+  main #join input:not(input[type=button]) {
     width: 280px;
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
   }
-  main #join input[type="button"] {
+  main #join input[type=button] {
     width: 280px;
     height: 64px;
     font-size: 1.2rem;
