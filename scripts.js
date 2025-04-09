@@ -9,16 +9,16 @@ const headerInner = `
         <nav id="leftGnb">
             <ul>
               <li>
-                <a href="#" title="clothes">CLOTHES</a>
+                <a href="./detail.html" title="clothes">CLOTHES</a>
               </li>
               <li>
-                <a href="#" title="acc">ACC</a>
+                <a href="./detail.html" title="acc">ACC</a>
               </li>
               <li>
-                <a href="#" title="life">LIFE</a>
+                <a href="./detail.html" title="life">LIFE</a>
               </li>
               <li>
-              <a href="mypage.html" title="event">MYPAGE</a>
+              <a href="mypage.html" title="mypage" >MYPAGE</a>
               </li>
               <li class="promotionTitle">
                 <a href="event.html" title="event">스프링시즌세일</a>
@@ -32,15 +32,12 @@ const headerInner = `
                 <i class="fa-solid fa-magnifying-glass"></i></a>
               </li>
               <li>
-                <a href="#" title="cart"><span>CART</span><i class="fa-solid fa-bag-shopping"></i><span>(0)</span>
+                <a href="./cart.html" title="cart"><span>CART</span><i class="fa-solid fa-bag-shopping"></i><span>(0)</span>
                 </a>
               </li>
               <li>
-                <a href="login.html" title="login"><span>LOGIN</span>
+                <a href="login.html" title="login" class="loginSucces"><span>LOGIN</span>
                 <i class="fa-solid fa-user"></i></a>
-              </li>
-              <li>
-                <a href="mypage.html" title="mypage">mypage</a>
               </li>
               <li>
                 <button id="toggleBtn">

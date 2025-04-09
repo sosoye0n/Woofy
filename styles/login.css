@@ -24,10 +24,20 @@ body {
   background: #fff;
 }
 
+.error {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #99bdff;
+}
+.error i {
+  font-size: 1.2rem;
+  padding: 0 2px;
+  color: #99bdff;
+}
+
 main {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -36,7 +46,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 140px 0;
+  padding: 100px 0;
   text-transform: uppercase;
   margin-top: 0;
 }
@@ -47,13 +57,8 @@ main h2 {
 main #login {
   width: 420px;
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   position: relative;
 }
 main #login input:not(input[type=checkbox]) {
@@ -66,7 +71,6 @@ main #login input:not(input[type=checkbox]) {
   background: #000;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #login input:not(input[type=checkbox]):focus {
@@ -76,13 +80,8 @@ main #login input:not(input[type=checkbox]):hover {
   background: #99bdff;
 }
 main #login #inputContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
 main #login #inputContainer .inputBox {
@@ -95,7 +94,6 @@ main #login #inputContainer .inputBox input {
   font-weight: 500;
   font-size: 1.4rem;
   font-family: "Figtree";
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main #login #inputContainer .inputBox input:hover {
@@ -106,8 +104,7 @@ main #login #inputContainer .inputBox label {
   position: absolute;
   left: 30px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -134,15 +131,9 @@ main #login #inputContainer #loginBtn:hover {
 main #login #searchInfo {
   margin-top: 14px;
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   font-size: 1.2rem;
   color: #a9a9a9;
 }
@@ -152,35 +143,32 @@ main #login #searchInfo .border {
   background: #a9a9a9;
   margin: 0 10px;
 }
-main #login #join {
+main #login #btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
 }
-main #login #join #kakaoBtn {
+main #login #btns #kakaoBtn {
   background: #fedf32;
   color: #000;
 }
-main #login #join #joinBtn {
+main #login #btns #joinBtn {
   background: #dadada;
   color: #000;
 }
+main #login #btns #joinBtn:hover {
+  background: #99bdff;
+}
 
 @media screen and (max-width: 767px) {
-  main {
-    padding: 100px 0;
-  }
   main h2 {
     font-size: 2.6rem;
   }
   main #login {
     width: 320px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   main #login input:not(input[type=checkbox]) {
     height: 64px;
