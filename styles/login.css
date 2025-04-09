@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -102,7 +101,6 @@ main #login #inputContainer #loginBtn {
   background: #000;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #login #inputContainer #loginBtn:focus {
