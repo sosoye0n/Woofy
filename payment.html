@@ -26,20 +26,35 @@
           <h3 class="section-title">배송지</h3>
           <div class="address-selector">
             <div class="address-label">
-              <span class="recent-address">최근배송지</span>
-              <span class="direct-input">직접입력</span>
+              <span class="recent-address">직접입력</span>
+              <span class="direct-input">최근배송지</span>
             </div>
             <div class="address-info">
-              <div class="user-state">
-                <p class="recipient">user-name</p>
+              <div class="user-chioce">
+                <input
+                  type="text"
+                  class="recipient-input"
+                  placeholder="user-name"
+                  value=""
+                />
                 <div class="address-book-link">
                   <a href="#">배송지목록</a>
                 </div>
               </div>
-              <p class="address-detail">
-                [12725]경기 광주시 곤지암읍 내선길63 901호
-              </p>
-              <p class="phone">010-9412-2207</p>
+              <div class="user-state">
+                <input
+                  type="text"
+                  class="address-input"
+                  placeholder="주소를 입력하세요"
+                  value=""
+                />
+                <input
+                  type="tel"
+                  class="phone-input"
+                  placeholder="연락처"
+                  value=""
+                />
+              </div>
             </div>
             <div class="delivery-message">
               <select>
