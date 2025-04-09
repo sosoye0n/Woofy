@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/3f2ea24883.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/3f2ea24883.js" crossorigin="anonymous"></script>
     <!-- CSS & JS -->
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/join.css" />
@@ -24,70 +21,47 @@
       <h2>Join member</h2>
       <p>회원가입에 필요한 정보를 입력해주세요</p>
       <form id="join" action="#" method="post">
-        <div id="joinContainer">
-          <div id="joinName">
-            <div class="joinWrap">
-              <div class="joinInput">
-                <div>
-                  <input id="name" type="text" placeholder="이름" />
-                  <label for="name"></label>
-                </div>
+        <div id="joinBox">
+          <div class="joinWrap">
+            <div class="joinInput">
+              <input type="text" id="joinName" placeholder="이름" />
+              <label for="joinName"></label>
+            </div>
+            <div id="errorName" class="error"></div>
+          </div>
+          <div class="joinWrap">
+            <div class="joinInput">
+              <input type="text" id="joinPhone" placeholder="휴대폰번호" oninput="autoHyphen2(this)" maxlength="13" />
+              <label for="joinPhone"></label>
+            </div>
+            <div id="errorPhone" class="error"></div>
+          </div>
+          <div class="joinWrap">
+            <div class="joinInput">
+              <div>
+                <input type="text" id="joinId" name="joinId" placeholder="아이디" />
+                <label for="joinId"></label>
               </div>
             </div>
+            <div id="errorId" class="error"></div>
           </div>
-          <div id="joinPhone">
-            <div class="joinWrap">
-              <div class="joinInput">
-                <div>
-                  <input id="name" type="text" placeholder="휴대폰번호" />
-                  <label for="name"></label>
-                </div>
-              </div>
+          <div class="joinWrap">
+            <div class="joinInput">
+              <input type="password" id="joinPw" minlength="10" maxlength="16" placeholder="비밀번호" />
+              <label for="joinPw"></label>
             </div>
+            <div id="errorPw01" class="error"></div>
           </div>
-          <div id="joinId">
-            <div class="joinWrap">
-              <div class="joinInput">
-                <div>
-                  <input id="id" type="text" placeholder="아이디" />
-                  <label for="id"></label>
-                </div>
-              </div>
+          <div class="joinWrap">
+            <div class="joinInput">
+              <input type="password" id="joinPwCheck" minlength="10" maxlength="16" placeholder="비밀번호 확인" />
+              <label for="joinPwCheck"></label>
             </div>
-          </div>
-          <div id="joinPassword">
-            <div class="joinWrap">
-              <div class="joinInput">
-                <div>
-                  <input id="password" type="password" placeholder="비밀번호" />
-                  <label for="password"></label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="joinPasswordConfirm">
-            <div class="joinWrap">
-              <div class="joinInput">
-                <div>
-                  <input
-                    id="passwordConfirm"
-                    type="password"
-                    placeholder="비밀번호 확인"
-                  />
-                  <label for="passwordConfirm"></label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div id="errorPW" class="error">
-            <i class="fas fa-circle-check"></i>
-            비밀번호를 확인해주세요
+            <div id="errorPw02" class="error"></div>
           </div>
         </div>
         <div id="inputBtn">
-          <a href="./welcome.html">
-            <input id="finalBtn" type="button" value="가입하기" />
-          </a>
+          <input id="finalBtn" type="button" value="회원가입" />
         </div>
       </form>
     </main>

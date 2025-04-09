@@ -24,6 +24,18 @@ body {
   background: #fff;
 }
 
+.error {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  font-weight: 500;
+  color: #99bdff;
+}
+.error i {
+  font-size: 1.2rem;
+  padding: 0 2px;
+  color: #99bdff;
+}
+
 main {
   width: 100%;
   display: -webkit-box;
@@ -36,7 +48,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 140px 0;
+  padding: 100px 0;
   text-transform: uppercase;
   margin-top: 0;
 }
@@ -152,7 +164,7 @@ main #login #searchInfo .border {
   background: #a9a9a9;
   margin: 0 10px;
 }
-main #login #join {
+main #login #btns {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,25 +174,25 @@ main #login #join {
           flex-direction: column;
   gap: 10px;
 }
-main #login #join #kakaoBtn {
+main #login #btns #kakaoBtn {
   background: #fedf32;
   color: #000;
 }
-main #login #join #joinBtn {
+main #login #btns #joinBtn {
   background: #dadada;
   color: #000;
 }
+main #login #btns #joinBtn:hover {
+  background: #99bdff;
+}
 
 @media screen and (max-width: 767px) {
-  main {
-    padding: 100px 0;
-  }
   main h2 {
     font-size: 2.6rem;
   }
   main #login {
     width: 320px;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   main #login input:not(input[type=checkbox]) {
     height: 64px;
