@@ -10,13 +10,25 @@ body {
   background: #fff;
 }
 
+.error {
+  font-size: 1.1rem;
+  margin-top: 12px;
+  font-weight: 500;
+  color: map-get($map: $color, $key: point);
+  i {
+    font-size: 1.2rem;
+    padding: 0 2px;
+    color: map-get($map: $color, $key: point);
+  }
+}
+
 // Contents
 main {
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 140px 0;
+  padding: 100px 0;
   text-transform: uppercase;
   margin-top: 0;
   h2 {
@@ -95,9 +107,7 @@ main {
         }
       }
     }
-    // #loginBtn {
-    //   margin-top: 20px;
-    // }
+
     #searchInfo {
       margin-top: 14px;
       margin-bottom: 30px;
@@ -113,7 +123,8 @@ main {
         margin: 0 10px;
       }
     }
-    #join {
+
+    #btns {
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -124,6 +135,9 @@ main {
       #joinBtn {
         background: map-get($map: $color, $key: gray);
         color: map-get($map: $color, $key: dark);
+        &:hover {
+          background: map-get($map: $color, $key: point);
+        }
       }
     }
   }
@@ -132,13 +146,12 @@ main {
 // 반응형 mobile
 @media screen and (max-width: 767px) {
   main {
-    padding: 100px 0;
     h2 {
       font-size: 2.6rem;
     }
     #login {
       width: 320px;
-      margin-top: 20px;
+      margin-top: 30px;
       input:not(input[type="checkbox"]) {
         height: 64px;
         border-radius: 8px;

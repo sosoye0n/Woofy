@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -17,7 +18,6 @@ a {
 
 html {
   font-size: 62.5%;
-  scroll-behavior: auto !important;
 }
 
 html,
@@ -29,10 +29,6 @@ body {
   font-size: 1.6rem;
   font-family: "Figtree";
   letter-spacing: -0.2px;
-}
-body.active {
-  overflow-y: hidden;
-  height: 100vh;
 }
 
 header {
@@ -47,6 +43,7 @@ header {
   background-color: rgb(106, 106, 106);
   background: #fff;
   font-weight: 500;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   transform: translate(0);
   display: flex;
@@ -102,6 +99,7 @@ header #rightGnb ul li i {
   position: absolute;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 header #rightGnb ul li:last-child {
@@ -110,6 +108,7 @@ header #rightGnb ul li:last-child {
   position: absolute;
 }
 header #rightGnb ul li:last-child #toggleBtn {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 28px;
   height: 20px;
@@ -142,10 +141,19 @@ header #rightGnb ul li a {
   display: inline-block;
   position: relative;
   font-size: 1.4rem;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 header #logo {
-  order: 2;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
 }
@@ -163,6 +171,7 @@ header #logo a {
   left: 0;
   width: 100%;
   height: 100vh;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: -1;
 }
@@ -170,6 +179,7 @@ header #logo a {
   width: 100%;
   height: 100vh;
   opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background: rgba(0, 0, 0, 0.4);
 }
@@ -181,6 +191,7 @@ header #logo a {
   top: 0;
   padding: 100px 20px 0 20px;
   background: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 #searchWrap form .search input {
@@ -190,21 +201,49 @@ header #logo a {
   border-bottom: 1px solid #dadada;
   padding-bottom: 20px;
 }
+#searchWrap form .search input::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
 #searchWrap form .search input::-moz-placeholder {
   opacity: 1;
   -moz-transition: all 0.3s;
   transition: all 0.3s;
   color: #dadada;
 }
+#searchWrap form .search input:-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
+#searchWrap form .search input::-ms-input-placeholder {
+  opacity: 1;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #dadada;
+}
 #searchWrap form .search input::placeholder {
   opacity: 1;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   color: #dadada;
 }
 #searchWrap form .search input:focus {
   outline: none;
 }
+#searchWrap form .search input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
 #searchWrap form .search input:focus::-moz-placeholder {
+  opacity: 0;
+}
+#searchWrap form .search input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+#searchWrap form .search input:focus::-ms-input-placeholder {
   opacity: 0;
 }
 #searchWrap form .search input:focus::placeholder {
@@ -221,15 +260,21 @@ header #logo a {
 }
 #searchWrap form ul {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 #searchWrap form ul li:first-child {
   font-weight: bold;
   font-size: 2rem;
 }
 #searchWrap form #closeBtn {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 26px;
   height: 18px;
@@ -248,15 +293,18 @@ header #logo a {
   background: #000;
   width: 100%;
   height: 2px;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 #searchWrap form #closeBtn span:first-child {
   top: 50%;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 #searchWrap form #closeBtn span:last-child {
   top: 50%;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 #searchWrap.active {
   z-index: 4;
@@ -270,6 +318,7 @@ header #logo a {
 
 main {
   margin-top: 70px;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -287,6 +336,8 @@ footer {
   text-transform: uppercase;
   background: #000;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -299,6 +350,8 @@ footer #footerCategory {
   margin-bottom: 16px;
 }
 footer #footerCategory ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
@@ -311,6 +364,8 @@ footer #footerInfo {
   margin-bottom: 20px;
 }
 footer #footerInfo ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
 }
@@ -324,6 +379,9 @@ footer p {
 }
 
 @media screen and (max-width: 1024px) {
+  body {
+    background: #ddd;
+  }
   header {
     z-index: 2;
     background: transparent;
@@ -339,6 +397,7 @@ footer p {
     position: fixed;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
     width: 100% !important;
     top: 0;
@@ -417,6 +476,9 @@ footer p {
     transform: rotate(-45deg);
   }
   header #logo {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
     width: auto;
     z-index: 3;
     left: 3%;

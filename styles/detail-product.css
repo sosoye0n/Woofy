@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -23,8 +24,11 @@ header {
 
 /* 레이아웃 */
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   max-width: 1920px;
   padding-bottom: 100px;
   background: #fff;
@@ -33,14 +37,21 @@ header {
 
 /* 상품 상세 페이지 스타일 */
 .product-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   max-width: 80%;
   margin: 0 auto;
   padding: 40px 20px;
   gap: 50px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 600px;
 }
 
@@ -48,9 +59,15 @@ header {
 .product-gallery {
   width: 55%;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .product-gallery .gallery-main {
   width: 80%;
@@ -99,8 +116,12 @@ header {
   width: 80%;
 }
 .product-info .product-price-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 30px;
   width: 80%;
 }
@@ -149,9 +170,15 @@ header {
   border-bottom: 1px solid #eeeeee;
 }
 .product-info .product-accordion .category .title-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px 0;
   cursor: pointer;
 }
@@ -161,7 +188,10 @@ header {
 }
 .product-info .product-accordion .category .title-top i {
   font-size: 1.4rem;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .product-info .product-accordion .category .subcategory {
   padding: 0 0 15px;
@@ -179,10 +209,19 @@ header {
   margin-bottom: 0;
 }
 .product-info .product-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   margin-top: 20px;
   width: 80%;
@@ -195,6 +234,7 @@ header {
   text-align: center;
   border-radius: 0;
   cursor: pointer;
+  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .product-info .product-actions button:hover {
@@ -233,12 +273,22 @@ header {
 }
 .share-moment .moment-grid {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .share-moment .moment-grid .moment-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 20px;
   margin-bottom: 20px;
 }
@@ -270,14 +320,21 @@ header {
   width: 100%;
   height: auto;
   display: block;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image img:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 5px;
   margin-top: 10px;
 }
@@ -294,7 +351,10 @@ header {
 @media screen and (max-width: 1024px) {
   /* 상품 상세 페이지 스타일 - 태블릿 */
   .product-detail {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 100%;
     padding: 20px;
     gap: 30px;
@@ -311,10 +371,19 @@ header {
   .product-info {
     width: 80%;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .product-info .product-title,
   .product-info .product-price-info,
@@ -339,8 +408,11 @@ header {
     width: 100%;
   }
   .share-moment .moment-grid .moment-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     gap: 10px;
     margin-bottom: 10px;
   }
@@ -394,8 +466,11 @@ header {
     width: 100%;
   }
   .share-moment .moment-grid .moment-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     gap: 10px;
   }
   .share-moment .moment-grid .moment-row .moment-item {
@@ -462,7 +537,10 @@ header {
   }
   .share-moment .moment-grid .moment-row {
     gap: 30px;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .share-moment .moment-grid .moment-row .moment-item {
     width: 100%;
@@ -558,7 +636,10 @@ header {
     width: 100%;
   }
   .share-moment .moment-grid .moment-row {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 30px;
   }
   .share-moment .moment-grid .moment-row .moment-item {

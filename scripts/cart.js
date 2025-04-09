@@ -333,18 +333,23 @@ function initSidebarAccordion() {
   document
     .querySelectorAll(".sidebar .category .subcategory")
     .forEach((subcategory) => {
-      // 부드러운 전환을 위한 transition 추가
       subcategory.style.transition = "height 0.3s ease, opacity 0.3s ease";
-      subcategory.style.height = "0";
-      subcategory.style.opacity = "0";
       subcategory.style.overflow = "hidden";
       subcategory.style.display = "flex";
+      subcategory.style.flexWrap = "wrap";
+      subcategory.style.height = "auto";
+      subcategory.style.opacity = "1";
+
+      const icon = subcategory.previousElementSibling.querySelector("i");
+      if (icon) {
+        icon.style.transform = "rotate(0deg)";
+        icon.style.transition = "transform 0.3s ease";
+      }
     });
 
   accordionToggles.forEach((toggle) => {
     toggle.addEventListener("click", function () {
       const subcategory = this.nextElementSibling;
-
       const icon = this.querySelector("i");
 
       const isCollapsed =
@@ -353,6 +358,7 @@ function initSidebarAccordion() {
       if (isCollapsed) {
         subcategory.style.height = "auto";
         const autoHeight = subcategory.offsetHeight + "px";
+
         subcategory.style.height = "0px";
 
         setTimeout(() => {
@@ -360,14 +366,16 @@ function initSidebarAccordion() {
           subcategory.style.opacity = "1";
         }, 10);
 
-        icon.style.transform = "rotate(0deg)";
-        icon.style.transition = "transform 0.3s ease";
+        if (icon) {
+          icon.style.transform = "rotate(0deg)";
+        }
       } else {
         subcategory.style.height = "0px";
         subcategory.style.opacity = "0";
 
-        icon.style.transform = "rotate(-90deg)";
-        icon.style.transition = "transform 0.3s ease";
+        if (icon) {
+          icon.style.transform = "rotate(90deg)";
+        }
       }
     });
   });

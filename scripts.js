@@ -18,7 +18,7 @@ const headerInner = `
                 <a href="./detail.html" title="life">LIFE</a>
               </li>
               <li>
-              <a href="mypage.html" title="event">MYPAGE</a>
+              <a href="mypage.html" title="mypage" >MYPAGE</a>
               </li>
               <li class="promotionTitle">
                 <a href="event.html" title="event">스프링시즌세일</a>
@@ -36,11 +36,8 @@ const headerInner = `
                 </a>
               </li>
               <li>
-                <a href="login.html" title="login"><span>LOGIN</span>
+                <a href="login.html" title="login" class="loginSucces"><span>LOGIN</span>
                 <i class="fa-solid fa-user"></i></a>
-              </li>
-              <li>
-                <a href="mypage.html" title="mypage">mypage</a>
               </li>
               <li>
                 <button id="toggleBtn">
@@ -167,7 +164,7 @@ toggleBtn.addEventListener("click", function () {
   this.classList.toggle("active");
   leftGnb.classList.toggle("active");
   header.classList.toggle("blendMode");
-  document.body.classList.toggle("active");
+  header.style.transform = "none";
 });
 
 const searchBtn = document.querySelector("#rightGnb ul li:first-child");
