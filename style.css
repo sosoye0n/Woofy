@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -173,6 +174,10 @@ header #rightGnb ul li a {
   transition: all 0.5s;
 }
 header #logo {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -470,6 +475,9 @@ footer p {
             transform: rotate(-45deg);
   }
   header #logo {
+    position: static;
+    -webkit-transform: none;
+            transform: none;
     width: auto;
     z-index: 3;
     left: 3%;
