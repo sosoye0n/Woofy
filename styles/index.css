@@ -137,7 +137,7 @@ main #pinSection .swiper .pagination-fraction {
   left: calc(8% + 20px);
 }
 main #scrollSection {
-  padding-top: 70px;
+  padding-top: 60px;
   padding-left: 35%;
   width: 100%;
 }
@@ -363,13 +363,13 @@ main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
   text-align: center;
   display: block;
   color: #fff;
+  top: 6% !important;
 }
 main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
   top: auto;
   left: auto;
   width: auto;
   height: auto;
-  top: 5%;
   right: 4%;
 }
 main #scrollSection .flexCon02 .swiper02 .swiper-button-prev::after {
@@ -381,7 +381,6 @@ main #scrollSection .flexCon02 .swiper02 .swiper-button-next {
   width: auto;
   height: auto;
   right: 0;
-  top: 5%;
 }
 main #scrollSection .flexCon02 .swiper02 .swiper-button-next::after {
   font-size: 1.4rem;
@@ -413,11 +412,17 @@ main #scrollSection .marquee div {
   }
 }
 @media screen and (max-width: 1700px) and (max-width: 1600px) {
+  main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
+    height: 250px;
+  }
   main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
     right: 5% !important;
   }
 }
 @media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1400px) {
+  main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
+    height: 200px;
+  }
   main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
     right: 6% !important;
   }
@@ -428,8 +433,15 @@ main #scrollSection .marquee div {
   }
 }
 @media screen and (max-width: 1700px) and (max-width: 1600px) and (max-width: 1100px) {
+  main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
+    height: 150px;
+  }
+  main #scrollSection .flexCon02 .swiper02 .swiper-button-next,
   main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
-    right: 7% !important;
+    top: 7% !important;
+  }
+  main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
+    right: 6.5% !important;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -481,6 +493,13 @@ main #scrollSection .marquee div {
   main #scrollSection .flexCon02 {
     margin: 100px 0 !important;
   }
+  main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
+    height: 280px;
+  }
+  main #scrollSection .flexCon02 .swiper02 .swiper-button-next,
+  main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
+    top: 7.5% !important;
+  }
   main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
     right: 6% !important;
   }
@@ -506,9 +525,11 @@ main #scrollSection .marquee div {
   main #scrollSection .flexCon02 {
     margin: 100px 0 100px !important;
   }
+  main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
+    height: 250px !important;
+  }
   main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
-    right: 8% !important;
-    top: 6% !important;
+    right: 7.5% !important;
   }
   main #scrollSection .flexCon02 .swiper02 .swiper-button-prev::after {
     font-size: 1.6rem !important;
@@ -525,21 +546,23 @@ main #scrollSection .marquee div {
   main #scrollSection .flexCon02 .productImg img {
     height: 250px !important;
   }
-  main .flexCon01 {
-    grid-template-columns: repeat(1, 100%) !important;
-    gap: 2% !important;
-    padding: 0 5%;
-  }
 }
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 590px) {
   main #pinSection .swiper .swiper-slide .swiperText {
     bottom: 25% !important;
   }
   main #pinSection .swiper .pgbar {
     width: 180px;
   }
+  main #scrollSection .flexCon02 .swiper02 .swiper-wrapper .swiper-slide .productImg img {
+    height: 180px !important;
+  }
+  main #scrollSection .flexCon02 .swiper02 .swiper-button-next,
   main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
-    right: 10% !important;
+    top: 7.2% !important;
+  }
+  main #scrollSection .flexCon02 .swiper02 .swiper-button-prev {
+    right: 9% !important;
   }
   .marquee {
     margin-top: 100px;

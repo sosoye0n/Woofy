@@ -1,90 +1,110 @@
-// // 모달 공통
-// const modalContainer = document.querySelector(".modalContainer");
-// const modal = document.querySelector(".modal");
+// const couponModalContainer = document.querySelector("#couponModal");
 
-// // 멤버십 모달
-// const membershipModal = document.querySelector(".membership");
-// const closeBtn = document.querySelector(".close");
-// const openMembership = document.querySelector(".");
-// const openMembershipLevel = document.querySelector(".membershipInfo");
+// const couponModal = document.createElement("div");
+// couponModal.id = "couponModal";
+// couponModal.innerHTML = `
+//         <div class="coupon">
+//           <div class="modalHeader">
+//             <i class="fas fa-xmark close"></i>
+//             <div class="modalTitle">
+//               <p>보유쿠폰</p>
+//               <span>coupon</span>
+//             </div>
+//           </div>
+//           <ul class="couponContents">
+//             <li class="modalCouponInfoCon">
+//               <div class="modalCoupon">
+//                 <div class="couponBox1">
+//                   <div class="modalInfo">
+//                     <div class="membershipInfo">
+//                       <p>12<b>%</b></p>
+//                       <span>[프로모션] 스프링시즌세일</span>
+//                     </div>
+//                     <p class="subInfo">신규멤버, 첫구매 쿠폰 제공</p>
+//                   </div>
+//                 </div>
+//                 <div class="couponBox2">
+//                   <i class="fas fa-circle-check"></i>
+//                 </div>
+//               </div>
+//             </li>
+//             <li class="modalCouponInfoCon">
+//               <div class="modalCoupon">
+//                 <div class="couponBox1">
+//                   <div class="modalInfo">
+//                     <div class="membershipInfo">
+//                       <p>30<b>%</b></p>
+//                       <span>[이미스] 브랜드 중복쿠폰</span>
+//                     </div>
+//                     <p class="subInfo">50,000원 이상 구매시 사용 가능</p>
+//                   </div>
+//                 </div>
+//                 <div class="couponBox2">
+//                   <i class="fas fa-circle-check"></i>
+//                 </div>
+//               </div>
+//             </li>
+//             <li class="modalCouponInfoCon">
+//               <div class="modalCoupon">
+//                 <div class="couponBox1">
+//                   <div class="modalInfo">
+//                     <div class="membershipInfo">
+//                       <p><b>무료배송</b></p>
+//                       <span>[멤버십] 가입감사쿠폰</span>
+//                     </div>
+//                     <p class="subInfo">신규멤버십 가입 회원 대상</p>
+//                   </div>
+//                 </div>
+//                 <div class="couponBox2">
+//                   <i class="fas fa-circle-check"></i>
+//                 </div>
+//               </div>
+//             </li>
+//           </ul>
+//         </div>
+// `;
 
-// //오픈
-// openMembership.addEventListener("click", () => {
-//   modal.classList.add("on");
-//   membershipModal.classList.add("on");
+// couponModalContainer.appendChild(couponModal);
 
-//   console.log(openMembership);
-// });
+// console.log(couponModal);
 
-// // **--멤버십 모달--**
-// // 오픈 - 이전ver
-// // couponModalOpen.addEventListener("click", () => {
-// //   membershipModal.classList.add("on");
-// // });
+// 모달 요소
+const couponModal = document.querySelector("#couponModal");
+const pointModal = document.querySelector("#pointModal");
+const membershipModal = document.querySelector("#membershipModal");
 
-// // membershipModalOpen.addEventListener("click", () => {
-// //   membershipModal.classList.add("on");
-// // });
-// // // 닫기
-// // modalClose.addEventListener("click", () => {
-// //   membershipModal.classList.remove("on");
-// // });
-// // closeModal.addEventListener("click", () => {
-// //   membershipModal.classList.remove("on");
-// // });
+// 오픈 트리거
+const coupon = document.querySelector(".couponOpen");
+const point = document.querySelector(".pointOpen");
+const membership = document.querySelector(".memberhshipOpen");
+const membershipLevel = document.querySelector(".membershipLevel");
 
-////
-// // 멤버십 모달 팝업 -이전ver
-// // const membershipModal = document.querySelector("#membershipModal");
-// // const couponModalOpen = document.querySelector(".membershipBox");
-// // const membershipModalOpen = document.querySelector(".membershipLevel");
-// // const modalClose = document.querySelector(".close");
+// 닫기 버튼
+const closeBtns = document.querySelectorAll(".close");
+const bg = document.querySelector(".bg");
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const modals = document.querySelectorAll(".modal");
-//   const modalContainer = document.getElementById("modalContainer");
-//   const closeButtons = document.querySelectorAll(".modal .close");
+// 모달 오픈
+coupon.addEventListener("click", () => {
+  couponModal.classList.add("on");
+  // bg.classList.add("on");
+});
+point.addEventListener("click", () => {
+  pointModal.classList.add("on");
+});
+membership.addEventListener("click", () => {
+  membershipModal.classList.add("on");
+});
+membershipLevel.addEventListener("click", () => {
+  membershipModal.classList.add("on");
+});
 
-//   // 모달 닫기 함수
-//   function closeModals() {
-//     modals.forEach((modal) => modal.classList.remove("active"));
-//     modalContainer.classList.remove("show");
-//   }
-
-//   // 모달 열기 함수
-//   function openModal(modalClass) {
-//     closeModals(); // 다른 모달 열리지 않도록
-//     const modal = document.querySelector(`.modal.${modalClass}`);
-//     if (modal) {
-//       modal.classList.add("active");
-//       modalContainer.classList.add("show");
-//     }
-//   }
-
-//   // 닫기 버튼 클릭 시
-//   closeButtons.forEach((button) => {
-//     button.addEventListener("click", closeModals);
-//   });
-
-//   // 배경 클릭 시 모달 닫기
-//   modalContainer.addEventListener("click", (e) => {
-//     if (e.target === modalContainer) {
-//       closeModals();
-//     }
-//   });
-
-//   // 쿠폰 영역 클릭 시
-//   document.querySelector(".detailInfo:nth-child(1)").addEventListener("click", () => {
-//     openModal("coupon");
-//   });
-
-//   // 포인트 영역 클릭 시
-//   document.querySelector(".detailInfo:nth-child(2)").addEventListener("click", () => {
-//     openModal("point");
-//   });
-
-//   // 멤버십 영역 클릭 시
-//   document.querySelector(".membershipLevel").addEventListener("click", () => {
-//     openModal("membership");
-//   });
-// });
+// 모달 닫기
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const modal = btn.closest("#couponModal, #pointModal, #membershipModal");
+    if (modal) {
+      modal.classList.remove("on");
+      bg.classList.remove("on");
+    }
+  });
+});
