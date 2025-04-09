@@ -1,3 +1,6 @@
+//font
+@import url("https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap");
+
 // reset & variables
 @import "./styles/reset.scss";
 @import "./styles/variables.scss";
@@ -132,6 +135,9 @@ header {
     }
   }
   #logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     order: 2;
     display: flex;
     align-items: center;
@@ -417,6 +423,8 @@ footer {
       }
     }
     #logo {
+      position: static;
+      transform: none;
       width: auto;
       z-index: 3;
       left: 3%;

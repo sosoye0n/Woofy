@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 * {
   margin: 0;
@@ -21,7 +20,7 @@ header {
   z-index: 10;
 }
 
-/* 레이아웃 */
+/* Layout */
 .container {
   background: #fff;
   min-height: 100vh;
@@ -60,9 +59,6 @@ section {
   padding: 20px;
 }
 
-.checkout-container {
-  width: 100%;
-}
 .checkout-container .shipping-section .address-selector {
   margin-bottom: 20px;
   padding: 0 15px;
@@ -75,13 +71,13 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .checkout-container .shipping-section .address-selector .address-label .recent-address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 2.2rem;
-  font-weight: 300;
   font-weight: 400;
   margin-right: 30px;
   border-bottom: 1px solid #000;
@@ -93,8 +89,15 @@ section {
 .checkout-container .shipping-section .address-selector .address-info {
   margin-bottom: 20px;
   color: #a7a7a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state {
+.checkout-container .shipping-section .address-selector .address-info .user-chioce {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,31 +107,119 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
   font-size: 2rem;
   font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  border: none;
+  padding: 5px 0;
+  width: 60%;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-webkit-input-placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-moz-placeholder {
+  color: #999;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus {
+  outline: none;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
   font-size: 1.6rem;
   color: #000;
 }
-.checkout-container .shipping-section .address-selector .address-info .address-detail {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 10px;
+.checkout-container .shipping-section .address-selector .address-info .user-state {
+  width: 100%;
 }
-.checkout-container .shipping-section .address-selector .address-info .phone {
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
+.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
   font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 10px;
+  border: none;
+  padding: 5px 0;
+  width: 100%;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::-webkit-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::-webkit-input-placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::-moz-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::-moz-placeholder {
+  color: #999;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::placeholder,
+.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus,
+.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus {
+  outline: none;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::-webkit-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::-moz-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus:-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::placeholder,
+.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::placeholder {
+  opacity: 0;
 }
 .checkout-container .shipping-section .address-selector .delivery-message {
   width: 100%;
@@ -267,7 +358,6 @@ section {
           justify-content: flex-end;
   margin-bottom: 20px;
   font-size: 1.4rem;
-  display: flex;
   color: #dadada;
 }
 
@@ -437,13 +527,248 @@ section {
           box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.modal, .payment-confirm-modal, .coupon-modal, .address-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal .modal-content, .payment-confirm-modal .modal-content, .coupon-modal .modal-content, .address-modal .modal-content {
+  background-color: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  -webkit-animation: modalFadeIn 0.3s ease;
+          animation: modalFadeIn 0.3s ease;
+}
+.modal .modal-header, .payment-confirm-modal .modal-header, .coupon-modal .modal-header, .address-modal .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 20px;
+}
+.modal .modal-header h3, .payment-confirm-modal .modal-header h3, .coupon-modal .modal-header h3, .address-modal .modal-header h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+.modal .modal-header .close-modal, .payment-confirm-modal .modal-header .close-modal, .coupon-modal .modal-header .close-modal, .address-modal .modal-header .close-modal {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #333333;
+}
+.modal .modal-body, .payment-confirm-modal .modal-body, .coupon-modal .modal-body, .address-modal .modal-body {
+  padding: 20px;
+}
+.modal .modal-footer, .payment-confirm-modal .modal-footer, .coupon-modal .modal-footer, .address-modal .modal-footer {
+  padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.modal .modal-footer .modal-button, .payment-confirm-modal .modal-footer .modal-button, .modal .modal-footer .coupon-modal .select-coupon, .payment-confirm-modal .modal-footer .coupon-modal .select-coupon, .coupon-modal .modal-footer .modal-button, .coupon-modal .modal-footer .select-coupon, .modal .modal-footer .address-modal .select-address, .payment-confirm-modal .modal-footer .address-modal .select-address, .coupon-modal .modal-footer .address-modal .select-address, .address-modal .modal-footer .modal-button, .address-modal .modal-footer .coupon-modal .select-coupon, .address-modal .modal-footer .select-address {
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  width: 80%;
+}
+.modal .modal-footer .modal-button:hover, .payment-confirm-modal .modal-footer .modal-button:hover, .modal .modal-footer .coupon-modal .select-coupon:hover, .payment-confirm-modal .modal-footer .coupon-modal .select-coupon:hover, .coupon-modal .modal-footer .modal-button:hover, .coupon-modal .modal-footer .select-coupon:hover, .modal .modal-footer .address-modal .select-address:hover, .payment-confirm-modal .modal-footer .address-modal .select-address:hover, .coupon-modal .modal-footer .address-modal .select-address:hover, .address-modal .modal-footer .modal-button:hover, .address-modal .modal-footer .coupon-modal .select-coupon:hover, .address-modal .modal-footer .select-address:hover {
+  opacity: 0.9;
+}
+
+@-webkit-keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.address-modal {
+  z-index: 1000;
+}
+.address-modal .close-modal {
+  display: none;
+}
+.address-modal .address-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 12px 10px;
+  cursor: pointer;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+.address-modal .address-item:hover {
+  background-color: #f9f9f9;
+}
+.address-modal .address-item.selected {
+  background-color: #f0f0f0;
+}
+.address-modal .address-item .address-number {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-right: 15px;
+}
+.address-modal .address-item .address-info-modal {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.coupon-modal {
+  z-index: 20;
+}
+.coupon-modal .coupon-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.coupon-modal .coupon-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+.coupon-modal .coupon-item:hover {
+  background-color: #f9f9f9;
+}
+.coupon-modal .coupon-item.selected {
+  background-color: #f0f0f0;
+}
+.coupon-modal .coupon-item .coupon-number {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-right: 15px;
+}
+.coupon-modal .coupon-item .coupon-info-modal {
+  font-size: 1.6rem;
+}
+.coupon-modal .coupon-item .coupon-info-modal .coupon-name {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.coupon-modal .coupon-item .coupon-info-modal .coupon-expiry {
+  font-size: 1.4rem;
+  color: #666;
+}
+.payment-confirm-modal {
+  z-index: 25;
+}
+.payment-confirm-modal .modal-content {
+  max-width: 420px;
+}
+.payment-confirm-modal .modal-body {
+  padding: 50px 20px;
+  text-align: center;
+}
+.payment-confirm-modal .modal-body .confirm-message {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  color: #333333;
+}
+.payment-confirm-modal .modal-footer {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 12px;
+}
+.payment-confirm-modal .modal-footer .move-to-cart,
+.payment-confirm-modal .modal-footer .continue-shopping {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 14px 16px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border: none;
+}
+.payment-confirm-modal .modal-footer .move-to-cart {
+  background-color: #e0e0e0;
+  color: #333333;
+}
+.payment-confirm-modal .modal-footer .move-to-cart:hover {
+  background-color: #d0d0d0;
+}
+.payment-confirm-modal .modal-footer .continue-shopping {
+  background-color: #000;
+  color: #fff;
+}
+.payment-confirm-modal .modal-footer .continue-shopping:hover {
+  background-color: #333333;
+}
+
 @media screen and (max-width: 1024px) {
-  /* 레이아웃 변경 */
   .container {
     max-width: 100%;
     margin-top: 80px;
   }
-  /* 체크아웃 컨테이너 조정 */
   .checkout-container {
     max-width: 100%;
     padding: 0 20px;
@@ -452,17 +777,14 @@ section {
     font-size: 2.2rem;
     margin-bottom: 15px;
   }
-  /* 섹션 타이틀 조정 */
   .section-title {
     font-size: 2rem;
     margin-bottom: 14px;
     padding-bottom: 8px;
   }
-  /* 섹션 패딩 조정 */
   section {
     padding: 15px;
   }
-  /* 배송지 섹션 */
   .checkout-container .shipping-section .address-selector {
     padding: 0 10px;
   }
@@ -479,21 +801,24 @@ section {
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 15px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+    margin-bottom: 12px;
+  }
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
     font-size: 1.8rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
     font-size: 1.5rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
+  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
+  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
     font-size: 1.6rem;
+    margin-bottom: 8px;
   }
   .checkout-container .shipping-section .address-selector .delivery-message select {
     height: 38px;
     font-size: 1.4rem;
   }
-  /* 주문상품 섹션 */
   .order-products .product-list {
     padding: 0 8px;
   }
@@ -514,7 +839,6 @@ section {
   .order-products .product-list .product-item .remove-product {
     font-size: 2.2rem;
   }
-  /* 할인/부가결제 섹션 */
   .payment-section .payment-options {
     padding: 0 10px;
   }
@@ -541,7 +865,6 @@ section {
   .payment-section .payment-options .option-info {
     font-size: 1.3rem;
   }
-  /* 결제정보 섹션 */
   .order-summary .summary-list {
     padding: 0 15px;
   }
@@ -561,7 +884,6 @@ section {
   .order-summary .summary-list .summary-row.total .summary-amount {
     font-size: 1.7rem;
   }
-  /* 결제수단 섹션 */
   .payment-methods {
     margin-bottom: 25px;
   }
@@ -590,7 +912,6 @@ section {
   .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
     font-size: 1.3rem;
   }
-  /* 결제하기 버튼 */
   .checkout-button-container {
     width: 80%;
   }
@@ -599,9 +920,43 @@ section {
     padding: 12px 0;
     margin-bottom: 80px;
   }
+  .modal .modal-content, .address-modal .modal-content, .coupon-modal .modal-content, .payment-confirm-modal .modal-content {
+    max-width: 380px;
+  }
+  .modal .modal-header h3, .address-modal .modal-header h3, .coupon-modal .modal-header h3, .payment-confirm-modal .modal-header h3 {
+    font-size: 1.7rem;
+  }
+  .modal .modal-body, .address-modal .modal-body, .coupon-modal .modal-body, .payment-confirm-modal .modal-body {
+    padding: 18px;
+  }
+  .coupon-modal .coupon-number,
+  .coupon-modal .address-number,
+  .address-modal .coupon-number,
+  .address-modal .address-number {
+    font-size: 1.5rem;
+  }
+  .coupon-modal .coupon-info-modal,
+  .coupon-modal .address-info-modal,
+  .address-modal .coupon-info-modal,
+  .address-modal .address-info-modal {
+    font-size: 1.5rem;
+  }
+  .coupon-modal .select-coupon,
+  .coupon-modal .select-address,
+  .address-modal .select-coupon,
+  .address-modal .select-address {
+    font-size: 1.5rem;
+  }
+  .payment-confirm-modal .confirm-message {
+    font-size: 1.9rem;
+  }
+  .payment-confirm-modal .move-to-cart,
+  .payment-confirm-modal .continue-shopping {
+    font-size: 1.4rem;
+    padding: 12px 14px;
+  }
 }
 @media screen and (max-width: 768px) {
-  /* 레이아웃 변경 */
   .container {
     padding: 10px 0;
     margin-top: 60px;
@@ -623,17 +978,14 @@ section {
         -ms-flex-align: center;
             align-items: center;
   }
-  /* 섹션 타이틀 조정 */
   .section-title {
     font-size: 1.8rem;
     margin-bottom: 12px;
     text-align: left;
   }
-  /* 섹션 패딩 조정 */
   section {
     padding: 12px 8px;
   }
-  /* 배송지 섹션 */
   .checkout-container .shipping-section .address-selector {
     padding: 0 8px;
   }
@@ -650,17 +1002,17 @@ section {
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 12px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state {
-    margin-bottom: 8px;
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+    margin-bottom: 10px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
     font-size: 1.6rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
     font-size: 1.4rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
+  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
+  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
     font-size: 1.5rem;
     margin-bottom: 8px;
   }
@@ -669,7 +1021,6 @@ section {
     font-size: 1.3rem;
     padding: 0 15px;
   }
-  /* 주문상품 섹션 */
   .order-products .product-list {
     padding: 0 5px;
   }
@@ -690,7 +1041,6 @@ section {
     height: 25px;
     font-size: 2rem;
   }
-  /* 할인/부가결제 섹션 */
   .payment-section .payment-options {
     padding: 0 8px;
   }
@@ -721,7 +1071,6 @@ section {
     font-size: 1.2rem;
     margin-bottom: 15px;
   }
-  /* 결제정보 섹션 */
   .order-summary .summary-list {
     padding: 0 10px;
   }
@@ -743,7 +1092,6 @@ section {
   .order-summary .summary-list .summary-row.total .summary-amount {
     font-size: 1.6rem;
   }
-  /* 결제수단 섹션 */
   .payment-methods {
     margin-bottom: 20px;
   }
@@ -772,7 +1120,6 @@ section {
     width: 11px;
     height: 11px;
   }
-  /* 결제하기 버튼 */
   .checkout-button-container {
     width: 90%;
     margin: 25px auto;
@@ -782,9 +1129,63 @@ section {
     padding: 12px 0;
     margin-bottom: 60px;
   }
+  .modal .modal-content, .address-modal .modal-content, .coupon-modal .modal-content, .payment-confirm-modal .modal-content {
+    max-width: 350px;
+  }
+  .modal .modal-header h3, .address-modal .modal-header h3, .coupon-modal .modal-header h3, .payment-confirm-modal .modal-header h3 {
+    font-size: 1.6rem;
+  }
+  .modal .modal-body, .address-modal .modal-body, .coupon-modal .modal-body, .payment-confirm-modal .modal-body {
+    padding: 15px;
+  }
+  .modal .modal-footer, .address-modal .modal-footer, .coupon-modal .modal-footer, .payment-confirm-modal .modal-footer {
+    padding: 12px 15px;
+  }
+  .coupon-modal .coupon-item,
+  .coupon-modal .address-item,
+  .address-modal .coupon-item,
+  .address-modal .address-item {
+    padding: 10px 8px;
+  }
+  .coupon-modal .coupon-number,
+  .coupon-modal .address-number,
+  .address-modal .coupon-number,
+  .address-modal .address-number {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
+  .coupon-modal .coupon-info-modal,
+  .coupon-modal .address-info-modal,
+  .address-modal .coupon-info-modal,
+  .address-modal .address-info-modal {
+    font-size: 1.4rem;
+  }
+  .coupon-modal .coupon-expiry,
+  .address-modal .coupon-expiry {
+    font-size: 1.2rem;
+  }
+  .coupon-modal .select-coupon,
+  .coupon-modal .select-address,
+  .address-modal .select-coupon,
+  .address-modal .select-address {
+    font-size: 1.4rem;
+    padding: 8px 25px;
+  }
+  .payment-confirm-modal .confirm-message {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  }
+  .payment-confirm-modal .modal-footer {
+    padding: 15px;
+  }
+  .payment-confirm-modal .move-to-cart,
+  .payment-confirm-modal .continue-shopping {
+    font-size: 1.4rem;
+    padding: 10px 14px;
+  }
 }
 @media screen and (max-width: 580px) {
-  /* 레이아웃 변경 */
   .container {
     padding: 5px 0;
     margin-top: 70px;
@@ -807,18 +1208,15 @@ section {
         -ms-flex-align: center;
             align-items: center;
   }
-  /* 섹션 타이틀 조정 */
   .section-title {
     font-size: 1.7rem;
     margin-bottom: 10px;
     padding-bottom: 5px;
   }
-  /* 섹션 패딩 조정 */
   section {
     padding: 10px 5px;
     margin-bottom: 10px;
   }
-  /* 배송지 섹션 */
   .checkout-container .shipping-section .address-selector {
     padding: 0 5px;
     margin-bottom: 15px;
@@ -836,34 +1234,62 @@ section {
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 10px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state {
-    margin-bottom: 5px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+    margin-bottom: 8px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
     font-size: 1.5rem;
-    margin-bottom: 5px;
+    width: 50%;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
     font-size: 1.3rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
+  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
+  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
     font-size: 1.4rem;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
   }
   .checkout-container .shipping-section .address-selector .delivery-message select {
     height: 34px;
     font-size: 1.2rem;
     padding: 0 10px;
   }
-  /* 주문상품 섹션 */
+  .modal-content {
+    width: 95%;
+    max-width: 320px;
+    border-radius: 10px;
+  }
+  .modal-header {
+    padding: 12px 15px;
+  }
+  .modal-header h3 {
+    font-size: 1.6rem;
+  }
+  .close-modal {
+    font-size: 2rem;
+  }
+  .modal-body {
+    padding: 15px;
+  }
+  .address-item {
+    padding: 10px 8px;
+  }
+  .address-number {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
+  .address-info-modal {
+    font-size: 1.4rem;
+  }
+  .modal-footer {
+    padding: 12px 15px;
+  }
+  .select-address {
+    border-radius: 20px;
+    padding: 8px 25px;
+    font-size: 1.5rem;
+    width: 85%;
+  }
   .order-products .product-list {
     padding: 0;
   }
@@ -888,7 +1314,6 @@ section {
     height: 22px;
     font-size: 1.8rem;
   }
-  /* 할인/부가결제 섹션 */
   .payment-section .payment-options {
     padding: 0 5px;
   }
@@ -921,7 +1346,47 @@ section {
     margin-bottom: 12px;
     text-align: right;
   }
-  /* 결제정보 섹션 */
+  .coupon-modal .modal-content {
+    width: 95%;
+    max-width: 320px;
+    border-radius: 10px;
+  }
+  .coupon-modal .modal-header {
+    padding: 12px 15px;
+  }
+  .coupon-modal .modal-header h3 {
+    font-size: 1.6rem;
+  }
+  .coupon-modal .close-modal {
+    font-size: 1.8rem;
+  }
+  .coupon-modal .modal-body {
+    padding: 15px;
+  }
+  .coupon-item {
+    padding: 10px 8px;
+  }
+  .coupon-number {
+    font-size: 1.4rem;
+    margin-right: 10px;
+  }
+  .coupon-info-modal {
+    font-size: 1.4rem;
+  }
+  .coupon-name {
+    margin-bottom: 3px;
+  }
+  .coupon-expiry {
+    font-size: 1.2rem;
+  }
+  .coupon-modal .modal-footer {
+    padding: 12px 15px;
+  }
+  .coupon-modal .select-coupon {
+    border-radius: 20px;
+    padding: 8px 25px;
+    font-size: 1.4rem;
+  }
   .order-summary .summary-list {
     padding: 0 5px;
   }
@@ -943,7 +1408,6 @@ section {
   .order-summary .summary-list .summary-row.total .summary-amount {
     font-size: 1.5rem;
   }
-  /* 결제수단 섹션 */
   .payment-methods {
     margin-bottom: 15px;
   }
@@ -978,7 +1442,6 @@ section {
     width: 10px;
     height: 10px;
   }
-  /* 결제하기 버튼 */
   .checkout-button-container {
     width: 100%;
     margin: 20px auto;
@@ -989,9 +1452,28 @@ section {
     margin-bottom: 50px;
     border-radius: 8px;
   }
+  .payment-confirm-modal .modal-content {
+    max-width: 340px;
+  }
+  .payment-confirm-modal .modal-body {
+    padding: 30px 15px;
+  }
+  .payment-confirm-modal .confirm-message {
+    font-size: 1.6rem;
+    margin-top: 12px;
+  }
+  .payment-confirm-modal .modal-footer {
+    padding: 15px;
+    gap: 10px;
+  }
+  .payment-confirm-modal .move-to-cart,
+  .payment-confirm-modal .continue-shopping {
+    font-size: 1.3rem;
+    padding: 10px 12px;
+    border-radius: 25px;
+  }
 }
 @media screen and (max-width: 375px) {
-  /* 레이아웃 변경 */
   .container {
     padding: 3px 0;
     margin-top: 70px;
@@ -1005,18 +1487,15 @@ section {
     margin-bottom: 8px;
     padding-left: 5px;
   }
-  /* 섹션 타이틀 조정 */
   .section-title {
     font-size: 1.6rem;
     margin-bottom: 8px;
     padding-bottom: 3px;
   }
-  /* 섹션 패딩 조정 */
   section {
     padding: 8px 3px;
     margin-bottom: 8px;
   }
-  /* 배송지 섹션 */
   .checkout-container .shipping-section .address-selector {
     padding: 0 3px;
     margin-bottom: 10px;
@@ -1034,27 +1513,71 @@ section {
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 8px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state {
-    margin-bottom: 10px;
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+    margin-bottom: 6px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .recipient {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-book-link {
-    font-size: 1.3rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .address-detail,
-  .checkout-container .shipping-section .address-selector .address-info .phone {
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
     font-size: 1.4rem;
-    margin-bottom: 3px;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
+    font-size: 1.2rem;
+    margin-top: 3px;
+  }
+  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
+  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
   }
   .checkout-container .shipping-section .address-selector .delivery-message select {
     height: 28px;
     font-size: 1.2rem;
     padding: 0 8px;
   }
-  /* 주문상품 섹션 */
+  .modal-content {
+    width: 98%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  .modal-header {
+    padding: 10px 12px;
+  }
+  .modal-header h3 {
+    font-size: 1.5rem;
+  }
+  .close-modal {
+    font-size: 1.8rem;
+  }
+  .modal-body {
+    padding: 12px 10px;
+  }
+  .address-item {
+    padding: 8px 6px;
+  }
+  .address-number {
+    font-size: 1.3rem;
+    margin-right: 8px;
+  }
+  .address-info-modal {
+    font-size: 1.3rem;
+  }
+  .modal-footer {
+    padding: 10px 12px;
+  }
+  .select-address {
+    border-radius: 18px;
+    padding: 7px 20px;
+    font-size: 1.4rem;
+    width: 90%;
+  }
   .order-products .product-list {
     padding: 0;
   }
@@ -1079,7 +1602,6 @@ section {
     height: 20px;
     font-size: 1.6rem;
   }
-  /* 할인/부가결제 섹션 */
   .payment-section .payment-options {
     padding: 0 3px;
   }
@@ -1112,7 +1634,48 @@ section {
     margin-bottom: 10px;
     text-align: right;
   }
-  /* 결제정보 섹션 */
+  .coupon-modal .modal-content {
+    width: 98%;
+    max-width: 300px;
+    border-radius: 8px;
+  }
+  .coupon-modal .modal-header {
+    padding: 10px 12px;
+  }
+  .coupon-modal .modal-header h3 {
+    font-size: 1.5rem;
+  }
+  .coupon-modal .close-modal {
+    font-size: 1.7rem;
+  }
+  .coupon-modal .modal-body {
+    padding: 12px 10px;
+  }
+  .coupon-item {
+    padding: 8px 6px;
+  }
+  .coupon-number {
+    font-size: 1.3rem;
+    margin-right: 8px;
+  }
+  .coupon-info-modal {
+    font-size: 1.3rem;
+  }
+  .coupon-name {
+    font-size: 1.3rem;
+  }
+  .coupon-expiry {
+    font-size: 1.1rem;
+  }
+  .coupon-modal .modal-footer {
+    padding: 10px 12px;
+  }
+  .coupon-modal .select-coupon {
+    border-radius: 18px;
+    padding: 7px 20px;
+    font-size: 1.3rem;
+    width: 90%;
+  }
   .order-summary .summary-list {
     padding: 0 3px;
   }
@@ -1134,7 +1697,6 @@ section {
   .order-summary .summary-list .summary-row.total .summary-amount {
     font-size: 1.4rem;
   }
-  /* 결제수단 섹션 */
   .payment-methods {
     margin-bottom: 12px;
   }
@@ -1165,7 +1727,6 @@ section {
     width: 9px;
     height: 9px;
   }
-  /* 결제하기 버튼 */
   .checkout-button-container {
     width: 100%;
     margin: 15px auto;
@@ -1175,5 +1736,25 @@ section {
     padding: 8px 0;
     margin-bottom: 40px;
     border-radius: 6px;
+  }
+  .payment-confirm-modal .modal-content {
+    max-width: 290px;
+  }
+  .payment-confirm-modal .modal-body {
+    padding: 20px 10px;
+  }
+  .payment-confirm-modal .confirm-message {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+  .payment-confirm-modal .modal-footer {
+    padding: 10px;
+    gap: 8px;
+  }
+  .payment-confirm-modal .move-to-cart,
+  .payment-confirm-modal .continue-shopping {
+    font-size: 1.1rem;
+    padding: 7px;
+    border-radius: 18px;
   }
 }

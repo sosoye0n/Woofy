@@ -272,6 +272,10 @@ header {
                 background-color: map-get($map: $color, $key: input);
               }
             }
+            /* 체크된 상태일 때 배경색을 변경 */
+            &:checked + label {
+              background-color: map-get($map: $color, $key: input);
+            }
           }
         }
         .items {
@@ -281,9 +285,10 @@ header {
           border-top: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
           padding: 20px 0;
+          position: relative;
           input[type="checkbox"] {
             position: absolute;
-            top: 0;
+            top: 20px;
             left: 0;
             display: none;
             & + label {
@@ -292,13 +297,19 @@ header {
               height: 20px;
               border: 1px solid map-get($map: $color, $key: input);
               border-radius: 2px;
-              position: relative;
+              position: absolute;
+              top: 20px;
+              left: 0;
               cursor: pointer;
               background-color: map-get($map: $color, $key: light);
               transition: background-color 0.2s ease;
               &:active {
                 background-color: map-get($map: $color, $key: input);
               }
+            }
+            /* 체크된 상태일 때 배경색을 변경 */
+            &:checked + label {
+              background-color: map-get($map: $color, $key: input);
             }
           }
           .item-image {
@@ -604,6 +615,10 @@ header {
           .items {
             flex-direction: column;
             gap: 15px;
+            input[type="checkbox"] + label {
+              top: 15px;
+              left: 0;
+            }
             .item-image {
               display: flex;
               justify-content: center;
