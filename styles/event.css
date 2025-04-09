@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -33,9 +34,15 @@ main #container01 .eventHeader {
 }
 main #container01 .eventBtn {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 .eventBtn p {
   width: 50%;
@@ -43,9 +50,16 @@ main #container01 .eventBtn p {
   font-size: 3rem;
   font-weight: bold;
   border-bottom: 1px solid #dadada;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -64,10 +78,17 @@ main #container01 #eventModal #modalBg {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: none;
 }
@@ -81,9 +102,15 @@ main #container01 #eventModal #modalBg .modalContent {
   border-radius: 18px;
   background-color: #fff;
   margin: 16% 34%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 main #container01 #eventModal #modalBg .modalContent .closeModal {
@@ -98,10 +125,19 @@ main #container01 #eventModal #modalBg .modalContent .closeModal .fa-xmark {
   margin-right: 6%;
 }
 main #container01 #eventModal #modalBg .modalContent .modalTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 #eventModal #modalBg .modalContent .modalTitle h1 {
   font-size: 7rem;
@@ -129,6 +165,7 @@ main #container01 #eventModal #modalBg .modalContent .modalTitle .modalBtn {
   border-radius: 12px;
   background: #99bdff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #container01 #eventModal #modalBg .modalContent .modalTitle .modalBtn:hover {
@@ -137,10 +174,19 @@ main #container01 #eventModal #modalBg .modalContent .modalTitle .modalBtn:hover
 }
 main #container01 .event01 {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 .event01 .event01Wrapper {
   margin-top: 4%;
@@ -156,18 +202,33 @@ main #container01 .event01 .event01Wrapper .textWrapper {
 main #container01 .event01 .event01Wrapper .textWrapper h1 {
   width: 100%;
   height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #868fa0;
   font: normal 2rem/1 "Figtree";
   text-shadow: 0px 3px 0px rgba(255, 255, 255, 0.8);
 }
 main #container01 .event01 .event01Wrapper .textWrapper .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   gap: 20px;
   margin-bottom: 20px;
 }
@@ -176,19 +237,34 @@ main #container01 .event01 .event01Wrapper .textWrapper .left img {
   height: 100px;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .left p {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: left;
-  align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 20px 22px;
   border-radius: 40px;
   font: normal 1.8rem/1 "Figtree";
   background: #f2f2f2;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   gap: 20px;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right p {
@@ -196,13 +272,20 @@ main #container01 .event01 .event01Wrapper .textWrapper .right p {
   border-radius: 40px;
   font: normal 1.8rem/1 "Figtree";
   background: #3698fb;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right .coupon {
   font-weight: 600;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right .coupon:hover {
@@ -223,25 +306,42 @@ main #container01 .event01 .eventSec p b {
   color: #99bdff;
 }
 main #container01 .event01 .slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 .event01 .slide .imgSlider1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
 }
 main #container01 .event01 .slide .imgSlider1:hover .track1 {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 main #container01 .event01 .slide .imgSlider1 .track1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   will-change: transform;
-  animation: scrolling 18s linear infinite both;
+  -webkit-animation: scrolling 18s linear infinite both;
+          animation: scrolling 18s linear infinite both;
 }
 main #container01 .event01 .slide .imgSlider1 .track1 img {
   width: 240px;
@@ -250,25 +350,37 @@ main #container01 .event01 .slide .imgSlider1 .track1 img {
      object-fit: cover;
 }
 main #container01 .event01 .slide .imgSlider2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -o-object-fit: cover;
      object-fit: cover;
   overflow: hidden;
 }
 main #container01 .event01 .slide .imgSlider2:hover .track2 {
-  animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 main #container01 .event01 .slide .imgSlider2 .track2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   will-change: transform;
-  animation: scrolling-r 18s linear infinite both;
+  -webkit-animation: scrolling-r 18s linear infinite both;
+          animation: scrolling-r 18s linear infinite both;
 }
 main #container01 .event01 .slide .imgSlider2 .track2 img {
   width: 240px;
   height: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -279,9 +391,15 @@ main #container01 .event01-1 {
 }
 main #container01 .event01-1 .conWrapper {
   gap: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container01 .event01-1 .conWrapper .swiper {
   width: 460px;
@@ -306,15 +424,28 @@ main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:n
   background-image: url("/images/event/15.jpg");
 }
 main #container01 .event01-1 .conWrapper .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 8%;
 }
 main #container01 .event01-1 .conWrapper .contents h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   text-align: center;
   padding-top: 60px;
   padding-bottom: 30px;
@@ -324,9 +455,15 @@ main #container01 .event01-1 .conWrapper .contents h1 {
 main #container01 .event01-1 .conWrapper .contents .contentList {
   width: 460px;
   gap: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList .detailImg {
@@ -341,9 +478,16 @@ main #container01 .event01-1 .conWrapper .contents .contentList .content {
   width: 240px;
   height: 200px;
   gap: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: left;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList .content .brand {
@@ -374,6 +518,8 @@ main #container01 .event01-2 .conImg {
   width: 500px;
   height: 100%;
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 main #container01 .event01-2 .conImg img {
@@ -389,11 +535,14 @@ main #container01 .event01-2 .cap {
      object-fit: cover;
   top: 3%;
   right: 8%;
-  transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
 }
 main #container01 .event01-2 .cap:hover {
-  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
-  transform: rotate(14deg);
+  -webkit-filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+          filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
 }
 main #container01 .event01-2 .clothe {
   position: absolute;
@@ -402,18 +551,29 @@ main #container01 .event01-2 .clothe {
   right: 6%;
 }
 main #container01 .event01-2 .clothe:hover {
-  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
-  transform: rotate(-14deg);
+  -webkit-filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+          filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+  -webkit-transform: rotate(-14deg);
+          transform: rotate(-14deg);
 }
 main #container02 {
   width: 100%;
   height: 200vh;
   background-color: #000;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 main #container02 .eventBtn {
@@ -421,9 +581,15 @@ main #container02 .eventBtn {
   top: 0;
   left: 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container02 .eventBtn p {
   width: 960px;
@@ -431,10 +597,17 @@ main #container02 .eventBtn p {
   font-size: 3rem;
   font-weight: bold;
   border-bottom: 0.2px solid #dadada;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -449,17 +622,35 @@ main #container02 .eventBtn p:nth-child(2) {
 main #container02 .event2 {
   margin-top: 10%;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10%;
 }
 main #container02 .event2 .event02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container02 .event2 .event02 ul {
   width: 132%;
@@ -468,22 +659,39 @@ main #container02 .event2 .event02 ul {
   font-size: 9rem;
   margin-top: 3%;
   margin-bottom: 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 main #container02 .event2 .event02 ul li {
   font-weight: 800;
   font-style: italic;
 }
 main #container02 .event2 .event02 ul li:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container02 .event2 .event02 ul li:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container02 .event2 .event02 ul hr {
   width: 100%;
@@ -503,9 +711,15 @@ main #container02 .event2 .event02 .drawImg img {
 main #container02 .event2 .event02 .countdown {
   width: 500px;
   margin: 16% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 7rem;
   font-weight: 600;
   color: #fff;
@@ -516,9 +730,15 @@ main #container02 .event2 .event02 .countdown span {
   margin-right: 10px;
 }
 main #container02 .event2 .event02 .drawBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 280px;
   padding: 16px 20px;
   border-radius: 40px;
@@ -527,6 +747,7 @@ main #container02 .event2 .event02 .drawBtn {
   background: inherit;
   color: #fff;
   border: 1px solid #fff;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -537,10 +758,19 @@ main #container02 .event2 .event02 .drawBtn:hover {
 main #container02 .event2 .eventWarning {
   width: 60%;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container02 .event2 .eventWarning h1 {
   width: 100%;
@@ -572,10 +802,17 @@ main #container02 #drawModal #modalDrawBg {
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: none;
 }
@@ -589,9 +826,15 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent {
   border-radius: 18px;
   background-color: #fff;
   margin: 16% 34%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 main #container02 #drawModal #modalDrawBg .modalDrawContent .closeDrawModal {
@@ -606,10 +849,19 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .closeDrawModal .fa-
   margin-right: 6%;
 }
 main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle h1 {
   font-size: 1.8rem;
@@ -635,6 +887,7 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   background: #000;
   color: #99bdff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .modalDrawBtn:hover {
@@ -642,20 +895,45 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   color: #000;
 }
 
-@keyframes scrolling {
+@-webkit-keyframes scrolling {
   0% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes scrolling-r {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @keyframes scrolling-r {
   0% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 @media screen and (max-width: 1024px) {
@@ -882,10 +1160,19 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
     height: 160px;
   }
   main #container01 .event01-1 .conWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main #container01 .event01-1 .conWrapper .swiper {
     width: 80%;
@@ -900,9 +1187,15 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   main #container01 .event01-1 .conWrapper .contents .contentList {
     width: 100%;
     gap: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList .detailImg {
     width: 42px;
