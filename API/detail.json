@@ -1097,7 +1097,15 @@
       "brand": "YALE",
       "name": "노르딕 댄 코지 도기 니트-아이보리",
       "price": "49,000",
-      "category": "clothes"
+      "category": "clothes",
+      "detail-product": {
+        "subImg01": "",
+        "subImg02": "",
+        "desc": "",
+        "postImg01": "",
+        "postImg02": "",
+        "postImg03": ""
+      }
     },
     {
       "thumbnail": "https://phyps-department.co.kr/web/upload/NNEditor/20240906/73f4b9a8c20cb348c0f82215ed2f5e0a.jpg",
