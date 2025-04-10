@@ -26,7 +26,7 @@ main .brandBanner {
   background-size: cover;
   background-repeat: no-repeat;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-attachment: fixed;
   padding: 3%;
   display: flex;
@@ -66,12 +66,8 @@ main section {
   width: 100%;
   padding: 3%;
   background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 main section ul {
   width: 1200px;
@@ -80,13 +76,8 @@ main section ul {
   gap: 20px;
 }
 main section ul .itemBox a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   width: 100%;
 }
@@ -96,16 +87,11 @@ main section ul .itemBox a .itemImg {
 main section ul .itemBox a .itemImg img {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 main section ul .itemBox a .itemText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 30px;
 }
@@ -123,7 +109,7 @@ main section ul .itemBox a .itemText p:nth-child(2) {
   main .brandBanner {
     height: 800px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     background-attachment: inherit;
   }
   main section ul {
