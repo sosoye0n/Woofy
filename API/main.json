@@ -83,7 +83,7 @@
   ],
   "data02": [
     {
-      "nameEng": "Avie muah",
+      "nameEng": "Àvie muah",
       "name": "아비에무아",
       "href": "https://emis.kr/#none",
       "mainImg": "https://cafe24img.poxo.com/aviemuah2020/web/product/extra/small/202402/71f03072183db9ed1508f2572be8a5e3.jpg",
@@ -96,7 +96,7 @@
         "subItems": [
           {
             "itemImg": "https://cafe24img.poxo.com/aviemuah2020/web/product/extra/small/202402/f3af9ed2761c6bc4f747ca0e168c6567.jpg",
-            "itemBrand": "Avie muah",
+            "itemBrand": "Àvie muah",
             "itemTitle": "컬러 블록 스트라이프 티셔츠",
             "itemDc": 4,
             "itemPrice": "38,000",
@@ -104,7 +104,7 @@
           },
           {
             "itemImg": "https://cafe24img.poxo.com/aviemuah2020/web/product/extra/small/202402/ad7d945bd035b2bcde07a5b2af0acf51.jpg",
-            "itemBrand": "Avie muah",
+            "itemBrand": "Àvie muah",
             "itemTitle": "스트라이프 시어서커 셔츠 블루종",
             "itemDc": 3,
             "itemPrice": "51,000",
@@ -310,7 +310,7 @@
       "mainTitle": "폴로와 함께 걷는 하루",
       "subTitle": "반려동물을 위한 클래식 웨어",
       "imgClass": "thumbnail2",
-      "brand": "poloralphlauren",
+      "brand": "Polo Ralph Lauren",
       "brandBanner": "https://media.endclothing.com/end-features/f_auto,q_auto:eco,w_1520/prodfeatures/4fd5626c-b091-45b1-bc9c-6cf8de532782_02-08-22_ENDxPoloRalphLauren_1_DesktopSlideshow_1600x900.jpg?auto=compress,format",
       "brandItem": {
         "subItems": [

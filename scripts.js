@@ -51,7 +51,7 @@ const headerInner = `
 `;
 const searchInner = `
         <div id="searchBg"></div>
-        <form name="shopping-form" action="#" method="get">
+        <form name="shopping-form" action="./search.html" method="get">
           <div class="search">
             <input
               id="search"
@@ -68,19 +68,19 @@ const searchInner = `
             <ul>
               <li>POPULAR KEYWORDS</li>
               <li>
-                <a href="#" title="임시">PAPERBACK</a>
+                <a href="#" title="임시">EMIS</a>
               </li>
               <li>
-                <a href="#" title="임시">MI-2</a>
+                <a href="#" title="임시">PET</a>
               </li>
               <li>
-                <a href="#" title="임시">BR소파</a>
+                <a href="#" title="임시">CAP</a>
               </li>
               <li>
-                <a href="#" title="임시">프레스룸체어</a>
+                <a href="#" title="임시">Àvie muah</a>
               </li>
               <li>
-                <a href="#" title="임시">다이닝체어</a>
+                <a href="#" title="임시">GLOWNY</a>
               </li>
             </ul>
           </div>
@@ -130,6 +130,13 @@ const footerInner = `
 header.innerHTML = headerInner;
 footer.innerHTML = footerInner;
 searchWrap.innerHTML = searchInner;
+
+const keywordsSearch = document.querySelectorAll("#searchWrap ul li");
+keywordsSearch.forEach((i) =>
+  i.addEventListener("click", () => {
+    location.href = `./search.html?search=${i.innerText}`;
+  })
+);
 
 const toggleBtn = document.querySelector("#toggleBtn");
 const leftGnb = document.querySelector("#leftGnb");

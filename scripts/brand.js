@@ -5,42 +5,99 @@ fetch("./API/main.json").then((response) =>
     const params = new URLSearchParams(window.location.search);
     const brand = params.get("brand");
     const title = document.querySelector("title");
+    const brandTitle = document.createElement("h2");
+    brandTitle.innerHTML = `${brand.toUpperCase()} <span>PRODUCTS</span>`;
     title.innerText = brand;
+
     const fetchData = async () => {
       const response = await fetch("./API/detail.json");
       const product = await response.json();
-      console.log(product.detail.find((i) => console.log(i.brand)));
-      const matched = await product.detail.filter(
+      let matched = await product.detail.filter(
         (it) => it.brand.toLowerCase() === brand.toLowerCase()
       );
       const main = document.querySelector("main");
       const section = document.createElement("section");
       const ul = document.createElement("ul");
-      if (matched) {
-        console.log("gd");
-      }
-      for (let i = 0; i < matched.length; i++) {
-        const li = document.createElement("li");
-        li.classList.add("itemBox");
-        li.innerHTML = `
-          <a href="#">
-              <div class="itemImg">
-                <img
-                  src="${matched[i].thumbnail}"
-                  alt=""
-                />
-              </div>
-              <div class="itemText">
-                <p>${matched[i].brand}</p>
-                <p>${matched[i].name}</p>
-                <p>${matched[i].price} <span>KRW</span></p>
-              </div>
-            </a>
-            `;
-        ul.append(li);
-      }
-      section.append(ul);
+      const filterWrap = document.createElement("div");
+      filterWrap.classList.add("filterWrap");
+
+      const addData = () => {
+        for (let i = 0; i < matched.length; i++) {
+          const li = document.createElement("li");
+          li.classList.add("itemBox");
+          li.innerHTML = `
+            <a href="#">
+                <div class="itemImg">
+                  <img
+                    src="${matched[i].thumbnail}"
+                    alt=""
+                  />
+                </div>
+                <div class="itemText">
+                  <p>${matched[i].brand}</p>
+                  <p>${matched[i].name}</p>
+                  <p>${matched[i].price} <span>KRW</span></p>
+                </div>
+              </a>
+              `;
+          ul.append(li);
+        }
+      };
+      const removeData = () => {
+        ul.innerText = "";
+      };
+      const newData = () => {
+        matched.sort((a, b) => b.time - a.time);
+        addData();
+      };
+      const likeData = () => {
+        matched.sort((a, b) => b.LikeCnt - a.LikeCnt);
+        addData();
+      };
+      const priceData = () => {
+        matched.sort((a, b) => {
+          const priceA = Number(a.price.replace(/,/g, ""));
+          const priceB = Number(b.price.replace(/,/g, ""));
+          return priceB - priceA;
+        });
+        addData();
+      };
+      const priceDataRe = () => {
+        matched.sort((a, b) => {
+          const priceA = Number(a.price.replace(/,/g, ""));
+          const priceB = Number(b.price.replace(/,/g, ""));
+          return priceA - priceB; // 오름차순
+        });
+        addData();
+      };
+      filterWrap.innerHTML = `
+        <p><span>${matched.length}</span>개의 상품</p>
+        <select>
+          <option>신상품순</option>
+          <option>판매많은순</option>
+          <option>가격높은순</option>
+          <option>가격낮은순</option>
+        </select>
+      `;
+      section.append(brandTitle, filterWrap, ul);
       main.append(section);
+      let select = document.querySelector("select");
+      newData();
+      select.addEventListener("change", () => {
+        if (select.value === "신상품순") {
+          removeData();
+          newData();
+        } else if (select.value === "판매많은순") {
+          removeData();
+          likeData();
+        } else if (select.value === "가격높은순") {
+          removeData();
+          priceData();
+        } else {
+          removeData();
+          priceDataRe();
+        }
+      });
     };
     fetchData();
 
@@ -65,8 +122,6 @@ fetch("./API/main.json").then((response) =>
 
       const brandBanner = document.querySelector(".brandBanner");
       brandBanner.style.backgroundImage = `url("${products.brandBanner}")`;
-    } else {
-      console.warn("해당 브랜드 데이터를 찾을 수 없습니다.");
     }
   })
 );

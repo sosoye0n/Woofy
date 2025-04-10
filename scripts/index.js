@@ -10,10 +10,10 @@ const mySwiper = new Swiper(".swiper", {
     el: ".pagination-progressbar",
     type: "progressbar",
   },
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 });
 const pagingSwiper = new Swiper(".swiper", {
   // loop: true,
@@ -46,56 +46,96 @@ fetch("./API/main.json").then((response) =>
       <p>${item.mainTitle}</p>
       <p>${item.subTitle}</p>
       `;
-
       const itemWrap = document.createElement("div");
-      const subItems = item.brandItem.subItems;
-      subItems.forEach((item) => {
-        itemWrap.classList.add("itemWrap");
-        const itemBox = document.createElement("div");
-        itemBox.classList.add("itemBox");
 
-        const itemContainer = document.createElement("a");
-        itemContainer.href = "#";
+      itemWrap.classList.add("itemWrap");
 
-        const itemImg = document.createElement("div");
-        itemImg.classList.add("itemImg");
+      const url = "./API/detail.json";
+      const fetchData02 = async () => {
+        const response = await fetch(url);
+        const data = await response.json();
+        const addItem = (e) => {
+          const itemBox = document.createElement("div");
+          itemBox.classList.add("itemBox");
 
-        const brandItemImg = document.createElement("img");
-        brandItemImg.src = item.itemImg;
-        const itemText = document.createElement("div");
-        itemText.classList.add("itemText");
-        itemText.innerHTML = `
-          <p>${item.itemBrand}</p>
-          <p>${item.itemTitle}</p>
+          const itemContainer = document.createElement("a");
+          itemContainer.href = "#";
+
+          const itemImg = document.createElement("div");
+          itemImg.classList.add("itemImg");
+
+          const brandItemImg = document.createElement("img");
+          brandItemImg.src = e.thumbnail;
+          const itemText = document.createElement("div");
+          itemText.classList.add("itemText");
+          itemText.innerHTML = `
+          <p>${e.brand}</p>
+          <p>${e.name}</p>
           <p>
-            <span>${item.itemDc}%</span>
-            <span>${item.itemPrice}원</span>
+            <span>${e.price}KRW</span>
           </p>
           `;
-        // const itemLike = document.createElement("div");
-        // itemLike.classList.add("itemLike");
-        // itemLike.innerHTML = `
-        //     <i class="fa-regular fa-heart"></i>
-        //     <span>${item.like}</span>
-        //   `;
-        itemImg.appendChild(brandItemImg);
-        itemContainer.append(itemImg, itemText);
-        itemBox.append(itemContainer);
-        itemWrap.append(itemBox);
-      });
-      imgBox.appendChild(img);
-      brandWrap.append(imgBox, textBox);
-      flexBox.append(brandWrap, itemWrap);
+
+          itemImg.appendChild(brandItemImg);
+          itemContainer.append(itemImg, itemText);
+          itemBox.append(itemContainer);
+          itemWrap.append(itemBox);
+          imgBox.appendChild(img);
+          brandWrap.append(imgBox, textBox);
+          flexBox.append(brandWrap, itemWrap);
+        };
+        const emisItem = await data.detail.filter(
+          (i) => i.brand.toLowerCase() === item.nameEng.toLowerCase()
+        );
+        const emisItemList = emisItem.slice(0, 2);
+        emisItemList.forEach((e) => {
+          addItem(e);
+        });
+      };
+      fetchData02();
+      // const subItems = item.brandItem.subItems;
+      // subItems.forEach((item) => {
+      //   itemWrap.classList.add("itemWrap");
+      //   const itemBox = document.createElement("div");
+      //   itemBox.classList.add("itemBox");
+
+      //   const itemContainer = document.createElement("a");
+      //   itemContainer.href = "#";
+
+      //   const itemImg = document.createElement("div");
+      //   itemImg.classList.add("itemImg");
+
+      //   const brandItemImg = document.createElement("img");
+      //   brandItemImg.src = item.itemImg;
+      //   const itemText = document.createElement("div");
+      //   itemText.classList.add("itemText");
+      //   itemText.innerHTML = `
+      //     <p>${item.itemBrand}</p>
+      //     <p>${item.itemTitle}</p>
+      //     <p>
+      //       <span>${item.itemDc}%</span>
+      //       <span>${item.itemPrice}원</span>
+      //     </p>
+      //     `;
+
+      //   itemImg.appendChild(brandItemImg);
+      //   itemContainer.append(itemImg, itemText);
+      //   itemBox.append(itemContainer);
+      //   itemWrap.append(itemBox);
+      // });
+      // imgBox.appendChild(img);
+      // brandWrap.append(imgBox, textBox);
+      // flexBox.append(brandWrap, itemWrap);
       return flexBox;
     };
     const con = document.querySelectorAll(".con");
     for (let i = 0; i < keys.length; i++) {
-      const key = keys[i]; // "data01", "data02" 등
-      const conBox = con[i]; // .con01, .con02 등
+      const key = keys[i];
+      const conBox = con[i];
 
       data[key].forEach((item) => {
-        const flexBox = dataFunc(item); // DOM 요소 생성
-        conBox.append(flexBox); // 해당 영역에 append
+        const flexBox = dataFunc(item);
+        conBox.append(flexBox);
       });
     }
     var image = document.getElementsByClassName("thumbnail");
