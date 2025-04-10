@@ -179,8 +179,6 @@ header {
 .sidebar section .subcategory .item {
   width: 50%;
   width: calc(50% - 5px);
-}
-.sidebar section .subcategory .item a {
   text-decoration: none;
   color: #000;
   display: flex;
@@ -192,8 +190,9 @@ header {
   padding: 10px;
   border-radius: 3px;
   transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
 }
-.sidebar section .subcategory .item a:hover {
+.sidebar section .subcategory .item:hover {
   background-color: rgba(0, 0, 0, 0.05);
   color: #99bdff;
 }
