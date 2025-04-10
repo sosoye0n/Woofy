@@ -26,7 +26,7 @@ main .brandBanner {
   background-size: cover;
   background-repeat: no-repeat;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   background-attachment: fixed;
   padding: 3%;
   display: flex;
@@ -87,7 +87,7 @@ main section ul .itemBox a .itemImg {
 main section ul .itemBox a .itemImg img {
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main section ul .itemBox a .itemText {
   display: flex;
@@ -109,7 +109,7 @@ main section ul .itemBox a .itemText p:nth-child(2) {
   main .brandBanner {
     height: 800px;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     background-attachment: inherit;
   }
   main section ul {
