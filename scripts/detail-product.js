@@ -1,29 +1,10 @@
-// 스와이프 슬라이더 형식
-const swiper = new Swiper(".swiper", {
-  // Optional parameters
-  direction: "horizontal",
-  loop: false,
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-// 본문내용용
+// 본문내용 detail-product.js
 document.addEventListener("DOMContentLoaded", function () {
+  // 아코디언 기능 초기화
   setupAccordion();
 
+  // 상품 옵션 및 버튼 기능 초기화
   setupProductOptions();
-
-  // 장바구니 카운터 업데이트
-  updateCartCounter();
 
   // 장바구니 추가 버튼 이벤트 설정
   const addToCartBtn = document.querySelector(".add-to-cart-btn");
@@ -31,8 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // 사이즈 선택 여부 확인
-      if (!checkSizeSelected()) {
+      // 사이즈 선택 여부 확인 (공통 함수 사용)
+      if (!checkOptionSelected()) {
         alert("필수옵션을 선택해주세요");
         return;
       }
@@ -55,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         quantity: 1,
       };
 
-      // 장바구니에 추가
+      // 장바구니에 추가 (공통 함수 사용)
       addToCart(product);
 
       // 장바구니 추가 성공 알림
@@ -69,8 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
     buyNowBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // 사이즈 선택 여부 확인
-      if (!checkSizeSelected()) {
+      // 사이즈 선택 여부 확인 (공통 함수 사용)
+      if (!checkOptionSelected()) {
         alert("필수옵션을 선택해주세요");
         return;
       }
@@ -107,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function () {
     kakaoPayBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // 사이즈 선택 여부 확인
-      if (!checkSizeSelected()) {
+      // 사이즈 선택 여부 확인 (공통 함수 사용)
+      if (!checkOptionSelected()) {
         alert("필수옵션을 선택해주세요");
         return;
       }
@@ -243,58 +224,5 @@ function setupProductOptions() {
         disableButtons();
       }
     });
-  }
-}
-
-// 사이즈 선택 여부 확인
-function checkSizeSelected() {
-  const sizeSelect = document.querySelector(".option-select select");
-  if (sizeSelect && sizeSelect.selectedIndex === 0) {
-    return false;
-  }
-  return true;
-}
-
-// 장바구니에 상품 추가 함수
-function addToCart(product) {
-  // 로컬 스토리지에서 장바구니 가져오기
-  let cart = localStorage.getItem("cart");
-  cart = cart ? JSON.parse(cart) : [];
-
-  // 동일한 상품이 있는지 확인 (제목과 옵션으로 구분)
-  const existingProductIndex = cart.findIndex(
-    (item) => item.title === product.title && item.option === product.option
-  );
-
-  if (existingProductIndex !== -1) {
-    // 이미 있는 상품이면 수량만 증가
-    cart[existingProductIndex].quantity += 1;
-  } else {
-    // 새 상품이면 추가
-    cart.push(product);
-  }
-
-  // 업데이트된 장바구니를 로컬 스토리지에 저장
-  localStorage.setItem("cart", JSON.stringify(cart));
-
-  // 장바구니 카운터 업데이트
-  updateCartCounter();
-}
-
-// 장바구니 카운터 업데이트 함수
-function updateCartCounter() {
-  // 로컬 스토리지에서 장바구니 가져오기
-  let cart = localStorage.getItem("cart");
-  cart = cart ? JSON.parse(cart) : [];
-
-  // 총 수량 계산
-  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
-
-  // 헤더의 장바구니 카운터 업데이트
-  const cartCounter = document.querySelector(
-    "#rightGnb ul li:nth-child(2) a span:last-child"
-  );
-  if (cartCounter) {
-    cartCounter.textContent = `(${totalItems})`;
   }
 }
