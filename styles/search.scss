@@ -91,6 +91,9 @@ main {
                 font-size: 1.6rem;
               }
               &:nth-child(3) {
+                span {
+                  font-weight: bold;
+                }
               }
             }
           }

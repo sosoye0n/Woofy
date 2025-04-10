@@ -72,7 +72,7 @@ fetch("./API/main.json").then((response) =>
           <p>${e.brand}</p>
           <p>${e.name}</p>
           <p>
-            <span>${e.price}KRW</span>
+            <span>${e.price}</span> KRW
           </p>
           `;
 
@@ -93,39 +93,6 @@ fetch("./API/main.json").then((response) =>
         });
       };
       fetchData02();
-      // const subItems = item.brandItem.subItems;
-      // subItems.forEach((item) => {
-      //   itemWrap.classList.add("itemWrap");
-      //   const itemBox = document.createElement("div");
-      //   itemBox.classList.add("itemBox");
-
-      //   const itemContainer = document.createElement("a");
-      //   itemContainer.href = "#";
-
-      //   const itemImg = document.createElement("div");
-      //   itemImg.classList.add("itemImg");
-
-      //   const brandItemImg = document.createElement("img");
-      //   brandItemImg.src = item.itemImg;
-      //   const itemText = document.createElement("div");
-      //   itemText.classList.add("itemText");
-      //   itemText.innerHTML = `
-      //     <p>${item.itemBrand}</p>
-      //     <p>${item.itemTitle}</p>
-      //     <p>
-      //       <span>${item.itemDc}%</span>
-      //       <span>${item.itemPrice}원</span>
-      //     </p>
-      //     `;
-
-      //   itemImg.appendChild(brandItemImg);
-      //   itemContainer.append(itemImg, itemText);
-      //   itemBox.append(itemContainer);
-      //   itemWrap.append(itemBox);
-      // });
-      // imgBox.appendChild(img);
-      // brandWrap.append(imgBox, textBox);
-      // flexBox.append(brandWrap, itemWrap);
       return flexBox;
     };
     const con = document.querySelectorAll(".con");
@@ -153,6 +120,26 @@ fetch("./API/main.json").then((response) =>
     const fetchData = async () => {
       const response = await fetch("./API/detail.json");
       const subData = await response.json();
+      const ss01 = document.querySelector(".ss01");
+      const ss02 = document.querySelector(".ss02");
+      const ss03 = document.querySelector(".ss03");
+      const ss04 = document.querySelector(".ss04");
+      const ss05 = document.querySelector(".ss05");
+      ss01.addEventListener("click", () => {
+        window.location = "./brand.html?brand=GUCCI";
+      });
+      ss02.addEventListener("click", () => {
+        window.location = "./brand.html?brand=Àvie muah";
+      });
+      ss03.addEventListener("click", () => {
+        window.location = "./brand.html?brand=merlot";
+      });
+      ss04.addEventListener("click", () => {
+        window.location = "./brand.html?brand=emis";
+      });
+      ss05.addEventListener("click", () => {
+        window.location = "./brand.html?brand=MLB";
+      });
       const ToplikeCnt = [];
       const latestRelease = [];
       let FinalNum = [];
@@ -216,7 +203,7 @@ fetch("./API/main.json").then((response) =>
                   <p>${mostPopular[i][0].brand}</p>
                   <p>${mostPopular[i][0].name}</p>
                   <p>
-                    <span>${mostPopular[i][0].price} KRW</span>
+                    <span>${mostPopular[i][0].price}</span> KRW
                   </p>
                 </div>
           </a>
@@ -238,7 +225,7 @@ fetch("./API/main.json").then((response) =>
                   <p>${last[i][0].brand}</p>
                   <p>${last[i][0].name}</p>
                   <p>
-                    <span>${last[i][0].price} KRW</span>
+                    <span>${last[i][0].price}</span> KRW
                   </p>
                 </div>
           </a>
@@ -283,20 +270,5 @@ fetch("./API/main.json").then((response) =>
       });
     };
     fetchData();
-    // fetch("./API/detail.json").then((response) =>
-    //   response.json().then((subData) => {
-    //     // const keys = Object.keys(subData.detail);
-    //     const likeCntAll = [];
-    //     // const key = keys[i];
-    //     const likeCnt = subData.detail.LikeCnt;
-    //     likeCntAll.push(likeCnt);
-    //     likeCntAll.sort((a, b) => b - a);
-    //     const popularNum = likeCntAll.slice(0, 10);
-    //     const popularProduct = subData.detail.filter(
-    //       (i) => i.LikeCnt === popularNum
-    //     );
-    //     console.log(popularProduct);
-    //   })
-    // );
   })
 );

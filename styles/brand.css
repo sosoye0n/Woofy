@@ -163,6 +163,10 @@ main section ul .itemBox a .itemText p:first-child {
 main section ul .itemBox a .itemText p:nth-child(2) {
   font-size: 1.6rem;
 }
+main section ul .itemBox a .itemText p:nth-child(3) span {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 1024px) {
   main .brandBanner {
     height: 800px;

@@ -47,7 +47,7 @@ const fetchData = async () => {
             <div class="itemText">
               <p>${matched[i].brand}</p>
               <p>${matched[i].name}</p>
-              <p>${matched[i].price} <span>KRW</span></p>
+              <p><span>${matched[i].price}</span> KRW</p>
             </div>
           </a>
           `;
