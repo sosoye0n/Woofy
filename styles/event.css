@@ -274,44 +274,39 @@ main #container01 .event01 .slide .imgSlider2 .track2 img {
 }
 main #container01 .event01-1 {
   width: 100%;
-  height: 100vh;
   background: #e7effd;
 }
 main #container01 .event01-1 .conWrapper {
-  gap: 6%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 6% 0;
+  gap: 6%;
 }
 main #container01 .event01-1 .conWrapper .swiper {
   width: 460px;
   height: 560px;
   border-radius: 18px;
   margin: 0;
-  margin-top: 8%;
 }
 main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper {
   width: 100%;
   height: 100%;
 }
-main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
-  background-image: url("/images/event/25.jpg");
-}
-main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
-  background-image: url("/images/event/15.jpg");
+main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-1 .conWrapper .contents {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 8%;
-  margin-bottom: 10%;
 }
 main #container01 .event01-1 .conWrapper .contents h1 {
   font: bold 3.2rem/1 "Figtree";
@@ -333,14 +328,13 @@ main #container01 .event01-1 .conWrapper .contents .contentList01 .detailImg {
   padding: 10px;
   background-color: #fff;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  cursor: pointer;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList01 .detailImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList01 .content {
   width: 240px;
@@ -358,6 +352,10 @@ main #container01 .event01-1 .conWrapper .contents .contentList01 .content .bran
 main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name {
   font-size: 1.6rem;
   font-weight: 600;
+  cursor: pointer;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name:hover {
+  text-decoration: underline;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale {
   font-weight: 300;
@@ -375,6 +373,7 @@ main #container01 .event01-1 .conWrapper .contents .contentList02 {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 10%;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList02 .detailImg {
   width: 140px;
@@ -382,14 +381,13 @@ main #container01 .event01-1 .conWrapper .contents .contentList02 .detailImg {
   padding: 10px;
   background-color: #fff;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  cursor: pointer;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList02 .detailImg img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList02 .content {
   width: 240px;
@@ -407,11 +405,67 @@ main #container01 .event01-1 .conWrapper .contents .contentList02 .content .bran
 main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name {
   font-size: 1.6rem;
   font-weight: 600;
+  cursor: pointer;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name:hover {
+  text-decoration: underline;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale {
   font-weight: 300;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale b {
+  color: #99bdff;
+  font-size: 2.2rem;
+  margin-right: 8px;
+  font-weight: 600;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 {
+  width: 460px;
+  gap: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .detailImg {
+  width: 140px;
+  height: 140px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .detailImg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content {
+  width: 240px;
+  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .brand {
+  color: #99bdff;
+  font-size: 2rem;
+  font-weight: 700;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name:hover {
+  text-decoration: underline;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale {
+  font-weight: 300;
+}
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale b {
   color: #99bdff;
   font-size: 2.2rem;
   margin-right: 8px;
@@ -442,6 +496,7 @@ main #container01 .event01-2 .cap {
      object-fit: cover;
   top: 3%;
   right: 8%;
+  cursor: pointer;
   transform: rotate(4deg);
 }
 main #container01 .event01-2 .cap:hover {
@@ -453,6 +508,7 @@ main #container01 .event01-2 .clothe {
   width: 140px;
   top: 44%;
   right: 6%;
+  cursor: pointer;
 }
 main #container01 .event01-2 .clothe:hover {
   filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
@@ -774,17 +830,23 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   main #container01 .event01-1 .conWrapper .contents .contentList02 {
     gap: 40px;
   }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 {
+    gap: 40px;
+  }
   main #container01 .event01-2 {
     height: 40vh;
   }
   main #container01 .event01-2 .conImg {
-    width: 300px;
+    width: 400px;
   }
   main #container01 .event01-2 .cap {
-    width: 260px;
+    width: 200px;
+    right: 12%;
   }
   main #container01 .event01-2 .clothe {
-    width: 120px;
+    width: 100px;
+    right: 2%;
+    top: 38%;
   }
   main #container02 .eventBtn p {
     width: 512px;
@@ -802,7 +864,7 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
     font-size: 7rem;
   }
   main #container02 .event2 .event02 ul hr {
-    width: 110%;
+    width: 100%;
   }
   main #container02 #drawModal #modalDrawBg .modalDrawContent {
     margin: 30% 27%;
@@ -834,20 +896,35 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
     padding: 0 3%;
   }
   main #container01 .event01-1 .conWrapper .swiper {
-    height: 400px;
+    border-radius: 18px;
+    margin: 0;
+  }
+  main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   main #container01 .event01-1 .conWrapper .contents {
-    margin-bottom: 2%;
+    width: 50%;
   }
   main #container01 .event01-1 .conWrapper .contents h1 {
     margin-top: 2%;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList01 {
-    width: 80%;
-    gap: 30px;
+    width: 100%;
+    margin-bottom: 4%;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 {
-    width: 80%;
+    width: 100%;
+    margin-bottom: 4%;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 {
+    width: 100%;
+    margin-bottom: 0;
   }
   main #container01 .event01-2 .conImg {
     width: 240px;
@@ -882,7 +959,30 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
     font-size: 1.2rem;
   }
   main #container01 #eventModal #modalBg .modalContent {
-    margin: 34% 17%;
+    max-width: 270px;
+    height: 260px;
+    border-radius: 10px;
+    margin: 52% 14%;
+  }
+  main #container01 #eventModal #modalBg .modalContent .closeModal .fa-xmark {
+    font-size: 2rem;
+  }
+  main #container01 #eventModal #modalBg .modalContent .modalTitle span {
+    margin-bottom: 6px;
+  }
+  main #container01 #eventModal #modalBg .modalContent .modalTitle p {
+    font-size: 2.4rem;
+  }
+  main #container01 #eventModal #modalBg .modalContent .modalTitle h1 {
+    font-size: 5rem;
+    margin-bottom: 14px;
+  }
+  main #container01 #eventModal #modalBg .modalContent .modalTitle h1 b {
+    font-size: 3rem;
+  }
+  main #container01 #eventModal #modalBg .modalContent .modalTitle .modalBtn {
+    padding: 10px 26px;
+    font-size: 1.2rem;
   }
   main #container01 .event01 .event01Wrapper {
     width: 90%;
@@ -932,67 +1032,108 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
   }
   main #container01 .event01-1 .conWrapper .swiper {
     width: 80%;
-    height: 280px;
+    height: 240px;
+    border-radius: 6px;
+  }
+  main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-button-next {
+    border: 1px solid #f00;
   }
   main #container01 .event01-1 .conWrapper .contents {
     width: 80%;
+    margin-bottom: 0;
   }
   main #container01 .event01-1 .conWrapper .contents h1 {
     display: none;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList01 {
     width: 100%;
-    gap: 4px;
+    height: 100px;
+    gap: 20px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList01 .detailImg {
-    width: 42px;
-    margin: 12px;
+    border-radius: 6px;
+    height: 100%;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList01 .content {
     gap: 8px;
     height: 120px;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList01 .content .brand {
-    font-size: 1.4rem;
-  }
-  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name {
     font-size: 1.2rem;
   }
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name {
+    font-size: 1rem;
+  }
   main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale b {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 {
     width: 100%;
-    gap: 4px;
+    height: 100px;
+    gap: 20px;
+    margin-top: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 .detailImg {
-    width: 42px;
-    margin: 12px;
+    height: 100%;
+    border-radius: 6px;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 .content {
     gap: 8px;
     height: 120px;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 .content .brand {
-    font-size: 1.4rem;
-  }
-  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name {
     font-size: 1.2rem;
   }
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name {
+    font-size: 1rem;
+  }
   main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale b {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 {
+    width: 100%;
+    height: 100px;
+    gap: 20px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .detailImg {
+    height: 100%;
+    border-radius: 6px;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content {
+    gap: 8px;
+    height: 120px;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .brand {
+    font-size: 1.2rem;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name {
+    font-size: 1rem;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale {
+    font-size: 1.2rem;
+  }
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale b {
+    font-size: 1.4rem;
   }
   main #container01 .event01-2 {
     height: 30vh;
@@ -1020,8 +1161,9 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
     top: 6%;
   }
   main #container02 .event2 .event02 ul {
-    width: 50%;
+    width: 40%;
     font-size: 2.2rem;
+    margin-bottom: 4%;
   }
   main #container02 .event2 .event02 .drawImg {
     width: 240px;
@@ -1029,16 +1171,25 @@ main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .mod
     margin-top: 2%;
   }
   main #container02 .event2 .event02 .drawImg img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   main #container02 .event2 .event02 .countdown {
     font-size: 3.2rem;
+    margin: 8%;
+  }
+  main #container02 .event2 .event02 .drawBtn {
+    width: 160px;
+    padding: 12px 14px;
+    font-size: 1.6rem;
+  }
+  main #container02 .event2 .eventWarning h1 {
+    font-size: 1.6rem;
+    margin-bottom: 4%;
   }
   main #container02 .event2 .eventWarning ul li {
     font-size: 1.2rem;
+    margin-bottom: 2%;
   }
   main #container02 #drawModal #modalDrawBg .modalDrawContent {
     max-width: 300px;
