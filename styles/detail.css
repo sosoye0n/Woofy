@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -23,10 +24,7 @@ header {
 
 /* 레이아웃 */
 .container {
-  display: flex;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 20px;
+  padding-bottom: 100px;
   background: #fff;
   position: relative;
 }
@@ -40,8 +38,12 @@ header {
   width: 100%;
   height: 100%;
   z-index: 5;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .cart-modal .modal-content {
   background-color: white;
@@ -51,11 +53,21 @@ header {
   max-width: 400px;
   width: 90%;
   height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .cart-modal .modal-content p {
   font-size: 1.8rem;
@@ -63,17 +75,22 @@ header {
   font-weight: "Figtree";
 }
 .cart-modal .modal-content .modal-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 50px;
   gap: 10px;
 }
 .cart-modal .modal-content .modal-buttons button {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 12px 0;
   border-radius: 30px;
   font-size: 1.4rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .cart-modal .modal-content .modal-buttons .move-to-cart-btn {
@@ -93,6 +110,8 @@ header {
   background-color: #333333;
 }
 .cart-modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -103,13 +122,22 @@ header {
   background: #fff;
 }
 .tablet-navigation .tablet-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 15px 0;
   cursor: pointer;
 }
@@ -117,7 +145,9 @@ header {
   font-weight: bold;
   font-size: 1.8rem;
   text-align: center;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
   padding-bottom: 5px;
 }
@@ -128,16 +158,28 @@ header {
   color: #99bdff;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 10%;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column:first-child {
@@ -168,9 +210,15 @@ header {
   color: #99bdff;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item.with-dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item .color-dot {
   width: 20px;
@@ -213,18 +261,30 @@ header {
   margin-bottom: 20px;
 }
 .sidebar section .title-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #d3d3d3;
 }
 .sidebar section .title-top h2 {
   font-size: 18px;
   font-weight: bold;
   padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
 }
 .sidebar section .title-top i {
@@ -233,9 +293,14 @@ header {
   cursor: pointer;
 }
 .sidebar section .subcategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   gap: 10px;
   padding: 10px;
@@ -247,10 +312,14 @@ header {
 .sidebar section .subcategory .item a {
   text-decoration: none;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 40px;
   padding: 20px 10px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   border: 1px solid #d3d3d3;
   padding: 10px;
@@ -286,15 +355,21 @@ header {
   background-color: pink;
 }
 
-/* 콘텐츠 영역 */
-.content-inner {
-  flex: 1;
-  margin-left: 250px;
-  padding: 0 40px;
-}
-
 .content-area {
-  width: 100%;
+  width: calc(100% - 400px);
+  height: 3000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .content-area .product-grid {
   display: grid;
@@ -328,6 +403,7 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
 .content-area .product-grid .product-row .product-item .product-link .product-image .first-img {
@@ -373,12 +449,19 @@ header {
   font-size: 1.6rem;
   width: 24px;
   height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #d9d9d9;
   color: #fff;
   border-radius: 50%;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .content-area .product-grid .product-row .product-item .product-link .product-info i:hover {
@@ -387,11 +470,18 @@ header {
 
 /* 페이지네이션 */
 .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 50px 0 30px;
   width: 100%;
+  /* 콘텐츠 영역 조정 */
 }
 .pagination .prev-page,
 .pagination .next-page {
@@ -405,100 +495,69 @@ header {
   color: #000;
 }
 .pagination .page-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  list-style: none;
-}
-.pagination .page-numbers li {
-  margin: 0 8px;
-}
-.pagination .page-numbers li a {
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-  line-height: 26px;
-  text-align: center;
-  color: #a7a7a8;
-  text-decoration: none;
-  font-size: 1.3rem;
-}
-.pagination .page-numbers li a:hover {
-  color: #000;
-}
-.pagination .page-numbers li.active a {
-  color: #99bdff;
-  font-weight: bold;
-}
-
-/* 기본 유틸리티 */
-.line {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  height: 1px;
-  background: #999999;
+  margin-bottom: 20px;
+}
+.pagination .content-inner {
+  margin-left: 0;
+  padding: 0 20px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.pagination .content-area {
+  margin: 0 auto;
+}
+.pagination .content-area .product-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-left: 0;
+}
+.pagination .content-area .product-grid .product-row {
+  margin-bottom: 20px;
+}
+.pagination .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-brand {
+  font-size: 1.9rem;
+}
+.pagination .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-title {
+  font-size: 1.8rem;
+}
+.pagination .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-price {
+  font-size: 1.8rem;
+}
+.pagination .content-area .product-grid .product-row .product-item .product-link .product-info .fa-plus {
+  font-size: 1.7rem;
+  width: 25px;
+  height: 25px;
+  right: 50px;
+  bottom: 5px;
 }
 
-@media screen and (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-    padding: 0;
-    margin-top: 70px;
-  }
-  /* 사이드바 숨기기 */
-  .sidebar {
-    display: none;
-  }
-  /* 태블릿 내비게이션 표시 */
-  .tablet-navigation {
-    display: block;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  /* 콘텐츠 영역 조정 */
-  .content-inner {
-    margin-left: 0;
-    padding: 0 20px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .content-area {
-    margin: 0 auto;
-  }
-  .content-area .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-    margin-left: 0;
-  }
-  .content-area .product-grid .product-row {
-    margin-bottom: 20px;
-  }
-  .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-brand {
-    font-size: 1.9rem;
-  }
-  .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-title {
-    font-size: 1.8rem;
-  }
-  .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-price {
-    font-size: 1.8rem;
-  }
-  .content-area .product-grid .product-row .product-item .product-link .product-info .fa-plus {
-    font-size: 1.7rem;
-    width: 25px;
-    height: 25px;
-    right: 50px;
-    bottom: 5px;
-  }
-}
 @media screen and (max-width: 768px) {
   /* 태블릿 내비게이션 조정 */
   .tablet-navigation .tablet-nav-container .tablet-nav-headers {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 10px 5px;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-headers .nav-header {
     font-size: 1.6rem;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding: 0 15px;
     text-align: center;
     white-space: nowrap;
@@ -506,10 +565,15 @@ header {
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column {
     padding: 8px;
     min-width: 25%;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item {
     font-size: 1.4rem;
@@ -519,10 +583,19 @@ header {
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot {
     padding-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot .color-dot {
     width: 18px;
@@ -554,10 +627,14 @@ header {
 }
 @media screen and (max-width: 580px) {
   .tablet-navigation .tablet-nav-container .tablet-nav-headers {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 10px 5px;
     -webkit-overflow-scrolling: touch;
   }
@@ -565,15 +642,20 @@ header {
     display: none;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-headers .nav-header {
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     font-size: 1.5rem;
     padding: 0 15px;
     text-align: center;
     white-space: nowrap;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -582,10 +664,15 @@ header {
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column {
     min-width: 25%;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item {
     font-size: 1.4rem;
@@ -595,10 +682,19 @@ header {
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot {
     padding-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot .color-dot {
     width: 18px;
@@ -675,10 +771,16 @@ header {
     padding: 5px 0;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 10px;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot .color-dot {
     width: 15px;
