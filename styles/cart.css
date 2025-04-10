@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -413,6 +414,7 @@ header {
   position: relative;
   cursor: pointer;
   background-color: #fff;
+  -webkit-transition: background-color 0.2s ease;
   transition: background-color 0.2s ease;
 }
 .cart-container .cart-inner input[type=checkbox] + label:active {
@@ -435,7 +437,9 @@ header {
 .cart-container .cart-inner .quantity-selector {
   display: flex;
   gap: 30px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .cart-container .cart-inner .quantity-selector button {
   border: none;
@@ -451,16 +455,27 @@ header {
 .cart-container .cart-inner .cart-summary {
   margin: 30px 0;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
   padding: 0 15px;
 }
 .cart-container .cart-inner .cart-summary .summary-row {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 390px;
   padding: 15px 0;
   font-size: 1.8rem;
@@ -482,9 +497,15 @@ header {
 .cart-container .cart-inner .cart-actions {
   width: 100%;
   margin: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   padding: 0 15px;
 }
@@ -493,8 +514,12 @@ header {
   width: 160px;
   height: 50px;
   padding: 13px 10px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 13px;
   font-size: 1.6rem;
   border-radius: 30px;

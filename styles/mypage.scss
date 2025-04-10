@@ -231,50 +231,6 @@ main {
           }
         }
       }
-      // .pointContents {
-      //   display: flex;
-      //   flex-direction: column;
-      //   gap: 16px;
-      //   & > li {
-      //     display: flex;
-      //     align-items: center;
-      //     gap: 16px;
-      //   }
-      //   .modalCircle {
-      //     flex-shrink: 0;
-      //     width: 70px;
-      //     height: 70px;
-      //     background: map-get($map: $color, $key: point);
-      //     border-radius: 50%;
-      //     display: flex;
-      //     justify-content: center;
-      //     align-items: center;
-      //     overflow: hidden;
-      //     img {
-      //       width: 24px;
-      //       height: 24px;
-      //     }
-      //   }
-      //   .membershipInfo {
-      //     display: flex;
-      //     flex-direction: column;
-      //     font-size: 2rem;
-      //     gap: 4px;
-      //     p {
-      //       font-weight: 700;
-      //       b {
-      //         display: inline-block;
-      //         font-weight: 600;
-      //         padding-left: 8px;
-      //         color: map-get($map: $color, $key: point);
-      //       }
-      //     }
-      //     .subInfo {
-      //       font-size: 1.2rem;
-      //       font-weight: 300;
-      //     }
-      //   }
-      // }
     }
   }
   #membershipModal {
@@ -378,23 +334,6 @@ main {
       }
     }
   }
-  // .bg {
-  //   opacity: 0;
-  //   visibility: hidden;
-  //   z-index: 1;
-  //   width: 100%;
-  //   height: 100vh;
-  //   position: fixed;
-  //   top: 0;
-  //   left: 0;
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: center;
-  //   cursor: pointer;
-  //   transition: all 0.3s;
-  //   background: rgba(0, 0, 0, 0.4);
-  // }
-
   // 가상클래스
   #couponModal.on,
   #pointModal.on,
@@ -445,9 +384,6 @@ main {
           display: flex;
           flex-direction: column;
           transition: all 0.5s;
-          i {
-            font-size: 1.6rem;
-          }
           &:hover {
             background: map-get($map: $color, $key: dark);
             color: map-get($map: $color, $key: point);
@@ -736,9 +672,6 @@ main {
           .membershipLevel {
             font-size: 1.2rem;
             padding: 12px 20px;
-            i {
-              display: none;
-            }
           }
         }
         .detailInfoWrapper {

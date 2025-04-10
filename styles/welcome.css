@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -29,20 +30,29 @@ main {
 
 main {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 140px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 160px 0;
   text-transform: uppercase;
 }
 main h2 {
-  font-size: 2.6rem;
+  font-size: 3rem;
   font-weight: 700;
 }
 main p {
   margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 300;
   margin-bottom: 50px;
 }
@@ -56,6 +66,7 @@ main input[type=button] {
   background: #000;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main input[type=button]:hover {
@@ -66,11 +77,11 @@ main input[type=button]:hover {
 
 @media screen and (max-width: 767px) {
   main h2 {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
   main p {
     margin-top: 6px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     margin-bottom: 30px;
   }
   main input[type=button] {
