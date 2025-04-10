@@ -228,7 +228,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (couponType === "fixed") {
         couponValueElement.textContent = `-${couponValue}KRW`;
       } else if (couponType === "percent") {
-        const originalPrice = 147000;
+        // 주문 상품 총액 (window.orderTotalPrice 사용)
+        const originalPrice = window.orderTotalPrice || 0;
         const discount = Math.round(originalPrice * (couponValue / 100));
         couponValueElement.textContent = `-${discount}KRW`;
       }
@@ -265,6 +266,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // 결제하기 버튼 클릭 시 모달 열기
   checkoutButton.addEventListener("click", function () {
     paymentConfirmModal.style.display = "flex";
+
+    // 주문 정보 초기화 (결제 완료 시)
+    localStorage.removeItem("checkout-item");
+    localStorage.removeItem("selected-items");
+
+    // 장바구니에서 구매한 상품 제거 (옵션)
+    const selectedIds =
+      JSON.parse(localStorage.getItem("selected-items")) || [];
+    if (selectedIds.length > 0) {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const updatedCart = cart.filter((item) => !selectedIds.includes(item.id));
+      localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+      // 장바구니 카운터 업데이트
+      if (typeof updateCartCounter === "function") {
+        updateCartCounter();
+      }
+    }
   });
 
   // 장바구니로 이동
@@ -277,42 +296,172 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.href = "./detail.html";
   });
 
-  function updateTotalAmount() {
-    const productAmount = document.querySelector(
-      ".summary-row:nth-child(1) .summary-amount"
-    );
-    const shippingAmount = document.querySelector(
-      ".summary-row:nth-child(2) .summary-amount"
-    );
-    const discountAmount = document.querySelector(
-      ".summary-row:nth-child(3) .summary-amount"
-    );
-    const totalAmount = document.querySelector(
-      ".summary-row.total .summary-amount"
-    );
-    const paymentButton = document.querySelector(".checkout-button");
+  // 주문 상품 초기화
+  initOrderProducts();
 
-    const productPrice = 147000;
-    productAmount.textContent = `${productPrice} KRW`;
-
-    const shippingCost = 0;
-    shippingAmount.textContent = `${shippingCost} KRW`;
-
-    const couponText = document.querySelector(
-      ".coupon-row .option-value"
-    ).textContent;
-    let discount = 0;
-    if (couponText.includes("-")) {
-      discount = parseInt(couponText.replace(/[^0-9]/g, ""));
-    }
-    discountAmount.textContent = `-${discount} KRW`;
-
-    const total = productPrice + shippingCost - discount;
-    totalAmount.textContent = `${total} KRW`;
-
-    paymentButton.textContent = `${total} KRW 결제하기`;
-  }
-
-  // 초기 가격 설정
+  // 가격 정보 업데이트
   updateTotalAmount();
 });
+
+// 주문 상품 초기화 함수
+function initOrderProducts() {
+  const productList = document.querySelector(".product-list");
+  let orderProducts = [];
+  window.orderTotalPrice = 0;
+
+  // 1. checkout-item 체크 (detail-product 페이지에서 바로 구매)
+  const checkoutItem = JSON.parse(localStorage.getItem("checkout-item"));
+
+  // 2. selected-items 체크 (cart 페이지에서 구매)
+  const selectedItemIds = JSON.parse(localStorage.getItem("selected-items"));
+
+  if (checkoutItem) {
+    // 단일 상품 주문
+    orderProducts.push(checkoutItem);
+    const price = parseInt(checkoutItem.price.replace(/[^0-9]/g, ""));
+    window.orderTotalPrice += price * (checkoutItem.quantity || 1);
+  } else if (selectedItemIds && selectedItemIds.length > 0) {
+    // 장바구니에서 선택한 상품들 주문
+    const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
+
+    selectedItemIds.forEach((id) => {
+      const item = cartItems.find((cartItem) => cartItem.id === id);
+      if (item) {
+        orderProducts.push(item);
+        const itemPrice = parseInt(item.price.replace(/[^0-9]/g, ""));
+        window.orderTotalPrice += itemPrice * (item.quantity || 1);
+      }
+    });
+  }
+
+  // 주문 상품 목록 렌더링
+  if (orderProducts.length > 0) {
+    productList.innerHTML = orderProducts
+      .map(
+        (product) => `
+      <li class="product-item" data-id="${product.id}">
+        <div class="product-image">
+          <img src="${product.image}" alt="${product.title || ""}" />
+        </div>
+        <div class="product-info">
+          <p class="product-name">${product.title || ""}</p>
+          <p class="product-price">${product.price}</p>
+          ${
+            product.option && product.option !== "default"
+              ? `<p class="product-option">옵션: ${product.option}</p>`
+              : ""
+          }
+          ${
+            product.quantity > 1
+              ? `<p class="product-quantity">수량: ${product.quantity}개</p>`
+              : ""
+          }
+        </div>
+        <button type="button" class="remove-product">x</button>
+      </li>
+    `
+      )
+      .join("");
+
+    // 삭제 버튼에 이벤트 리스너 추가
+    addRemoveButtonListeners();
+  } else {
+    productList.innerHTML = `
+    <li class="empty-product">
+      <p>주문 상품이 없습니다.</p>
+      <p>상품 상세 페이지나 장바구니에서 상품을 선택해주세요.</p>
+    </li>
+  `;
+
+    // 기본 가격 설정
+    window.orderTotalPrice = 0;
+
+    // 삭제 버튼에 이벤트 리스너 추가
+    addRemoveButtonListeners();
+  }
+}
+
+// 상품 삭제 버튼 이벤트 리스너
+function addRemoveButtonListeners() {
+  const removeButtons = document.querySelectorAll(".remove-product");
+
+  removeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const productItem = this.closest(".product-item");
+      const productId = parseInt(productItem.dataset.id);
+
+      // 체크아웃 아이템인 경우
+      if (localStorage.getItem("checkout-item")) {
+        localStorage.removeItem("checkout-item");
+      }
+
+      // 선택된 아이템 목록에서 삭제
+      if (localStorage.getItem("selected-items")) {
+        const selectedItems = JSON.parse(
+          localStorage.getItem("selected-items")
+        );
+        const updatedSelection = selectedItems.filter((id) => id !== productId);
+
+        if (updatedSelection.length > 0) {
+          localStorage.setItem(
+            "selected-items",
+            JSON.stringify(updatedSelection)
+          );
+        } else {
+          localStorage.removeItem("selected-items");
+        }
+      }
+
+      // 화면에서 삭제
+      productItem.remove();
+
+      // 주문 상품 다시 초기화 (남은 상품이 있는지 확인)
+      initOrderProducts();
+
+      // 가격 업데이트
+      updateTotalAmount();
+    });
+  });
+}
+
+// 가격 정보 업데이트 함수
+function updateTotalAmount() {
+  const productAmount = document.querySelector(
+    ".summary-row:nth-child(1) .summary-amount"
+  );
+  const shippingAmount = document.querySelector(
+    ".summary-row:nth-child(2) .summary-amount"
+  );
+  const discountAmount = document.querySelector(
+    ".summary-row:nth-child(3) .summary-amount"
+  );
+  const totalAmount = document.querySelector(
+    ".summary-row.total .summary-amount"
+  );
+  const paymentButton = document.querySelector(".checkout-button");
+
+  // 주문 상품 총액
+  const productPrice = window.orderTotalPrice || 0;
+  productAmount.textContent = `${productPrice} KRW`;
+
+  // 배송비는 무료로 설정
+  const shippingCost = 0;
+  shippingAmount.textContent = `${shippingCost} KRW`;
+
+  // 할인 금액
+  const couponText = document.querySelector(
+    ".coupon-row .option-value"
+  ).textContent;
+  let discount = 0;
+  if (couponText.includes("-")) {
+    discount = parseInt(couponText.replace(/[^0-9]/g, ""));
+  }
+  discountAmount.textContent = `-${discount} KRW`;
+
+  // 최종 가격
+  const total = productPrice + shippingCost - discount;
+  totalAmount.textContent = `${total} KRW`;
+
+  // 결제 버튼 텍스트 업데이트
+  paymentButton.textContent = `${total} KRW 결제하기`;
+}
