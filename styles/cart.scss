@@ -18,12 +18,11 @@ header {
   position: relative;
 }
 
-/* top 내비게이션 */
+/*내비게이션 공통 스타일 */
 .tablet-navigation {
   display: none;
   width: 100%;
   background: map-get($map: $color, $key: light);
-  // border-bottom: 1px solid map-get($map: $color, $key: boxline);
   .tablet-nav-container {
     display: flex;
     flex-direction: column;
@@ -42,85 +41,79 @@ header {
         padding-bottom: 5px;
         &:hover {
           color: map-get($map: $color, $key: point);
-          &::after {
-            width: 50%;
+          &:active {
+            color: map-get($map: $color, $key: point);
           }
-        }
-        &::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          width: 0%;
-          height: 2px;
-          background: map-get($map: $color, $key: point);
-          transform-origin: center;
-          transform: translateX(-50%);
-          transition: width 0.3s;
         }
       }
     }
     .tablet-nav-content {
       display: flex;
       width: 100%;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10%;
       .nav-column {
-        flex: 1;
-        padding: 10px;
-        &:last-child {
-          border-right: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        &:first-child {
+          width: 40%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+          text-align: left;
         }
-        .nav-item {
-          padding: 8px 0;
-          font-size: 1.5rem;
-          text-align: center;
-          position: relative;
-          cursor: pointer;
-          &:hover {
+        &:last-child {
+          width: 40%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 10px;
+        }
+      }
+      .nav-item {
+        padding: 8px 0;
+        font-size: 1.5rem;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        text-align: left;
+        &:hover {
+          color: map-get($map: $color, $key: point);
+          &:active {
             color: map-get($map: $color, $key: point);
-            &::after {
-              width: 30%;
-            }
           }
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 1px;
-            background: map-get($map: $color, $key: point);
-            transform: translateX(-50%);
-            transition: width 0.3s ease;
+        }
+        &.with-dot {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+        .color-dot {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 10px;
+          border: 1px solid map-get($map: $color, $key: boxline);
+          &.black {
+            background-color: #000;
           }
-          &.with-dot {
-            display: flex;
-            align-items: center;
+          &.white {
+            background-color: #fff;
           }
-          .color-dot {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 10px;
-            border: 1px solid map-get($map: $color, $key: boxline);
-            &.black {
-              background-color: #000;
-            }
-            &.white {
-              background-color: #fff;
-            }
-            &.blue {
-              background-color: blue;
-            }
-            &.red {
-              background-color: red;
-            }
-            &.brown {
-              background-color: brown;
-            }
-            &.pink {
-              background-color: pink;
-            }
+          &.blue {
+            background-color: blue;
+          }
+          &.red {
+            background-color: red;
+          }
+          &.brown {
+            background-color: brown;
+          }
+          &.pink {
+            background-color: pink;
           }
         }
       }
@@ -165,20 +158,26 @@ header {
       width: 100%;
       gap: 10px;
       padding: 10px;
+      transition: height 0.3s ease, opacity 0.3s ease;
+      overflow: hidden;
       .item {
         width: 50%;
         width: calc(50% - 5px);
-        a {
-          text-decoration: none;
-          color: #000;
-          display: flex;
-          height: 40px;
-          padding: 20px 10px;
-          align-items: center;
-          gap: 10px;
-          border: 1px solid #d3d3d3;
-          padding: 10px;
-          border-radius: 3px;
+        text-decoration: none;
+        color: #000;
+        display: flex;
+        height: 40px;
+        padding: 20px 10px;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #d3d3d3;
+        padding: 10px;
+        border-radius: 3px;
+        transition: background-color 0.2s ease, color 0.2s ease;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.05);
+          color: map-get($map: $color, $key: point);
         }
       }
       .color-dot {
@@ -217,11 +216,13 @@ header {
   height: 1px;
   background: map-get($map: $color, $key: line);
 }
+
 .cart-container {
   flex: 1;
   width: 100%;
   max-width: none;
-  height: 1060px;
+  height: auto;
+  min-height: 600px;
   margin: 0 auto;
   margin-left: 350px;
   padding: 20px 50px;
@@ -239,123 +240,131 @@ header {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
+    /* 장바구니 헤더 스타일 */
+    .cart-header {
+      display: flex;
+      width: 100%;
+      padding: 15px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: map-get($map: $color, $key: lightgray);
+      font-weight: 500;
+      color: var(--color-dark);
+    }
+    /* 장바구니 아이템 목록 */
     .cart-items {
       width: 100%;
       margin-bottom: 30px;
       padding: 0 15px;
+      /* 장바구니 아이템 */
       .cart-item {
+        display: flex;
         width: 100%;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
         align-items: center;
-        margin-bottom: 20px;
-        .checkbox-container {
-          width: 100%;
-          height: 30px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: start;
-          input[type="checkbox"] {
-            display: none;
-            & + label {
-              display: inline-block;
-              width: 20px;
-              height: 20px;
-              border: 1px solid map-get($map: $color, $key: input);
-              border-radius: 2px;
-              position: relative;
-              cursor: pointer;
-              background-color: map-get($map: $color, $key: light);
-              transition: background-color 0.2s ease;
-              &:active {
-                background-color: map-get($map: $color, $key: input);
-              }
-            }
-            /* 체크된 상태일 때 배경색을 변경 */
-            &:checked + label {
-              background-color: map-get($map: $color, $key: input);
-            }
-          }
-        }
-        .items {
-          display: flex;
-          gap: 20px;
-          justify-content: space-between;
-          border-top: 1px solid #ccc;
-          border-bottom: 1px solid #ccc;
-          padding: 20px 0;
-          position: relative;
-          input[type="checkbox"] {
-            position: absolute;
-            top: 20px;
-            left: 0;
-            display: none;
-            & + label {
-              display: inline-block;
-              width: 20px;
-              height: 20px;
-              border: 1px solid map-get($map: $color, $key: input);
-              border-radius: 2px;
-              position: absolute;
-              top: 20px;
-              left: 0;
-              cursor: pointer;
-              background-color: map-get($map: $color, $key: light);
-              transition: background-color 0.2s ease;
-              &:active {
-                background-color: map-get($map: $color, $key: input);
-              }
-            }
-            /* 체크된 상태일 때 배경색을 변경 */
-            &:checked + label {
-              background-color: map-get($map: $color, $key: input);
-            }
-          }
-          .item-image {
-            flex: 1;
-            height: 150px;
-            img {
-              width: 80%;
-              height: 100%;
-              object-fit: cover;
-            }
-          }
-          .item-details {
-            flex: 4;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            .detail-top {
-              display: flex;
-              justify-content: space-between;
-            }
-            .detail-bottom {
-              display: flex;
-              justify-content: space-between;
-              p {
-                color: map-get($map: $color, $key: line);
-                font-size: 1.6rem;
-                font-weight: 400;
-                line-height: 1;
-              }
-              .quantity-selector {
-                display: flex;
-                gap: 30px;
-                align-items: center;
-                button {
-                  border: none;
-                  background: none;
-                  cursor: pointer;
-                  font-size: 1.8rem;
-                  color: map-get($map: $color, $key: line);
-                }
-              }
-            }
-          }
-        }
       }
     }
+    .select-column {
+      flex: 0.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10px;
+    }
+    .product-column {
+      flex: 5;
+      display: flex;
+      align-items: center;
+    }
+    .price-column,
+    .quantity-column {
+      flex: 1.5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 상품 이미지와 정보 */
+    .product-image {
+      width: 200px;
+      height: 150px;
+      margin-right: 20px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .product-info {
+      h3 {
+        font-size: 1.7rem;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .option {
+        font-size: 1.5rem;
+        margin-top: 30px;
+        color: #777;
+      }
+    }
+
+    /* 체크박스 스타일 */
+    input[type="checkbox"] {
+      display: none;
+      & + label {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid map-get($map: $color, $key: input);
+        border-radius: 2px;
+        position: relative;
+        cursor: pointer;
+        background-color: map-get($map: $color, $key: light);
+        transition: background-color 0.2s ease;
+        &:active {
+          background-color: map-get($map: $color, $key: input);
+        }
+      }
+      /* 체크된 상태일 때 배경색을 변경 */
+      &:checked + label {
+        background-color: map-get($map: $color, $key: input);
+      }
+      &:checked + label:after {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 3px;
+        width: 6px;
+        height: 11px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    /* 수량 선택기 스타일 */
+    .quantity-selector {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: map-get($map: $color, $key: line);
+      }
+      .num {
+        width: 30px;
+        text-align: center;
+      }
+    }
+
+    /* 장바구니 요약 */
     .cart-summary {
       margin: 30px 0;
       width: 100%;
@@ -388,6 +397,8 @@ header {
         }
       }
     }
+
+    /* 장바구니 액션 버튼 */
     .cart-actions {
       width: 100%;
       margin: 30px 0;
@@ -411,6 +422,9 @@ header {
         &.buy-now {
           background-color: map-get($map: $color, $key: kakao);
         }
+        &.empty-cart {
+          background-color: #e0e0e0;
+        }
       }
     }
   }
@@ -418,12 +432,37 @@ header {
 
 // 반응형 태블릿 코드 (1024px 이하)
 @media screen and (max-width: 1024px) {
-  /* 레이아웃 변경 */
   .container {
     flex-direction: column;
-    padding: 0;
     margin-top: 70px;
+    .tablet-navigation {
+      .tablet-nav-container {
+        .tablet-nav-headers {
+          padding: 10px 0;
+          gap: 20px;
+          .nav-header {
+            font-size: 1.6rem;
+          }
+        }
+        .tablet-nav-content {
+          .nav-column {
+            width: 33%;
+            &:nth-child(1) {
+              .nav-item {
+                padding-left: 20px;
+              }
+            }
+            &:nth-child(2) {
+              .nav-item {
+                padding-left: 90px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
+
   /* 사이드바 숨기기 */
   .sidebar {
     display: none;
@@ -476,16 +515,23 @@ header {
     .tablet-nav-container {
       .tablet-nav-headers {
         padding: 10px 0;
+        gap: 20px;
         .nav-header {
           font-size: 1.6rem;
         }
       }
       .tablet-nav-content {
         .nav-column {
-          padding: 8px;
-          .nav-item {
-            padding: 6px 0;
-            font-size: 1.4rem;
+          width: 60%;
+          &:nth-child(1) {
+            .nav-item {
+              padding-left: 0px;
+            }
+          }
+          &:nth-child(2) {
+            .nav-item {
+              padding-left: 20px;
+            }
           }
         }
       }
@@ -502,37 +548,63 @@ header {
     }
 
     .cart-inner {
+      /* 장바구니 헤더 숨기기 */
+      .cart-header {
+        display: none;
+      }
+
+      /* 카트 아이템 레이아웃 변경 */
       .cart-items {
         .cart-item {
-          .items {
-            .item-details {
-              text-align: center;
-              .detail-top {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-                h3 {
-                  font-size: 1.6rem;
-                }
-                p {
-                  display: inline-block;
-                  justify-content: center;
-                  align-items: center;
-                }
-                .price {
-                  align-self: flex-start;
-                }
+          flex-wrap: wrap;
+          padding: 15px 0;
+
+          .select-column {
+            flex: 1;
+          }
+          .product-column {
+            flex: 10;
+            .product-image {
+              width: 150px;
+              height: 150px;
+            }
+            .product-info {
+              h3 {
+                font-size: 1.6rem;
+              }
+              p {
+                font-size: 1.4rem;
+                margin-top: 20px;
               }
             }
+          }
+          .price-column,
+          .quantity-column,
+          .total-column {
+            flex: 100%;
+            justify-content: flex-end;
+            padding: 5px 0 5px 40px;
+          }
+          .price-column:before {
+            content: "가격: ";
+            margin-right: 40px;
+            font-weight: 500;
+          }
+
+          .quantity-column:before {
+            content: "수량: ";
+            margin-right: 25px;
+            font-weight: 500;
           }
         }
       }
 
       .cart-summary {
-        padding-right: 0;
+        padding-right: 100px;
+        margin-bottom: 0;
       }
-
       .cart-actions {
+        padding-right: 30px;
         button {
           width: 70%;
         }
@@ -550,14 +622,14 @@ header {
         display: flex;
         overflow-x: auto;
         white-space: nowrap;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 10px 5px;
+        gap: 15px;
         -webkit-overflow-scrolling: touch;
         &::-webkit-scrollbar {
-          display: none; // 스크롤바 숨기기
+          display: none;
         }
         .nav-header {
-          flex: 1;
           font-size: 1.5rem;
           padding: 0 15px;
           text-align: center;
@@ -573,25 +645,26 @@ header {
           display: none; // 스크롤바 숨기기
         }
         .nav-column {
-          min-width: 25%;
-          flex: 1;
+          min-width: 40%;
+          flex: 0 0 auto;
           padding: 0;
-          .nav-item {
-            white-space: nowrap;
-            font-size: 1.4rem;
-            padding: 8px 0;
-            text-align: center;
-            &.with-dot {
-              padding-left: 10px;
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              align-items: center;
-              .color-dot {
-                width: 18px;
-                height: 18px;
-                margin-right: 5px;
-                border-radius: 50%;
+          &:nth-child(2) {
+            .nav-item {
+              white-space: nowrap;
+              // font-size: 1.4rem;
+              padding: 8px 0;
+              text-align: start;
+              font-size: 1.6rem;
+              &.with-dot {
+                padding-left: 10px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                .color-dot {
+                  width: 15px;
+                  height: 15px;
+                  margin-right: 5px;
+                }
               }
             }
           }
@@ -602,85 +675,68 @@ header {
 
   /* 카트 페이지 조정 */
   .cart-container {
-    padding: 10px;
+    padding: 15px;
     h2 {
       font-size: 2rem;
-      padding: 0;
-      margin-bottom: 20px;
+      padding: 0 10px;
     }
+
     .cart-inner {
+      /* 장바구니 헤더 숨기기 */
+      .cart-header {
+        display: none;
+      }
+
+      /* 카트 아이템 레이아웃 변경 */
       .cart-items {
-        margin-bottom: 10px;
         .cart-item {
-          .items {
-            flex-direction: column;
-            gap: 15px;
-            input[type="checkbox"] + label {
-              top: 15px;
-              left: 0;
+          flex-wrap: wrap;
+          padding: 15px 0;
+          .select-column {
+            flex: 1;
+          }
+          .product-column {
+            flex: 10;
+            .product-image {
+              width: 150px;
+              height: 150px;
             }
-            .item-image {
-              display: flex;
-              justify-content: center;
-              height: 120px;
-              img {
-                width: 50%;
+            .product-info {
+              h3 {
+                font-size: 1.3rem;
               }
-            }
-            .item-details {
-              text-align: center;
-              align-items: center;
-              .detail-top {
-                flex-direction: column;
-                gap: 10px;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                h3 {
-                  font-size: 1.6rem;
-                  text-align: center;
-                  width: 100%;
-                }
-                .price {
-                  text-align: center;
-                  width: 100%;
-                  display: block;
-                  margin: 0 auto;
-                }
-              }
-              .detail-bottom {
-                flex-direction: column;
-                gap: 15px;
-                margin-top: 15px;
-                align-items: center;
-                width: 100%;
-                p {
-                  text-align: center;
-                }
-                .quantity-price {
-                  width: 100%;
-                  display: flex;
-                  justify-content: center;
-                }
-                .quantity-selector {
-                  justify-content: center;
-                }
+              p {
+                font-size: 1.3rem;
+                margin-top: 20px;
               }
             }
           }
+          .price-column,
+          .quantity-column,
+          .total-column {
+            flex: 100%;
+            justify-content: flex-end;
+            padding: 5px 0 5px 40px;
+          }
+          .price-column:before {
+            display: none;
+          }
+          .quantity-column:before {
+            content: "수량: ";
+            margin-right: 25px;
+            font-weight: 500;
+          }
         }
       }
+
       .cart-summary {
-        width: 100%;
-        margin-right: 25%;
-        .summary-row {
-          width: 100%;
-        }
+        padding-right: 70px;
+        margin-bottom: 0;
       }
       .cart-actions {
+        padding-right: 30px;
         button {
-          width: 100%;
+          width: 80%;
         }
       }
     }
@@ -689,22 +745,24 @@ header {
 
 // 모바일 (max-width: 375px)
 @media screen and (max-width: 375px) {
-  /* 모바일 내비게이션 추가 조정 */
   .tablet-navigation {
+    padding: 0 5px;
     .tablet-nav-container {
       .tablet-nav-headers {
         padding: 8px 3px;
+        gap: 10px;
         .nav-header {
-          font-size: 1.4rem;
-          padding: 0 10px;
+          font-size: 1.3rem;
+          padding: 0px;
+          gap: 50px;
         }
       }
       .tablet-nav-content {
         .nav-column {
-          min-width: 25%;
+          min-width: 50%;
           padding: 0;
           .nav-item {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             padding: 5px 0;
             &.with-dot {
               display: flex;
@@ -712,8 +770,9 @@ header {
               justify-content: flex-start;
               align-items: center;
               .color-dot {
-                width: 15px;
-                height: 15px;
+                width: 12px;
+                height: 12px;
+                margin-right: 5;
               }
             }
           }
@@ -732,28 +791,23 @@ header {
       .cart-items {
         padding: 0 5px;
         .cart-item {
-          .items {
-            padding: 15px 0;
-            .item-image {
-              height: 100px;
-            }
-            .item-details {
-              .detail-top {
-                h3 {
-                  font-size: 1.4rem;
-                }
-              }
-              .detail-bottom {
-                p {
-                  font-size: 1.4rem;
-                }
-                .quantity-selector {
-                  gap: 20px;
-                  button {
-                    font-size: 1.6rem;
-                  }
-                }
-              }
+          padding: 15px 0;
+          .product-image {
+            height: 70px;
+          }
+          .product-info h3 {
+            font-size: 1.2rem;
+          }
+          .price-column,
+          .quantity-column,
+          .total-column {
+            padding: 3px 0 3px 20px;
+            font-size: 1.3rem;
+          }
+          .quantity-selector {
+            gap: 20px;
+            button {
+              font-size: 1.6rem;
             }
           }
         }
@@ -763,6 +817,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 50px;
         .summary-row {
           padding: 10px 0;
           .summary-label,
@@ -780,5 +835,93 @@ header {
         }
       }
     }
+  }
+}
+
+/* 전역 체크박스 컨테이너 스타일링 */
+.global-checkbox-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 0 10px;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.global-checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+.global-checkbox-container input[type="checkbox"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.global-checkbox-container input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.global-checkbox-container input[type="checkbox"]:checked + label:before {
+  background-color: #555;
+  border-color: #555;
+}
+
+.global-checkbox-container input[type="checkbox"]:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 11px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 768px) {
+  .global-checkbox-container {
+    padding: 0 5px;
+  }
+
+  .global-checkbox-container input[type="checkbox"] + label {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .global-checkbox-container input[type="checkbox"] + label {
+    font-size: 13px;
+    padding-left: 25px;
+  }
+
+  .global-checkbox-container input[type="checkbox"] + label:before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .global-checkbox-container input[type="checkbox"]:checked + label:after {
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
   }
 }

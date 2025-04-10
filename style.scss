@@ -8,7 +8,6 @@
 // common
 html {
   font-size: 62.5%;
-  scroll-behavior: auto !important;
 }
 html,
 body {
@@ -18,10 +17,7 @@ body {
   font-size: 1.6rem;
   font-family: "Figtree";
   letter-spacing: -0.2px;
-  &.active {
-    overflow-y: hidden;
-    height: 100vh;
-  }
+  // background: #ddd;
 }
 
 // Header
@@ -324,6 +320,9 @@ footer {
 // 반응형 tablet
 @media screen and (max-width: 1024px) {
   // header
+  body {
+    background: #ddd;
+  }
   header {
     z-index: 2;
     background: transparent;

@@ -9,13 +9,13 @@ const headerInner = `
         <nav id="leftGnb">
             <ul>
               <li>
-                <a href="./detail.html" title="clothes">CLOTHES</a>
+                <a href="./detail.html?category=clothes" title="clothes" class="category-link" data-category="clothes">CLOTHES</a>
               </li>
               <li>
-                <a href="./detail.html" title="acc">ACC</a>
+                <a href="./detail.html?category=acc" title="acc" class="category-link" data-category="acc">ACC</a>
               </li>
               <li>
-                <a href="./detail.html" title="life">LIFE</a>
+                <a href="./detail.html?category=life" title="life" class="category-link" data-category="life">LIFE</a>
               </li>
               <li>
               <a href="mypage.html" title="mypage" >MYPAGE</a>
@@ -32,7 +32,7 @@ const headerInner = `
                 <i class="fa-solid fa-magnifying-glass"></i></a>
               </li>
               <li>
-                <a href="./cart.html" title="cart"><span>CART</span><i class="fa-solid fa-bag-shopping"></i><span>(0)</span>
+                <a href="./cart.html" title="cart"><span>CART</span><i class="fa-solid fa-bag-shopping"></i><span class="cart-count"></span>
                 </a>
               </li>
               <li>
@@ -94,13 +94,13 @@ const footerInner = `
 <nav id="footerCategory">
         <ul>
           <li>
-            <a href="#" title="clothes">CLOTHES</a>
+            <a href="./detail.html?category=clothes" title="clothes" class="category-link" data-category="clothes">CLOTHES</a>
           </li>
           <li>
-            <a href="#" title="acc">ACC</a>
+            <a href="./detail.html?category=acc" title="acc" class="category-link" data-category="acc">ACC</a>
           </li>
           <li>
-            <a href="#" title="life">LIFE</a>
+            <a href="./detail.html?category=life" title="life" class="category-link" data-category="life">LIFE</a>
           </li>
           <li class="promotionTitle">
             <a href="event.html" title="event">promotion</a>
@@ -127,9 +127,72 @@ const footerInner = `
       </h1>
       <p>WOOFY© ALL RIGHT RESERVED</p>
 `;
+
 header.innerHTML = headerInner;
 footer.innerHTML = footerInner;
 searchWrap.innerHTML = searchInner;
+
+// 카테고리 필터링 이벤트 리스너 추가
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.pathname.includes("detail.html")) {
+    const categoryLinks = document.querySelectorAll(".category-link");
+
+    categoryLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const category = this.getAttribute("data-category");
+
+        // URL 히스토리 업데이트 (페이지 새로고침 없이)
+        const url = new URL(window.location);
+        url.searchParams.set("category", category);
+        window.history.pushState({}, "", url);
+
+        if (typeof filterByCategory === "function") {
+          filterByCategory(category);
+        }
+
+        // 선택된 카테고리 하이라이트
+        highlightSelectedCategory(category);
+      });
+    });
+  } else {
+    // 다른 페이지에서는 기존 방식 유지
+    const categoryLinks = document.querySelectorAll(".category-link");
+    categoryLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const category = this.getAttribute("data-category");
+        window.location.href = `detail.html?category=${category}`;
+      });
+    });
+  }
+});
+
+// 카트 카운터 업데이트 함수
+updateCartCounter();
+
+// updateCartCounter 함수 업데이트
+function updateCartCounter() {
+  let cart = getCartItems();
+  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+
+  // 클래스 선택자로 변경
+  const cartCounter = document.querySelector(".cart-count");
+
+  if (cartCounter) {
+    cartCounter.textContent = `(${totalItems})`;
+  } else {
+    // 백업 선택자 (기존 코드의 선택자)
+    const alternativeCounter = document.querySelector(
+      "#rightGnb ul li a[title='cart'] span:last-child"
+    );
+    if (alternativeCounter) {
+      alternativeCounter.textContent = `(${totalItems})`;
+    } else {
+      console.log("장바구니 카운터를 찾을 수 없습니다.");
+    }
+  }
+}
 
 const toggleBtn = document.querySelector("#toggleBtn");
 const leftGnb = document.querySelector("#leftGnb");
@@ -137,7 +200,7 @@ toggleBtn.addEventListener("click", function () {
   this.classList.toggle("active");
   leftGnb.classList.toggle("active");
   header.classList.toggle("blendMode");
-  document.body.classList.toggle("active");
+  header.style.transform = "none";
 });
 
 const searchBtn = document.querySelector("#rightGnb ul li:first-child");
@@ -191,3 +254,60 @@ const closeBtn = document.querySelector("#closeBtn");
 closeBtn.addEventListener("click", (e) => {
   e.preventDefault();
 });
+
+// 장바구니 관련 함수들
+function getCartItems() {
+  const cartData = localStorage.getItem("cart");
+  return cartData ? JSON.parse(cartData) : [];
+}
+
+function saveCart(data) {
+  const str = JSON.stringify(data);
+  localStorage.setItem("cart", str);
+}
+
+function addToCart(product) {
+  const cart = getCartItems();
+  const i = cart.findIndex((p) => p.id === product.id);
+  if (i !== -1) {
+    cart[i].quantity += 1;
+  } else {
+    cart.push({
+      ...product,
+      id: product.id,
+      quantity: product.quantity || 1,
+      option: product.option || "기본",
+    });
+  }
+  saveCart(cart);
+  updateCartCounter();
+  return cart;
+}
+
+function removeCartItem(id) {
+  const newCart = getCartItems().filter((item) => item.id !== id);
+  saveCart(newCart);
+  updateCartCounter();
+  return newCart;
+}
+
+function clearCart() {
+  saveCart([]);
+  updateCartCounter();
+}
+
+function showCartModal(id = "cart-modal") {
+  const m = document.getElementById(id);
+  if (m) {
+    m.classList.add("show");
+    m.style.display = "flex";
+  }
+}
+
+function hideCartModal(id = "cart-modal") {
+  const m = document.getElementById(id);
+  if (m) {
+    m.classList.remove("show");
+    m.style.display = "none";
+  }
+}

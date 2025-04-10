@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -17,8 +16,7 @@ a {
 }
 
 main {
-  height: 2000px;
-  background: skyblue;
+  margin-top: 0;
 }
 main .brandBanner {
   width: 100%;
@@ -31,12 +29,8 @@ main .brandBanner {
      object-fit: cover;
   background-attachment: fixed;
   padding: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 main .brandBanner::after {
   width: 100%;
@@ -49,13 +43,8 @@ main .brandBanner::after {
 }
 main .brandBanner .brandText {
   width: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 30px;
   position: relative;
   z-index: 1;
@@ -73,12 +62,66 @@ main .brandBanner .brandText p:nth-child(2) {
 main .brandBanner .brandText p:last-child {
   font-size: 1.6rem;
 }
-
+main section {
+  width: 100%;
+  padding: 3%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+main section ul {
+  width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+main section ul .itemBox a {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+main section ul .itemBox a .itemImg {
+  width: 100%;
+}
+main section ul .itemBox a .itemImg img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main section ul .itemBox a .itemText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+main section ul .itemBox a .itemText p {
+  font-size: 1.4rem;
+}
+main section ul .itemBox a .itemText p:first-child {
+  font-weight: bold;
+  color: #99bdff;
+}
+main section ul .itemBox a .itemText p:nth-child(2) {
+  font-size: 1.6rem;
+}
 @media screen and (max-width: 1024px) {
   main .brandBanner {
     height: 800px;
     -o-object-fit: cover;
        object-fit: cover;
     background-attachment: inherit;
+  }
+  main section ul {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  main section ul {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }

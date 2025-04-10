@@ -3,7 +3,11 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
+<<<<<<< HEAD
           box-sizing: border-box;
+=======
+  box-sizing: border-box;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
 }
 
 ul,
@@ -37,8 +41,13 @@ header {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+<<<<<<< HEAD
       -ms-flex-direction: column;
           flex-direction: column;
+=======
+  -ms-flex-direction: column;
+  flex-direction: column;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
 }
 .checkout-container .checkout-title {
   font-size: 2.4rem;
@@ -69,14 +78,27 @@ section {
   display: flex;
   margin-bottom: 20px;
   -webkit-box-align: center;
+<<<<<<< HEAD
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
 }
 .checkout-container .shipping-section .address-selector .address-label .recent-address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+=======
+  -ms-flex-align: center;
+  align-items: center;
+}
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-label
+  .recent-address {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   font-size: 2.2rem;
   font-weight: 400;
   margin-right: 30px;
@@ -89,77 +111,56 @@ section {
 .checkout-container .shipping-section .address-selector .address-info {
   margin-bottom: 20px;
   color: #a7a7a8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce {
+<<<<<<< HEAD
+.checkout-container .shipping-section .address-selector .address-info .user-state {
+=======
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state {
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+<<<<<<< HEAD
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 15px;
+=======
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
+  margin-bottom: 10px;
 }
 .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
   font-size: 2rem;
   font-weight: 400;
-  border: none;
-  padding: 5px 0;
-  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+<<<<<<< HEAD
+      -ms-flex-align: center;
+          align-items: center;
+=======
+  -ms-flex-align: center;
+  align-items: center;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-webkit-input-placeholder {
-  color: #999;
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-moz-placeholder {
-  color: #999;
-  -moz-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:-ms-input-placeholder {
-  color: #999;
-  -ms-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-ms-input-placeholder {
-  color: #999;
-  -ms-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::placeholder {
-  color: #999;
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus {
-  outline: none;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-moz-placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-book-link {
   font-size: 1.6rem;
   color: #000;
 }
@@ -225,6 +226,13 @@ section {
   width: 100%;
 }
 .checkout-container .shipping-section .address-selector .delivery-message select {
+=======
+.checkout-container
+  .shipping-section
+  .address-selector
+  .delivery-message
+  select {
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,11 +266,19 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+<<<<<<< HEAD
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+=======
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   padding: 35px 25px;
   margin: 5px;
   border-top: 1px solid #d9d9d9;
@@ -282,8 +298,13 @@ section {
 }
 .order-products .product-list .product-item .product-info {
   -webkit-box-flex: 1;
+<<<<<<< HEAD
       -ms-flex: 1;
           flex: 1;
+=======
+  -ms-flex: 1;
+  flex: 1;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   padding: 0 15px;
   font-size: 2rem;
   font-weight: 400;
@@ -317,6 +338,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+<<<<<<< HEAD
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
@@ -324,6 +346,15 @@ section {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+=======
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   margin-bottom: 15px;
   padding: 0 10px;
   color: #999999;
@@ -354,8 +385,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
+<<<<<<< HEAD
       -ms-flex-pack: end;
           justify-content: flex-end;
+=======
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   margin-bottom: 20px;
   font-size: 1.4rem;
   color: #dadada;
@@ -369,8 +405,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
+<<<<<<< HEAD
       -ms-flex-pack: justify;
           justify-content: space-between;
+=======
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+>>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   margin-bottom: 15px;
   padding: 0 5%;
   color: #a7a7a8;
@@ -406,8 +447,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .payment-methods .payment-options .visually-hidden {
   position: absolute;
@@ -424,13 +465,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .payment-methods .payment-options .payment-options-list .payment-option {
   cursor: pointer;
@@ -466,8 +507,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .payment-methods .terms-agreement .agreement-label {
   cursor: pointer;
@@ -503,8 +544,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .checkout-button-container .checkout-button {
   width: 100%;
@@ -524,1237 +565,5 @@ section {
 }
 .checkout-button-container .checkout-button:active {
   -webkit-box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.modal, .payment-confirm-modal, .coupon-modal, .address-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.modal .modal-content, .payment-confirm-modal .modal-content, .coupon-modal .modal-content, .address-modal .modal-content {
-  background-color: white;
-  width: 90%;
-  max-width: 400px;
-  border-radius: 15px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  -webkit-animation: modalFadeIn 0.3s ease;
-          animation: modalFadeIn 0.3s ease;
-}
-.modal .modal-header, .payment-confirm-modal .modal-header, .coupon-modal .modal-header, .address-modal .modal-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px 20px;
-}
-.modal .modal-header h3, .payment-confirm-modal .modal-header h3, .coupon-modal .modal-header h3, .address-modal .modal-header h3 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
-}
-.modal .modal-header .close-modal, .payment-confirm-modal .modal-header .close-modal, .coupon-modal .modal-header .close-modal, .address-modal .modal-header .close-modal {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2.2rem;
-  cursor: pointer;
-  color: #333333;
-}
-.modal .modal-body, .payment-confirm-modal .modal-body, .coupon-modal .modal-body, .address-modal .modal-body {
-  padding: 20px;
-}
-.modal .modal-footer, .payment-confirm-modal .modal-footer, .coupon-modal .modal-footer, .address-modal .modal-footer {
-  padding: 15px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.modal .modal-footer .modal-button, .payment-confirm-modal .modal-footer .modal-button, .modal .modal-footer .coupon-modal .select-coupon, .payment-confirm-modal .modal-footer .coupon-modal .select-coupon, .coupon-modal .modal-footer .modal-button, .coupon-modal .modal-footer .select-coupon, .modal .modal-footer .address-modal .select-address, .payment-confirm-modal .modal-footer .address-modal .select-address, .coupon-modal .modal-footer .address-modal .select-address, .address-modal .modal-footer .modal-button, .address-modal .modal-footer .coupon-modal .select-coupon, .address-modal .modal-footer .select-address {
-  background-color: #000;
-  color: white;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 30px;
-  font-size: 1.6rem;
-  cursor: pointer;
-  width: 80%;
-}
-.modal .modal-footer .modal-button:hover, .payment-confirm-modal .modal-footer .modal-button:hover, .modal .modal-footer .coupon-modal .select-coupon:hover, .payment-confirm-modal .modal-footer .coupon-modal .select-coupon:hover, .coupon-modal .modal-footer .modal-button:hover, .coupon-modal .modal-footer .select-coupon:hover, .modal .modal-footer .address-modal .select-address:hover, .payment-confirm-modal .modal-footer .address-modal .select-address:hover, .coupon-modal .modal-footer .address-modal .select-address:hover, .address-modal .modal-footer .modal-button:hover, .address-modal .modal-footer .coupon-modal .select-coupon:hover, .address-modal .modal-footer .select-address:hover {
-  opacity: 0.9;
-}
-
-@-webkit-keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes modalFadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-.address-modal {
-  z-index: 1000;
-}
-.address-modal .close-modal {
-  display: none;
-}
-.address-modal .address-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 12px 10px;
-  cursor: pointer;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  align-items: center;
-  gap: 15px;
-  border-bottom: 1px solid #eeeeee;
-}
-.address-modal .address-item:hover {
-  background-color: #f9f9f9;
-}
-.address-modal .address-item.selected {
-  background-color: #f0f0f0;
-}
-.address-modal .address-item .address-number {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-right: 15px;
-}
-.address-modal .address-item .address-info-modal {
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-.coupon-modal {
-  z-index: 20;
-}
-.coupon-modal .coupon-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.coupon-modal .coupon-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 12px 10px;
-  border-bottom: 1px solid #eee;
-  cursor: pointer;
-}
-.coupon-modal .coupon-item:hover {
-  background-color: #f9f9f9;
-}
-.coupon-modal .coupon-item.selected {
-  background-color: #f0f0f0;
-}
-.coupon-modal .coupon-item .coupon-number {
-  font-size: 1.6rem;
-  font-weight: 500;
-  margin-right: 15px;
-}
-.coupon-modal .coupon-item .coupon-info-modal {
-  font-size: 1.6rem;
-}
-.coupon-modal .coupon-item .coupon-info-modal .coupon-name {
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-.coupon-modal .coupon-item .coupon-info-modal .coupon-expiry {
-  font-size: 1.4rem;
-  color: #666;
-}
-.payment-confirm-modal {
-  z-index: 25;
-}
-.payment-confirm-modal .modal-content {
-  max-width: 420px;
-}
-.payment-confirm-modal .modal-body {
-  padding: 50px 20px;
-  text-align: center;
-}
-.payment-confirm-modal .modal-body .confirm-message {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-top: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  color: #333333;
-}
-.payment-confirm-modal .modal-footer {
-  padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 12px;
-}
-.payment-confirm-modal .modal-footer .move-to-cart,
-.payment-confirm-modal .modal-footer .continue-shopping {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding: 14px 16px;
-  border-radius: 30px;
-  font-size: 1.5rem;
-  font-weight: 500;
-  cursor: pointer;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  border: none;
-}
-.payment-confirm-modal .modal-footer .move-to-cart {
-  background-color: #e0e0e0;
-  color: #333333;
-}
-.payment-confirm-modal .modal-footer .move-to-cart:hover {
-  background-color: #d0d0d0;
-}
-.payment-confirm-modal .modal-footer .continue-shopping {
-  background-color: #000;
-  color: #fff;
-}
-.payment-confirm-modal .modal-footer .continue-shopping:hover {
-  background-color: #333333;
-}
-
-@media screen and (max-width: 1024px) {
-  .container {
-    max-width: 100%;
-    margin-top: 80px;
-  }
-  .checkout-container {
-    max-width: 100%;
-    padding: 0 20px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 2.2rem;
-    margin-bottom: 15px;
-  }
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 14px;
-    padding-bottom: 8px;
-  }
-  section {
-    padding: 15px;
-  }
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 2rem;
-    margin-right: 25px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.6rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
-    margin-bottom: 12px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
-    font-size: 1.8rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
-    font-size: 1.5rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 38px;
-    font-size: 1.4rem;
-  }
-  .order-products .product-list {
-    padding: 0 8px;
-  }
-  .order-products .product-list .product-item {
-    padding: 25px 15px;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 80px;
-    height: 80px;
-    margin-right: 30px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.8rem;
-  }
-  .order-products .product-list .product-item .product-info .product-name {
-    margin-bottom: 6px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    font-size: 2.2rem;
-  }
-  .payment-section .payment-options {
-    padding: 0 10px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.8rem;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    padding: 0 5px;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 80px;
-    font-size: 1.5rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.5rem;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    font-size: 1.3rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1.3rem;
-  }
-  .order-summary .summary-list {
-    padding: 0 15px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 12px;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.6rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.5rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 15px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.7rem;
-  }
-  .payment-methods {
-    margin-bottom: 25px;
-  }
-  .payment-methods .payment-options {
-    padding: 0 8px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 8px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option {
-    margin-right: 15px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.5rem;
-    padding-left: 25px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 14px;
-    height: 14px;
-  }
-  .payment-methods .terms-agreement {
-    padding: 0 10px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1.3rem;
-  }
-  .checkout-button-container {
-    width: 80%;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.8rem;
-    padding: 12px 0;
-    margin-bottom: 80px;
-  }
-  .modal .modal-content, .address-modal .modal-content, .coupon-modal .modal-content, .payment-confirm-modal .modal-content {
-    max-width: 380px;
-  }
-  .modal .modal-header h3, .address-modal .modal-header h3, .coupon-modal .modal-header h3, .payment-confirm-modal .modal-header h3 {
-    font-size: 1.7rem;
-  }
-  .modal .modal-body, .address-modal .modal-body, .coupon-modal .modal-body, .payment-confirm-modal .modal-body {
-    padding: 18px;
-  }
-  .coupon-modal .coupon-number,
-  .coupon-modal .address-number,
-  .address-modal .coupon-number,
-  .address-modal .address-number {
-    font-size: 1.5rem;
-  }
-  .coupon-modal .coupon-info-modal,
-  .coupon-modal .address-info-modal,
-  .address-modal .coupon-info-modal,
-  .address-modal .address-info-modal {
-    font-size: 1.5rem;
-  }
-  .coupon-modal .select-coupon,
-  .coupon-modal .select-address,
-  .address-modal .select-coupon,
-  .address-modal .select-address {
-    font-size: 1.5rem;
-  }
-  .payment-confirm-modal .confirm-message {
-    font-size: 1.9rem;
-  }
-  .payment-confirm-modal .move-to-cart,
-  .payment-confirm-modal .continue-shopping {
-    font-size: 1.4rem;
-    padding: 12px 14px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 10px 0;
-    margin-top: 60px;
-  }
-  .checkout-container {
-    padding: 0 15px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 2rem;
-    margin-bottom: 12px;
-    padding-left: 6px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 12px;
-    text-align: left;
-  }
-  section {
-    padding: 12px 8px;
-  }
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 12px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 1.8rem;
-    margin-right: 20px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.5rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 12px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
-    font-size: 1.6rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
-    font-size: 1.4rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 36px;
-    font-size: 1.3rem;
-    padding: 0 15px;
-  }
-  .order-products .product-list {
-    padding: 0 5px;
-  }
-  .order-products .product-list .product-item {
-    padding: 20px 10px;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 70px;
-    height: 70px;
-    margin-right: 20px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.6rem;
-    padding: 0 8px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    width: 25px;
-    height: 25px;
-    font-size: 2rem;
-  }
-  .payment-section .payment-options {
-    padding: 0 8px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.7rem;
-    margin-bottom: 12px;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    margin-bottom: 12px;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 70px;
-    font-size: 1.4rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.4rem;
-    margin-right: 8px;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    padding: 4px 8px;
-    font-size: 1.2rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-  }
-  .order-summary .summary-list {
-    padding: 0 10px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 10px;
-    padding: 0 3%;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.5rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.4rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 12px;
-    padding-top: 10px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.6rem;
-  }
-  .payment-methods {
-    margin-bottom: 20px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 8px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option {
-    margin-right: 10px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.4rem;
-    padding-left: 22px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 13px;
-    height: 13px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1.2rem;
-    padding-left: 22px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
-    width: 11px;
-    height: 11px;
-  }
-  .checkout-button-container {
-    width: 90%;
-    margin: 25px auto;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.7rem;
-    padding: 12px 0;
-    margin-bottom: 60px;
-  }
-  .modal .modal-content, .address-modal .modal-content, .coupon-modal .modal-content, .payment-confirm-modal .modal-content {
-    max-width: 350px;
-  }
-  .modal .modal-header h3, .address-modal .modal-header h3, .coupon-modal .modal-header h3, .payment-confirm-modal .modal-header h3 {
-    font-size: 1.6rem;
-  }
-  .modal .modal-body, .address-modal .modal-body, .coupon-modal .modal-body, .payment-confirm-modal .modal-body {
-    padding: 15px;
-  }
-  .modal .modal-footer, .address-modal .modal-footer, .coupon-modal .modal-footer, .payment-confirm-modal .modal-footer {
-    padding: 12px 15px;
-  }
-  .coupon-modal .coupon-item,
-  .coupon-modal .address-item,
-  .address-modal .coupon-item,
-  .address-modal .address-item {
-    padding: 10px 8px;
-  }
-  .coupon-modal .coupon-number,
-  .coupon-modal .address-number,
-  .address-modal .coupon-number,
-  .address-modal .address-number {
-    font-size: 1.4rem;
-    margin-right: 10px;
-  }
-  .coupon-modal .coupon-info-modal,
-  .coupon-modal .address-info-modal,
-  .address-modal .coupon-info-modal,
-  .address-modal .address-info-modal {
-    font-size: 1.4rem;
-  }
-  .coupon-modal .coupon-expiry,
-  .address-modal .coupon-expiry {
-    font-size: 1.2rem;
-  }
-  .coupon-modal .select-coupon,
-  .coupon-modal .select-address,
-  .address-modal .select-coupon,
-  .address-modal .select-address {
-    font-size: 1.4rem;
-    padding: 8px 25px;
-  }
-  .payment-confirm-modal .confirm-message {
-    font-size: 1.8rem;
-    margin-top: 15px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
-  }
-  .payment-confirm-modal .modal-footer {
-    padding: 15px;
-  }
-  .payment-confirm-modal .move-to-cart,
-  .payment-confirm-modal .continue-shopping {
-    font-size: 1.4rem;
-    padding: 10px 14px;
-  }
-}
-@media screen and (max-width: 580px) {
-  .container {
-    padding: 5px 0;
-    margin-top: 70px;
-  }
-  .checkout-container {
-    padding: 0 10px;
-    margin-top: 10px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .section-title {
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-  }
-  section {
-    padding: 10px 5px;
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 5px;
-    margin-bottom: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 1.6rem;
-    margin-right: 15px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.4rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
-    font-size: 1.5rem;
-    width: 50%;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
-    font-size: 1.3rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
-    font-size: 1.4rem;
-    margin-bottom: 6px;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 34px;
-    font-size: 1.2rem;
-    padding: 0 10px;
-  }
-  .modal-content {
-    width: 95%;
-    max-width: 320px;
-    border-radius: 10px;
-  }
-  .modal-header {
-    padding: 12px 15px;
-  }
-  .modal-header h3 {
-    font-size: 1.6rem;
-  }
-  .close-modal {
-    font-size: 2rem;
-  }
-  .modal-body {
-    padding: 15px;
-  }
-  .address-item {
-    padding: 10px 8px;
-  }
-  .address-number {
-    font-size: 1.4rem;
-    margin-right: 10px;
-  }
-  .address-info-modal {
-    font-size: 1.4rem;
-  }
-  .modal-footer {
-    padding: 12px 15px;
-  }
-  .select-address {
-    border-radius: 20px;
-    padding: 8px 25px;
-    font-size: 1.5rem;
-    width: 85%;
-  }
-  .order-products .product-list {
-    padding: 0;
-  }
-  .order-products .product-list .product-item {
-    padding: 15px 5px;
-    margin: 3px 0;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.5rem;
-    padding: 0 5px;
-  }
-  .order-products .product-list .product-item .product-info .product-name {
-    margin-bottom: 5px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    width: 22px;
-    height: 22px;
-    font-size: 1.8rem;
-  }
-  .payment-section .payment-options {
-    padding: 0 5px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    margin-bottom: 10px;
-    padding: 0;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 60px;
-    font-size: 1.3rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.3rem;
-    margin-right: 5px;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    padding: 3px 6px;
-    font-size: 1.1rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1.1rem;
-    margin-bottom: 12px;
-    text-align: right;
-  }
-  .coupon-modal .modal-content {
-    width: 95%;
-    max-width: 320px;
-    border-radius: 10px;
-  }
-  .coupon-modal .modal-header {
-    padding: 12px 15px;
-  }
-  .coupon-modal .modal-header h3 {
-    font-size: 1.6rem;
-  }
-  .coupon-modal .close-modal {
-    font-size: 1.8rem;
-  }
-  .coupon-modal .modal-body {
-    padding: 15px;
-  }
-  .coupon-item {
-    padding: 10px 8px;
-  }
-  .coupon-number {
-    font-size: 1.4rem;
-    margin-right: 10px;
-  }
-  .coupon-info-modal {
-    font-size: 1.4rem;
-  }
-  .coupon-name {
-    margin-bottom: 3px;
-  }
-  .coupon-expiry {
-    font-size: 1.2rem;
-  }
-  .coupon-modal .modal-footer {
-    padding: 12px 15px;
-  }
-  .coupon-modal .select-coupon {
-    border-radius: 20px;
-    padding: 8px 25px;
-    font-size: 1.4rem;
-  }
-  .order-summary .summary-list {
-    padding: 0 5px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 8px;
-    padding: 0;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.4rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.3rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 10px;
-    padding-top: 8px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.5rem;
-  }
-  .payment-methods {
-    margin-bottom: 15px;
-  }
-  .payment-methods .payment-options {
-    padding: 0 5px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px 5px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option {
-    margin-right: 0;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.3rem;
-    padding-left: 20px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 12px;
-    height: 12px;
-  }
-  .payment-methods .terms-agreement {
-    padding: 0 5px;
-    margin-top: 8px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1.1rem;
-    padding-left: 20px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
-    width: 10px;
-    height: 10px;
-  }
-  .checkout-button-container {
-    width: 100%;
-    margin: 20px auto;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.6rem;
-    padding: 10px 0;
-    margin-bottom: 50px;
-    border-radius: 8px;
-  }
-  .payment-confirm-modal .modal-content {
-    max-width: 340px;
-  }
-  .payment-confirm-modal .modal-body {
-    padding: 30px 15px;
-  }
-  .payment-confirm-modal .confirm-message {
-    font-size: 1.6rem;
-    margin-top: 12px;
-  }
-  .payment-confirm-modal .modal-footer {
-    padding: 15px;
-    gap: 10px;
-  }
-  .payment-confirm-modal .move-to-cart,
-  .payment-confirm-modal .continue-shopping {
-    font-size: 1.3rem;
-    padding: 10px 12px;
-    border-radius: 25px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .container {
-    padding: 3px 0;
-    margin-top: 70px;
-  }
-  .checkout-container {
-    padding: 0 8px;
-    margin-top: 5px;
-  }
-  .checkout-container .checkout-title {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    padding-left: 5px;
-  }
-  .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 8px;
-    padding-bottom: 3px;
-  }
-  section {
-    padding: 8px 3px;
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector {
-    padding: 0 3px;
-    margin-bottom: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label {
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
-    font-size: 1.3rem;
-    margin-right: 10px;
-  }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
-    font-size: 1.2rem;
-  }
-  .checkout-container .shipping-section .address-selector .address-info {
-    margin-bottom: 8px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
-    margin-bottom: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
-    font-size: 1.4rem;
-    width: 100%;
-    margin-bottom: 5px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
-    font-size: 1.2rem;
-    margin-top: 3px;
-  }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
-    font-size: 1.3rem;
-    margin-bottom: 5px;
-  }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
-    height: 28px;
-    font-size: 1.2rem;
-    padding: 0 8px;
-  }
-  .modal-content {
-    width: 98%;
-    max-width: 300px;
-    border-radius: 8px;
-  }
-  .modal-header {
-    padding: 10px 12px;
-  }
-  .modal-header h3 {
-    font-size: 1.5rem;
-  }
-  .close-modal {
-    font-size: 1.8rem;
-  }
-  .modal-body {
-    padding: 12px 10px;
-  }
-  .address-item {
-    padding: 8px 6px;
-  }
-  .address-number {
-    font-size: 1.3rem;
-    margin-right: 8px;
-  }
-  .address-info-modal {
-    font-size: 1.3rem;
-  }
-  .modal-footer {
-    padding: 10px 12px;
-  }
-  .select-address {
-    border-radius: 18px;
-    padding: 7px 20px;
-    font-size: 1.4rem;
-    width: 90%;
-  }
-  .order-products .product-list {
-    padding: 0;
-  }
-  .order-products .product-list .product-item {
-    padding: 12px 3px;
-    margin: 2px 0;
-  }
-  .order-products .product-list .product-item .product-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  .order-products .product-list .product-item .product-info {
-    font-size: 1.4rem;
-    padding: 0 3px;
-  }
-  .order-products .product-list .product-item .product-info .product-name {
-    margin-bottom: 3px;
-  }
-  .order-products .product-list .product-item .remove-product {
-    width: 20px;
-    height: 20px;
-    font-size: 1.6rem;
-  }
-  .payment-section .payment-options {
-    padding: 0 3px;
-  }
-  .payment-section .payment-options .subsection-title {
-    font-size: 1.4rem;
-    margin-bottom: 8px;
-  }
-  .payment-section .payment-options .coupon-row,
-  .payment-section .payment-options .points-row {
-    margin-bottom: 8px;
-    padding: 0;
-  }
-  .payment-section .payment-options .coupon-row .option-label,
-  .payment-section .payment-options .points-row .option-label {
-    width: 55px;
-    font-size: 1.2rem;
-  }
-  .payment-section .payment-options .coupon-row .option-value,
-  .payment-section .payment-options .points-row .option-value {
-    font-size: 1.2rem;
-    margin-right: 3px;
-  }
-  .payment-section .payment-options .coupon-row .option-button,
-  .payment-section .payment-options .points-row .option-button {
-    padding: 2px 5px;
-    font-size: 1rem;
-  }
-  .payment-section .payment-options .option-info {
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-align: right;
-  }
-  .coupon-modal .modal-content {
-    width: 98%;
-    max-width: 300px;
-    border-radius: 8px;
-  }
-  .coupon-modal .modal-header {
-    padding: 10px 12px;
-  }
-  .coupon-modal .modal-header h3 {
-    font-size: 1.5rem;
-  }
-  .coupon-modal .close-modal {
-    font-size: 1.7rem;
-  }
-  .coupon-modal .modal-body {
-    padding: 12px 10px;
-  }
-  .coupon-item {
-    padding: 8px 6px;
-  }
-  .coupon-number {
-    font-size: 1.3rem;
-    margin-right: 8px;
-  }
-  .coupon-info-modal {
-    font-size: 1.3rem;
-  }
-  .coupon-name {
-    font-size: 1.3rem;
-  }
-  .coupon-expiry {
-    font-size: 1.1rem;
-  }
-  .coupon-modal .modal-footer {
-    padding: 10px 12px;
-  }
-  .coupon-modal .select-coupon {
-    border-radius: 18px;
-    padding: 7px 20px;
-    font-size: 1.3rem;
-    width: 90%;
-  }
-  .order-summary .summary-list {
-    padding: 0 3px;
-  }
-  .order-summary .summary-list .summary-row {
-    margin-bottom: 6px;
-    padding: 0;
-  }
-  .order-summary .summary-list .summary-row .summary-label {
-    font-size: 1.3rem;
-  }
-  .order-summary .summary-list .summary-row .summary-amount {
-    font-size: 1.2rem;
-  }
-  .order-summary .summary-list .summary-row.total {
-    margin-top: 8px;
-    padding-top: 6px;
-  }
-  .order-summary .summary-list .summary-row.total .summary-label,
-  .order-summary .summary-list .summary-row.total .summary-amount {
-    font-size: 1.4rem;
-  }
-  .payment-methods {
-    margin-bottom: 12px;
-  }
-  .payment-methods .payment-options {
-    padding: 0 3px;
-  }
-  .payment-methods .payment-options .payment-options-list {
-    grid-template-columns: 1fr 1fr;
-    gap: 6px 3px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
-    font-size: 1.2rem;
-    padding-left: 18px;
-  }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
-    width: 11px;
-    height: 11px;
-  }
-  .payment-methods .terms-agreement {
-    padding: 0 3px;
-    margin-top: 6px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
-    font-size: 1rem;
-    padding-left: 18px;
-  }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
-    width: 9px;
-    height: 9px;
-  }
-  .checkout-button-container {
-    width: 100%;
-    margin: 15px auto;
-  }
-  .checkout-button-container .checkout-button {
-    font-size: 1.5rem;
-    padding: 8px 0;
-    margin-bottom: 40px;
-    border-radius: 6px;
-  }
-  .payment-confirm-modal .modal-content {
-    max-width: 290px;
-  }
-  .payment-confirm-modal .modal-body {
-    padding: 20px 10px;
-  }
-  .payment-confirm-modal .confirm-message {
-    font-size: 1.5rem;
-    margin-top: 10px;
-  }
-  .payment-confirm-modal .modal-footer {
-    padding: 10px;
-    gap: 8px;
-  }
-  .payment-confirm-modal .move-to-cart,
-  .payment-confirm-modal .continue-shopping {
-    font-size: 1.1rem;
-    padding: 7px;
-    border-radius: 18px;
-  }
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
