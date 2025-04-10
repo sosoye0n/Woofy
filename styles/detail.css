@@ -3,7 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -38,8 +39,12 @@ header {
   width: 100%;
   height: 100%;
   z-index: 5;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .cart-modal .modal-content {
   background-color: #fff;
@@ -49,11 +54,21 @@ header {
   max-width: 400px;
   width: 90%;
   height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 .cart-modal .modal-content p {
   font-size: 1.8rem;
@@ -61,17 +76,22 @@ header {
   font-weight: "Figtree";
 }
 .cart-modal .modal-content .modal-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 50px;
   gap: 10px;
 }
 .cart-modal .modal-content .modal-buttons button {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 12px 0;
   border-radius: 30px;
   font-size: 1.4rem;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 .cart-modal .modal-content .modal-buttons .move-to-cart-btn {
@@ -91,6 +111,8 @@ header {
   background-color: #333333;
 }
 .cart-modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -101,13 +123,22 @@ header {
   background: #fff;
 }
 .tablet-navigation .tablet-nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-headers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 15px 0;
   cursor: pointer;
 }
@@ -115,7 +146,9 @@ header {
   font-weight: bold;
   font-size: 1.8rem;
   text-align: center;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   position: relative;
   padding-bottom: 5px;
 }
@@ -126,16 +159,28 @@ header {
   color: #99bdff;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   gap: 10%;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column:first-child {
@@ -165,9 +210,15 @@ header {
   font-weight: 600;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item.with-dot {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item .color-dot {
   width: 20px;
@@ -209,18 +260,30 @@ header {
   margin-bottom: 20px;
 }
 .sidebar section .title-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px solid #d3d3d3;
 }
 .sidebar section .title-top h2 {
   font-size: 18px;
   font-weight: bold;
   padding: 15px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
 }
 .sidebar section .title-top i {
@@ -229,9 +292,14 @@ header {
   cursor: pointer;
 }
 .sidebar section .subcategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   gap: 10px;
   padding: 10px;
@@ -243,10 +311,14 @@ header {
   width: calc(50% - 5px);
   text-decoration: none;
   color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 40px;
   padding: 20px 10px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 10px;
   border: 1px solid #d3d3d3;
   padding: 10px;
@@ -334,6 +406,7 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
 .content-inner .content-area .product-grid .product-row .product-item .product-link .product-image .first-img {
@@ -379,12 +452,19 @@ header {
   font-size: 1.6rem;
   width: 24px;
   height: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #d9d9d9;
   color: #fff;
   border-radius: 50%;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info i:hover {
@@ -395,10 +475,15 @@ header {
 }
 .content-inner .pagination {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 50px 0 30px;
   width: 100%;
+  /* 콘텐츠 영역 조정 */
 }
 .content-inner .pagination .prev-page,
 .content-inner .pagination .next-page {
@@ -533,6 +618,8 @@ header {
 }
 @media screen and (max-width: 580px) {
   .tablet-navigation .tablet-nav-container .tablet-nav-headers {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
@@ -551,8 +638,11 @@ header {
     white-space: nowrap;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -572,6 +662,8 @@ header {
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column:nth-child(2) .nav-item.with-dot {
     padding-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -656,8 +748,12 @@ header {
     height: 12px;
     display: flex;
     padding-left: 10px;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot .color-dot {
     width: 12px;
