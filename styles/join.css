@@ -30,9 +30,9 @@ main {
 
 main {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -42,9 +42,10 @@ main {
 }
 main #allContainer {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -69,12 +70,9 @@ main #allContainer p {
   font-weight: 300;
 }
 main #allContainer #join {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 420px;
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -95,7 +93,6 @@ main #allContainer #join input:not(input[type=button]) {
   background: #f5f5f5;
   color: #dadada;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #allContainer #join input:not(input[type=button]):focus {
@@ -111,7 +108,6 @@ main #allContainer #join input[type=button] {
   background: #000;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #allContainer #join input[type=button]:hover {
@@ -120,9 +116,8 @@ main #allContainer #join input[type=button]:hover {
   color: #fff;
 }
 main #allContainer #join #joinBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -135,7 +130,6 @@ main #allContainer #join #joinBox .joinInput {
 }
 main #allContainer #join #joinBox .joinInput input {
   padding-left: 20px;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main #allContainer #join #joinBox .joinInput input:hover {

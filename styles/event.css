@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -34,9 +35,9 @@ main #container01 .eventHeader {
 }
 main #container01 .eventBtn {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -50,9 +51,9 @@ main #container01 .eventBtn p {
   font-size: 3rem;
   font-weight: bold;
   border-bottom: 1px solid #dadada;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -79,7 +80,6 @@ main #container01 #eventModal #modalBg {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: none;
 }
@@ -100,6 +100,8 @@ main #container01 #eventModal #modalBg .modalContents .modalContent {
   border-radius: 18px;
   background-color: #fff;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -140,6 +142,9 @@ main
   .modalContent
   .modalTitle {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -213,7 +218,6 @@ main
   border-radius: 12px;
   background: #99bdff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main
@@ -229,9 +233,10 @@ main
 }
 main #container01 .event01 {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -257,9 +262,9 @@ main #container01 .event01 .event01Wrapper .textWrapper {
 main #container01 .event01 .event01Wrapper .textWrapper h1 {
   width: 100%;
   height: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -271,9 +276,10 @@ main #container01 .event01 .event01Wrapper .textWrapper h1 {
   text-shadow: 0px 3px 0px rgba(255, 255, 255, 0.8);
 }
 main #container01 .event01 .event01Wrapper .textWrapper .left {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -292,9 +298,9 @@ main #container01 .event01 .event01Wrapper .textWrapper .left img {
   height: 100px;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .left p {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: left;
+  align-items: center;
   -webkit-box-pack: left;
   -ms-flex-pack: left;
   justify-content: left;
@@ -307,9 +313,10 @@ main #container01 .event01 .event01Wrapper .textWrapper .left p {
   background: #f2f2f2;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -327,9 +334,9 @@ main #container01 .event01 .event01Wrapper .textWrapper .right p {
   border-radius: 40px;
   font: normal 1.8rem/1 "Figtree";
   background: #3698fb;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: right;
+  align-items: center;
   -webkit-box-pack: right;
   -ms-flex-pack: right;
   justify-content: right;
@@ -340,7 +347,6 @@ main #container01 .event01 .event01Wrapper .textWrapper .right p {
 main #container01 .event01 .event01Wrapper .textWrapper .right .coupon {
   font-weight: 600;
   cursor: pointer;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 main #container01 .event01 .event01Wrapper .textWrapper .right .coupon:hover {
@@ -361,9 +367,10 @@ main #container01 .event01 .eventSec p b {
   color: #99bdff;
 }
 main #container01 .event01 .slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -376,9 +383,8 @@ main #container01 .event01 .slide {
   align-items: center;
 }
 main #container01 .event01 .slide .imgSlider1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -387,14 +393,14 @@ main #container01 .event01 .slide .imgSlider1 {
   overflow: hidden;
 }
 main #container01 .event01 .slide .imgSlider1:hover .track1 {
+  animation-play-state: paused;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 main #container01 .event01 .slide .imgSlider1 .track1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   will-change: transform;
+  animation: scrolling 18s linear infinite both;
   -webkit-animation: scrolling 18s linear infinite both;
   animation: scrolling 18s linear infinite both;
 }
@@ -405,9 +411,8 @@ main #container01 .event01 .slide .imgSlider1 .track1 img {
   object-fit: cover;
 }
 main #container01 .event01 .slide .imgSlider2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -416,23 +421,22 @@ main #container01 .event01 .slide .imgSlider2 {
   overflow: hidden;
 }
 main #container01 .event01 .slide .imgSlider2:hover .track2 {
+  animation-play-state: paused;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 main #container01 .event01 .slide .imgSlider2 .track2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   will-change: transform;
+  animation: scrolling-r 18s linear infinite both;
   -webkit-animation: scrolling-r 18s linear infinite both;
   animation: scrolling-r 18s linear infinite both;
 }
 main #container01 .event01 .slide .imgSlider2 .track2 img {
   width: 240px;
   height: 280px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -500,8 +504,6 @@ main #container01 .event01-1 .conWrapper .swiper .swiper-button-prev {
   color: #fff;
 }
 main #container01 .event01-1 .conWrapper .contents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -611,9 +613,9 @@ main
 main #container01 .event01-1 .conWrapper .contents .contentList02 {
   width: 460px;
   gap: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -647,9 +649,9 @@ main
 main #container01 .event01-1 .conWrapper .contents .contentList02 .content {
   width: 240px;
   gap: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -822,8 +824,6 @@ main #container01 .event01-2 .conImg {
   width: 50%;
   height: 100%;
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 main #container01 .event01-2 .conImg img {
@@ -843,6 +843,8 @@ main #container01 .event01-2 .cap {
   transform: rotate(4deg);
 }
 main #container01 .event01-2 .cap:hover {
+  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+  transform: rotate(14deg);
   -webkit-filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
   filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
   -webkit-transform: rotate(14deg);
@@ -856,6 +858,8 @@ main #container01 .event01-2 .clothe {
   cursor: pointer;
 }
 main #container01 .event01-2 .clothe:hover {
+  filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
+  transform: rotate(-14deg);
   -webkit-filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
   filter: drop-shadow(0 0 10px white) drop-shadow(0 0 1px white);
   -webkit-transform: rotate(-14deg);
@@ -865,9 +869,10 @@ main #container02 {
   width: 100%;
   background-color: #000;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -885,9 +890,9 @@ main #container02 .eventBtn {
   top: 0;
   left: 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -901,9 +906,9 @@ main #container02 .eventBtn p {
   font-size: 3rem;
   font-weight: bold;
   border-bottom: 0.2px solid #dadada;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -911,7 +916,6 @@ main #container02 .eventBtn p {
   -ms-flex-align: center;
   align-items: center;
   background-color: #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -925,9 +929,10 @@ main #container02 .eventBtn p:nth-child(2) {
 }
 main #container02 .event2 {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -943,6 +948,9 @@ main #container02 .event2 {
 main #container02 .event2 .event02 {
   margin-top: 16%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -960,9 +968,8 @@ main #container02 .event2 .event02 ul {
   color: #fff;
   font-size: 9rem;
   margin-bottom: 8%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -973,9 +980,9 @@ main #container02 .event2 .event02 ul li {
   font-style: italic;
 }
 main #container02 .event2 .event02 ul li:nth-child(1) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: start;
+  align-items: center;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: start;
@@ -984,9 +991,9 @@ main #container02 .event2 .event02 ul li:nth-child(1) {
   align-items: center;
 }
 main #container02 .event2 .event02 ul li:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: end;
+  align-items: center;
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: end;
@@ -1013,6 +1020,8 @@ main #container02 .event2 .event02 .countdown {
   width: 500px;
   margin: 20%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1029,9 +1038,9 @@ main #container02 .event2 .event02 .countdown span {
   margin-right: 10px;
 }
 main #container02 .event2 .event02 .drawBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1046,7 +1055,6 @@ main #container02 .event2 .event02 .drawBtn {
   background: inherit;
   color: #fff;
   border: 1px solid #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -1096,9 +1104,9 @@ main #container02 #drawModal #modalDrawBg {
   left: 0;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  justify-content: center;
+  align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1106,7 +1114,6 @@ main #container02 #drawModal #modalDrawBg {
   -ms-flex-align: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   display: none;
 }
@@ -1162,6 +1169,9 @@ main
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -1225,7 +1235,6 @@ main
   background: #000;
   color: #99bdff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main
@@ -1253,10 +1262,12 @@ main
 
 @keyframes scrolling {
   0% {
+    transform: translateX(0);
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
+    transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
@@ -1273,10 +1284,12 @@ main
 }
 @keyframes scrolling-r {
   0% {
+    transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
   100% {
+    transform: translateX(0);
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
@@ -2558,9 +2571,10 @@ main
     height: 160px;
   }
   main #container01 .event01-1 .conWrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
