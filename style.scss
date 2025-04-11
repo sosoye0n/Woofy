@@ -53,7 +53,7 @@ header {
       align-items: center;
       gap: 20px;
       li {
-        &:nth-child(4) {
+        &:nth-child(5) {
           opacity: 0;
           visibility: hidden;
           position: absolute;
@@ -151,7 +151,6 @@ header {
 }
 #searchWrap {
   position: fixed;
-  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
@@ -246,7 +245,7 @@ header {
     }
   }
   &.active {
-    z-index: 4;
+    z-index: 20;
     #searchBg {
       opacity: 1;
     }
@@ -256,7 +255,7 @@ header {
   }
 }
 main {
-  margin-top: 70px;
+  margin-top: 60px;
   transition: all 0.5s;
 }
 footer {
@@ -353,7 +352,7 @@ footer {
           width: 100%;
           text-indent: 3%;
           width: 100%;
-          &:nth-child(4) {
+          &:nth-child(5) {
             opacity: 1;
             visibility: visible;
             position: static;

@@ -301,6 +301,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const timer = setInterval(updateCountdown, 1000);
   }
 
-  const targetDate = new Date("2025-04-11T14:30:00").getTime();
+  const targetDate = new Date("2025-04-11T18:20:00").getTime();
   startCountdown(targetDate);
 });

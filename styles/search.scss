@@ -1,0 +1,169 @@
+// reset & variables
+@import "./reset.scss";
+@import "./variables.scss";
+
+main {
+  background-color: map-get($map: $color, $key: light);
+  margin-top: 60px;
+  padding: 3%;
+  min-height: 100vh;
+  h2 {
+    font-size: 3rem;
+    span {
+      font-weight: normal;
+    }
+  }
+  .filterWrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 40px 0;
+    border: 1px solid map-get($map: $color, $key: box);
+    padding-left: 10px;
+    p {
+      padding: 10px 0;
+      span {
+        font-weight: bold;
+      }
+    }
+    select {
+      width: 8%;
+      border: none;
+      border-left: 1px solid map-get($map: $color, $key: box);
+    }
+  }
+  #searchResult {
+    .nothingSearch {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      font-size: 2rem;
+      gap: 10px;
+      color: map-get($map: $color, $key: input);
+      i {
+        font-size: 6rem;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  section {
+    width: 100%;
+    background: map-get($map: $color, $key: light);
+    display: flex;
+    justify-content: center;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      .itemBox {
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          position: relative;
+          &:hover {
+            .itemImg img:nth-child(2) {
+              opacity: 1;
+            }
+            .itemImg img:nth-child(1) {
+              opacity: 0;
+            }
+          }
+          .itemImg {
+            width: 100%;
+            img {
+              width: 100%;
+              aspect-ratio: 1/1;
+              height: auto;
+              object-fit: cover;
+              filter: brightness(0.95);
+              transition: all 0.3s;
+              &:nth-child(2) {
+                opacity: 0;
+                position: absolute;
+                left: 0;
+                top: 0;
+              }
+            }
+          }
+          .itemText {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 30px;
+            p {
+              font-size: 1.4rem;
+              &:first-child {
+                font-weight: bold;
+                color: map-get($map: $color, $key: point);
+              }
+              &:nth-child(2) {
+                font-size: 1.6rem;
+              }
+              &:nth-child(3) {
+                span {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1624px) {
+  main {
+    .filterWrap {
+      select {
+        width: 12%;
+      }
+    }
+  }
+}
+// 반응형 tablet
+@media screen and (max-width: 1024px) {
+  main {
+    h2 {
+      font-size: 2.4rem;
+      margin-top: 30px;
+    }
+    .filterWrap {
+      select {
+        width: 15%;
+      }
+    }
+    section {
+      ul {
+        width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}
+
+// 반응형 모바일
+@media screen and (max-width: 767px) {
+  main {
+    .filterWrap {
+      select {
+        width: 20%;
+      }
+    }
+    section {
+      ul {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
+  }
+}

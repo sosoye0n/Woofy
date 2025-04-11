@@ -1,4 +1,4 @@
-// detail.js - 최종 완성본
+// detail.js - 최종 완성본 (색상 선택 기능 포함)
 
 // 전역 변수로 선언하여 여러 함수에서 접근 가능하게 함
 let selectedCategory = "";
@@ -368,11 +368,26 @@ function applyFilters() {
   // 카테고리와 브랜드 필터링 함께 적용
   let filteredProducts = originalAllProducts;
 
-  // 카테고리 필터 적용
+  // 카테고리 필터 적용 - luxury와 luxery 모두 처리
   if (selectedCategory) {
-    filteredProducts = filteredProducts.filter(
-      (product) => product.category === selectedCategory
-    );
+    // luxury/luxery 일치 문제 해결
+    if (
+      selectedCategory.toLowerCase() === "luxury" ||
+      selectedCategory.toLowerCase() === "luxery"
+    ) {
+      filteredProducts = filteredProducts.filter(
+        (product) =>
+          product.category &&
+          (product.category.toLowerCase() === "luxury" ||
+            product.category.toLowerCase() === "luxery")
+      );
+    } else {
+      filteredProducts = filteredProducts.filter(
+        (product) =>
+          product.category &&
+          product.category.toLowerCase() === selectedCategory.toLowerCase()
+      );
+    }
   }
 
   // 브랜드 필터 적용
@@ -403,55 +418,74 @@ function applyFilters() {
   currentPageGroup = 1;
 }
 
-// 썸네일 이미지 업데이트 + 페이지네이션
-document.addEventListener("DOMContentLoaded", async function () {
-  // 브랜드 필터 선택자들 - 모든 사이드바 카테고리(BRANDS와 Luxery)의 아이템들과 태블릿 네비게이션 포함
+// 브랜드 필터 함수 (색상 기능이 구현된 버전)
+function initBrandFilters() {
+  // 브랜드 필터 요소들 선택
   const brandItems = document.querySelectorAll(
     ".sidebar .category .subcategory .item, " +
       ".tablet-nav-container .nav-column .nav-item"
   );
 
-  // 브랜드 필터 이벤트 리스너
+  // 브랜드 필터 이벤트 리스너 추가
   brandItems.forEach((item) => {
+    // 저장된 선택 상태 복원
+    const brandName = item.textContent.trim();
+    const brandValue = item.getAttribute("data-brand") || brandName;
+
+    if (selectedBrands.includes(brandValue)) {
+      item.classList.add("selected");
+    }
+
+    // 클릭 이벤트 처리
     item.addEventListener("click", function (e) {
       e.preventDefault();
-      const brandName = this.textContent.trim();
 
-      // data-brand 속성이 있으면 그 값을 사용하고, 없으면 텍스트 콘텐츠 사용
+      const brandName = this.textContent.trim();
       const brandValue = this.getAttribute("data-brand") || brandName;
 
       // 토글 선택
       if (selectedBrands.includes(brandValue)) {
+        // 이미 선택된 경우 선택 해제
         selectedBrands = selectedBrands.filter((brand) => brand !== brandValue);
         this.classList.remove("selected");
       } else {
+        // 선택되지 않은 경우 선택
         selectedBrands.push(brandValue);
         this.classList.add("selected");
       }
 
-      // 모든 선택된 브랜드 아이템에 대해 선택 상태 동기화
+      // 동일한 브랜드를 가진 다른 요소들의 선택 상태 동기화
       syncBrandSelections(brandValue);
 
       // 필터 적용
       applyFilters();
     });
   });
+}
 
-  // 브랜드 선택 상태 동기화 함수 - 모든 카테고리(BRANDS, Luxery)에 적용
-  function syncBrandSelections(brandValue) {
-    brandItems.forEach((item) => {
-      const itemBrand =
-        item.getAttribute("data-brand") || item.textContent.trim();
-      if (itemBrand === brandValue) {
-        if (selectedBrands.includes(brandValue)) {
-          item.classList.add("selected");
-        } else {
-          item.classList.remove("selected");
-        }
+// 브랜드 선택 상태 동기화 함수
+function syncBrandSelections(brandValue) {
+  const brandItems = document.querySelectorAll(
+    ".sidebar .category .subcategory .item, " +
+      ".tablet-nav-container .nav-column .nav-item"
+  );
+
+  brandItems.forEach((item) => {
+    const itemBrand =
+      item.getAttribute("data-brand") || item.textContent.trim();
+
+    if (itemBrand === brandValue) {
+      if (selectedBrands.includes(brandValue)) {
+        item.classList.add("selected");
+      } else {
+        item.classList.remove("selected");
       }
-    });
-  }
+    }
+  });
+}
 
+// 썸네일 이미지 업데이트 + 페이지네이션
+document.addEventListener("DOMContentLoaded", async function () {
   try {
     // JSON 데이터 로드
     const productGrid = document.querySelector(".product-grid");
@@ -472,9 +506,24 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // URL에서 선택된 카테고리가 있는 경우, 해당 카테고리의 제품만 필터링
     if (selectedCategory) {
-      allProducts = originalAllProducts.filter(
-        (product) => product.category === selectedCategory
-      );
+      // luxury/luxery 일치 문제 해결
+      if (
+        selectedCategory.toLowerCase() === "luxury" ||
+        selectedCategory.toLowerCase() === "luxery"
+      ) {
+        allProducts = originalAllProducts.filter(
+          (product) =>
+            product.category &&
+            (product.category.toLowerCase() === "luxury" ||
+              product.category.toLowerCase() === "luxery")
+        );
+      } else {
+        allProducts = originalAllProducts.filter(
+          (product) =>
+            product.category &&
+            product.category.toLowerCase() === selectedCategory.toLowerCase()
+        );
+      }
     } else {
       allProducts = [...originalAllProducts];
     }
@@ -487,8 +536,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         productGrid.classList.remove("loading");
       }
     }, 100);
+
+    // 브랜드 필터 초기화 - DOM 완전 로드 후
+    initBrandFilters();
   } catch (error) {
-    console.error("데이터를 가져오는 중 오류 발생:", error);
     const productGrid = document.querySelector(".product-grid");
     if (productGrid) {
       productGrid.classList.remove("loading");
@@ -523,7 +574,6 @@ document.addEventListener("DOMContentLoaded", async function () {
   function initPagination(totalPages) {
     const pagination = document.querySelector(".pagination");
     if (!pagination) {
-      console.warn("페이지네이션 요소를 찾을 수 없습니다.");
       return;
     }
 
@@ -609,8 +659,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 async function updateProductItems(products, recreateDOM = false) {
   if (!products || products.length === 0) {
-    console.warn("업데이트할 제품 데이터가 없습니다.");
-
     // 제품이 없을 때 "제품이 없습니다" 메시지 표시
     const productGrid = document.querySelector(".product-grid");
     if (productGrid) {
@@ -635,7 +683,6 @@ async function updateProductItems(products, recreateDOM = false) {
     if (recreateDOM) {
       // DOM 요소 새로 생성 방식 (페이지 변경 시)
       if (!productGrid) {
-        console.warn("제품 그리드 컨테이너를 찾을 수 없습니다.");
         return;
       }
 
@@ -655,9 +702,7 @@ async function updateProductItems(products, recreateDOM = false) {
             const productItem =
               createProductItemWithExistingStructure(productData);
             productRow.appendChild(productItem);
-          } catch (error) {
-            console.error(`제품 ${i + j + 1} 업데이트 중 오류 발생:`, error);
-          }
+          } catch (error) {}
         }
 
         productGrid.appendChild(productRow);
@@ -679,9 +724,7 @@ async function updateProductItems(products, recreateDOM = false) {
                 try {
                   const url = new URL(productLink.href, window.location.origin);
                   productId = url.searchParams.get("id");
-                } catch (err) {
-                  console.error("URL 파싱 오류:", err);
-                }
+                } catch (err) {}
               }
             }
 
@@ -735,7 +778,6 @@ async function updateProductItems(products, recreateDOM = false) {
       // 기존 DOM 요소 업데이트 방식 (첫 로드 시)
       const productItems = document.querySelectorAll(".product-item");
       if (productItems.length === 0) {
-        console.warn("업데이트할 제품 아이템이 HTML에 없습니다.");
         return;
       }
 
@@ -751,9 +793,7 @@ async function updateProductItems(products, recreateDOM = false) {
 
           // 텍스트 정보 업데이트
           updateProductInfo(productItem, productData);
-        } catch (error) {
-          console.error(`제품 ${i + 1} 업데이트 중 오류 발생:`, error);
-        }
+        } catch (error) {}
       }
     }
 
@@ -794,7 +834,6 @@ function updateProductImages(productItem, productData) {
     secondImg.src = productData["detail-product"].subImg01;
     secondImg.alt = productData.name || "";
     productImageDiv.appendChild(secondImg);
-  } else {
   }
 }
 
