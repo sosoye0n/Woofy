@@ -1,7 +1,7 @@
 const cap = document.querySelector(".cap");
 const clothe = document.querySelector(".clothe");
 cap.addEventListener("click", () => {
-  window.location.href = `detail-product.html?id=0`;
+  window.location.href = `detail-product.html?id=500`;
 });
 clothe.addEventListener("click", () => {
   window.location.href = `detail-product.html?id=15`;

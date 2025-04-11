@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -16,7 +17,7 @@ a {
 }
 
 header {
-  z-index: 10;
+  z-index: 1;
 }
 
 body {
@@ -29,32 +30,62 @@ main {
 
 main {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 100px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main #allContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 70px 0;
   text-transform: uppercase;
   margin-top: 0;
 }
-main h2 {
+main #allContainer h2 {
   font-size: 2.6rem;
   font-weight: 600;
 }
-main p {
+main #allContainer p {
   margin-top: 10px;
   font-size: 1.2rem;
   font-weight: 300;
 }
-main #join {
+main #allContainer #join {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   width: 420px;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
-main #join input:not(input[type=button]) {
+main #allContainer #join input:not(input[type=button]) {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -64,12 +95,13 @@ main #join input:not(input[type=button]) {
   background: #f5f5f5;
   color: #dadada;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-main #join input:not(input[type=button]):focus {
+main #allContainer #join input:not(input[type=button]):focus {
   outline: none;
 }
-main #join input[type=button] {
+main #allContainer #join input[type=button] {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -79,81 +111,85 @@ main #join input[type=button] {
   background: #000;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-main #join input[type=button]:hover {
+main #allContainer #join input[type=button]:hover {
   outline: none;
   background: #99bdff;
   color: #fff;
 }
-main #join #inputBtn #finalBtn {
-  margin-bottom: 10px;
-}
-main #join #joinBox {
+main #allContainer #join #joinBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
   gap: 8px;
-  margin-bottom: 30px;
 }
-main #join #joinBox .joinInput {
+main #allContainer #join #joinBox .joinInput {
   position: relative;
 }
-main #join #joinBox .joinInput input {
+main #allContainer #join #joinBox .joinInput input {
   padding-left: 20px;
+  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-main #join #joinBox .joinInput input:hover {
+main #allContainer #join #joinBox .joinInput input:hover {
   border: 1px solid #dadada;
   background: #fff;
   color: #000;
   font-weight: 700;
 }
-main #join #joinBox .error {
+main #allContainer #join #joinBox .error {
   font-size: 1.1rem;
-  margin-top: 12px;
+  margin: 8px;
   font-weight: 500;
   color: #99bdff;
 }
-main #join #joinBox .error i {
+main #allContainer #join #joinBox .error i {
   font-size: 1.2rem;
   padding: 0 2px;
   color: #99bdff;
 }
 
 @media screen and (max-width: 767px) {
-  main h2 {
+  main #allContainer h2 {
     font-size: 2.6rem;
   }
-  main p {
+  main #allContainer p {
     margin-top: 8px;
     font-size: 1.2rem;
   }
-  main #join {
+  main #allContainer #join {
     width: 280px;
     margin-top: 30px;
   }
-  main #join input:not(input[type=button]) {
+  main #allContainer #join input:not(input[type=button]) {
     width: 320px;
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
   }
-  main #join input[type=button] {
+  main #allContainer #join input[type=button] {
     width: 320px;
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
   }
-  main #join #joinContainer {
+  main #allContainer #join #joinContainer {
     margin-bottom: 30px;
   }
-  main #join #joinContainer #joinInput input {
+  main #allContainer #join #joinContainer #joinInput input {
     padding-left: 20px;
   }
-  main #join #joinContainer #errorPW {
+  main #allContainer #join #joinContainer #errorPW {
     font-size: 1.1rem;
   }
-  main #join #joinContainer #errorPW i {
+  main #allContainer #join #joinContainer #errorPW i {
     font-size: 1rem;
     padding: 0 1px;
   }

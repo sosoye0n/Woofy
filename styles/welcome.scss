@@ -20,15 +20,15 @@ main {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 140px 0;
+  padding: 160px 0;
   text-transform: uppercase;
   h2 {
-    font-size: 2.6rem;
+    font-size: 3rem;
     font-weight: 700;
   }
   p {
     margin-top: 10px;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-weight: 300;
     margin-bottom: 50px;
   }
@@ -55,11 +55,11 @@ main {
 @media screen and (max-width: 767px) {
   main {
     h2 {
-      font-size: 1.8rem;
+      font-size: 2.4rem;
     }
     p {
       margin-top: 6px;
-      font-size: 1rem;
+      font-size: 1.4rem;
       margin-bottom: 30px;
     }
     input[type="button"] {
