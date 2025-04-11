@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -31,31 +31,26 @@ main {
 main {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 main #allContainer {
   width: 100%;
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 70px 0;
   text-transform: uppercase;
   margin-top: 0;
@@ -76,14 +71,14 @@ main #allContainer #join {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
 }
-main #allContainer #join input:not(input[type=button]) {
+main #allContainer #join input:not(input[type="button"]) {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -95,10 +90,10 @@ main #allContainer #join input:not(input[type=button]) {
   cursor: pointer;
   transition: all 0.3s;
 }
-main #allContainer #join input:not(input[type=button]):focus {
+main #allContainer #join input:not(input[type="button"]):focus {
   outline: none;
 }
-main #allContainer #join input[type=button] {
+main #allContainer #join input[type="button"] {
   width: 420px;
   height: 72px;
   border-radius: 10px;
@@ -110,7 +105,7 @@ main #allContainer #join input[type=button] {
   cursor: pointer;
   transition: all 0.3s;
 }
-main #allContainer #join input[type=button]:hover {
+main #allContainer #join input[type="button"]:hover {
   outline: none;
   background: #99bdff;
   color: #fff;
@@ -120,8 +115,8 @@ main #allContainer #join #joinBox {
   flex-direction: column;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 20px;
   gap: 8px;
 }
@@ -162,13 +157,13 @@ main #allContainer #join #joinBox .error i {
     width: 280px;
     margin-top: 30px;
   }
-  main #allContainer #join input:not(input[type=button]) {
+  main #allContainer #join input:not(input[type="button"]) {
     width: 320px;
     height: 64px;
     font-size: 1.2rem;
     border-radius: 8px;
   }
-  main #allContainer #join input[type=button] {
+  main #allContainer #join input[type="button"] {
     width: 320px;
     height: 64px;
     font-size: 1.2rem;
