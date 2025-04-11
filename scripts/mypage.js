@@ -1,8 +1,6 @@
 // 헤더 요소
 const loginSuccesChange = document.querySelector(".loginSucces");
 
-console.log(loginSuccesChange);
-
 // 모달 요소
 const couponModal = document.querySelector("#couponModal");
 const pointModal = document.querySelector("#pointModal");
@@ -21,7 +19,6 @@ const bg = document.querySelector(".bg");
 // 모달 오픈
 coupon.addEventListener("click", () => {
   couponModal.classList.add("on");
-  // bg.classList.add("on");
 });
 point.addEventListener("click", () => {
   pointModal.classList.add("on");
@@ -46,9 +43,3 @@ closeBtns.forEach((btn) => {
 
 // 로그인 성공사 헤더 변경
 loginSuccesChange.innerHTML = `<span>logout</span><i class="fa-solid fa-right-from-bracket"></i>`;
-
-// function updateHeaderLoginState() {
-//   loginSuccesChange.innerHTML = "logout";
-//   loginSuccesChange.setAttribute("href", "/mypage.html");
-//   updateHeaderLoginState();
-// }

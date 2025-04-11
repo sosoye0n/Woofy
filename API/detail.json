@@ -8,7 +8,6 @@
       "price": "39,000",
       "category": "acc",
       "LikeCnt": 251,
-      "time": 163,
       "detail-product": {
         "subImg01": "https://product-assets.everuts.com/store/8234/bef6668-screenshot33.png",
         "subImg02": "https://cdn-images.buyma.com/resizer/item/240925/0110827808/646636663/org.jpg?w=1500&h=1500",
@@ -205,7 +204,7 @@
         "subImg01": "https://shoplineimg.com/57b56d5c61706974303e0300/65528e3b0a865ee6de7e567e/1512x.jpg?",
         "subImg02": "https://imagedelivery.net/QondspN4HIUvB_R16-ddAQ/5592b77586b1883bcc00205e/9bfb9ec3ffa555666bfd.jpeg/fit=cover,w=800,h=800",
         "desc": "반려견과 견주가 함께 입을 수 있게 츨시된 뉴로고 후드티입니다. 주머니 하단쪽에 발바닥 자수가 포인트로 들어갔으며 총 4가지 컬러로 출시되었습니다.",
-        "postImg": []
+        "postImg": ""
       }
     },
     {
@@ -4534,6 +4533,70 @@
         "subImg01": "https://moncler-cdn.thron.com/delivery/public/image/moncler/J209O3G00019539AY546_E/dpx6uv/std/768x1152/%EA%B0%95%EC%95%84%EC%A7%80-%EB%B0%B1-%ED%99%80%EB%8D%94-%EC%A0%A0%EB%8D%94-%EB%89%B4%ED%8A%B8%EB%9F%B4-%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8-%ED%95%91%ED%81%AC-moncler.jpg?scalemode=centered&adjustcrop=reduce&quality=80&format=avif",
         "subImg02": "https://moncler-cdn.thron.com/delivery/public/image/moncler/J209O3G00019539AY546_R/dpx6uv/std/768x1152/%EA%B0%95%EC%95%84%EC%A7%80-%EB%B0%B1-%ED%99%80%EB%8D%94-%EC%A0%A0%EB%8D%94-%EB%89%B4%ED%8A%B8%EB%9F%B4-%EB%B8%8C%EB%9D%BC%EC%9D%B4%ED%8A%B8-%ED%95%91%ED%81%AC-moncler.jpg?scalemode=centered&adjustcrop=reduce&quality=80&format=avif",
         "desc": "몽클레르 폴도 도그 쿠튀르 백 홀더는 매일 산책 시 착용하기 좋은 반려동물을 위한 필수 액세서리입니다.",
+        "postImg01": "",
+        "postImg02": "",
+        "postImg03": "",
+        "postImg04": ""
+      }
+    },
+    {
+      "thumbnail": "https://static.fendi.com/dam/is/image/fendi/8AC016A8V3F18AT_01?wid=2000&hei=2000&hash=1ea93bf3f169d5d254e95bc8adc03920-195b9dec7e0",
+      "brand": "FENDI",
+      "name": "반려견 칼라",
+      "price": "500,000",
+      "category": "luxury",
+      "detail-product": {
+        "subImg01": "https://static.fendi.com/dam/is/image/fendi/8AC016A8V3F18AT_02?wid=2000&hei=2000&hash=492a0b504d20f18ab9b76455708aa94a-195b9de46f8",
+        "subImg02": "https://static.fendi.com/dam/is/image/fendi/8AC016A8V3F18AT_03?wid=2000&hei=2000&hash=28a0e4df29a48a4a2cae1c9078cf255d-195b9dd50e0",
+        "desc": "맞춤형 엠보싱 FF 네임 플레이트가 달린 반려견 칼라. 메탈 핀 버클의 조절 가능한 잠금장치. 브라운과 토바코 컬러의 FF 모티프 패브릭 소재. 가죽 디테일. 팔라듐 피니싱 메탈웨어.",
+        "postImg01": "",
+        "postImg02": "",
+        "postImg03": "",
+        "postImg04": ""
+      }
+    },
+    {
+      "thumbnail": "https://static.fendi.com/dam/is/image/fendi/8AC015AFT2F0QT2_01?wid=2000&hei=2000&hash=aa7fa5c59eb5a83de25d699c2cacceed-18fc3cb4a18",
+      "brand": "FENDI",
+      "name": "반려견 코트",
+      "price": "670,000",
+      "category": "luxury",
+      "detail-product": {
+        "subImg01": "https://static.fendi.com/dam/is/image/fendi/8AC015AFT2F0QT2_02?wid=2000&hei=2000&hash=61305ce42c489025922b1546f8fc9e3e-18fc3cb55d0",
+        "subImg02": "https://static.fendi.com/dam/is/image/fendi/8AC015AFT2F0QT2_04?wid=2000&hei=2000&hash=e21f9285ee88d13e1f6e323fa509a538-18fe38d2c18",
+        "desc": "브라운과 토바코 색조의 FF 모티프를 새긴 나일론 소재의 반려견 코트. 뒷면에 블랙 컬러의 탈부탁 가능 스트랩 및 칼라로 마감. 얇은 패딩 패브릭. 아랫배 부분의 프레스 스터드 및 스트랩 잠금장치.",
+        "postImg01": "",
+        "postImg02": "",
+        "postImg03": "",
+        "postImg04": ""
+      }
+    },
+    {
+      "thumbnail": "https://static.fendi.com/dam/is/image/fendi/8AC012A8V3F18AT_01?wid=2000&hei=2000&hash=2e8e2dee7c1e4a4d71371b3cdeb765be-195b9dd4910",
+      "brand": "FENDI",
+      "name": "반려견 리쉬",
+      "price": "550,000",
+      "category": "luxury",
+      "detail-product": {
+        "subImg01": "https://static.fendi.com/dam/is/image/fendi/8AC012A8V3F18AT_02?wid=2000&hei=2000&hash=9fdb45b9f48e882f593bb9074c0ef7d1-195b9dd6c38",
+        "subImg02": "https://static.fendi.com/dam/is/image/fendi/8AC012A8V3F18AT_03?wid=2000&hei=2000&hash=1082a9f559b197044f7b145ea7416138-195b9ddd998",
+        "desc": "펜디 레터링 맞춤형 디자인의 클립 및 링이 달린 반려견 리드. 브라운과 토바코 컬러의 FF 모티프 패브릭 소재. 가죽 디테일. 팔라듐 피니싱 메탈웨어.",
+        "postImg01": "",
+        "postImg02": "",
+        "postImg03": "",
+        "postImg04": ""
+      }
+    },
+    {
+      "thumbnail": "https://static.fendi.com/dam/is/image/fendi/8AC010A8V3F18AT_01?wid=2000&hei=2000&hash=2d852c3a0ec1ab700a567b3c2b9b02e4-18fc3cb4a18",
+      "brand": "FENDI",
+      "name": "반려동물 이동가방",
+      "price": "3,980,000",
+      "category": "luxury",
+      "detail-product": {
+        "subImg01": "https://static.fendi.com/dam/is/image/fendi/8AC010A8V3F18AT_03?wid=2000&hei=2000&hash=bbd5eb3dd39e2a21ce0150bef9924878-18fc3cb4a18",
+        "subImg02": "https://static.fendi.com/dam/is/image/fendi/8AC010A8V3F18AT_05?wid=2000&hei=2000&hash=acb99ff8c081e9dcde2cec1c998644c9-18fe38d3000",
+        "desc": "더블 핸들과 탈부착 가능한 웨빙 스트랩이 달린 반려견 이동가방. 더블 슬라이더 지퍼 오프닝 2개 및 양쪽에 메쉬 네트 인서트. 브라운 및 토바코 컬러의 FF 모티프 패브릭 소재. 가죽 디테일 및 맞춤형 태그 장식. 탈부착 가능한 FF 패브릭 쿠션. 팔라듐 피니싱 메탈웨어.",
         "postImg01": "",
         "postImg02": "",
         "postImg03": "",
