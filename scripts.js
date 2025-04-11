@@ -9,7 +9,7 @@ const headerInner = `
         <nav id="leftGnb">
             <ul>
               <li>
-                <a href="./detail.html?category=luxury" title="clothes" class="category-link" data-category="clothes">LUXURY</a>
+                <a href="./detail.html?category=luxury" title="luxury" class="category-link" data-category="luxury">LUXURY</a>
               </li>
               <li>
                 <a href="./detail.html?category=clothes" title="clothes" class="category-link" data-category="clothes">CLOTHES</a>
@@ -80,7 +80,7 @@ const searchInner = `
                 <a href="#" title="임시">CAP</a>
               </li>
               <li>
-                <a href="#" title="임시">Àvie muah</a>
+                <a href="#" title="임시">Àvie muah</a>
               </li>
               <li>
                 <a href="#" title="임시">GLOWNY</a>
@@ -97,7 +97,10 @@ const footerInner = `
 <nav id="footerCategory">
         <ul>
           <li>
-            <a href="./detail.html" class="category-link" data-category="clothes">CLOTHES</a>
+            <a href="./detail.html?category=luxury" title="luxury" class="category-link" data-category="luxury">LUXURY</a>
+          </li>
+          <li>
+            <a href="./detail.html?category=clothes" title="clothes" class="category-link" data-category="clothes">CLOTHES</a>
           </li>
           <li>
             <a href="./detail.html?category=acc" title="acc" class="category-link" data-category="acc">ACC</a>
@@ -151,6 +154,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
         const category = this.getAttribute("data-category");
+        console.log("카테고리 링크 클릭:", category); // 디버깅용
 
         // URL 히스토리 업데이트 (페이지 새로고침 없이)
         const url = new URL(window.location);
@@ -159,10 +163,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (typeof filterByCategory === "function") {
           filterByCategory(category);
+        } else {
+          console.log(
+            "filterByCategory 함수를 찾을 수 없습니다. detail.js가 로드되었는지 확인하세요."
+          );
         }
 
         // 선택된 카테고리 하이라이트
-        highlightSelectedCategory(category);
+        if (typeof highlightSelectedCategory === "function") {
+          highlightSelectedCategory(category);
+        }
       });
     });
   } else {
@@ -245,17 +255,19 @@ window.addEventListener("scroll", function () {
   prevscroll = scrollTop;
 });
 
-// lenis 라이브러리
-const lenis = new Lenis();
+// lenis 라이브러리 (있다면 사용)
+if (typeof Lenis === "function") {
+  const lenis = new Lenis();
 
-lenis.on("scroll", (e) => {});
+  lenis.on("scroll", (e) => {});
 
-function raf(time) {
-  lenis.raf(time);
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
   requestAnimationFrame(raf);
 }
-
-requestAnimationFrame(raf);
 
 window.addEventListener("resize", () => {
   document.body.classList.remove("active");

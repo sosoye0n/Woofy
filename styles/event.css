@@ -89,97 +89,42 @@ main #container01 #eventModal #modalBg .modalContents .modalContent {
   align-items: center;
   position: relative;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .closeModal {
+main #container01 #eventModal #modalBg .modalContents .modalContent .closeModal {
   position: absolute;
   top: 5%;
   right: 5%;
   cursor: pointer;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .closeModal
-  .fa-xmark {
+main #container01 #eventModal #modalBg .modalContents .modalContent .closeModal .fa-xmark {
   font-size: 3rem;
   margin-top: 3%;
   margin-right: 6%;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .modalTitle {
+main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .modalTitle
-  h1 {
+main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 {
   font-size: 7rem;
   font-weight: 700;
   color: #99bdff;
   margin-bottom: 10px;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .modalTitle
-  h1
-  b {
+main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 b {
   font-size: 5.2rem;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .modalTitle
-  p {
+main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle p {
   font-size: 3rem;
   font-weight: 700;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .modalTitle
-  span {
+main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle span {
   font-size: 1.4rem;
   font-weight: 300;
   margin-bottom: 4px;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .modalTitle
-  .modalBtn {
+main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle .modalBtn {
   font-size: 1.4rem;
   font-weight: 600;
   border: none;
@@ -189,14 +134,7 @@ main
   cursor: pointer;
   transition: all 0.3s;
 }
-main
-  #container01
-  #eventModal
-  #modalBg
-  .modalContents
-  .modalContent
-  .modalTitle
-  .modalBtn:hover {
+main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle .modalBtn:hover {
   background: #000;
   color: #99bdff;
 }
@@ -297,7 +235,7 @@ main #container01 .event01 .slide .imgSlider1 {
   display: flex;
   align-items: center;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
 }
 main #container01 .event01 .slide .imgSlider1:hover .track1 {
@@ -312,13 +250,13 @@ main #container01 .event01 .slide .imgSlider1 .track1 img {
   width: 240px;
   height: 280px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01 .slide .imgSlider2 {
   display: flex;
   align-items: center;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
 }
 main #container01 .event01 .slide .imgSlider2:hover .track2 {
@@ -335,7 +273,7 @@ main #container01 .event01 .slide .imgSlider2 .track2 img {
   display: flex;
   justify-content: center;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-1 {
   width: 100%;
@@ -359,38 +297,19 @@ main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper {
   width: 100%;
   height: 100%;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .swiper
-  .swiper-wrapper
-  .swiper-slide
-  img {
+main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide img {
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .swiper
-  .swiper-pagination
-  .swiper-pagination-bullet {
+main #container01 .event01-1 .conWrapper .swiper .swiper-pagination .swiper-pagination-bullet {
   background-color: #222;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .swiper
-  .swiper-pagination
-  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+main #container01 .event01-1 .conWrapper .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #fff;
 }
 main #container01 .event01-1 .conWrapper .swiper .swiper-button-next,
@@ -425,18 +344,11 @@ main #container01 .event01-1 .conWrapper .contents .contentList01 .detailImg {
   border-radius: 10px;
   cursor: pointer;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList01
-  .detailImg
-  img {
+main #container01 .event01-1 .conWrapper .contents .contentList01 .detailImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList01 .content {
   width: 240px;
@@ -446,59 +358,23 @@ main #container01 .event01-1 .conWrapper .contents .contentList01 .content {
   justify-content: center;
   text-align: left;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList01
-  .content
-  .brand {
+main #container01 .event01-1 .conWrapper .contents .contentList01 .content .brand {
   color: #99bdff;
   font-size: 2rem;
   font-weight: 700;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList01
-  .content
-  .name {
+main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name {
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList01
-  .content
-  .name:hover {
+main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name:hover {
   text-decoration: underline;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList01
-  .content
-  .sale {
+main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale {
   font-weight: 300;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList01
-  .content
-  .sale
-  b {
+main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale b {
   color: #99bdff;
   font-size: 2.2rem;
   margin-right: 8px;
@@ -521,18 +397,11 @@ main #container01 .event01-1 .conWrapper .contents .contentList02 .detailImg {
   border-radius: 10px;
   cursor: pointer;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList02
-  .detailImg
-  img {
+main #container01 .event01-1 .conWrapper .contents .contentList02 .detailImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList02 .content {
   width: 240px;
@@ -542,59 +411,23 @@ main #container01 .event01-1 .conWrapper .contents .contentList02 .content {
   justify-content: center;
   text-align: left;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList02
-  .content
-  .brand {
+main #container01 .event01-1 .conWrapper .contents .contentList02 .content .brand {
   color: #99bdff;
   font-size: 2rem;
   font-weight: 700;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList02
-  .content
-  .name {
+main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name {
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList02
-  .content
-  .name:hover {
+main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name:hover {
   text-decoration: underline;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList02
-  .content
-  .sale {
+main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale {
   font-weight: 300;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList02
-  .content
-  .sale
-  b {
+main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale b {
   color: #99bdff;
   font-size: 2.2rem;
   margin-right: 8px;
@@ -616,18 +449,11 @@ main #container01 .event01-1 .conWrapper .contents .contentList03 .detailImg {
   border-radius: 10px;
   cursor: pointer;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList03
-  .detailImg
-  img {
+main #container01 .event01-1 .conWrapper .contents .contentList03 .detailImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-1 .conWrapper .contents .contentList03 .content {
   width: 240px;
@@ -637,59 +463,23 @@ main #container01 .event01-1 .conWrapper .contents .contentList03 .content {
   justify-content: center;
   text-align: left;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList03
-  .content
-  .brand {
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .brand {
   color: #99bdff;
   font-size: 2rem;
   font-weight: 700;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList03
-  .content
-  .name {
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name {
   font-size: 1.6rem;
   font-weight: 600;
   cursor: pointer;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList03
-  .content
-  .name:hover {
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name:hover {
   text-decoration: underline;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList03
-  .content
-  .sale {
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale {
   font-weight: 300;
 }
-main
-  #container01
-  .event01-1
-  .conWrapper
-  .contents
-  .contentList03
-  .content
-  .sale
-  b {
+main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale b {
   color: #99bdff;
   font-size: 2.2rem;
   margin-right: 8px;
@@ -711,13 +501,13 @@ main #container01 .event01-2 .conImg img {
   width: 70%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main #container01 .event01-2 .cap {
   position: absolute;
   width: 300px;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   top: 3%;
   right: 10%;
   cursor: pointer;
@@ -829,7 +619,7 @@ main #container02 .event2 .event02 .drawImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 main #container02 .event2 .event02 .countdown {
   width: 500px;
@@ -932,37 +722,18 @@ main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent {
   background-color: #fff;
   position: relative;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .closeDrawModal {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .closeDrawModal {
   position: absolute;
   top: 5%;
   right: 5%;
   cursor: pointer;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .closeDrawModal
-  .fa-xmark {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .closeDrawModal .fa-xmark {
   font-size: 3rem;
   margin-top: 3%;
   margin-right: 6%;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .modalDrawTitle {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle {
   width: 100%;
   height: 100%;
   display: flex;
@@ -970,49 +741,21 @@ main
   justify-content: center;
   align-items: center;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .modalDrawTitle
-  h1 {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle h1 {
   font-size: 1.8rem;
   font-weight: 200;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .modalDrawTitle
-  p {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle p {
   font-size: 4rem;
   font-weight: 800;
   margin-top: 6px;
   margin-bottom: 10px;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .modalDrawTitle
-  span {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle span {
   font-size: 1.4rem;
   font-weight: 300;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .modalDrawTitle
-  .modalDrawBtn {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle .modalDrawBtn {
   font-size: 1.4rem;
   font-weight: 600;
   margin-top: 30px;
@@ -1024,14 +767,7 @@ main
   cursor: pointer;
   transition: all 0.3s;
 }
-main
-  #container02
-  #drawModal
-  #modalDrawBg
-  .modalDrawContents
-  .modalDrawContent
-  .modalDrawTitle
-  .modalDrawBtn:hover {
+main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle .modalDrawBtn:hover {
   background: #99bdff;
   color: #000;
 }
@@ -1176,35 +912,13 @@ main
     height: 60px;
     font-size: 2rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1 {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 {
     font-size: 5.2rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1
-    b {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 b {
     font-size: 4.6rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    .modalBtn {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle .modalBtn {
     margin-top: 5%;
   }
   main #container01 .event01 .event01Wrapper .textWrapper {
@@ -1225,21 +939,14 @@ main
     border-radius: 18px;
     margin: 0;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .swiper
-    .swiper-wrapper
-    .swiper-slide
-    img {
+  main #container01 .event01-1 .conWrapper .swiper .swiper-wrapper .swiper-slide img {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
   }
   main #container01 .event01-1 .conWrapper .contents {
     width: 50%;
@@ -1289,24 +996,10 @@ main
   main #container02 .event2 .warningWrapper .eventWarning ul li {
     font-size: 1rem;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent
-    .modalTitle
-    h1 {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalTitle h1 {
     font-size: 5.2rem;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent
-    .modalTitle
-    .modalBtn {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalTitle .modalBtn {
     margin-top: 5%;
   }
 }
@@ -1323,66 +1016,23 @@ main
     height: 230px;
     border-radius: 10px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .closeModal
-    .fa-xmark {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .closeModal .fa-xmark {
     font-size: 2rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    span {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle span {
     margin-bottom: 6px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    p {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle p {
     font-size: 2.4rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1 {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 {
     font-size: 4rem;
     margin-bottom: 10px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1
-    b {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 b {
     font-size: 3rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    .modalBtn {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle .modalBtn {
     margin-top: 0;
     padding: 10px 26px;
     font-size: 1.2rem;
@@ -1463,45 +1113,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .brand {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale b {
     font-size: 1.6rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 {
@@ -1521,45 +1142,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .brand {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale b {
     font-size: 1.6rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList03 {
@@ -1580,45 +1172,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .brand {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale b {
     font-size: 1.6rem;
   }
   main #container01 .event01-1 .event01-2 {
@@ -1662,7 +1225,7 @@ main
   }
   main #container01 #container02 .event2 .event02 .drawImg img {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
   main #container01 #container02 .event2 .event02 .countdown {
     font-size: 3.2rem;
@@ -1685,14 +1248,7 @@ main
     font-size: 1rem;
     margin-bottom: 2%;
   }
-  main
-    #container01
-    #container02
-    .event2
-    .warningWrapper
-    .eventWarning
-    ul
-    li::before {
+  main #container01 #container02 .event2 .warningWrapper .eventWarning ul li::before {
     top: 4px;
     width: 3px;
     height: 3px;
@@ -1703,54 +1259,19 @@ main
     margin: 60% 11%;
     border-radius: 8px;
   }
-  main
-    #container01
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .closeDrawModal
-    .fa-xmark {
+  main #container01 #container02 #drawModal #modalDrawBg .modalDrawContent .closeDrawModal .fa-xmark {
     font-size: 1.8rem;
   }
-  main
-    #container01
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    h1 {
+  main #container01 #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle h1 {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    p {
+  main #container01 #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle p {
     font-size: 3rem;
   }
-  main
-    #container01
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    span {
+  main #container01 #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle span {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    .modalDrawBtn {
+  main #container01 #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .modalDrawBtn {
     font-size: 1.2rem;
     padding: 10px 26px;
   }
@@ -1768,67 +1289,24 @@ main
     height: 230px;
     border-radius: 10px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .closeModal
-    .fa-xmark {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .closeModal .fa-xmark {
     font-size: 2rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    span {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle span {
     font-size: 1rem;
     margin-bottom: 6px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    p {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle p {
     font-size: 2.3rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1 {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 {
     font-size: 4rem;
     margin-bottom: 16px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1
-    b {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 b {
     font-size: 3rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    .modalBtn {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle .modalBtn {
     margin-top: 0;
     padding: 10px 26px;
     font-size: 1.2rem;
@@ -1909,45 +1387,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .brand {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale b {
     font-size: 1.6rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 {
@@ -1968,45 +1417,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .brand {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale b {
     font-size: 1.6rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList03 {
@@ -2027,45 +1447,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .brand {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale {
     font-size: 1.4rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale b {
     font-size: 1.6rem;
   }
   main #container01 .event01-2 {
@@ -2110,7 +1501,7 @@ main
   }
   main #container02 .event2 .event02 .drawImg img {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
   main #container02 .event2 .event02 .countdown {
     font-size: 3.2rem;
@@ -2145,67 +1536,27 @@ main
     width: 3px;
     height: 3px;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent {
     max-width: 270px;
     height: 230px;
     border-radius: 10px;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent
-    .closeDrawModal
-    .fa-xmark {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .closeDrawModal .fa-xmark {
     font-size: 2rem;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent
-    .modalDrawTitle
-    h1 {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle h1 {
     font-size: 1.6rem;
     margin-bottom: 8px;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent
-    .modalDrawTitle
-    p {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle p {
     font-size: 3rem;
     font-weight: 700;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent
-    .modalDrawTitle
-    span {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle span {
     font-size: 1rem;
     margin-bottom: 6px;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContents
-    .modalDrawContent
-    .modalDrawTitle
-    .modalDrawBtn {
+  main #container02 #drawModal #modalDrawBg .modalDrawContents .modalDrawContent .modalDrawTitle .modalDrawBtn {
     margin-top: 20px;
     padding: 10px 26px;
     font-size: 1.2rem;
@@ -2224,66 +1575,23 @@ main
     height: 230px;
     border-radius: 10px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .closeModal
-    .fa-xmark {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .closeModal .fa-xmark {
     font-size: 2rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    span {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle span {
     margin-bottom: 6px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    p {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle p {
     font-size: 2.4rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1 {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 {
     font-size: 4rem;
     margin-bottom: 10px;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    h1
-    b {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle h1 b {
     font-size: 3rem;
   }
-  main
-    #container01
-    #eventModal
-    #modalBg
-    .modalContents
-    .modalContent
-    .modalTitle
-    .modalBtn {
+  main #container01 #eventModal #modalBg .modalContents .modalContent .modalTitle .modalBtn {
     margin-top: 0;
     padding: 10px 26px;
     font-size: 1.2rem;
@@ -2364,45 +1672,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .brand {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .name {
     font-size: 1rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList01
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList01 .content .sale b {
     font-size: 1.4rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList02 {
@@ -2423,45 +1702,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .brand {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .name {
     font-size: 1rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList02
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList02 .content .sale b {
     font-size: 1.4rem;
   }
   main #container01 .event01-1 .conWrapper .contents .contentList03 {
@@ -2482,45 +1732,16 @@ main
     gap: 8px;
     height: 120px;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .brand {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .brand {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .name {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .name {
     font-size: 1rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .sale {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale {
     font-size: 1.2rem;
   }
-  main
-    #container01
-    .event01-1
-    .conWrapper
-    .contents
-    .contentList03
-    .content
-    .sale
-    b {
+  main #container01 .event01-1 .conWrapper .contents .contentList03 .content .sale b {
     font-size: 1.4rem;
   }
   main #container01 .event01-2 {
@@ -2564,7 +1785,7 @@ main
   }
   main #container02 .event2 .event02 .drawImg img {
     -o-object-fit: contain;
-    object-fit: contain;
+       object-fit: contain;
   }
   main #container02 .event2 .event02 .countdown {
     font-size: 3.2rem;
@@ -2603,49 +1824,19 @@ main
     margin: 60% 11%;
     border-radius: 8px;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .closeDrawModal
-    .fa-xmark {
+  main #container02 #drawModal #modalDrawBg .modalDrawContent .closeDrawModal .fa-xmark {
     font-size: 1.8rem;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    h1 {
+  main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle h1 {
     font-size: 1.4rem;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    p {
+  main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle p {
     font-size: 3rem;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    span {
+  main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle span {
     font-size: 1.2rem;
   }
-  main
-    #container02
-    #drawModal
-    #modalDrawBg
-    .modalDrawContent
-    .modalDrawTitle
-    .modalDrawBtn {
+  main #container02 #drawModal #modalDrawBg .modalDrawContent .modalDrawTitle .modalDrawBtn {
     font-size: 1.2rem;
     padding: 10px 26px;
   }
