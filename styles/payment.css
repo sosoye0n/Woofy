@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -33,13 +33,11 @@ header {
   width: 100%;
   max-width: 1000px;
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 .checkout-container .checkout-title {
   font-size: 2.4rem;
@@ -65,25 +63,31 @@ section {
   padding: 0 15px;
 }
 .checkout-container .shipping-section .address-selector .address-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   cursor: pointer;
 }
-.checkout-container .shipping-section .address-selector .address-label .recent-address {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-label
+  .recent-address {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 2.2rem;
   font-weight: 400;
   margin-right: 30px;
   border-bottom: 1px solid #000;
 }
-.checkout-container .shipping-section .address-selector .address-label .direct-input {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-label
+  .direct-input {
   font-size: 1.8rem;
   font-weight: 300;
 }
@@ -95,80 +99,163 @@ section {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 15px;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input {
   font-size: 2rem;
   font-weight: 400;
   border: none;
   padding: 5px 0;
   width: 60%;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-webkit-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input::-webkit-input-placeholder {
   color: #999;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-moz-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input::-moz-placeholder {
   color: #999;
   -moz-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:-ms-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input:-ms-input-placeholder {
   color: #999;
   -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-ms-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input::-ms-input-placeholder {
   color: #999;
   -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input::placeholder {
   color: #999;
   -webkit-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input:focus {
   outline: none;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-webkit-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-moz-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input:focus::-moz-placeholder {
   opacity: 0;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus:-ms-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input:focus:-ms-input-placeholder {
   opacity: 0;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-ms-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input:focus::-ms-input-placeholder {
   opacity: 0;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .recipient-input:focus::placeholder {
   opacity: 0;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-chioce
+  .address-book-link {
   font-size: 1.6rem;
   color: #000;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state {
   width: 100%;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-input,
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .phone-input {
   font-size: 1.8rem;
   font-weight: 400;
   margin-bottom: 10px;
@@ -176,56 +263,87 @@ section {
   padding: 5px 0;
   width: 100%;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::-webkit-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::-webkit-input-placeholder {
-  color: #999;
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::-moz-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::-moz-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-input::-moz-placeholder,
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .phone-input::-moz-placeholder {
   color: #999;
   -moz-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:-ms-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-input::placeholder,
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .phone-input::placeholder {
   color: #999;
-  -ms-transition: opacity 0.2s ease;
   transition: opacity 0.2s ease;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::-ms-input-placeholder {
-  color: #999;
-  -ms-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input::placeholder,
-.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input::placeholder {
-  color: #999;
-  -webkit-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus,
-.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-input:focus,
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .phone-input:focus {
   outline: none;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::-webkit-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::-webkit-input-placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-input:focus::-moz-placeholder,
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .phone-input:focus::-moz-placeholder {
   opacity: 0;
 }
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::-moz-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::-moz-placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus:-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::-ms-input-placeholder, .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-.checkout-container .shipping-section .address-selector .address-info .user-state .address-input:focus::placeholder,
-.checkout-container .shipping-section .address-selector .address-info .user-state .phone-input:focus::placeholder {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .address-input:focus::placeholder,
+.checkout-container
+  .shipping-section
+  .address-selector
+  .address-info
+  .user-state
+  .phone-input:focus::placeholder {
   opacity: 0;
 }
 .checkout-container .shipping-section .address-selector .delivery-message {
   width: 100%;
 }
-.checkout-container .shipping-section .address-selector .delivery-message select {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .delivery-message
+  select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -235,18 +353,28 @@ section {
   background-color: #fff;
   border-radius: 3px;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-position: right 8px center;
   background-size: 16px;
   padding: 0 20px;
   font-size: 1.5rem;
   cursor: pointer;
 }
-.checkout-container .shipping-section .address-selector .delivery-message select option {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .delivery-message
+  select
+  option {
   font-size: 16px;
 }
-.checkout-container .shipping-section .address-selector .delivery-message select option[disabled] {
+.checkout-container
+  .shipping-section
+  .address-selector
+  .delivery-message
+  select
+  option[disabled] {
   color: #dadada;
 }
 
@@ -255,15 +383,13 @@ section {
   padding: 0 10px;
 }
 .order-products .product-list .product-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   padding: 35px 25px;
   margin: 5px;
   border-top: 1px solid #d9d9d9;
@@ -279,12 +405,12 @@ section {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .order-products .product-list .product-item .product-info {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 0 15px;
   font-size: 2rem;
   font-weight: 400;
@@ -302,11 +428,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -ms-flex-pack: right;
+  justify-content: right;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 1.7rem;
   font-weight: bold;
   padding-right: 30px;
@@ -316,11 +442,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -ms-flex-pack: right;
+  justify-content: right;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   font-size: 1.5rem;
   margin-top: 10px;
   padding-right: 30px;
@@ -353,17 +479,15 @@ section {
 .payment-section .payment-options .coupon-row,
 .payment-section .payment-options .points-row {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-bottom: 15px;
   padding: 0 10px;
   color: #999999;
@@ -390,12 +514,10 @@ section {
 }
 .payment-section .payment-options .option-info {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   margin-bottom: 20px;
   font-size: 1.4rem;
   color: #dadada;
@@ -405,12 +527,10 @@ section {
   padding: 0 20px;
 }
 .order-summary .summary-list .summary-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 15px;
   padding: 0 5%;
   color: #a7a7a8;
@@ -442,12 +562,10 @@ section {
   padding: 0 10px;
   border: none;
   border-bottom: 1px solid #d9d9d9;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .payment-methods .payment-options .visually-hidden {
   position: absolute;
@@ -460,31 +578,43 @@ section {
   border: 0;
 }
 .payment-methods .payment-options .payment-options-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .payment-methods .payment-options .payment-options-list .payment-option {
   cursor: pointer;
   margin-right: 20px;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio] {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"] {
   display: none;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"]
+  + .option-text {
   position: relative;
   padding-left: 28px;
   font-size: 1.6rem;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"]
+  + .option-text:before {
   content: "";
   position: absolute;
   left: 0;
@@ -495,32 +625,43 @@ section {
   border-radius: 3px;
   background: #fff;
 }
-.payment-methods .payment-options .payment-options-list .payment-option input[type=radio]:checked + .option-text:before {
+.payment-methods
+  .payment-options
+  .payment-options-list
+  .payment-option
+  input[type="radio"]:checked
+  + .option-text:before {
   background: #999999;
   border-color: #999999;
 }
 .payment-methods .terms-agreement {
   padding: 0 12px;
   margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .payment-methods .terms-agreement .agreement-label {
   cursor: pointer;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox] {
+.payment-methods .terms-agreement .agreement-label input[type="checkbox"] {
   display: none;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
+.payment-methods
+  .terms-agreement
+  .agreement-label
+  input[type="checkbox"]
+  + .agreement-text {
   position: relative;
   padding-left: 28px;
   font-size: 1.4rem;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
+.payment-methods
+  .terms-agreement
+  .agreement-label
+  input[type="checkbox"]
+  + .agreement-text:before {
   content: "";
   position: absolute;
   left: 0;
@@ -531,7 +672,11 @@ section {
   border: 1px solid #999999;
   background: #fff;
 }
-.payment-methods .terms-agreement .agreement-label input[type=checkbox]:checked + .agreement-text:before {
+.payment-methods
+  .terms-agreement
+  .agreement-label
+  input[type="checkbox"]:checked
+  + .agreement-text:before {
   background: #a7a7a8;
   border-color: #999999;
 }
@@ -539,12 +684,10 @@ section {
 .checkout-button-container {
   width: 90%;
   margin: 30px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .checkout-button-container .checkout-button {
   width: 100%;
@@ -556,7 +699,6 @@ section {
   border-radius: 10px;
   margin-bottom: 100px;
   cursor: pointer;
-  -webkit-transition: background 0.3s;
   transition: background 0.3s;
 }
 .checkout-button-container .checkout-button:hover {
@@ -564,10 +706,13 @@ section {
 }
 .checkout-button-container .checkout-button:active {
   -webkit-box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-.modal, .payment-confirm-modal, .coupon-modal, .address-modal {
+.modal,
+.payment-confirm-modal,
+.coupon-modal,
+.address-modal {
   display: none;
   position: fixed;
   top: 0;
@@ -577,41 +722,53 @@ section {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-.modal .modal-content, .payment-confirm-modal .modal-content, .coupon-modal .modal-content, .address-modal .modal-content {
+.modal .modal-content,
+.payment-confirm-modal .modal-content,
+.coupon-modal .modal-content,
+.address-modal .modal-content {
   background-color: white;
   width: 90%;
   max-width: 400px;
   border-radius: 15px;
   overflow: hidden;
   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   -webkit-animation: modalFadeIn 0.3s ease;
-          animation: modalFadeIn 0.3s ease;
+  animation: modalFadeIn 0.3s ease;
 }
-.modal .modal-header, .payment-confirm-modal .modal-header, .coupon-modal .modal-header, .address-modal .modal-header {
+.modal .modal-header,
+.payment-confirm-modal .modal-header,
+.coupon-modal .modal-header,
+.address-modal .modal-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 15px 20px;
 }
-.modal .modal-header h3, .payment-confirm-modal .modal-header h3, .coupon-modal .modal-header h3, .address-modal .modal-header h3 {
+.modal .modal-header h3,
+.payment-confirm-modal .modal-header h3,
+.coupon-modal .modal-header h3,
+.address-modal .modal-header h3 {
   font-size: 1.8rem;
   font-weight: bold;
   margin: 0;
 }
-.modal .modal-header .close-modal, .payment-confirm-modal .modal-header .close-modal, .coupon-modal .modal-header .close-modal, .address-modal .modal-header .close-modal {
+.modal .modal-header .close-modal,
+.payment-confirm-modal .modal-header .close-modal,
+.coupon-modal .modal-header .close-modal,
+.address-modal .modal-header .close-modal {
   display: none;
   background: none;
   border: none;
@@ -619,19 +776,36 @@ section {
   cursor: pointer;
   color: #333333;
 }
-.modal .modal-body, .payment-confirm-modal .modal-body, .coupon-modal .modal-body, .address-modal .modal-body {
+.modal .modal-body,
+.payment-confirm-modal .modal-body,
+.coupon-modal .modal-body,
+.address-modal .modal-body {
   padding: 20px;
 }
-.modal .modal-footer, .payment-confirm-modal .modal-footer, .coupon-modal .modal-footer, .address-modal .modal-footer {
+.modal .modal-footer,
+.payment-confirm-modal .modal-footer,
+.coupon-modal .modal-footer,
+.address-modal .modal-footer {
   padding: 15px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
-.modal .modal-footer .modal-button, .payment-confirm-modal .modal-footer .modal-button, .modal .modal-footer .coupon-modal .select-coupon, .payment-confirm-modal .modal-footer .coupon-modal .select-coupon, .coupon-modal .modal-footer .modal-button, .coupon-modal .modal-footer .select-coupon, .modal .modal-footer .address-modal .select-address, .payment-confirm-modal .modal-footer .address-modal .select-address, .coupon-modal .modal-footer .address-modal .select-address, .address-modal .modal-footer .modal-button, .address-modal .modal-footer .coupon-modal .select-coupon, .address-modal .modal-footer .select-address {
+.modal .modal-footer .modal-button,
+.payment-confirm-modal .modal-footer .modal-button,
+.modal .modal-footer .coupon-modal .select-coupon,
+.payment-confirm-modal .modal-footer .coupon-modal .select-coupon,
+.coupon-modal .modal-footer .modal-button,
+.coupon-modal .modal-footer .select-coupon,
+.modal .modal-footer .address-modal .select-address,
+.payment-confirm-modal .modal-footer .address-modal .select-address,
+.coupon-modal .modal-footer .address-modal .select-address,
+.address-modal .modal-footer .modal-button,
+.address-modal .modal-footer .coupon-modal .select-coupon,
+.address-modal .modal-footer .select-address {
   background-color: #000;
   color: white;
   border: none;
@@ -641,7 +815,18 @@ section {
   cursor: pointer;
   width: 80%;
 }
-.modal .modal-footer .modal-button:hover, .payment-confirm-modal .modal-footer .modal-button:hover, .modal .modal-footer .coupon-modal .select-coupon:hover, .payment-confirm-modal .modal-footer .coupon-modal .select-coupon:hover, .coupon-modal .modal-footer .modal-button:hover, .coupon-modal .modal-footer .select-coupon:hover, .modal .modal-footer .address-modal .select-address:hover, .payment-confirm-modal .modal-footer .address-modal .select-address:hover, .coupon-modal .modal-footer .address-modal .select-address:hover, .address-modal .modal-footer .modal-button:hover, .address-modal .modal-footer .coupon-modal .select-coupon:hover, .address-modal .modal-footer .select-address:hover {
+.modal .modal-footer .modal-button:hover,
+.payment-confirm-modal .modal-footer .modal-button:hover,
+.modal .modal-footer .coupon-modal .select-coupon:hover,
+.payment-confirm-modal .modal-footer .coupon-modal .select-coupon:hover,
+.coupon-modal .modal-footer .modal-button:hover,
+.coupon-modal .modal-footer .select-coupon:hover,
+.modal .modal-footer .address-modal .select-address:hover,
+.payment-confirm-modal .modal-footer .address-modal .select-address:hover,
+.coupon-modal .modal-footer .address-modal .select-address:hover,
+.address-modal .modal-footer .modal-button:hover,
+.address-modal .modal-footer .coupon-modal .select-coupon:hover,
+.address-modal .modal-footer .select-address:hover {
   opacity: 0.9;
 }
 
@@ -649,12 +834,12 @@ section {
   from {
     opacity: 0;
     -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
@@ -662,12 +847,12 @@ section {
   from {
     opacity: 0;
     -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
+    transform: translateY(-20px);
   }
   to {
     opacity: 1;
     -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
 }
 .address-modal {
@@ -681,13 +866,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 12px 10px;
   cursor: pointer;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 15px;
   border-bottom: 1px solid #eeeeee;
@@ -720,8 +905,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   padding: 12px 10px;
   border-bottom: 1px solid #eee;
   cursor: pointer;
@@ -771,15 +956,15 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   gap: 12px;
 }
 .payment-confirm-modal .modal-footer .move-to-cart,
 .payment-confirm-modal .modal-footer .continue-shopping {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   padding: 14px 16px;
   border-radius: 30px;
   font-size: 1.5rem;
@@ -832,31 +1017,67 @@ section {
   .checkout-container .shipping-section .address-selector .address-label {
     margin-bottom: 15px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .recent-address {
     font-size: 2rem;
     margin-right: 25px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .direct-input {
     font-size: 1.6rem;
   }
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 15px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce {
     margin-bottom: 12px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .recipient-input {
     font-size: 1.8rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .address-book-link {
     font-size: 1.5rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .address-input,
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .phone-input {
     font-size: 1.6rem;
     margin-bottom: 8px;
   }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .delivery-message
+    select {
     height: 38px;
     font-size: 1.4rem;
   }
@@ -937,24 +1158,38 @@ section {
   }
   .payment-methods .payment-options .payment-options-list {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 8px;
   }
   .payment-methods .payment-options .payment-options-list .payment-option {
     margin-right: 15px;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text {
     font-size: 1.5rem;
     padding-left: 25px;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text:before {
     width: 14px;
     height: 14px;
   }
   .payment-methods .terms-agreement {
     padding: 0 10px;
   }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
+  .payment-methods
+    .terms-agreement
+    .agreement-label
+    input[type="checkbox"]
+    + .agreement-text {
     font-size: 1.3rem;
   }
   .checkout-button-container {
@@ -965,13 +1200,22 @@ section {
     padding: 12px 0;
     margin-bottom: 80px;
   }
-  .modal .modal-content, .address-modal .modal-content, .coupon-modal .modal-content, .payment-confirm-modal .modal-content {
+  .modal .modal-content,
+  .address-modal .modal-content,
+  .coupon-modal .modal-content,
+  .payment-confirm-modal .modal-content {
     max-width: 380px;
   }
-  .modal .modal-header h3, .address-modal .modal-header h3, .coupon-modal .modal-header h3, .payment-confirm-modal .modal-header h3 {
+  .modal .modal-header h3,
+  .address-modal .modal-header h3,
+  .coupon-modal .modal-header h3,
+  .payment-confirm-modal .modal-header h3 {
     font-size: 1.7rem;
   }
-  .modal .modal-body, .address-modal .modal-body, .coupon-modal .modal-body, .payment-confirm-modal .modal-body {
+  .modal .modal-body,
+  .address-modal .modal-body,
+  .coupon-modal .modal-body,
+  .payment-confirm-modal .modal-body {
     padding: 18px;
   }
   .coupon-modal .coupon-number,
@@ -1017,11 +1261,11 @@ section {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .section-title {
     font-size: 1.8rem;
@@ -1037,31 +1281,67 @@ section {
   .checkout-container .shipping-section .address-selector .address-label {
     margin-bottom: 12px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .recent-address {
     font-size: 1.8rem;
     margin-right: 20px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .direct-input {
     font-size: 1.5rem;
   }
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 12px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce {
     margin-bottom: 10px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .recipient-input {
     font-size: 1.6rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .address-book-link {
     font-size: 1.4rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .address-input,
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .phone-input {
     font-size: 1.5rem;
     margin-bottom: 8px;
   }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .delivery-message
+    select {
     height: 36px;
     font-size: 1.3rem;
     padding: 0 15px;
@@ -1142,26 +1422,44 @@ section {
   }
   .payment-methods .payment-options .payment-options-list {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 8px;
   }
   .payment-methods .payment-options .payment-options-list .payment-option {
     margin-right: 10px;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text {
     font-size: 1.4rem;
     padding-left: 22px;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text:before {
     width: 13px;
     height: 13px;
   }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
+  .payment-methods
+    .terms-agreement
+    .agreement-label
+    input[type="checkbox"]
+    + .agreement-text {
     font-size: 1.2rem;
     padding-left: 22px;
   }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
+  .payment-methods
+    .terms-agreement
+    .agreement-label
+    input[type="checkbox"]
+    + .agreement-text:before {
     width: 11px;
     height: 11px;
   }
@@ -1174,16 +1472,28 @@ section {
     padding: 12px 0;
     margin-bottom: 60px;
   }
-  .modal .modal-content, .address-modal .modal-content, .coupon-modal .modal-content, .payment-confirm-modal .modal-content {
+  .modal .modal-content,
+  .address-modal .modal-content,
+  .coupon-modal .modal-content,
+  .payment-confirm-modal .modal-content {
     max-width: 350px;
   }
-  .modal .modal-header h3, .address-modal .modal-header h3, .coupon-modal .modal-header h3, .payment-confirm-modal .modal-header h3 {
+  .modal .modal-header h3,
+  .address-modal .modal-header h3,
+  .coupon-modal .modal-header h3,
+  .payment-confirm-modal .modal-header h3 {
     font-size: 1.6rem;
   }
-  .modal .modal-body, .address-modal .modal-body, .coupon-modal .modal-body, .payment-confirm-modal .modal-body {
+  .modal .modal-body,
+  .address-modal .modal-body,
+  .coupon-modal .modal-body,
+  .payment-confirm-modal .modal-body {
     padding: 15px;
   }
-  .modal .modal-footer, .address-modal .modal-footer, .coupon-modal .modal-footer, .payment-confirm-modal .modal-footer {
+  .modal .modal-footer,
+  .address-modal .modal-footer,
+  .coupon-modal .modal-footer,
+  .payment-confirm-modal .modal-footer {
     padding: 12px 15px;
   }
   .coupon-modal .coupon-item,
@@ -1247,11 +1557,11 @@ section {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .section-title {
     font-size: 1.7rem;
@@ -1269,32 +1579,68 @@ section {
   .checkout-container .shipping-section .address-selector .address-label {
     margin-bottom: 10px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .recent-address {
     font-size: 1.6rem;
     margin-right: 15px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .direct-input {
     font-size: 1.4rem;
   }
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 10px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce {
     margin-bottom: 8px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .recipient-input {
     font-size: 1.5rem;
     width: 50%;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .address-book-link {
     font-size: 1.3rem;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .address-input,
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .phone-input {
     font-size: 1.4rem;
     margin-bottom: 6px;
   }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .delivery-message
+    select {
     height: 34px;
     font-size: 1.2rem;
     padding: 0 10px;
@@ -1477,11 +1823,21 @@ section {
   .payment-methods .payment-options .payment-options-list .payment-option {
     margin-right: 0;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text {
     font-size: 1.3rem;
     padding-left: 20px;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text:before {
     width: 12px;
     height: 12px;
   }
@@ -1489,11 +1845,19 @@ section {
     padding: 0 5px;
     margin-top: 8px;
   }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
+  .payment-methods
+    .terms-agreement
+    .agreement-label
+    input[type="checkbox"]
+    + .agreement-text {
     font-size: 1.1rem;
     padding-left: 20px;
   }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
+  .payment-methods
+    .terms-agreement
+    .agreement-label
+    input[type="checkbox"]
+    + .agreement-text:before {
     width: 10px;
     height: 10px;
   }
@@ -1558,42 +1922,78 @@ section {
   .checkout-container .shipping-section .address-selector .address-label {
     margin-bottom: 8px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .recent-address {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .recent-address {
     font-size: 1.3rem;
     margin-right: 10px;
   }
-  .checkout-container .shipping-section .address-selector .address-label .direct-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-label
+    .direct-input {
     font-size: 1.2rem;
   }
   .checkout-container .shipping-section .address-selector .address-info {
     margin-bottom: 8px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce {
     margin-bottom: 6px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .recipient-input {
     font-size: 1.4rem;
     width: 100%;
     margin-bottom: 5px;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-chioce
+    .address-book-link {
     font-size: 1.2rem;
     margin-top: 3px;
     font-weight: 500;
   }
-  .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
-  .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .address-input,
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .address-info
+    .user-state
+    .phone-input {
     font-size: 1.3rem;
     margin-bottom: 5px;
   }
-  .checkout-container .shipping-section .address-selector .delivery-message select {
+  .checkout-container
+    .shipping-section
+    .address-selector
+    .delivery-message
+    select {
     height: 28px;
     font-size: 1.2rem;
     padding: 0 8px;
@@ -1773,11 +2173,21 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 6px 3px;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text {
     font-size: 1.2rem;
     padding-left: 18px;
   }
-  .payment-methods .payment-options .payment-options-list .payment-option input[type=radio] + .option-text:before {
+  .payment-methods
+    .payment-options
+    .payment-options-list
+    .payment-option
+    input[type="radio"]
+    + .option-text:before {
     width: 11px;
     height: 11px;
   }
@@ -1785,11 +2195,19 @@ section {
     padding: 0 3px;
     margin-top: 6px;
   }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text {
+  .payment-methods
+    .terms-agreement
+    .agreement-label
+    input[type="checkbox"]
+    + .agreement-text {
     font-size: 1rem;
     padding-left: 18px;
   }
-  .payment-methods .terms-agreement .agreement-label input[type=checkbox] + .agreement-text:before {
+  .payment-methods
+    .terms-agreement
+    .agreement-label
+    input[type="checkbox"]
+    + .agreement-text:before {
     width: 9px;
     height: 9px;
   }

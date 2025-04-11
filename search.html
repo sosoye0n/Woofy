@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Common CSS & JS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/search.css" />
+    <script defer src="./scripts.js"></script>
+    <script defer src="./scripts/search.js"></script>
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <div id="searchWrap"></div>
+    <main>
+      <h2></h2>
+      <div class="filterWrap">
+        <p><span></span>개의 상품</p>
+        <select>
+          <option>신상품순</option>
+          <option>판매많은순</option>
+          <option>가격높은순</option>
+          <option>가격낮은순</option>
+        </select>
+      </div>
+      <div id="searchResult"></div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

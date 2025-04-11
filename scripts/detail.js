@@ -92,17 +92,13 @@ function initProductGrid() {
         e.stopPropagation();
         const productItem = this.closest(".product-item");
         let productId = productItem.getAttribute("data-id");
-        // data-id가 없으면 data-category 또는 다른 속성에서 찾기 시도
         if (!productId) {
           const productLink = productItem.querySelector(".product-link");
           if (productLink) {
             try {
-              // 추가: try-catch 블록
               const url = new URL(productLink.href, window.location.origin);
               productId = url.searchParams.get("id");
-            } catch (err) {
-              console.error("URL 파싱 오류:", err);
-            }
+            } catch (err) {}
           }
         }
 
@@ -406,7 +402,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     const data = await response.json();
-    console.log("JSON 데이터 로드 성공:", data);
 
     // 모든 제품 데이터 저장
     originalAllProducts = data.detail;
@@ -632,9 +627,6 @@ document.addEventListener("DOMContentLoaded", async function () {
               const productItem =
                 createProductItemWithExistingStructure(productData);
               productRow.appendChild(productItem);
-              console.log(
-                `제품 ${i + j + 1} 업데이트 완료: ${productData.name}`
-              );
             } catch (error) {
               console.error(`제품 ${i + j + 1} 업데이트 중 오류 발생:`, error);
             }
@@ -756,8 +748,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
       }, 100);
     }, 300);
-
-    console.log(`${products.length}개의 제품 아이템이 업데이트되었습니다.`);
   }
 
   // 이미지 업데이트 함수
@@ -769,7 +759,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     // 첫 번째 이미지(썸네일) 업데이트
     if (firstImg) {
       firstImg.src = productData.thumbnail || "";
-      console.log(`첫 번째 이미지 업데이트: ${firstImg.src}`);
     }
 
     // 두 번째 이미지 처리 (subImg01이 있고 빈 문자열이 아닌 경우에만 표시)
@@ -783,18 +772,13 @@ document.addEventListener("DOMContentLoaded", async function () {
       secondImg.remove();
     }
 
-    // 유효한 secondImg가 있는 경우에만 새로 생성하여 추가
     if (hasValidSecondImg) {
       secondImg = document.createElement("img");
       secondImg.className = "second-img";
       secondImg.src = productData["detail-product"].subImg01;
       secondImg.alt = productData.name || "";
       productImageDiv.appendChild(secondImg);
-      console.log(`두 번째 이미지 추가: ${secondImg.src}`);
     } else {
-      console.log(
-        "두 번째 이미지 추가하지 않음: subImg01이 없거나 빈 문자열입니다."
-      );
     }
   }
 
@@ -807,27 +791,22 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     if (productLink) {
       productLink.href = `./detail-product.html?id=${productData.id}`;
-      console.log(`상품 링크 업데이트: ${productLink.href}`);
     }
 
     if (brandElement) {
       brandElement.textContent = productData.brand || "";
-      console.log(`브랜드 업데이트: ${brandElement.textContent}`);
     }
 
     if (nameElement) {
       nameElement.textContent = productData.name || "";
-      console.log(`이름 업데이트: ${nameElement.textContent}`);
     }
 
     if (priceElement) {
       priceElement.textContent = (productData.price || "0") + " KRW";
-      console.log(`가격 업데이트: ${priceElement.textContent}`);
     }
 
     if (productData.category) {
       productItem.setAttribute("data-category", productData.category);
-      console.log(`카테고리 설정: ${productData.category}`);
     }
 
     // data-id 속성 추가/업데이트
