@@ -143,6 +143,8 @@ main #scrollSection {
 }
 main #scrollSection .flexCon01 {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 3%;
   padding: 0 3%;
@@ -182,8 +184,13 @@ main #scrollSection .flexCon01 .flexBox .imgBox img {
      object-fit: cover;
 }
 main #scrollSection .flexCon01 .flexBox .textBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
 }
 main #scrollSection .flexCon01 .flexBox .textBox p {
@@ -247,8 +254,13 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemText p {
@@ -278,13 +290,15 @@ main #scrollSection .flexCon01 .flexBox .itemWrap .itemBox .itemLike {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4px;
-  align-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   cursor: pointer;
   position: absolute;
   right: 0;
   top: 50%;
   width: 30px;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   text-align: center;
   color: #a9a9a9;
 }
@@ -498,7 +512,8 @@ main #scrollSection .marquee div {
     padding-top: 30px !important;
   }
   main #scrollSection .flexCon01 {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   main #scrollSection .flexCon01 .flexLeft,
   main #scrollSection .flexCon01 .flexRight {

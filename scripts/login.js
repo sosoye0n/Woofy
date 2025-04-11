@@ -40,15 +40,12 @@ if (!window.Kakao.isInitialized()) {
 function handleKakaoLogin() {
   Kakao.Auth.login({
     success: function (authObj) {
-      console.log("로그인 성공", authObj);
       Kakao.API.request({
         url: "/v2/user/me",
         success: function (res) {
-          console.log("사용자 정보", res);
           const username = res.kakao_account.profile.username;
           alert(`환영합니다, ${username}님!`);
         },
-        fail: function (error) {},
       });
     },
     fail: function (err) {

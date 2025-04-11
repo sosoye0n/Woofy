@@ -3,11 +3,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-<<<<<<< HEAD
           box-sizing: border-box;
-=======
-  box-sizing: border-box;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
 }
 
 ul,
@@ -42,13 +38,8 @@ header {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-<<<<<<< HEAD
       -ms-flex-direction: column;
           flex-direction: column;
-=======
-  -ms-flex-direction: column;
-  flex-direction: column;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
 }
 .checkout-container .checkout-title {
   font-size: 2.4rem;
@@ -79,27 +70,14 @@ section {
   display: flex;
   margin-bottom: 20px;
   -webkit-box-align: center;
-<<<<<<< HEAD
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 .checkout-container .shipping-section .address-selector .address-label .recent-address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-=======
-  -ms-flex-align: center;
-  align-items: center;
-}
-.checkout-container
-  .shipping-section
-  .address-selector
-  .address-label
-  .recent-address {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   font-size: 2.2rem;
   font-weight: 400;
   margin-right: 30px;
@@ -112,56 +90,77 @@ section {
 .checkout-container .shipping-section .address-selector .address-info {
   margin-bottom: 20px;
   color: #a7a7a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-<<<<<<< HEAD
-.checkout-container .shipping-section .address-selector .address-info .user-state {
-=======
-.checkout-container
-  .shipping-section
-  .address-selector
-  .address-info
-  .user-state {
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
+.checkout-container .shipping-section .address-selector .address-info .user-chioce {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-<<<<<<< HEAD
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-=======
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
   font-size: 2rem;
   font-weight: 400;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-<<<<<<< HEAD
-      -ms-flex-align: center;
-          align-items: center;
-=======
-  -ms-flex-align: center;
-  align-items: center;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
+  border: none;
+  padding: 5px 0;
+  width: 60%;
 }
-.checkout-container
-  .shipping-section
-  .address-selector
-  .address-info
-  .user-state
-  .address-book-link {
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-webkit-input-placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-moz-placeholder {
+  color: #999;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus {
+  outline: none;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
   font-size: 1.6rem;
   color: #000;
 }
@@ -227,13 +226,6 @@ section {
   width: 100%;
 }
 .checkout-container .shipping-section .address-selector .delivery-message select {
-=======
-.checkout-container
-  .shipping-section
-  .address-selector
-  .delivery-message
-  select {
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,19 +259,11 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-<<<<<<< HEAD
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-=======
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   padding: 35px 25px;
   margin: 5px;
   border-top: 1px solid #d9d9d9;
@@ -299,13 +283,8 @@ section {
 }
 .order-products .product-list .product-item .product-info {
   -webkit-box-flex: 1;
-<<<<<<< HEAD
       -ms-flex: 1;
           flex: 1;
-=======
-  -ms-flex: 1;
-  flex: 1;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   padding: 0 15px;
   font-size: 2rem;
   font-weight: 400;
@@ -363,7 +342,6 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-<<<<<<< HEAD
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
@@ -371,15 +349,6 @@ section {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-=======
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   margin-bottom: 15px;
   padding: 0 10px;
   color: #999999;
@@ -410,13 +379,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-<<<<<<< HEAD
       -ms-flex-pack: end;
           justify-content: flex-end;
-=======
-  -ms-flex-pack: end;
-  justify-content: flex-end;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   margin-bottom: 20px;
   font-size: 1.4rem;
   color: #dadada;
@@ -430,13 +394,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-<<<<<<< HEAD
       -ms-flex-pack: justify;
           justify-content: space-between;
-=======
-  -ms-flex-pack: justify;
-  justify-content: space-between;
->>>>>>> 8418415fa2dcddb029a5ba9182747b879e07f01b
   margin-bottom: 15px;
   padding: 0 5%;
   color: #a7a7a8;
@@ -472,8 +431,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .payment-options .visually-hidden {
   position: absolute;
@@ -490,13 +449,13 @@ section {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .payment-options .payment-options-list .payment-option {
   cursor: pointer;
@@ -532,8 +491,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .terms-agreement .agreement-label {
   cursor: pointer;
@@ -569,8 +528,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .checkout-button-container .checkout-button {
   width: 100%;
@@ -590,7 +549,7 @@ section {
 }
 .checkout-button-container .checkout-button:active {
   -webkit-box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal, .payment-confirm-modal, .coupon-modal, .address-modal {
