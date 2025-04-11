@@ -184,7 +184,6 @@ async function fetchAllProducts() {
     }
 
     const data = await response.json();
-    console.log("전체 JSON 데이터 로드됨:", data);
     return data;
   } catch (error) {
     console.error("데이터를 가져오는 중 오류 발생:", error);
@@ -201,7 +200,6 @@ async function fetchProductDetails(id) {
     }
 
     const data = await response.json();
-    console.log("JSON 데이터 로드됨:", data);
 
     // ID로 상품 찾기
     const product = data.detail.find((item) => item.id === parseInt(id, 10));
@@ -416,12 +414,6 @@ function updateProductUI(product) {
       }, 100);
     }, 50);
   }
-
-  // 디버깅용 로그
-  console.log("상품 정보 업데이트 완료:", product.name);
-  console.log("상품 브랜드:", product.brand);
-  console.log("상품 카테고리:", product.category);
-  console.log("추가 이미지 있음:", hasAdditionalImages);
 }
 
 // 아코디언 기능 설정
@@ -555,6 +547,4 @@ function addToCart(product) {
 
   // 장바구니 저장
   localStorage.setItem("cart", JSON.stringify(cart));
-
-  console.log("장바구니에 추가됨:", product);
 }

@@ -88,99 +88,108 @@ header {
   display: none;
   width: 100%;
   background: map-get($map: $color, $key: light);
+  border-bottom: 1px solid #e9e9e9;
+  margin-bottom: 25px;
+
   .tablet-nav-container {
     display: flex;
     flex-direction: column;
     width: 100%;
+
     .tablet-nav-headers {
       display: flex;
-      justify-content: space-between;
-      padding: 15px 0;
-      cursor: pointer;
+      justify-content: center;
+      padding: 15px 20px;
+      border-bottom: 1px solid #f0f0f0;
 
       .nav-header {
-        font-weight: bold;
-        font-size: 1.8rem;
+        font-weight: 600;
+        font-size: 1.6rem;
         text-align: center;
-        flex: 1;
+        padding: 8px 15px;
+        flex: 1; /* 균등한 너비 */
+        max-width: 50%; /* 너비 제한 */
         position: relative;
-        padding-bottom: 5px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        &:hover {
+        &:hover,
+        &.active {
           color: map-get($map: $color, $key: point);
-          &:active {
-            color: map-get($map: $color, $key: point);
-          }
+          background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        &.active:after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 50%;
+          height: 2px;
+          background-color: map-get($map: $color, $key: point);
         }
       }
     }
+
     .tablet-nav-content {
       display: flex;
       width: 100%;
       justify-content: space-between;
-      padding: 0 5%;
+      padding: 15px 20px;
       gap: 20px;
-      margin: 0 auto;
+      max-height: 300px;
+      overflow-y: auto;
       .nav-column {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: flex-start;
-        text-align: left;
-        &:first-child {
-          flex: 1;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 10px;
-        }
+        flex: 1;
+        &:first-child,
         &:last-child {
-          height: 10px;
           flex: 1;
           display: grid;
-          grid-template-columns: 1fr;
-          gap: 10px;
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+          gap: 5px 15px;
+          padding: 0 10px;
         }
-      }
-      .nav-item {
-        padding: 8px 0;
-        font-size: 1.5rem;
-        text-align: left;
-        position: relative;
-        cursor: pointer;
-        &:hover {
-          color: map-get($map: $color, $key: point);
-          &:active {
+
+        .nav-item {
+          padding: 8px 0;
+          font-size: 1.4rem;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 160px;
+          cursor: pointer;
+          transition: color 0.2s ease;
+          position: relative;
+
+          &:hover,
+          &.active {
             color: map-get($map: $color, $key: point);
+            font-weight: 500;
           }
-        }
-        &.with-dot {
-          display: flex;
-          align-items: center;
-          justify-content: flex-start;
-        }
-        .color-dot {
-          width: 20px;
-          height: 20px;
-          border-radius: 50%;
-          display: inline-block;
-          margin-right: 10px;
-          border: 1px solid map-get($map: $color, $key: boxline);
-          &.black {
-            background-color: #000;
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: map-get($map: $color, $key: point);
+            transition: width 0.2s ease;
           }
-          &.white {
-            background-color: #fff;
-          }
-          &.blue {
-            background-color: blue;
-          }
-          &.red {
-            background-color: red;
-          }
-          &.brown {
-            background-color: brown;
-          }
-          &.pink {
-            background-color: pink;
+
+          &:hover:after,
+          &.active:after {
+            width: 100%;
+            max-width: 120px;
           }
         }
       }
@@ -568,6 +577,7 @@ header {
 // 반응형 태블릿 코드 (1024px 이하)
 @media screen and (max-width: 1024px) {
   .container {
+    margin: 0;
     flex-direction: column;
     margin-top: 70px;
     .tablet-navigation {
@@ -579,11 +589,9 @@ header {
           }
         }
         .tablet-nav-content {
-          margin-left: 6.5%;
           .nav-column {
             width: 45%;
-            margin-left: 0;
-            margin-right: 2%;
+            margin-left: 6.5%;
             &:first-child,
             &:last-child {
               display: grid;
@@ -661,7 +669,7 @@ header {
           }
         }
         .tablet-nav-content {
-          margin-left: 3.5%;
+          margin-left: 0;
           .nav-column {
             width: 45%;
             &:first-child,
@@ -768,8 +776,8 @@ header {
 @media screen and (max-width: 580px) {
   .container {
     .tablet-navigation {
+      margin-bottom: 15px;
       .tablet-nav-container {
-        margin: 0;
         .tablet-nav-headers {
           display: flex;
           overflow-x: auto;
@@ -783,32 +791,34 @@ header {
           }
           .nav-header {
             font-size: 1.5rem;
-            padding: 0 15px;
+            padding: 5px 10px;
             text-align: center;
             white-space: nowrap;
           }
         }
         .tablet-nav-content {
-          width: 96vw;
-          display: flex;
-          flex-wrap: nowrap;
+          padding: 10px;
+          max-height: 250px;
           overflow-x: auto;
-          margin: 0;
+          flex-wrap: nowrap;
+          display: flex;
+          justify-content: flex-start;
           -webkit-overflow-scrolling: touch;
           &::-webkit-scrollbar {
             display: none; // 스크롤바 숨기기
           }
           .nav-column {
-            min-width: 50%;
+            min-width: 130px;
             flex: 0 0 auto;
-            padding: 0;
-            gap: 5px;
+            margin-left: 10px;
             &:first-child,
             &:last-child {
               .nav-item {
                 white-space: nowrap;
-                padding: 8px 0;
-                text-align: start;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 130px;
+                padding: 6px 0;
                 font-size: 1.3rem;
               }
             }
@@ -952,7 +962,7 @@ header {
         .tablet-nav-content {
           width: 90vw;
           margin: 0;
-          padding: 0;
+          gap: 0;
           .nav-column {
             min-width: 50%;
             padding: 0;

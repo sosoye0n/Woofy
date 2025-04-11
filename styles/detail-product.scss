@@ -48,6 +48,7 @@ header {
         width: 100%;
         height: 100%;
         .swiper-slide {
+          width: 100%;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -292,11 +293,17 @@ header {
   /* 갤러리 영역 */
   .product-gallery {
     width: 100%;
-    max-width: 600px;
+    max-width: 601px;
     .gallery-main {
       width: 100%;
       .swiper {
+        width: 100%;
         height: 600px;
+        .swiper-wrapper {
+          .swiper-slide {
+            margin-top: 30px;
+          }
+        }
       }
     }
   }
@@ -353,7 +360,7 @@ header {
     max-width: 500px;
     .gallery-main {
       .swiper {
-        height: 500px;
+        height: 600px;
       }
     }
   }
@@ -413,7 +420,7 @@ header {
     .gallery-main {
       width: 100%;
       .swiper {
-        height: 450px;
+        height: 600px;
       }
     }
   }
@@ -502,7 +509,8 @@ header {
     .gallery-main {
       width: 100%;
       .swiper {
-        height: 350px;
+        margin-top: 10px;
+        height: 500px;
       }
     }
   }
