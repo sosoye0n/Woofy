@@ -291,22 +291,36 @@ section {
 }
 .order-products .product-list .product-item .product-info .product-name {
   margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 2rem;
   font-weight: 600;
 }
 .order-products .product-list .product-item .product-info .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.7rem;
   font-weight: bold;
   padding-right: 30px;
 }
 .order-products .product-list .product-item .product-info .product-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  align-items: center;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.5rem;
   margin-top: 10px;
   padding-right: 30px;
@@ -320,6 +334,7 @@ section {
   font-size: 2.4rem;
   cursor: pointer;
   color: #a9a9a9;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .order-products .product-list .product-item .remove-product:hover {
@@ -561,8 +576,12 @@ section {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .modal .modal-content, .payment-confirm-modal .modal-content, .coupon-modal .modal-content, .address-modal .modal-content {
   background-color: white;
@@ -570,13 +589,21 @@ section {
   max-width: 400px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  animation: modalFadeIn 0.3s ease;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  -webkit-animation: modalFadeIn 0.3s ease;
+          animation: modalFadeIn 0.3s ease;
 }
 .modal .modal-header, .payment-confirm-modal .modal-header, .coupon-modal .modal-header, .address-modal .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px 20px;
 }
 .modal .modal-header h3, .payment-confirm-modal .modal-header h3, .coupon-modal .modal-header h3, .address-modal .modal-header h3 {
@@ -597,8 +624,12 @@ section {
 }
 .modal .modal-footer, .payment-confirm-modal .modal-footer, .coupon-modal .modal-footer, .address-modal .modal-footer {
   padding: 15px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .modal .modal-footer .modal-button, .payment-confirm-modal .modal-footer .modal-button, .modal .modal-footer .coupon-modal .select-coupon, .payment-confirm-modal .modal-footer .coupon-modal .select-coupon, .coupon-modal .modal-footer .modal-button, .coupon-modal .modal-footer .select-coupon, .modal .modal-footer .address-modal .select-address, .payment-confirm-modal .modal-footer .address-modal .select-address, .coupon-modal .modal-footer .address-modal .select-address, .address-modal .modal-footer .modal-button, .address-modal .modal-footer .coupon-modal .select-coupon, .address-modal .modal-footer .select-address {
   background-color: #000;
@@ -614,14 +645,29 @@ section {
   opacity: 0.9;
 }
 
-@keyframes modalFadeIn {
+@-webkit-keyframes modalFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 .address-modal {
@@ -631,11 +677,17 @@ section {
   display: none;
 }
 .address-modal .address-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 12px 10px;
   cursor: pointer;
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   align-items: center;
   gap: 15px;
   border-bottom: 1px solid #eeeeee;
@@ -664,8 +716,12 @@ section {
   margin: 0;
 }
 .coupon-modal .coupon-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 12px 10px;
   border-bottom: 1px solid #eee;
   cursor: pointer;
@@ -711,18 +767,25 @@ section {
 }
 .payment-confirm-modal .modal-footer {
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 12px;
 }
 .payment-confirm-modal .modal-footer .move-to-cart,
 .payment-confirm-modal .modal-footer .continue-shopping {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 14px 16px;
   border-radius: 30px;
   font-size: 1.5rem;
   font-weight: 500;
   cursor: pointer;
+  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   border: none;
 }
@@ -873,7 +936,8 @@ section {
     padding: 0 50px;
   }
   .payment-methods .payment-options .payment-options-list {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 8px;
   }
   .payment-methods .payment-options .payment-options-list .payment-option {
@@ -949,9 +1013,15 @@ section {
     font-size: 2rem;
     margin-bottom: 12px;
     padding-left: 6px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .section-title {
     font-size: 1.8rem;
@@ -1071,7 +1141,8 @@ section {
     margin-bottom: 20px;
   }
   .payment-methods .payment-options .payment-options-list {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 8px;
   }
@@ -1172,9 +1243,15 @@ section {
     font-size: 1.8rem;
     margin-bottom: 10px;
     padding-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .section-title {
     font-size: 1.7rem;
@@ -1493,8 +1570,13 @@ section {
   }
   .checkout-container .shipping-section .address-selector .address-info .user-chioce {
     margin-bottom: 6px;
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
     font-size: 1.4rem;

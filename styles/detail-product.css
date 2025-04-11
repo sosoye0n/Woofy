@@ -292,18 +292,28 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  filter: brightness(0.95);
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
 }
 .more-prodtcts .product-item .product-image:hover img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .more-prodtcts .product-item .product-info {
   width: 100%;
 }
 .more-prodtcts .product-item .product-info .product-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 5px;
 }
 .more-prodtcts .product-item .product-info .product-brand {
@@ -313,6 +323,8 @@ header {
   font-weight: bold;
 }
 .more-prodtcts .product-item .product-info .product-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   font-weight: 500;
@@ -340,7 +352,9 @@ header {
     padding: 20px;
     gap: 30px;
     min-height: auto;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   /* 갤러리 영역 */
   .product-gallery {
@@ -359,6 +373,8 @@ header {
     max-width: 600px;
     padding: 0;
     position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
