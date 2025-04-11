@@ -1,4 +1,4 @@
-// detail.js - 최종 완성본 (색상 선택 기능 포함)
+// detail.js - 최종 완성본 (브랜드 필터링 문제 해결)
 
 // 전역 변수로 선언하여 여러 함수에서 접근 가능하게 함
 let selectedCategory = "";
@@ -363,7 +363,7 @@ function updateCartCounter() {
   });
 }
 
-// 필터 적용 함수
+// 필터 적용 함수 - 브랜드 필터링 개선
 function applyFilters() {
   // 카테고리와 브랜드 필터링 함께 적용
   let filteredProducts = originalAllProducts;
@@ -390,11 +390,18 @@ function applyFilters() {
     }
   }
 
-  // 브랜드 필터 적용
+  // 브랜드 필터 적용 - 대소문자 무시 및 부분 일치 처리로 개선
   if (selectedBrands.length > 0) {
-    filteredProducts = filteredProducts.filter((product) =>
-      selectedBrands.includes(product.brand)
-    );
+    filteredProducts = filteredProducts.filter((product) => {
+      if (!product.brand) return false;
+
+      // 선택된 브랜드 중 하나라도 일치하면 포함
+      return selectedBrands.some((selectedBrand) => {
+        return product.brand
+          .toLowerCase()
+          .includes(selectedBrand.toLowerCase());
+      });
+    });
   }
 
   // 필터링된 결과로 allProducts 업데이트
