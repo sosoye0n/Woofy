@@ -15,7 +15,6 @@ main {
 }
 // 메인 컨텐츠
 main {
-  // margin-top: 70px;
   width: 100%;
   text-transform: uppercase;
   // 모달
@@ -32,7 +31,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    // cursor: pointer;
     transition: all 0.3s;
     .coupon {
       width: 380px;
@@ -84,7 +82,6 @@ main {
         .modalCouponInfoCon {
           .modalCoupon {
             display: flex;
-            // cursor: pointer;
             .couponBox1 {
               width: 160px;
               height: 92px;

@@ -27,6 +27,8 @@ header {
   padding-bottom: 100px;
   background: #fff;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -203,6 +205,7 @@ header {
   position: relative;
   cursor: pointer;
   text-align: left;
+  -webkit-transition: color 0.2s ease;
   transition: color 0.2s ease;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item.selected {
@@ -303,6 +306,7 @@ header {
   width: 100%;
   gap: 10px;
   padding: 10px;
+  -webkit-transition: height 0.3s ease, opacity 0.3s ease;
   transition: height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
 }
@@ -323,6 +327,7 @@ header {
   border: 1px solid #d3d3d3;
   padding: 10px;
   border-radius: 3px;
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
@@ -367,18 +372,29 @@ header {
   /* 페이지네이션 */
 }
 .content-inner .content-area {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .content-inner .content-area .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
+  -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
 .content-inner .content-area .product-grid .product-row {
@@ -474,6 +490,8 @@ header {
   opacity: 0;
 }
 .content-inner .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -483,7 +501,6 @@ header {
           align-items: center;
   padding: 50px 0 30px;
   width: 100%;
-  /* 콘텐츠 영역 조정 */
 }
 .content-inner .pagination .prev-page,
 .content-inner .pagination .next-page {
@@ -491,6 +508,8 @@ header {
   text-decoration: none;
   font-size: 1.3rem;
   padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .content-inner .pagination .prev-page:hover,
@@ -498,6 +517,8 @@ header {
   color: #000;
 }
 .content-inner .pagination .page-numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0;
   margin: 0;
@@ -514,6 +535,7 @@ header {
   color: #a7a7a8;
   padding: 5px 10px;
   font-size: 1.3rem;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .content-inner .pagination .page-numbers li a:hover {
@@ -526,7 +548,10 @@ header {
 
 @media screen and (max-width: 1024px) {
   .container {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 70px;
   }
   .container .tablet-navigation .tablet-nav-container .tablet-nav-headers {
@@ -623,7 +648,9 @@ header {
     display: flex;
     overflow-x: auto;
     white-space: nowrap;
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     padding: 10px 5px;
     gap: 15px;
     -webkit-overflow-scrolling: touch;
@@ -651,7 +678,9 @@ header {
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column {
     min-width: 40%;
-    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
     padding: 0;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column:nth-child(2) .nav-item {
@@ -665,8 +694,13 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column:nth-child(2) .nav-item.with-dot .color-dot {
     width: 15px;
@@ -746,6 +780,8 @@ header {
   .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column .nav-item.with-dot {
     width: 12px;
     height: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 10px;
     -webkit-box-pack: start;
