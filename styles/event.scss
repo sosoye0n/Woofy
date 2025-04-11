@@ -57,76 +57,78 @@ main {
         left: 0;
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-color: rgba($color: #000000, $alpha: 0.5);
         transition: all 0.3s;
-        // opacity: 0;
         display: none;
         &.on {
           display: block;
-          // opacity: 1;
         }
-        .modalContent {
-          max-width: 500px;
+        .modalContents {
           width: 100%;
-          height: 300px;
-          border-radius: 18px;
-          background-color: #fff;
-          margin: 16% 34%;
+          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-          position: relative;
-          .closeModal {
-            position: absolute;
-            top: 5%;
-            right: 5%;
-            cursor: pointer;
-            .fa-xmark {
-              font-size: 3rem;
-              color: map-get($map: $color, $key: inputs);
-              margin-top: 3%;
-              margin-right: 6%;
-            }
-          }
-          .modalTitle {
+          .modalContent {
+            max-width: 500px;
+            width: 100%;
+            height: 300px;
+            border-radius: 18px;
+            background-color: #fff;
+            // margin: 16% 34%;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            h1 {
-              font-size: 7rem;
-              font-weight: 700;
-              color: map-get($map: $color, $key: point);
-              margin-bottom: 10px;
-              b {
-                font-size: 5.2rem;
+            position: relative;
+            .closeModal {
+              position: absolute;
+              top: 5%;
+              right: 5%;
+              cursor: pointer;
+              .fa-xmark {
+                font-size: 3rem;
+                color: map-get($map: $color, $key: inputs);
+                margin-top: 3%;
+                margin-right: 6%;
               }
             }
-            p {
-              font-size: 3rem;
-              font-weight: 700;
-            }
-            span {
-              font-size: 1.4rem;
-              font-weight: 300;
-              margin-bottom: 4px;
-            }
-            .modalBtn {
-              font-size: 1.4rem;
-              font-weight: 600;
-              // margin-top: 20px;
-              border: none;
-              padding: 14px 30px;
-              border-radius: 12px;
-              background: map-get($map: $color, $key: point);
-              cursor: pointer;
-              transition: all 0.3s;
-              &:hover {
-                background: map-get($map: $color, $key: dark);
+            .modalTitle {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              h1 {
+                font-size: 7rem;
+                font-weight: 700;
                 color: map-get($map: $color, $key: point);
+                margin-bottom: 10px;
+                b {
+                  font-size: 5.2rem;
+                }
+              }
+              p {
+                font-size: 3rem;
+                font-weight: 700;
+              }
+              span {
+                font-size: 1.4rem;
+                font-weight: 300;
+                margin-bottom: 4px;
+              }
+              .modalBtn {
+                font-size: 1.4rem;
+                font-weight: 600;
+                // margin-top: 20px;
+                border: none;
+                padding: 14px 30px;
+                border-radius: 12px;
+                background: map-get($map: $color, $key: point);
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                  background: map-get($map: $color, $key: dark);
+                  color: map-get($map: $color, $key: point);
+                }
               }
             }
           }
@@ -270,6 +272,8 @@ main {
       width: 100%;
       // height: 100vh;
       background: #e7effd;
+      padding: 0 3%;
+
       .conWrapper {
         display: flex;
         justify-content: center;
@@ -294,6 +298,19 @@ main {
                 object-fit: cover;
               }
             }
+          }
+          .swiper-pagination {
+            .swiper-pagination-bullet {
+              background-color: #222;
+
+              &.swiper-pagination-bullet-active {
+                background-color: #fff;
+              }
+            }
+          }
+          .swiper-button-next,
+          .swiper-button-prev {
+            color: #fff;
           }
         }
         .contents {
@@ -350,7 +367,6 @@ main {
               }
               .sale {
                 font-weight: 300;
-
                 b {
                   color: map-get($map: $color, $key: point);
                   font-size: 2.2rem;
@@ -368,7 +384,6 @@ main {
             align-items: center;
             text-align: center;
             margin-bottom: 10%;
-
             .detailImg {
               width: 140px;
               height: 140px;
@@ -376,7 +391,6 @@ main {
               background-color: #fff;
               border-radius: 10px;
               cursor: pointer;
-
               img {
                 width: 100%;
                 height: 100%;
@@ -475,12 +489,12 @@ main {
       background-color: #e0e8fc;
       position: relative;
       .conImg {
-        width: 500px;
+        width: 50%;
         height: 100%;
         position: absolute;
         display: flex;
         img {
-          width: 100%;
+          width: 70%;
           height: 100%;
           object-fit: cover;
         }
@@ -490,7 +504,7 @@ main {
         width: 300px;
         object-fit: cover;
         top: 3%;
-        right: 8%;
+        right: 10%;
         cursor: pointer;
         transform: rotate(4deg);
         &:hover {
@@ -500,7 +514,7 @@ main {
       }
       .clothe {
         position: absolute;
-        width: 140px;
+        width: 170px;
         top: 44%;
         right: 6%;
         cursor: pointer;
@@ -641,14 +655,17 @@ main {
         }
       }
       .eventWarning {
+        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 10%;
+        margin: 8% 0;
         h1 {
-          width: 100%;
-          font-size: 2rem;
+          i {
+            margin-right: 10px;
+          }
+          font-size: 1.8rem;
           color: map-get($map: $color, $key: light);
           margin-bottom: 2%;
         }
@@ -657,13 +674,15 @@ main {
           li {
             position: relative;
             padding-left: 16px;
+            font-size: 1.3rem;
+            margin-bottom: 2%;
             &::before {
               content: "";
               position: absolute;
-              width: 6px;
-              height: 6px;
+              width: 4px;
+              height: 4px;
               left: 0;
-              top: 7px;
+              top: 6px;
               background-color: map-get($map: $color, $key: light);
               border-radius: 100%;
             }
@@ -690,72 +709,94 @@ main {
           display: block;
           // opacity: 1;
         }
-        .modalDrawContent {
-          max-width: 500px;
+        .modalDrawContents {
           width: 100%;
-          height: 300px;
-          border-radius: 18px;
-          background-color: #fff;
-          margin: 16% 34%;
+          height: 100%;
           display: flex;
           justify-content: center;
           align-items: center;
-          position: relative;
-          .closeDrawModal {
-            position: absolute;
-            top: 5%;
-            right: 5%;
-            cursor: pointer;
-            .fa-xmark {
-              font-size: 3rem;
-              color: map-get($map: $color, $key: inputs);
-              margin-top: 3%;
-              margin-right: 6%;
-            }
-          }
-          .modalDrawTitle {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            h1 {
-              font-size: 1.8rem;
-              font-weight: 200;
-            }
-            p {
-              // font-size: 2.7rem;
-              font-size: 4rem;
-              font-weight: 800;
-              margin-top: 6px;
-              margin-bottom: 10px;
-            }
-            span {
-              font-size: 1.4rem;
-              font-weight: 300;
-              // margin-top: 20px;
-            }
-            .modalDrawBtn {
-              font-size: 1.4rem;
-              font-weight: 600;
-              margin-top: 30px;
-              border: none;
-              padding: 14px 30px;
-              border-radius: 12px;
-              background: map-get($map: $color, $key: dark);
-              color: map-get($map: $color, $key: point);
-              // background: map-get($map: $color, $key: point);
+          .modalDrawContent {
+            max-width: 500px;
+            width: 100%;
+            height: 300px;
+            border-radius: 18px;
+            background-color: #fff;
+            position: relative;
+            .closeDrawModal {
+              position: absolute;
+              top: 5%;
+              right: 5%;
               cursor: pointer;
-              transition: all 0.3s;
-              &:hover {
-                background: map-get($map: $color, $key: point);
-                // background: map-get($map: $color, $key: dark);
-                color: map-get($map: $color, $key: dark);
+              .fa-xmark {
+                font-size: 3rem;
+                color: map-get($map: $color, $key: inputs);
+                margin-top: 3%;
+                margin-right: 6%;
+              }
+            }
+            .modalDrawTitle {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              h1 {
+                font-size: 1.8rem;
+                font-weight: 200;
+              }
+              p {
+                // font-size: 2.7rem;
+                font-size: 4rem;
+                font-weight: 800;
+                margin-top: 6px;
+                margin-bottom: 10px;
+              }
+              span {
+                font-size: 1.4rem;
+                font-weight: 300;
+                // margin-top: 20px;
+              }
+              .modalDrawBtn {
+                font-size: 1.4rem;
+                font-weight: 600;
+                margin-top: 30px;
+                border: none;
+                padding: 14px 30px;
+                border-radius: 12px;
+                background: map-get($map: $color, $key: dark);
+                color: map-get($map: $color, $key: point);
+                // background: map-get($map: $color, $key: point);
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover {
+                  background: map-get($map: $color, $key: point);
+                  // background: map-get($map: $color, $key: dark);
+                  color: map-get($map: $color, $key: dark);
+                }
               }
             }
           }
         }
       }
     }
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scrolling-r {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -769,13 +810,6 @@ main {
         p {
           height: 70px;
           font-size: 2.4rem;
-        }
-      }
-      #eventModal {
-        #modalBg {
-          .modalContent {
-            margin: 30% 27%;
-          }
         }
       }
       .event01 {
@@ -880,41 +914,33 @@ main {
           top: 38%;
         }
       }
-    }
-    #container02 {
-      // height: 132vh;
-      .eventBtn {
-        p {
-          width: 512px;
-          height: 70px;
-          font-size: 2.4rem;
-        }
-      }
-      .event2 {
-        margin-top: 0;
-        .event02 {
-          top: 10%;
-          ul {
-            width: 120%;
-            font-size: 7rem;
-            hr {
-              width: 100%;
-            }
+      #container02 {
+        // height: 132vh;
+        .eventBtn {
+          p {
+            width: 512px;
+            height: 70px;
+            font-size: 2.4rem;
           }
         }
-      }
-      #drawModal {
-        #modalDrawBg {
-          .modalDrawContent {
-            margin: 30% 27%;
+        .event2 {
+          margin-top: 0;
+          .event02 {
+            top: 10%;
+            ul {
+              width: 120%;
+              font-size: 7rem;
+              hr {
+                width: 100%;
+              }
+            }
           }
         }
       }
     }
   }
 }
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   main {
     #container01 {
       .eventHeader {
@@ -928,8 +954,20 @@ main {
       }
       #eventModal {
         #modalBg {
-          .modalContent {
-            margin: 34% 17%;
+          .modalContents {
+            .modalContent {
+              .modalTitle {
+                h1 {
+                  font-size: 5.2rem;
+                  b {
+                    font-size: 4.6rem;
+                  }
+                }
+                .modalBtn {
+                  margin-top: 5%;
+                }
+              }
+            }
           }
         }
       }
@@ -999,7 +1037,8 @@ main {
           width: 180px;
         }
         .clothe {
-          width: 90px;
+          width: 120px;
+          right: 4%;
         }
       }
     }
@@ -1013,29 +1052,45 @@ main {
       .event2 {
         .event02 {
           ul {
-            width: 100%;
+            width: 90%;
             font-size: 6rem;
             hr {
               width: 100%;
             }
           }
         }
-        .eventWarning {
-          margin: 14%;
+        .warningWrapper {
+          .eventWarning {
+            margin: 14%;
+            ul {
+              width: 80%;
+              li {
+                font-size: 1rem;
+              }
+            }
+          }
         }
       }
       #drawModal {
         #modalDrawBg {
-          .modalDrawContent {
-            margin: 34% 17%;
+          .modalDrawContents {
+            .modalDrawContent {
+              .modalTitle {
+                h1 {
+                  font-size: 5.2rem;
+                }
+                .modalBtn {
+                  margin-top: 5%;
+                }
+              }
+            }
           }
         }
       }
     }
   }
 }
-
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 590px) {
   main {
     #container01 {
       .eventBtn {
@@ -1046,33 +1101,694 @@ main {
       }
       #eventModal {
         #modalBg {
-          .modalContent {
-            max-width: 270px;
-            height: 260px;
-            border-radius: 10px;
-            margin: 52% 14%;
-            .closeModal {
-              .fa-xmark {
-                font-size: 2rem;
-              }
-            }
-            .modalTitle {
-              span {
-                margin-bottom: 6px;
-              }
-              p {
-                font-size: 2.4rem;
-              }
-              h1 {
-                font-size: 5rem;
-                margin-bottom: 14px;
-                b {
-                  font-size: 3rem;
+          .modalContents {
+            height: 100%;
+            .modalContent {
+              max-width: 270px;
+              height: 230px;
+              border-radius: 10px;
+              .closeModal {
+                .fa-xmark {
+                  font-size: 2rem;
                 }
               }
-              .modalBtn {
-                padding: 10px 26px;
-                font-size: 1.2rem;
+              .modalTitle {
+                span {
+                  margin-bottom: 6px;
+                }
+                p {
+                  font-size: 2.4rem;
+                }
+                h1 {
+                  font-size: 4rem;
+                  margin-bottom: 10px;
+                  b {
+                    font-size: 3rem;
+                  }
+                }
+                .modalBtn {
+                  margin-top: 0;
+                  padding: 10px 26px;
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .event01 {
+        .event01Wrapper {
+          width: 90%;
+          .textWrapper {
+            height: 340px;
+            border-radius: 15px 15px 0 0;
+
+            h1 {
+              font: normal 1.4rem/1 map-get($map: $font-family, $key: figtree);
+              text-shadow: 0px 3px 0px rgba($color: #fff, $alpha: 0.6);
+            }
+            .left {
+              gap: 8px;
+              img {
+                width: 190px;
+                height: 70px;
+              }
+              p {
+                padding: 10px 10px;
+                font: normal 1rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+            .right {
+              gap: 8px;
+              p {
+                padding: 10px 10px;
+                font: normal 1rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+          }
+        }
+        .eventSec {
+          p {
+            font: normal 1.2rem/1.6 map-get($map: $font-family, $key: figtree);
+          }
+        }
+        .slide {
+          .imgSlider1 {
+            .track1 {
+              img {
+                width: 140px;
+                height: 160px;
+              }
+            }
+          }
+          .imgSlider2 {
+            .track2 {
+              img {
+                width: 140px;
+                height: 160px;
+              }
+            }
+          }
+        }
+      }
+      .event01-1 {
+        .conWrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .swiper {
+            width: 80%;
+            height: 300px;
+            border-radius: 6px;
+          }
+          .contents {
+            width: 80%;
+            margin-bottom: 0;
+            h1 {
+              display: none;
+            }
+            .contentList01 {
+              width: 100%;
+              height: 120px;
+              gap: 20px;
+              margin-top: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 0;
+              .detailImg {
+                border-radius: 6px;
+                height: 100%;
+              }
+              .content {
+                gap: 8px;
+                height: 120px;
+                .brand {
+                  font-size: 1.4rem;
+                }
+                .name {
+                  font-size: 1.2rem;
+                }
+                .sale {
+                  font-size: 1.4rem;
+
+                  b {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+            }
+            .contentList02 {
+              width: 100%;
+              height: 140px;
+              gap: 20px;
+              margin-top: 12px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 0;
+              .detailImg {
+                border-radius: 6px;
+              }
+              .content {
+                gap: 8px;
+                height: 120px;
+                .brand {
+                  font-size: 1.4rem;
+                }
+                .name {
+                  font-size: 1.2rem;
+                }
+                .sale {
+                  font-size: 1.4rem;
+
+                  b {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+            }
+            .contentList03 {
+              width: 100%;
+              height: 120px;
+              gap: 20px;
+              margin-top: 12px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 0;
+              .detailImg {
+                height: 100%;
+                border-radius: 6px;
+              }
+              .content {
+                gap: 8px;
+                height: 120px;
+                .brand {
+                  font-size: 1.4rem;
+                }
+                .name {
+                  font-size: 1.2rem;
+                }
+                .sale {
+                  font-size: 1.4rem;
+
+                  b {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .event01-2 {
+          height: 20vh;
+          .conImg {
+            width: 160px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .cap {
+            width: 70px;
+            right: 6%;
+          }
+          .clothe {
+            width: 20px;
+          }
+        }
+      }
+      #container02 {
+        position: relative;
+        height: 110vh;
+        .eventBtn {
+          p {
+            height: 50px;
+            font-size: 1.2rem;
+          }
+        }
+        .event2 {
+          position: absolute;
+          top: 3%;
+          .event02 {
+            ul {
+              width: 40%;
+              font-size: 2.2rem;
+              margin-bottom: 4%;
+            }
+            .drawImg {
+              width: 240px;
+              height: 280px;
+              margin-top: 2%;
+              img {
+                object-fit: contain;
+              }
+            }
+            .countdown {
+              font-size: 3.2rem;
+              margin: 4% 0;
+            }
+            .drawBtn {
+              width: 160px;
+              padding: 12px 14px;
+              font-size: 1.2rem;
+              margin: 3% 0;
+            }
+          }
+          .warningWrapper {
+            .eventWarning {
+              margin: 8% 0;
+              h1 {
+                font-size: 1.4rem;
+                margin-bottom: 4%;
+              }
+              ul {
+                li {
+                  font-size: 1rem;
+                  margin-bottom: 2%;
+                  &::before {
+                    top: 4px;
+                    width: 3px;
+                    height: 3px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        #drawModal {
+          #modalDrawBg {
+            .modalDrawContent {
+              max-width: 300px;
+              height: 200px;
+              margin: 60% 11%;
+              border-radius: 8px;
+              .closeDrawModal {
+                .fa-xmark {
+                  font-size: 1.8rem;
+                }
+              }
+              .modalDrawTitle {
+                h1 {
+                  font-size: 1.4rem;
+                }
+                p {
+                  font-size: 3rem;
+                }
+                span {
+                  font-size: 1.2rem;
+                }
+                .modalDrawBtn {
+                  font-size: 1.2rem;
+                  padding: 10px 26px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  main {
+    #container01 {
+      .eventBtn {
+        p {
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+      #eventModal {
+        #modalBg {
+          .modalContents {
+            height: 100%;
+            .modalContent {
+              max-width: 270px;
+              height: 230px;
+              border-radius: 10px;
+              .closeModal {
+                .fa-xmark {
+                  font-size: 2rem;
+                }
+              }
+              .modalTitle {
+                span {
+                  font-size: 1rem;
+                  margin-bottom: 6px;
+                }
+                p {
+                  font-size: 2.3rem;
+                }
+                h1 {
+                  font-size: 4rem;
+                  margin-bottom: 16px;
+                  b {
+                    font-size: 3rem;
+                  }
+                }
+                .modalBtn {
+                  margin-top: 0;
+                  padding: 10px 26px;
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      .event01 {
+        .event01Wrapper {
+          width: 90%;
+          .textWrapper {
+            height: 340px;
+            border-radius: 20px 20px 0 0;
+
+            h1 {
+              font: normal 1.4rem/1 map-get($map: $font-family, $key: figtree);
+              text-shadow: 0px 3px 0px rgba($color: #fff, $alpha: 0.6);
+            }
+            .left {
+              gap: 8px;
+              img {
+                width: 190px;
+                height: 70px;
+              }
+              p {
+                padding: 10px 10px;
+                font: normal 1rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+            .right {
+              gap: 8px;
+              p {
+                padding: 10px 10px;
+                font: normal 1rem/1 map-get($map: $font-family, $key: figtree);
+              }
+            }
+          }
+        }
+        .eventSec {
+          p {
+            font: normal 1.2rem/1.6 map-get($map: $font-family, $key: figtree);
+          }
+        }
+        .slide {
+          .imgSlider1 {
+            .track1 {
+              img {
+                width: 140px;
+                height: 160px;
+              }
+            }
+          }
+          .imgSlider2 {
+            .track2 {
+              img {
+                width: 140px;
+                height: 160px;
+              }
+            }
+          }
+        }
+      }
+      .event01-1 {
+        .conWrapper {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .swiper {
+            width: 80%;
+            height: 260px;
+            border-radius: 6px;
+          }
+          .contents {
+            width: 80%;
+            margin-bottom: 0;
+            h1 {
+              display: none;
+            }
+            .contentList01 {
+              width: 100%;
+              height: 120px;
+              gap: 20px;
+              margin-top: 20px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 0;
+              .detailImg {
+                border-radius: 6px;
+                height: 100%;
+              }
+              .content {
+                gap: 8px;
+                height: 120px;
+                .brand {
+                  font-size: 1.4rem;
+                }
+                .name {
+                  font-size: 1.2rem;
+                }
+                .sale {
+                  font-size: 1.4rem;
+
+                  b {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+            }
+            .contentList02 {
+              width: 100%;
+              height: 120px;
+              gap: 20px;
+              margin-top: 12px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 0;
+              .detailImg {
+                height: 100%;
+                border-radius: 6px;
+              }
+              .content {
+                gap: 8px;
+                height: 120px;
+                .brand {
+                  font-size: 1.4rem;
+                }
+                .name {
+                  font-size: 1.2rem;
+                }
+                .sale {
+                  font-size: 1.4rem;
+
+                  b {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+            }
+            .contentList03 {
+              width: 100%;
+              height: 120px;
+              gap: 20px;
+              margin-top: 12px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin-bottom: 0;
+              .detailImg {
+                height: 100%;
+                border-radius: 6px;
+              }
+              .content {
+                gap: 8px;
+                height: 120px;
+                .brand {
+                  font-size: 1.4rem;
+                }
+                .name {
+                  font-size: 1.2rem;
+                }
+                .sale {
+                  font-size: 1.4rem;
+
+                  b {
+                    font-size: 1.6rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .event01-2 {
+        height: 20vh;
+        .conImg {
+          width: 160px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .cap {
+          width: 100px;
+          right: 12%;
+        }
+        .clothe {
+          width: 60px;
+          top: 30%;
+        }
+      }
+    }
+    #container02 {
+      position: relative;
+      height: 126vh;
+      .eventBtn {
+        p {
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+      .event2 {
+        position: absolute;
+        top: 3%;
+        .event02 {
+          ul {
+            width: 60%;
+            font-size: 4rem;
+            margin-bottom: 4%;
+          }
+          .drawImg {
+            width: 240px;
+            height: 280px;
+            margin-top: 2%;
+            img {
+              object-fit: contain;
+            }
+          }
+          .countdown {
+            font-size: 3.2rem;
+            margin: 4% 0;
+          }
+          .drawBtn {
+            width: 160px;
+            padding: 12px 14px;
+            font-size: 1.2rem;
+            margin: 3% 0;
+          }
+        }
+        .eventWarning {
+          width: 70%;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          .warningWrapper {
+            margin: 8% 0;
+            h1 {
+              margin-bottom: 3%;
+              font-size: 1.4rem;
+            }
+            ul {
+              li {
+                font-size: 1rem;
+                margin-bottom: 2%;
+                &::before {
+                  top: 4px;
+                  width: 3px;
+                  height: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+      #drawModal {
+        #modalDrawBg {
+          .modalDrawContents {
+            .modalDrawContent {
+              max-width: 270px;
+              height: 230px;
+              border-radius: 10px;
+              .closeDrawModal {
+                .fa-xmark {
+                  font-size: 2rem;
+                }
+              }
+              .modalDrawTitle {
+                h1 {
+                  font-size: 1.6rem;
+                  margin-bottom: 8px;
+                }
+                p {
+                  font-size: 3rem;
+                  font-weight: 700;
+                }
+                span {
+                  font-size: 1rem;
+                  margin-bottom: 6px;
+                }
+                .modalDrawBtn {
+                  margin-top: 20px;
+                  padding: 10px 26px;
+                  font-size: 1.2rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  main {
+    #container01 {
+      .eventBtn {
+        p {
+          height: 50px;
+          font-size: 1.2rem;
+        }
+      }
+      #eventModal {
+        #modalBg {
+          .modalContents {
+            height: 100%;
+            .modalContent {
+              max-width: 270px;
+              height: 230px;
+              border-radius: 10px;
+              .closeModal {
+                .fa-xmark {
+                  font-size: 2rem;
+                }
+              }
+              .modalTitle {
+                span {
+                  margin-bottom: 6px;
+                }
+                p {
+                  font-size: 2.4rem;
+                }
+                h1 {
+                  font-size: 4rem;
+                  margin-bottom: 10px;
+                  b {
+                    font-size: 3rem;
+                  }
+                }
+                .modalBtn {
+                  margin-top: 0;
+                  padding: 10px 26px;
+                  font-size: 1.2rem;
+                }
               }
             }
           }
@@ -1143,12 +1859,6 @@ main {
             width: 80%;
             height: 240px;
             border-radius: 6px;
-
-            .swiper-wrapper {
-              .swiper-button-next {
-                border: 1px solid #f00;
-              }
-            }
           }
           .contents {
             width: 80%;
@@ -1253,22 +1963,26 @@ main {
         }
       }
       .event01-2 {
-        height: 30vh;
+        height: 20vh;
         .conImg {
-          width: 120px;
-          height: 100%;
+          width: 160px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
         }
         .cap {
-          width: 120px;
+          width: 90px;
+          right: 6%;
         }
         .clothe {
-          width: 68px;
+          width: 50px;
         }
       }
     }
     #container02 {
       position: relative;
-      height: 140vh;
+      height: 110vh;
       .eventBtn {
         p {
           height: 50px;
@@ -1277,7 +1991,7 @@ main {
       }
       .event2 {
         position: absolute;
-        top: 6%;
+        top: 3%;
         .event02 {
           ul {
             width: 40%;
@@ -1294,23 +2008,35 @@ main {
           }
           .countdown {
             font-size: 3.2rem;
-            margin: 8%;
+            margin: 4% 0;
           }
           .drawBtn {
             width: 160px;
             padding: 12px 14px;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
+            margin: 3% 0;
           }
         }
         .eventWarning {
-          h1 {
-            font-size: 1.6rem;
-            margin-bottom: 4%;
-          }
-          ul {
-            li {
-              font-size: 1.2rem;
-              margin-bottom: 2%;
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          .warningWrapper {
+            margin: 8% 0;
+            h1 {
+              font-size: 1.4rem;
+              margin-bottom: 6%;
+            }
+            ul {
+              li {
+                font-size: 0.9rem;
+                margin-bottom: 2%;
+                &::before {
+                  top: 4px;
+                  width: 3px;
+                  height: 3px;
+                }
+              }
             }
           }
         }
@@ -1346,22 +2072,5 @@ main {
         }
       }
     }
-  }
-}
-
-@keyframes scrolling {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes scrolling-r {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }

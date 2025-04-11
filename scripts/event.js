@@ -11,6 +11,9 @@ const mySwiper = new Swiper(".swiper", {
   // slidesPerView: 1,
   // loop: true,
   effect: "fade",
+  pagination: {
+    el: ".swiper-pagination",
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
