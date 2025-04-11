@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -24,11 +23,8 @@ header {
 
 /* 레이아웃 */
 .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 1920px;
   padding-bottom: 100px;
   background: #fff;
@@ -38,21 +34,14 @@ header {
 
 /* 상품 상세 페이지 스타일 */
 .product-detail {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100%;
   max-width: 80%;
   margin: 0 auto;
   padding: 40px 20px;
   gap: 50px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   min-height: 600px;
 }
 
@@ -60,15 +49,9 @@ header {
 .product-gallery {
   width: 55%;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .product-gallery .gallery-main {
   width: 80%;
@@ -85,7 +68,6 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-transition: background-image 0.3s ease;
   transition: background-image 0.3s ease;
 }
 .product-gallery .gallery-main .swiper .swiper-button-prev,
@@ -107,12 +89,8 @@ header {
   width: 80%;
 }
 .product-info .product-price-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 30px;
   width: 80%;
 }
@@ -161,15 +139,9 @@ header {
   border-bottom: 1px solid #eeeeee;
 }
 .product-info .product-accordion .category .title-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px 0;
   cursor: pointer;
 }
@@ -179,10 +151,7 @@ header {
 }
 .product-info .product-accordion .category .title-top i {
   font-size: 1.4rem;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .product-info .product-accordion .category .subcategory {
   padding: 0 0 15px;
@@ -200,19 +169,10 @@ header {
   margin-bottom: 0;
 }
 .product-info .product-actions {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   margin-top: 20px;
   width: 80%;
@@ -225,7 +185,6 @@ header {
   text-align: center;
   border-radius: 0;
   cursor: pointer;
-  -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
 .product-info .product-actions button:hover {
@@ -332,10 +291,7 @@ header {
 @media screen and (max-width: 1024px) {
   /* 상품 상세 페이지 스타일 - 태블릿 */
   .product-detail {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     max-width: 100%;
     padding: 20px;
     gap: 30px;
@@ -360,16 +316,9 @@ header {
     padding: 0;
     position: static;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .product-info .product-title,
   .product-info .product-price-info,
