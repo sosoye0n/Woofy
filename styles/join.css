@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  z-index: 1;
+}
+
+body {
+  background: #fff;
+}
+
+main {
+  padding: 0 3%;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+main #allContainer {
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 70px 0;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+main #allContainer h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+main #allContainer p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+main #allContainer #join {
+  transition: all 0.3s;
+  width: 420px;
+  margin-top: 30px;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+main #allContainer #join input:not(input[type="button"]) {
+  width: 420px;
+  height: 72px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: none;
+  background: #f5f5f5;
+  color: #dadada;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main #allContainer #join input:not(input[type="button"]):focus {
+  outline: none;
+}
+main #allContainer #join input[type="button"] {
+  width: 420px;
+  height: 72px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main #allContainer #join input[type="button"]:hover {
+  outline: none;
+  background: #99bdff;
+  color: #fff;
+}
+main #allContainer #join #joinBox {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 8px;
+}
+main #allContainer #join #joinBox .joinInput {
+  position: relative;
+}
+main #allContainer #join #joinBox .joinInput input {
+  padding-left: 20px;
+  transition: all 0.5s;
+}
+main #allContainer #join #joinBox .joinInput input:hover {
+  border: 1px solid #dadada;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+}
+main #allContainer #join #joinBox .error {
+  font-size: 1.1rem;
+  margin: 8px;
+  font-weight: 500;
+  color: #99bdff;
+}
+main #allContainer #join #joinBox .error i {
+  font-size: 1.2rem;
+  padding: 0 2px;
+  color: #99bdff;
+}
+
+@media screen and (max-width: 767px) {
+  main #allContainer h2 {
+    font-size: 2.6rem;
+  }
+  main #allContainer p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+  }
+  main #allContainer #join {
+    width: 280px;
+    margin-top: 30px;
+  }
+  main #allContainer #join input:not(input[type="button"]) {
+    width: 320px;
+    height: 64px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+  main #allContainer #join input[type="button"] {
+    width: 320px;
+    height: 64px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+  }
+  main #allContainer #join #joinContainer {
+    margin-bottom: 30px;
+  }
+  main #allContainer #join #joinContainer #joinInput input {
+    padding-left: 20px;
+  }
+  main #allContainer #join #joinContainer #errorPW {
+    font-size: 1.1rem;
+  }
+  main #allContainer #join #joinContainer #errorPW i {
+    font-size: 1rem;
+    padding: 0 1px;
+  }
+}

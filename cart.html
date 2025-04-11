@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/cart.css" />
+    <script defer src="./scripts.js"></script>
+    <script defer src="./scripts/cart.js"></script>
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <title>CART</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div id="searchWrap"></div>
+      <div class="container">
+        <div class="tablet-navigation">
+          <div class="tablet-nav-container">
+            <div class="tablet-nav-headers">
+              <div class="nav-header">BRANDS</div>
+              <div class="nav-header">LUXERY</div>
+            </div>
+            <div class="tablet-nav-content">
+              <div class="nav-column">
+                <div class="nav-item">EMIS</div>
+                <div class="nav-item">HAH X MERLOT</div>
+                <div class="nav-item">KABINE</div>
+                <div class="nav-item">MLB</div>
+                <div class="nav-item">YALE</div>
+                <div class="nav-item">HAZZYS</div>
+                <div class="nav-item">GLOWNY</div>
+                <div class="nav-item">Àvie mua</div>
+                <div class="nav-item">Merlot</div>
+              </div>
+              <div class="nav-column">
+                <div class="nav-item">MONCLER</div>
+                <div class="nav-item">LOUIS VUITTON</div>
+                <div class="nav-item">GUCCI</div>
+                <div class="nav-item">Polo Ralph Lauren</div>
+                <div class="nav-item">Dolce & Gabbana</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <section class="category">
+            <div class="title-top">
+              <h2>BRANDS</h2>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="subcategory">
+              <div class="item" data-brand="EMIS">EMIS</div>
+              <div class="item" data-brand="HAH X MERLOT">HAH X MERLOT</div>
+              <div class="item" data-brand="KABINE">KABINE</div>
+              <div class="item" data-brand="MLB">MLB</div>
+              <div class="item" data-brand="YALE">YALE</div>
+              <div class="item" data-brand="HAZZYS">HAZZYS</div>
+              <div class="item" data-brand="GLOWNY">GLOWNY</div>
+              <div class="item" data-brand="Àvie muah">Àvie muah</div>
+              <div class="item" data-brand="Merlot">Merlot</div>
+            </div>
+          </section>
+          <section class="category">
+            <div class="title-top">
+              <h2>LUXERY</h2>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="subcategory">
+              <div class="item" data-brand="MONCLER">MONCLER</div>
+              <div class="item" data-brand="LOUIS VUITTON">LOUIS VUITTON</div>
+              <div class="item" data-brand="GUCCI">GUCCI</div>
+              <div class="item" data-brand="Polo Ralph Lauren">
+                Polo Ralph Lauren
+              </div>
+              <div class="item" data-brand="Dolce & Gabbana">
+                Dolce & Gabbana
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="cart-container">
+          <h2>Cart</h2>
+          <div class="cart-inner">
+            <div class="cart-header">
+              <div class="select-column">
+                <input type="checkbox" id="select-all-items" checked />
+                <label for="select-all-items"></label>
+              </div>
+              <div class="product-column">Name</div>
+              <div class="price-column">Price</div>
+              <div class="quantity-column">Quantity</div>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-summary">
+              <div class="summary-row">
+                <span class="summary-label">상품가</span>
+                <span class="summary-value">0 KRW</span>
+              </div>
+              <div class="summary-row">
+                <span class="summary-label">배송료</span>
+                <span class="summary-value">+ 0 KRW</span>
+              </div>
+              <div class="summary-row total">
+                <span class="summary-label">총 결제 금액</span>
+                <span class="summary-value">0 KRW</span>
+              </div>
+            </div>
+            <div class="cart-actions">
+              <button class="btn empty-cart">Empty Cart</button>
+              <button class="btn buy-now">Buy Selected Items</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

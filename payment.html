@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/payment.css" />
+    <script defer src="./scripts.js"></script>
+    <script defer src="./scripts/payment.js"></script>
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <title>PAYMENT</title>
+  </head>
+  <body>
+    <header></header>
+    <div id="searchWrap"></div>
+    <main class="container">
+      <div class="checkout-container">
+        <h2 class="checkout-title">주문서작성</h2>
+        <section class="shipping-section">
+          <h3 class="section-title">배송지</h3>
+          <div class="address-selector">
+            <div class="address-label">
+              <span class="recent-address">직접입력</span>
+              <span class="direct-input">최근배송지</span>
+            </div>
+            <div class="address-info">
+              <div class="user-chioce">
+                <input
+                  type="text"
+                  class="recipient-input"
+                  placeholder="user-name"
+                  value=""
+                />
+                <div class="address-book-link">
+                  <a href="#">배송지목록</a>
+                </div>
+              </div>
+              <div class="user-state">
+                <input
+                  type="text"
+                  class="address-input"
+                  placeholder="주소를 입력하세요"
+                  value=""
+                />
+                <input
+                  type="tel"
+                  class="phone-input"
+                  placeholder="연락처"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="delivery-message">
+              <select>
+                <option selected disabled>- [선택사항] 메세지 선택</option>
+                <option>부재시 계단에 놓아주세요.</option>
+                <option>경비실에 놓아주세요</option>
+                <option>무인 택배함에 넣어주세요</option>
+                <option>직접 입력하기</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="order-products">
+          <h3 class="section-title">주문상품</h3>
+          <ul class="product-list">
+            <!-- <li class="product-item">
+              <div class="product-image">
+                <img src="./images/detail/pink-cap.png" alt="Pink-cap" />
+              </div>
+              <div class="product-info">
+                <p class="product-name">foot Print Wappen BAll CAP-pink</p>
+                <p class="product-price">147,000KRW</p>
+              </div>
+              <button type="button" class="remove-product">x</button>
+            </li> -->
+          </ul>
+        </section>
+        <section class="payment-section">
+          <h3 class="section-title">할인/부가결제</h3>
+          <div class="payment-options">
+            <h4 class="subsection-title">결제수단선택</h4>
+            <div class="coupon-row">
+              <span class="option-label">쿠폰 할인</span>
+              <div class="right-group">
+                <span class="option-value">0KRW</span>
+                <button type="button" class="option-button coupon-button">
+                  쿠폰 적용
+                </button>
+              </div>
+            </div>
+            <p class="option-info">보유쿠폰 2개</p>
+            <div class="points-row">
+              <span class="option-label">적립</span>
+              <div class="right-group">
+                <span class="option-value">0KRW</span>
+                <button type="button" class="option-button points-button">
+                  전액 사용
+                </button>
+              </div>
+            </div>
+            <p class="option-info">보유적립금 0,000원</p>
+          </div>
+        </section>
+        <section class="order-summary">
+          <h3 class="section-title">결제정보</h3>
+          <dl class="summary-list">
+            <div class="summary-row">
+              <dt class="summary-label">주문상품</dt>
+              <dd class="summary-amount">0 KRW</dd>
+            </div>
+            <div class="summary-row">
+              <dt class="summary-label">배송비</dt>
+              <dd class="summary-amount">0 KRW</dd>
+            </div>
+            <div class="summary-row">
+              <dt class="summary-label">할인부가금액</dt>
+              <dd class="summary-amount">0 KRW</dd>
+            </div>
+            <div class="summary-row total">
+              <dt class="summary-label">최종결제금액</dt>
+              <dd class="summary-amount">0 KRW</dd>
+            </div>
+          </dl>
+        </section>
+        <section class="payment-methods">
+          <h3 class="section-title">결제수단</h3>
+          <fieldset class="payment-options">
+            <legend class="visually-hidden">결제 수단 선택</legend>
+            <div class="payment-options-list">
+              <label class="payment-option">
+                <input type="radio" name="payment" value="card" />
+                <span class="option-text">카드결제</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="virtual" />
+                <span class="option-text">실시간 계좌이체</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="phone" />
+                <span class="option-text">무통장입금</span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="payment" value="kakao" />
+                <span class="option-text">카카오페이(간편결제)</span>
+              </label>
+            </div>
+          </fieldset>
+          <div class="terms-agreement">
+            <label class="agreement-label">
+              <input type="checkbox" name="save-payment-info" />
+              <span class="agreement-text"
+                >결제수단과 입력정보를 다음에도 사용</span
+              >
+            </label>
+          </div>
+        </section>
+        <div class="checkout-button-container">
+          <button type="button" class="checkout-button">
+            00,000 KRW 결제하기
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

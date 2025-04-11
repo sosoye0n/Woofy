@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/detail.css" />
+    <script defer src="./scripts.js"></script>
+    <script defer src="./scripts/detail.js"></script>
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <title>DETAIL</title>
+  </head>
+  <div id="cart-modal" class="cart-modal">
+    <div class="modal-content">
+      <p>상품이 카트에 담겼습니다.</p>
+      <p class="item-title"></p>
+      <div class="modal-buttons">
+        <button class="move-to-cart-btn">Move To Cart</button>
+        <button class="continue-shopping-btn">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+  <body>
+    <header></header>
+    <div id="searchWrap"></div>
+    <main class="container">
+      <div class="tablet-navigation">
+        <div class="tablet-nav-container">
+          <div class="tablet-nav-headers">
+            <div class="nav-header">BRANDS</div>
+            <div class="nav-header">LUXERY</div>
+          </div>
+          <div class="tablet-nav-content">
+            <div class="nav-column">
+              <div class="nav-item">EMIS</div>
+              <div class="nav-item">HAH X MERLOT</div>
+              <div class="nav-item">KABINE</div>
+              <div class="nav-item">MLB</div>
+              <div class="nav-item">YALE</div>
+              <div class="nav-item">HAZZYS</div>
+              <div class="nav-item">GLOWNY</div>
+              <div class="nav-item">Àvie mua</div>
+              <div class="nav-item">Merlot</div>
+            </div>
+            <div class="nav-column">
+              <div class="nav-item">MONCLER</div>
+              <div class="nav-item">LOUIS VUITTON</div>
+              <div class="nav-item">GUCCI</div>
+              <div class="nav-item">Polo Ralph Lauren</div>
+              <div class="nav-item">Dolce & Gabbana</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <section class="category">
+          <div class="title-top">
+            <h2>BRANDS</h2>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="subcategory">
+            <div class="item" data-brand="EMIS">EMIS</div>
+            <div class="item" data-brand="HAH X MERLOT">HAH X MERLOT</div>
+            <div class="item" data-brand="KABINE">KABINE</div>
+            <div class="item" data-brand="MLB">MLB</div>
+            <div class="item" data-brand="YALE">YALE</div>
+            <div class="item" data-brand="HAZZYS">HAZZYS</div>
+            <div class="item" data-brand="GLOWNY">GLOWNY</div>
+            <div class="item" data-brand="Àvie muah">Àvie muah</div>
+            <div class="item" data-brand="Merlot">Merlot</div>
+          </div>
+        </section>
+        <section class="category">
+          <div class="title-top">
+            <h2>LUXERY</h2>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
+          <div class="subcategory">
+            <div class="item" data-brand="MONCLER">MONCLER</div>
+            <div class="item" data-brand="LOUIS VUITTON">LOUIS VUITTON</div>
+            <div class="item" data-brand="GUCCI">GUCCI</div>
+            <div class="item" data-brand="Polo Ralph Lauren">
+              Polo Ralph Lauren
+            </div>
+            <div class="item" data-brand="Dolce & Gabbana">Dolce & Gabbana</div>
+          </div>
+        </section>
+      </div>
+      <div class="content-inner">
+        <div class="content-area">
+          <div class="product-grid">
+            <div class="loading-indicator">
+              <p>상품을 불러오는 중입니다...</p>
+            </div>
+            <!-- 첫 번째 줄 제품
+            <div class="product-row">
+              <div
+                class="product-item"
+                data-id="${productData.id}"
+                data-category="..."
+              >
+                <a href="./detail-product.html?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog4.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-4.jpg"
+                      alt="모자1"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price"><span>68,000</span> KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="product-item">
+                <a href="./detail-product.html?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog2.jpg?id=0"
+                      alt="강아지2"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-2.jpg"
+                      alt="모자2"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="product-item">
+                <a href="./detail-product.html?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog3.jpg?id=0"
+                      alt="강아지3"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-3.jpg?id=0"
+                      alt="모자3"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="product-row">
+              <div class="product-item">
+                <a href="./images/detail/cap-3.jpg?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog1.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-1.jpg"
+                      alt="모자1"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="product-item">
+                <a href="./images/detail/cap-3.jpg?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog5.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-5.jpg"
+                      alt="모자1"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="product-item">
+                <a href="./images/detail/cap-3.jpg?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog6.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-6.jpg"
+                      alt="모자1"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="product-row">
+              <div class="product-item">
+                <a href="./images/detail/cap-3.jpg?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog4.jpg"
+                      alt="강아지1"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-3.jpg?id=0"
+                      alt="모자1"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="product-item">
+                <a href="./images/detail/cap-3.jpg?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog2.jpg"
+                      alt="강아지2"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-2.jpg"
+                      alt="모자2"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+              <div class="product-item">
+                <a href="./images/detail/cap-3.jpg?id=0" class="product-link">
+                  <div class="product-image">
+                    <img
+                      class="first-img"
+                      src="./images/detail/cap-dog3.jpg"
+                      alt="강아지3"
+                    />
+                    <img
+                      class="second-img"
+                      src="./images/detail/cap-3.jpg"
+                      alt="모자3"
+                    />
+                  </div>
+                  <div class="product-info">
+                    <div class="product-inner">
+                      <div class="product-brand">[BRAND - NAME]</div>
+                      <h3 class="product-title">
+                        [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                      </h3>
+                      <p class="product-price">68,000 KRW</p>
+                    </div>
+                    <i class="fas fa-plus"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+             -->
+          </div>
+        </div>
+        <div class="pagination">
+          <a href="#" class="prev-page">← PREV</a>
+          <ul class="page-numbers">
+            <!-- <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">4</a></li> -->
+          </ul>
+          <a href="#" class="next-page">NEXT →</a>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

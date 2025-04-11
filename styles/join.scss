@@ -1,0 +1,159 @@
+// reset & variables
+@import "./reset.scss";
+@import "./variables.scss";
+
+// common
+header {
+  z-index: 1;
+}
+body {
+  background: #fff;
+}
+main {
+  padding: 0 3%;
+}
+
+// contents
+main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #allContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 0;
+    text-transform: uppercase;
+    margin-top: 0;
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 600;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+    #join {
+      transition: all 0.3s;
+      width: 420px;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      input:not(input[type="button"]) {
+        width: 420px;
+        height: 72px;
+        border-radius: 10px;
+        font-size: 1.4rem;
+        font-weight: 500;
+        border: none;
+        background: map-get($map: $color, $key: lightgray);
+        color: map-get($map: $color, $key: gray);
+        cursor: pointer;
+        transition: all 0.3s;
+        &:focus {
+          outline: none;
+        }
+      }
+      input[type="button"] {
+        width: 420px;
+        height: 72px;
+        border-radius: 10px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        border: none;
+        background: map-get($map: $color, $key: dark);
+        color: map-get($map: $color, $key: light);
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          outline: none;
+          background: map-get($map: $color, $key: point);
+          color: map-get($map: $color, $key: light);
+        }
+      }
+
+      #joinBox {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        gap: 8px;
+        .joinInput {
+          position: relative;
+          input {
+            padding-left: 20px;
+            transition: all 0.5s;
+            &:hover {
+              border: 1px solid map-get($map: $color, $key: gray);
+              background: map-get($map: $color, $key: light);
+              color: map-get($map: $color, $key: dark);
+              font-weight: 700;
+            }
+          }
+        }
+        .error {
+          font-size: 1.1rem;
+          margin: 8px;
+          font-weight: 500;
+          color: map-get($map: $color, $key: point);
+          i {
+            font-size: 1.2rem;
+            padding: 0 2px;
+            color: map-get($map: $color, $key: point);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 반응형 mobile
+@media screen and (max-width: 767px) {
+  main {
+    #allContainer {
+      h2 {
+        font-size: 2.6rem;
+      }
+      p {
+        margin-top: 8px;
+        font-size: 1.2rem;
+      }
+      #join {
+        width: 280px;
+        margin-top: 30px;
+        input:not(input[type="button"]) {
+          width: 320px;
+          height: 64px;
+          font-size: 1.2rem;
+          border-radius: 8px;
+        }
+        input[type="button"] {
+          width: 320px;
+          height: 64px;
+          font-size: 1.2rem;
+          border-radius: 8px;
+        }
+        #joinContainer {
+          margin-bottom: 30px;
+          #joinInput {
+            input {
+              padding-left: 20px;
+            }
+          }
+          #errorPW {
+            font-size: 1.1rem;
+            i {
+              font-size: 1rem;
+              padding: 0 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

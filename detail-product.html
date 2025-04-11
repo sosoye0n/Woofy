@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./styles/detail-product.css" />
+    <script defer src="./scripts.js"></script>
+    <script defer src="./scripts/detail-product.js"></script>
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- lenis -->
+    <script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+    <title>PRODUCTS</title>
+  </head>
+  <body>
+    <header></header>
+    <div id="searchWrap"></div>
+    <main class="container">
+      <div class="product-detail">
+        <div class="product-gallery">
+          <div class="gallery-main">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <!-- <div class="swiper-slide"></div> -->
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+        <div class="product-info">
+          <h1 class="product-title"></h1>
+          <div class="product-price-info">
+            <div class="price-label">판매가</div>
+            <div class="price-value"></div>
+          </div>
+          <div class="product-options">
+            <div class="option-item">
+              <div class="option-label">SIZE</div>
+              <div class="option-select">
+                <select>
+                  <option selected disabled>
+                    -[필수] 옵션을 선택해주세요 -
+                  </option>
+                  <option>S</option>
+                  <option>M</option>
+                  <option>L</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="product-accordion">
+            <section class="category">
+              <div class="title-top">
+                <h2>DESCRIPTION</h2>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <div class="subcategory description-content">
+                <p></p>
+              </div>
+            </section>
+            <section class="category">
+              <div class="title-top">
+                <h2>GUIDE</h2>
+                <i class="fa-solid fa-chevron-right"></i>
+              </div>
+              <div class="subcategory guide-content">
+                <p>사이즈 안내: S(소형견), M(중형견), L(대형견)</p>
+                <p>세탁 방법: 손세탁 권장, 중성세제 사용</p>
+              </div>
+            </section>
+          </div>
+          <div class="product-actions">
+            <button class="buy-now-btn">BUY NOW</button>
+            <button class="add-to-cart-btn">ADD TO CART</button>
+            <button class="kakao-pay-btn">KAKAO PAY</button>
+          </div>
+        </div>
+      </div>
+      <div class="more-prodtcts">
+        <h2 class="section-title">More Products</h2>
+        <div class="product-grid">
+          <div class="product-item">
+            <a href="./detail-product.html?id=0" class="product-link">
+              <div class="product-image">
+                <img src="./images/detail/cap-1.jpg" alt="product1" />
+              </div>
+              <div class="product-info">
+                <div class="product-inner">
+                  <div class="product-brand">[brand-name]</div>
+                  <div class="product-title">
+                    [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                  </div>
+                  <p class="product-price"><span>68,000</span> KRW</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="product-item">
+            <a href="./detail-product.html?id=0" class="product-link">
+              <div class="product-image">
+                <img src="./images/detail/cap-1.jpg" alt="product1" />
+              </div>
+              <div class="product-info">
+                <div class="product-inner">
+                  <div class="product-brand">[brand-name]</div>
+                  <div class="product-title">
+                    [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                  </div>
+                  <p class="product-price"><span>68,000</span> KRW</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="product-item">
+            <a href="./detail-product.html?id=0" class="product-link">
+              <div class="product-image">
+                <img src="./images/detail/cap-1.jpg" alt="product1" />
+              </div>
+              <div class="product-info">
+                <div class="product-inner">
+                  <div class="product-brand">[brand-name]</div>
+                  <div class="product-title">
+                    [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                  </div>
+                  <p class="product-price"><span>68,000</span> KRW</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="product-item">
+            <a href="./detail-product.html?id=0" class="product-link">
+              <div class="product-image">
+                <img src="./images/detail/cap-1.jpg" alt="product1" />
+              </div>
+              <div class="product-info">
+                <div class="product-inner">
+                  <div class="product-brand">[brand-name]</div>
+                  <div class="product-title">
+                    [PET] NEW LOGO BIG HOODIE-MELANGE GRAY
+                  </div>
+                  <p class="product-price"><span>68,000</span> KRW</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>

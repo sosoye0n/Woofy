@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  z-index: 10;
+}
+
+body {
+  background: #fff;
+}
+
+main {
+  padding: 0 3%;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 160px 0;
+  text-transform: uppercase;
+}
+main h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+main p {
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+main input[type=button] {
+  width: 420px;
+  height: 72px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main input[type=button]:hover {
+  outline: none;
+  background: #99bdff;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  main h2 {
+    font-size: 2.4rem;
+  }
+  main p {
+    margin-top: 6px;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+  main input[type=button] {
+    width: 280px;
+    height: 64px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+  }
+}
