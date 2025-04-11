@@ -1,15 +1,12 @@
 // 스와이프 슬라이더 형식
 const swiper = new Swiper(".swiper", {
-  // Optional parameters
   direction: "horizontal",
   loop: false,
 
-  // If we need pagination
   pagination: {
     el: ".swiper-pagination",
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -23,11 +20,24 @@ document.addEventListener("DOMContentLoaded", async function () {
   const productId = urlParams.get("id");
 
   // 상품 데이터 로드 및 페이지 업데이트
-  if (productId) {
+  if (productId !== null && productId !== undefined) {
     try {
-      const productData = await fetchProductDetails(productId);
+      // 모든 상품 데이터 가져오기
+      const allProductsData = await fetchAllProducts();
+
+      // 현재 상품 찾기
+      const productData = allProductsData.detail.find(
+        (item) => item.id === parseInt(productId, 10)
+      );
+
       if (productData) {
+        // 현재 상품 정보로 UI 업데이트
         updateProductUI(productData);
+
+        // 관련 상품 표시 (같은 브랜드 & 카테고리)
+        updateRelatedProducts(allProductsData.detail, productData);
+      } else {
+        console.error(`ID ${productId}에 해당하는 상품을 찾을 수 없습니다.`);
       }
     } catch (error) {
       console.error("상품 정보 로드 중 오류 발생:", error);
@@ -165,7 +175,24 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
-// JSON에서 상품 정보 가져오기
+// 모든 상품 정보 가져오기
+async function fetchAllProducts() {
+  try {
+    const response = await fetch("./API/detail.json");
+    if (!response.ok) {
+      throw new Error("JSON 파일을 가져오지 못했습니다.");
+    }
+
+    const data = await response.json();
+    console.log("전체 JSON 데이터 로드됨:", data);
+    return data;
+  } catch (error) {
+    console.error("데이터를 가져오는 중 오류 발생:", error);
+    return { detail: [] };
+  }
+}
+
+// 기존의 특정 상품 정보 가져오기 함수 (사용하지 않지만 유지)
 async function fetchProductDetails(id) {
   try {
     const response = await fetch("./API/detail.json");
@@ -187,6 +214,107 @@ async function fetchProductDetails(id) {
   } catch (error) {
     console.error("데이터를 가져오는 중 오류 발생:", error);
     return null;
+  }
+}
+
+// 관련 상품 업데이트 (같은 브랜드와 카테고리)
+function updateRelatedProducts(allProducts, currentProduct) {
+  // 같은 브랜드와 카테고리의 상품 필터링
+  let relatedProducts = allProducts.filter(
+    (product) =>
+      product.id !== currentProduct.id && // 현재 상품 제외
+      product.brand === currentProduct.brand && // 같은 브랜드
+      product.category === currentProduct.category // 같은 카테고리
+  );
+
+  // 같은 카테고리와 브랜드가 없으면 같은 브랜드만 필터링
+  if (relatedProducts.length < 4) {
+    relatedProducts = allProducts
+      .filter(
+        (product) =>
+          product.id !== currentProduct.id && // 현재 상품 제외
+          product.brand === currentProduct.brand // 같은 브랜드
+      )
+      .slice(0, 4); // 최대 4개
+  }
+
+  // 그래도 없으면 같은 카테고리만 필터링
+  if (relatedProducts.length < 4) {
+    relatedProducts = allProducts
+      .filter(
+        (product) =>
+          product.id !== currentProduct.id && // 현재 상품 제외
+          product.category === currentProduct.category // 같은 카테고리
+      )
+      .slice(0, 4); // 최대 4개
+  }
+
+  // 그래도 부족하면 다른 랜덤 상품으로 채우기
+  if (relatedProducts.length < 4) {
+    const remainingProducts = allProducts.filter(
+      (product) =>
+        product.id !== currentProduct.id && // 현재 상품 제외
+        !relatedProducts.some((relProd) => relProd.id === product.id) // 이미 추가된 상품 제외
+    );
+
+    // 랜덤으로 섞고 필요한 만큼 가져오기
+    const shuffled = remainingProducts.sort(() => 0.5 - Math.random());
+    const additional = shuffled.slice(0, 4 - relatedProducts.length);
+
+    relatedProducts = [...relatedProducts, ...additional];
+  }
+
+  // 최대 4개로 제한
+  relatedProducts = relatedProducts.slice(0, 4);
+
+  // "More Products" 섹션 업데이트
+  const productGrid = document.querySelector(".product-grid");
+
+  // 섹션 제목 업데이트 - 브랜드와 카테고리 표시
+  const sectionTitle = document.querySelector(".section-title");
+  if (sectionTitle) {
+    if (
+      relatedProducts[0]?.category === currentProduct.category &&
+      relatedProducts[0]?.brand === currentProduct.brand
+    ) {
+      sectionTitle.textContent = `More ${
+        currentProduct.brand
+      } ${currentProduct.category.toUpperCase()} Products`;
+    } else if (relatedProducts[0]?.brand === currentProduct.brand) {
+      sectionTitle.textContent = `More ${currentProduct.brand} Products`;
+    } else if (relatedProducts[0]?.category === currentProduct.category) {
+      sectionTitle.textContent = `More ${currentProduct.category.toUpperCase()} Products`;
+    } else {
+      sectionTitle.textContent = "More Products";
+    }
+  }
+
+  // 기존 상품 항목 비우기
+  if (productGrid) {
+    productGrid.innerHTML = "";
+
+    // 관련 상품 추가
+    relatedProducts.forEach((product) => {
+      const productItem = document.createElement("div");
+      productItem.className = "product-item";
+
+      productItem.innerHTML = `
+        <a href="./detail-product.html?id=${product.id}" class="product-link">
+          <div class="product-image">
+            <img src="${product.thumbnail}" alt="${product.name}" />
+          </div>
+          <div class="product-info">
+            <div class="product-inner">
+              <div class="product-brand">${product.brand}</div>
+              <div class="product-title">${product.name}</div>
+              <p class="product-price">${product.price} KRW</p>
+            </div>
+          </div>
+        </a>
+      `;
+
+      productGrid.appendChild(productItem);
+    });
   }
 }
 
@@ -291,6 +419,8 @@ function updateProductUI(product) {
 
   // 디버깅용 로그
   console.log("상품 정보 업데이트 완료:", product.name);
+  console.log("상품 브랜드:", product.brand);
+  console.log("상품 카테고리:", product.category);
   console.log("추가 이미지 있음:", hasAdditionalImages);
 }
 
@@ -403,4 +533,28 @@ function setupProductOptions() {
       }
     });
   }
+}
+
+// 장바구니에 추가하는 함수 (아직 구현하지 않았거나 다른 파일에 있는 경우를 대비한 더미 함수)
+function addToCart(product) {
+  // 로컬 스토리지에서 장바구니 가져오기
+  let cart = JSON.parse(localStorage.getItem("cart") || "[]");
+
+  // 이미 장바구니에 있는지 확인
+  const existingProductIndex = cart.findIndex(
+    (item) => item.id === product.id && item.option === product.option
+  );
+
+  if (existingProductIndex !== -1) {
+    // 이미 있으면 수량만 증가
+    cart[existingProductIndex].quantity += product.quantity;
+  } else {
+    // 없으면 새로 추가
+    cart.push(product);
+  }
+
+  // 장바구니 저장
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  console.log("장바구니에 추가됨:", product);
 }

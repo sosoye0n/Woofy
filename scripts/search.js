@@ -40,7 +40,11 @@ const fetchData = async () => {
             <div class="itemImg">
               <img
                 src="${matched[i].thumbnail}"
-                alt=""
+                alt="${matched[i].brand}"
+              />
+              <img
+                src="${matched[i]["detail-product"].subImg01}"
+                alt="${matched[i].brand}"
               />
             </div>
             <div class="itemText">

@@ -24,6 +24,7 @@ header {
 .container {
   background: #fff;
   min-height: 100vh;
+  margin: 0 3%;
 }
 
 .checkout-container {
@@ -269,7 +270,7 @@ section {
   border-bottom: 1px solid #d9d9d9;
 }
 .order-products .product-list .product-item .product-image {
-  width: 100px;
+  width: 150px;
   height: 100px;
   overflow: hidden;
   margin-right: 50px;
@@ -289,7 +290,41 @@ section {
   font-weight: 400;
 }
 .order-products .product-list .product-item .product-info .product-name {
-  margin-bottom: 8px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.order-products .product-list .product-item .product-info .product-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-right: 30px;
+}
+.order-products .product-list .product-item .product-info .product-option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  margin-top: 10px;
+  padding-right: 30px;
+  color: #777;
 }
 .order-products .product-list .product-item .remove-product {
   width: 30px;
@@ -298,7 +333,12 @@ section {
   background: none;
   font-size: 2.4rem;
   cursor: pointer;
-  color: #000;
+  color: #a9a9a9;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.order-products .product-list .product-item .remove-product:hover {
+  color: #99bdff;
 }
 
 .payment-section .payment-options {
@@ -768,6 +808,7 @@ section {
   .container {
     max-width: 100%;
     margin-top: 80px;
+    margin: 0;
   }
   .checkout-container {
     max-width: 100%;
@@ -786,7 +827,7 @@ section {
     padding: 15px;
   }
   .checkout-container .shipping-section .address-selector {
-    padding: 0 10px;
+    padding: 0 30px;
   }
   .checkout-container .shipping-section .address-selector .address-label {
     margin-bottom: 15px;
@@ -823,24 +864,28 @@ section {
     padding: 0 8px;
   }
   .order-products .product-list .product-item {
-    padding: 25px 15px;
+    padding: 25px 35px;
   }
   .order-products .product-list .product-item .product-image {
-    width: 80px;
-    height: 80px;
+    width: 130px;
+    height: 100px;
     margin-right: 30px;
   }
-  .order-products .product-list .product-item .product-info {
+  .order-products .product-list .product-item .product-info .product-name {
+    font-size: 2rem;
+    margin-bottom: 6px;
+  }
+  .order-products .product-list .product-item .product-info .product-price {
     font-size: 1.8rem;
   }
-  .order-products .product-list .product-item .product-info .product-name {
-    margin-bottom: 6px;
+  .order-products .product-list .product-item .product-info .product-option {
+    font-size: 1.8rem;
   }
   .order-products .product-list .product-item .remove-product {
     font-size: 2.2rem;
   }
   .payment-section .payment-options {
-    padding: 0 10px;
+    padding: 0 50px;
   }
   .payment-section .payment-options .subsection-title {
     font-size: 1.8rem;
@@ -888,7 +933,7 @@ section {
     margin-bottom: 25px;
   }
   .payment-methods .payment-options {
-    padding: 0 8px;
+    padding: 0 50px;
   }
   .payment-methods .payment-options .payment-options-list {
     -ms-flex-wrap: wrap;
@@ -1028,8 +1073,8 @@ section {
     padding: 20px 10px;
   }
   .order-products .product-list .product-item .product-image {
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 100px;
     margin-right: 20px;
   }
   .order-products .product-list .product-item .product-info {
@@ -1042,7 +1087,7 @@ section {
     font-size: 2rem;
   }
   .payment-section .payment-options {
-    padding: 0 8px;
+    padding: 0 25px;
   }
   .payment-section .payment-options .subsection-title {
     font-size: 1.7rem;
@@ -1298,16 +1343,26 @@ section {
     margin: 3px 0;
   }
   .order-products .product-list .product-item .product-image {
-    width: 60px;
-    height: 60px;
-    margin-right: 15px;
+    width: 80px;
+    height: 80px;
+    margin-right: 0px;
   }
   .order-products .product-list .product-item .product-info {
-    font-size: 1.5rem;
     padding: 0 5px;
   }
   .order-products .product-list .product-item .product-info .product-name {
+    font-size: 1.5rem;
     margin-bottom: 5px;
+  }
+  .order-products .product-list .product-item .product-info .product-price {
+    font-size: 1.3rem;
+    padding-right: 10px;
+    margin-top: 20px;
+  }
+  .order-products .product-list .product-item .product-info .product-option {
+    font-size: 1.3rem;
+    padding-right: 10px;
+    margin-top: 3px;
   }
   .order-products .product-list .product-item .remove-product {
     width: 22px;
@@ -1315,7 +1370,7 @@ section {
     font-size: 1.8rem;
   }
   .payment-section .payment-options {
-    padding: 0 5px;
+    padding: 0 20px;
   }
   .payment-section .payment-options .subsection-title {
     font-size: 1.5rem;
@@ -1388,7 +1443,7 @@ section {
     font-size: 1.4rem;
   }
   .order-summary .summary-list {
-    padding: 0 5px;
+    padding: 0 20px;
   }
   .order-summary .summary-list .summary-row {
     margin-bottom: 8px;
@@ -1412,7 +1467,7 @@ section {
     margin-bottom: 15px;
   }
   .payment-methods .payment-options {
-    padding: 0 5px;
+    padding: 0 20px;
   }
   .payment-methods .payment-options .payment-options-list {
     display: grid;
@@ -1497,7 +1552,7 @@ section {
     margin-bottom: 8px;
   }
   .checkout-container .shipping-section .address-selector {
-    padding: 0 3px;
+    padding: 0 5px;
     margin-bottom: 10px;
   }
   .checkout-container .shipping-section .address-selector .address-label {
@@ -1531,6 +1586,7 @@ section {
   .checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
     font-size: 1.2rem;
     margin-top: 3px;
+    font-weight: 500;
   }
   .checkout-container .shipping-section .address-selector .address-info .user-state .address-input,
   .checkout-container .shipping-section .address-selector .address-info .user-state .phone-input {
@@ -1586,16 +1642,26 @@ section {
     margin: 2px 0;
   }
   .order-products .product-list .product-item .product-image {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 70px;
+    height: 60px;
+    margin-right: 0px;
   }
   .order-products .product-list .product-item .product-info {
-    font-size: 1.4rem;
     padding: 0 3px;
   }
   .order-products .product-list .product-item .product-info .product-name {
+    font-size: 1.2rem;
     margin-bottom: 3px;
+  }
+  .order-products .product-list .product-item .product-info .product-price {
+    font-size: 1.1rem;
+    padding-right: 10px;
+    margin-top: 8px;
+  }
+  .order-products .product-list .product-item .product-info .product-option {
+    font-size: 1.1rem;
+    padding-right: 10px;
+    margin-top: 3px;
   }
   .order-products .product-list .product-item .remove-product {
     width: 20px;
@@ -1603,7 +1669,7 @@ section {
     font-size: 1.6rem;
   }
   .payment-section .payment-options {
-    padding: 0 3px;
+    padding: 0 10px;
   }
   .payment-section .payment-options .subsection-title {
     font-size: 1.4rem;
@@ -1677,7 +1743,7 @@ section {
     width: 90%;
   }
   .order-summary .summary-list {
-    padding: 0 3px;
+    padding: 0 10px;
   }
   .order-summary .summary-list .summary-row {
     margin-bottom: 6px;
@@ -1701,7 +1767,7 @@ section {
     margin-bottom: 12px;
   }
   .payment-methods .payment-options {
-    padding: 0 3px;
+    padding: 0 10px;
   }
   .payment-methods .payment-options .payment-options-list {
     grid-template-columns: 1fr 1fr;

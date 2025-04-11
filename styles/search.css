@@ -101,6 +101,13 @@ main section ul .itemBox a {
           flex-direction: column;
   gap: 10px;
   width: 100%;
+  position: relative;
+}
+main section ul .itemBox a:hover .itemImg img:nth-child(2) {
+  opacity: 1;
+}
+main section ul .itemBox a:hover .itemImg img:nth-child(1) {
+  opacity: 0;
 }
 main section ul .itemBox a .itemImg {
   width: 100%;
@@ -113,6 +120,14 @@ main section ul .itemBox a .itemImg img {
      object-fit: cover;
   -webkit-filter: brightness(0.95);
           filter: brightness(0.95);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+main section ul .itemBox a .itemImg img:nth-child(2) {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 main section ul .itemBox a .itemText {
   display: -webkit-box;

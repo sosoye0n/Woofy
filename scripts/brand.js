@@ -28,9 +28,13 @@ fetch("./API/main.json").then((response) =>
           li.innerHTML = `
             <a href="#">
                 <div class="itemImg">
-                  <img
+                  <img class="firstImg"
                     src="${matched[i].thumbnail}"
-                    alt=""
+                    alt="${matched[i].brand}"
+                  />
+                  <img class="secImg"
+                    src="${matched[i]["detail-product"].subImg01}"
+                    alt="${matched[i].brand}"
                   />
                 </div>
                 <div class="itemText">
@@ -40,6 +44,7 @@ fetch("./API/main.json").then((response) =>
                 </div>
               </a>
               `;
+
           ul.append(li);
         }
       };
@@ -119,9 +124,8 @@ fetch("./API/main.json").then((response) =>
       if (products) break; // 찾았으면 더 이상 루프 돌지 않음
     }
 
-    if (products) {
-      const main = document.querySelector("main");
-      main.innerHTML = `
+    const main = document.querySelector("main");
+    main.innerHTML = `
         <div class="brandBanner">
           <div class="brandText">
             <p>${products.nameEng}</p>
@@ -131,8 +135,7 @@ fetch("./API/main.json").then((response) =>
         </div>
       `;
 
-      const brandBanner = document.querySelector(".brandBanner");
-      brandBanner.style.backgroundImage = `url("${products.brandBanner}")`;
-    }
+    const brandBanner = document.querySelector(".brandBanner");
+    brandBanner.style.backgroundImage = `url("${products.brandBanner}")`;
   })
 );

@@ -551,9 +551,6 @@ main #mypage .mypageContainer .userInfo .membershipLevel {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-main #mypage .mypageContainer .userInfo .membershipLevel i {
-  font-size: 1.6rem;
-}
 main #mypage .mypageContainer .userInfo .membershipLevel:hover {
   background: #000;
   color: #99bdff;
@@ -817,9 +814,6 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
   main #mypage .mypageContainer .userInfo .membershipLevel {
     font-size: 1.2rem;
     padding: 12px 20px;
-  }
-  main #mypage .mypageContainer .userInfo .membershipLevel i {
-    display: none;
   }
   main #mypage .mypageContainer .detailInfoWrapper {
     -webkit-box-orient: vertical;

@@ -11,6 +11,7 @@ header {
 .container {
   background: map-get($map: $color, $key: light);
   min-height: 100vh;
+  margin: 0 3%;
 }
 
 .checkout-container {
@@ -151,11 +152,9 @@ section {
           padding: 0 20px;
           font-size: 1.5rem;
           cursor: pointer;
-
           option {
             font-size: 16px;
           }
-
           option[disabled] {
             color: map-get($map: $color, $key: gray);
           }
@@ -169,7 +168,6 @@ section {
   .product-list {
     margin: 0;
     padding: 0 10px;
-
     .product-item {
       display: flex;
       align-items: center;
@@ -178,31 +176,46 @@ section {
       margin: 5px;
       border-top: 1px solid map-get($map: $color, $key: boxline);
       border-bottom: 1px solid map-get($map: $color, $key: boxline);
-
       .product-image {
-        width: 100px;
+        width: 150px;
         height: 100px;
         overflow: hidden;
         margin-right: 50px;
-
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
         }
       }
-
       .product-info {
         flex: 1;
         padding: 0 15px;
         font-size: 2rem;
         font-weight: 400;
-
         .product-name {
-          margin-bottom: 8px;
+          margin-bottom: 50px;
+          display: flex;
+          font-size: 2rem;
+          font-weight: 600;
+        }
+        .product-price {
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          font-size: 1.7rem;
+          font-weight: bold;
+          padding-right: 30px;
+        }
+        .product-option {
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          font-size: 1.5rem;
+          margin-top: 10px;
+          padding-right: 30px;
+          color: #777;
         }
       }
-
       .remove-product {
         width: 30px;
         height: 30px;
@@ -210,16 +223,18 @@ section {
         background: none;
         font-size: 2.4rem;
         cursor: pointer;
-        color: map-get($map: $color, $key: dark);
+        color: map-get($map: $color, $key: input);
+        transition: all 0.2s;
+        &:hover {
+          color: map-get($map: $color, $key: point);
+        }
       }
     }
   }
 }
-
 .payment-section {
   .payment-options {
     padding: 0 15px;
-
     .subsection-title {
       font-size: 2rem;
       font-weight: 500;
@@ -680,12 +695,11 @@ section {
   .container {
     max-width: 100%;
     margin-top: 80px;
+    margin: 0;
   }
-
   .checkout-container {
     max-width: 100%;
     padding: 0 20px;
-
     .checkout-title {
       font-size: 2.2rem;
       margin-bottom: 15px;
@@ -697,43 +711,33 @@ section {
     margin-bottom: 14px;
     padding-bottom: 8px;
   }
-
   section {
     padding: 15px;
   }
-
   .checkout-container .shipping-section {
     .address-selector {
-      padding: 0 10px;
-
+      padding: 0 30px;
       .address-label {
         margin-bottom: 15px;
-
         .recent-address {
           font-size: 2rem;
           margin-right: 25px;
         }
-
         .direct-input {
           font-size: 1.6rem;
         }
       }
-
       .address-info {
         margin-bottom: 15px;
-
         .user-chioce {
           margin-bottom: 12px;
-
           .recipient-input {
             font-size: 1.8rem;
           }
-
           .address-book-link {
             font-size: 1.5rem;
           }
         }
-
         .user-state {
           .address-input,
           .phone-input {
@@ -742,7 +746,6 @@ section {
           }
         }
       }
-
       .delivery-message select {
         height: 38px;
         font-size: 1.4rem;
@@ -752,21 +755,23 @@ section {
 
   .order-products .product-list {
     padding: 0 8px;
-
     .product-item {
-      padding: 25px 15px;
-
+      padding: 25px 35px;
       .product-image {
-        width: 80px;
-        height: 80px;
+        width: 130px;
+        height: 100px;
         margin-right: 30px;
       }
-
       .product-info {
-        font-size: 1.8rem;
-
         .product-name {
+          font-size: 2rem;
           margin-bottom: 6px;
+        }
+        .product-price {
+          font-size: 1.8rem;
+        }
+        .product-option {
+          font-size: 1.8rem;
         }
       }
 
@@ -777,52 +782,40 @@ section {
   }
 
   .payment-section .payment-options {
-    padding: 0 10px;
-
+    padding: 0 50px;
     .subsection-title {
       font-size: 1.8rem;
     }
-
     .coupon-row,
     .points-row {
       padding: 0 5px;
-
       .option-label {
         width: 80px;
         font-size: 1.5rem;
       }
-
       .option-value {
         font-size: 1.5rem;
       }
-
       .option-button {
         font-size: 1.3rem;
       }
     }
-
     .option-info {
       font-size: 1.3rem;
     }
   }
-
   .order-summary .summary-list {
     padding: 0 15px;
-
     .summary-row {
       margin-bottom: 12px;
-
       .summary-label {
         font-size: 1.6rem;
       }
-
       .summary-amount {
         font-size: 1.5rem;
       }
-
       &.total {
         margin-top: 15px;
-
         .summary-label,
         .summary-amount {
           font-size: 1.7rem;
@@ -830,24 +823,18 @@ section {
       }
     }
   }
-
   .payment-methods {
     margin-bottom: 25px;
-
     .payment-options {
-      padding: 0 8px;
-
+      padding: 0 50px;
       .payment-options-list {
         flex-wrap: wrap;
         gap: 8px;
-
         .payment-option {
           margin-right: 15px;
-
           input[type="radio"] + .option-text {
             font-size: 1.5rem;
             padding-left: 25px;
-
             &:before {
               width: 14px;
               height: 14px;
@@ -1006,8 +993,8 @@ section {
       padding: 20px 10px;
 
       .product-image {
-        width: 70px;
-        height: 70px;
+        width: 110px;
+        height: 100px;
         margin-right: 20px;
       }
 
@@ -1025,33 +1012,27 @@ section {
   }
 
   .payment-section .payment-options {
-    padding: 0 8px;
-
+    padding: 0 25px;
     .subsection-title {
       font-size: 1.7rem;
       margin-bottom: 12px;
     }
-
     .coupon-row,
     .points-row {
       margin-bottom: 12px;
-
       .option-label {
         width: 70px;
         font-size: 1.4rem;
       }
-
       .option-value {
         font-size: 1.4rem;
         margin-right: 8px;
       }
-
       .option-button {
         padding: 4px 8px;
         font-size: 1.2rem;
       }
     }
-
     .option-info {
       font-size: 1.2rem;
       margin-bottom: 15px;
@@ -1337,17 +1318,25 @@ section {
       margin: 3px 0;
 
       .product-image {
-        width: 60px;
-        height: 60px;
-        margin-right: 15px;
+        width: 80px;
+        height: 80px;
+        margin-right: 0px;
       }
-
       .product-info {
-        font-size: 1.5rem;
         padding: 0 5px;
-
         .product-name {
+          font-size: 1.5rem;
           margin-bottom: 5px;
+        }
+        .product-price {
+          font-size: 1.3rem;
+          padding-right: 10px;
+          margin-top: 20px;
+        }
+        .product-option {
+          font-size: 1.3rem;
+          padding-right: 10px;
+          margin-top: 3px;
         }
       }
 
@@ -1360,7 +1349,7 @@ section {
   }
 
   .payment-section .payment-options {
-    padding: 0 5px;
+    padding: 0 20px;
 
     .subsection-title {
       font-size: 1.5rem;
@@ -1449,7 +1438,7 @@ section {
   }
 
   .order-summary .summary-list {
-    padding: 0 5px;
+    padding: 0 20px;
 
     .summary-row {
       margin-bottom: 8px;
@@ -1479,7 +1468,7 @@ section {
     margin-bottom: 15px;
 
     .payment-options {
-      padding: 0 5px;
+      padding: 0 20px;
 
       .payment-options-list {
         display: grid;
@@ -1586,7 +1575,7 @@ section {
 
   .checkout-container .shipping-section {
     .address-selector {
-      padding: 0 3px;
+      padding: 0 5px;
       margin-bottom: 10px;
 
       .address-label {
@@ -1619,6 +1608,7 @@ section {
           .address-book-link {
             font-size: 1.2rem;
             margin-top: 3px;
+            font-weight: 500;
           }
         }
 
@@ -1687,23 +1677,29 @@ section {
 
   .order-products .product-list {
     padding: 0;
-
     .product-item {
       padding: 12px 3px;
       margin: 2px 0;
-
       .product-image {
-        width: 50px;
-        height: 50px;
-        margin-right: 10px;
+        width: 70px;
+        height: 60px;
+        margin-right: 0px;
       }
-
       .product-info {
-        font-size: 1.4rem;
         padding: 0 3px;
-
         .product-name {
+          font-size: 1.2rem;
           margin-bottom: 3px;
+        }
+        .product-price {
+          font-size: 1.1rem;
+          padding-right: 10px;
+          margin-top: 8px;
+        }
+        .product-option {
+          font-size: 1.1rem;
+          padding-right: 10px;
+          margin-top: 3px;
         }
       }
 
@@ -1716,7 +1712,7 @@ section {
   }
 
   .payment-section .payment-options {
-    padding: 0 3px;
+    padding: 0 10px;
 
     .subsection-title {
       font-size: 1.4rem;
@@ -1806,7 +1802,7 @@ section {
   }
 
   .order-summary .summary-list {
-    padding: 0 3px;
+    padding: 0 10px;
 
     .summary-row {
       margin-bottom: 6px;
@@ -1834,19 +1830,15 @@ section {
 
   .payment-methods {
     margin-bottom: 12px;
-
     .payment-options {
-      padding: 0 3px;
-
+      padding: 0 10px;
       .payment-options-list {
         grid-template-columns: 1fr 1fr;
         gap: 6px 3px;
-
         .payment-option {
           input[type="radio"] + .option-text {
             font-size: 1.2rem;
             padding-left: 18px;
-
             &:before {
               width: 11px;
               height: 11px;

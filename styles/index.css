@@ -377,8 +377,8 @@ main #scrollSection .marquee {
 }
 main #scrollSection .marquee div {
   will-change: transform;
-  -webkit-animation: scrolling 60s linear infinite both;
-          animation: scrolling 60s linear infinite both;
+  -webkit-animation: scrolling 80s linear infinite both;
+          animation: scrolling 80s linear infinite both;
   font-size: 10rem;
   font-weight: bold;
   color: #fff;

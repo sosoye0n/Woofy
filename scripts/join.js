@@ -40,7 +40,6 @@ finalBtn.addEventListener("click", () => {
   // 비밀번호 일치
   if (pw.value !== pwCheck.value) {
     errorPw02.innerHTML = `<i class="fas fa-circle-check"></i> 비밀번호가 일치하지 않습니다.`;
-    // errorPW.style.display = "block";
     isValid = false;
   }
 
@@ -48,6 +47,6 @@ finalBtn.addEventListener("click", () => {
   if (isValid) {
     alert("회원가입을 축하드립니다🐶");
     // document.querySelector("#form").reset();
-    location.href = "/login.html";
+    location.href = "/welcome.html";
   }
 });

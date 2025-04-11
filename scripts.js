@@ -97,7 +97,7 @@ const footerInner = `
 <nav id="footerCategory">
         <ul>
           <li>
-            <a href="./detail.html?category=clothes" title="clothes" class="category-link" data-category="clothes">CLOTHES</a>
+            <a href="./detail.html" class="category-link" data-category="clothes">CLOTHES</a>
           </li>
           <li>
             <a href="./detail.html?category=acc" title="acc" class="category-link" data-category="acc">ACC</a>
@@ -183,24 +183,30 @@ updateCartCounter();
 // updateCartCounter 함수 업데이트
 function updateCartCounter() {
   let cart = getCartItems();
-  const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+  const totalItems = cart.reduce(
+    (total, item) => total + (item.quantity || 1),
+    0
+  );
 
   // 클래스 선택자로 변경
-  const cartCounter = document.querySelector(".cart-count");
+  const cartCounters = [
+    document.querySelector(".cart-count"),
+    document.querySelector(".cart-counter"),
+    document.querySelector("#rightGnb ul li a[title='cart'] span:last-child"),
+  ];
 
-  if (cartCounter) {
-    cartCounter.textContent = `(${totalItems})`;
-  } else {
-    // 백업 선택자 (기존 코드의 선택자)
-    const alternativeCounter = document.querySelector(
-      "#rightGnb ul li a[title='cart'] span:last-child"
-    );
-    if (alternativeCounter) {
-      alternativeCounter.textContent = `(${totalItems})`;
-    } else {
-      console.log("장바구니 카운터를 찾을 수 없습니다.");
+  cartCounters.forEach((counter) => {
+    if (counter) {
+      counter.textContent = totalItems > 0 ? `(${totalItems})` : "(0)";
+
+      // 스타일 적용 (선택적)
+      if (totalItems > 0) {
+        counter.style.display = "inline-block";
+      } else {
+        counter.style.display = "inline-block"; // 0일 때도 표시
+      }
     }
-  }
+  });
 }
 
 const toggleBtn = document.querySelector("#toggleBtn");
@@ -231,6 +237,8 @@ window.addEventListener("scroll", function () {
   let scrollTop = this.scrollY;
   if (scrollTop > prevscroll) {
     header.classList.add("active");
+  } else if (scrollTop === 0) {
+    header.classList.remove("active");
   } else {
     header.classList.remove("active");
   }
@@ -300,8 +308,9 @@ function removeCartItem(id) {
   return newCart;
 }
 
+// 클리어 함수
 function clearCart() {
-  saveCart([]);
+  localStorage.removeItem("cart"); // removeItem 사용하여 완전히 제거
   updateCartCounter();
 }
 
