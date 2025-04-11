@@ -20,6 +20,7 @@ main {
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
+          cursor: pointer;
           &::after {
             content: "";
             width: 100%;
@@ -39,10 +40,14 @@ main {
             flex-direction: column;
             gap: 10px;
             p {
-              &:nth-child(1) {
-                font-size: 3rem;
+              &:first-child {
+                font-size: 2.4rem;
               }
               &:nth-child(2) {
+                font-size: 3rem;
+                font-weight: bold;
+              }
+              &:nth-child(3) {
                 font-size: 1.6rem;
               }
             }
@@ -60,7 +65,7 @@ main {
             background-image: url("https://cafe24img.poxo.com/kimutaku4/web/upload/NNEditor/20250121/15.jpg");
           }
           &:nth-child(5) {
-            background-image: url("https://cafe24.poxo.com/ec01/suji3793/exMpWVRPvmnhTUkiTrF2w+f/nYM2LTtH1YeSo4Wf7yy5jQfdRFkNDJqEdcXcHwv1lFDfiMU/TBpMUvHCNtcmSQ==/_/web/upload/_merlotArticle/Snow_Pic/sl-04-10.jpg");
+            background-image: url("https://glowny.co.kr/web/product/extra/small/202403/2df588acf93bbe5ff2f449a47dd50680.jpg");
           }
         }
       }
@@ -202,7 +207,10 @@ main {
               position: relative;
               p {
                 font-size: 1.4rem;
-                font-weight: bold;
+                &:first-child {
+                  color: map-get($map: $color, $key: point);
+                  font-weight: bold;
+                }
                 &:nth-child(2) {
                   font-size: 1.6rem;
                   font-weight: normal;
@@ -215,31 +223,8 @@ main {
                 }
                 &:last-child {
                   span {
-                    &:first-child {
-                      color: map-get($map: $color, $key: point);
-                      margin-right: 10px;
-                    }
+                    font-weight: bold;
                   }
-                }
-              }
-            }
-            .itemLike {
-              display: flex;
-              flex-direction: column;
-              gap: 4px;
-              align-self: center;
-              cursor: pointer;
-              position: absolute;
-              right: 0;
-              top: 50%;
-              width: 30px;
-              transform: translateY(-50%);
-              text-align: center;
-              color: map-get($map: $color, $key: input);
-              i {
-                font-size: 2rem;
-                &.fa-solid {
-                  color: map-get($map: $color, $key: point);
                 }
               }
             }
@@ -273,18 +258,18 @@ main {
             justify-content: space-between;
             p {
               font-size: 1.4rem;
-              font-weight: bold;
               margin-top: 10px;
+              &:first-child {
+                color: map-get($map: $color, $key: point);
+                font-weight: bold;
+              }
               &:nth-child(2) {
                 font-size: 1.6rem;
                 font-weight: normal;
               }
               &:last-child {
                 span {
-                  &:first-child {
-                    color: map-get($map: $color, $key: point);
-                    margin-right: 10px;
-                  }
+                  font-weight: bold;
                 }
               }
             }
@@ -331,7 +316,7 @@ main {
       will-change: transform;
       div {
         will-change: transform;
-        animation: scrolling 60s linear infinite both;
+        animation: scrolling 80s linear infinite both;
         font-size: 10rem;
         font-weight: bold;
         color: #fff;

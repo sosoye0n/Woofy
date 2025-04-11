@@ -1,6 +1,4 @@
 const mySwiper = new Swiper(".swiper", {
-  // slidesPerView: 1,
-  // loop: true,
   effect: "fade",
   navigation: {
     nextEl: ".swiper-button-next",
@@ -10,10 +8,10 @@ const mySwiper = new Swiper(".swiper", {
     el: ".pagination-progressbar",
     type: "progressbar",
   },
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 });
 const pagingSwiper = new Swiper(".swiper", {
   // loop: true,
@@ -46,73 +44,114 @@ fetch("./API/main.json").then((response) =>
       <p>${item.mainTitle}</p>
       <p>${item.subTitle}</p>
       `;
-
       const itemWrap = document.createElement("div");
-      const subItems = item.brandItem.subItems;
-      subItems.forEach((item) => {
-        itemWrap.classList.add("itemWrap");
-        const itemBox = document.createElement("div");
-        itemBox.classList.add("itemBox");
 
-        const itemContainer = document.createElement("a");
-        itemContainer.href = "#";
+      itemWrap.classList.add("itemWrap");
 
-        const itemImg = document.createElement("div");
-        itemImg.classList.add("itemImg");
+      const url = "./API/detail.json";
+      const fetchData02 = async () => {
+        const response = await fetch(url);
+        const data = await response.json();
+        const addItem = (e) => {
+          const itemBox = document.createElement("div");
+          itemBox.classList.add("itemBox");
 
-        const brandItemImg = document.createElement("img");
-        brandItemImg.src = item.itemImg;
-        const itemText = document.createElement("div");
-        itemText.classList.add("itemText");
-        itemText.innerHTML = `
-          <p>${item.itemBrand}</p>
-          <p>${item.itemTitle}</p>
+          const itemContainer = document.createElement("a");
+          itemContainer.href = "#";
+
+          const itemImg = document.createElement("div");
+          itemImg.classList.add("itemImg");
+
+          const brandItemImg = document.createElement("img");
+          brandItemImg.src = e.thumbnail;
+          const itemText = document.createElement("div");
+          itemText.classList.add("itemText");
+          itemText.innerHTML = `
+          <p>${e.brand}</p>
+          <p>${e.name}</p>
           <p>
-            <span>${item.itemDc}%</span>
-            <span>${item.itemPrice}원</span>
+            <span>${e.price}</span> KRW
           </p>
           `;
-        // const itemLike = document.createElement("div");
-        // itemLike.classList.add("itemLike");
-        // itemLike.innerHTML = `
-        //     <i class="fa-regular fa-heart"></i>
-        //     <span>${item.like}</span>
-        //   `;
-        itemImg.appendChild(brandItemImg);
-        itemContainer.append(itemImg, itemText);
-        itemBox.append(itemContainer);
-        itemWrap.append(itemBox);
-      });
-      imgBox.appendChild(img);
-      brandWrap.append(imgBox, textBox);
-      flexBox.append(brandWrap, itemWrap);
+
+          itemImg.appendChild(brandItemImg);
+          itemContainer.append(itemImg, itemText);
+          itemBox.append(itemContainer);
+          itemWrap.append(itemBox);
+          imgBox.appendChild(img);
+          brandWrap.append(imgBox, textBox);
+          flexBox.append(brandWrap, itemWrap);
+        };
+        const emisItem = await data.detail.filter(
+          (i) => i.brand.toLowerCase() === item.nameEng.toLowerCase()
+        );
+        const emisItemList = emisItem.slice(0, 2);
+        emisItemList.forEach((e) => {
+          addItem(e);
+        });
+        var image = document.getElementsByClassName("thumbnail");
+        new simpleParallax(image, {
+          scale: 1.2,
+          orientation: "up",
+          delay: 1,
+        });
+        var image = document.getElementsByClassName("thumbnail2");
+        new simpleParallax(image, {
+          scale: 1.2,
+          orientation: "down",
+          delay: 1,
+        });
+      };
+
+      fetchData02();
       return flexBox;
     };
     const con = document.querySelectorAll(".con");
     for (let i = 0; i < keys.length; i++) {
-      const key = keys[i]; // "data01", "data02" 등
-      const conBox = con[i]; // .con01, .con02 등
+      const key = keys[i];
+      const conBox = con[i];
 
       data[key].forEach((item) => {
-        const flexBox = dataFunc(item); // DOM 요소 생성
-        conBox.append(flexBox); // 해당 영역에 append
+        const flexBox = dataFunc(item);
+        conBox.append(flexBox);
       });
     }
-    var image = document.getElementsByClassName("thumbnail");
-    new simpleParallax(image, {
-      scale: 1.2,
-      orientation: "up",
-      delay: 1,
-    });
-    var image = document.getElementsByClassName("thumbnail2");
-    new simpleParallax(image, {
-      scale: 1.2,
-      orientation: "down",
-      delay: 1,
-    });
     const fetchData = async () => {
       const response = await fetch("./API/detail.json");
       const subData = await response.json();
+      const itemBoxClick = document.querySelectorAll(".itemBox");
+      itemBoxClick.forEach((item) => {
+        item.addEventListener("click", function () {
+          const itemTitle = this.querySelector(
+            ".itemBox p:nth-child(2)"
+          ).innerText;
+          const itemObj = subData.detail.filter((i) => i.name === itemTitle);
+          const link = itemObj[0].id;
+          window.location = `./detail-product.html?id=${link}`;
+        });
+      });
+
+      // 핀 슬라이더
+      const ss01 = document.querySelector(".ss01");
+      const ss02 = document.querySelector(".ss02");
+      const ss03 = document.querySelector(".ss03");
+      const ss04 = document.querySelector(".ss04");
+      const ss05 = document.querySelector(".ss05");
+      ss01.addEventListener("click", () => {
+        window.location = "./brand.html?brand=GUCCI";
+      });
+      ss02.addEventListener("click", () => {
+        window.location = "./brand.html?brand=Àvie muah";
+      });
+      ss03.addEventListener("click", () => {
+        window.location = "./brand.html?brand=merlot";
+      });
+      ss04.addEventListener("click", () => {
+        window.location = "./brand.html?brand=emis";
+      });
+      ss05.addEventListener("click", () => {
+        window.location = "./brand.html?brand=GLOWNY";
+      });
       const ToplikeCnt = [];
       const latestRelease = [];
       let FinalNum = [];
@@ -124,6 +163,7 @@ fetch("./API/main.json").then((response) =>
         const key = keys[i];
         const likeNum = subData.detail[key].LikeCnt;
         const time = subData.detail[key].time;
+        const title = subData.detail[key].title;
         ToplikeCnt.push(likeNum);
         const popularNum = ToplikeCnt.sort((a, b) => b - a);
         latestRelease.push(time);
@@ -176,7 +216,7 @@ fetch("./API/main.json").then((response) =>
                   <p>${mostPopular[i][0].brand}</p>
                   <p>${mostPopular[i][0].name}</p>
                   <p>
-                    <span>${mostPopular[i][0].price} KRW</span>
+                    <span>${mostPopular[i][0].price}</span> KRW
                   </p>
                 </div>
           </a>
@@ -198,13 +238,14 @@ fetch("./API/main.json").then((response) =>
                   <p>${last[i][0].brand}</p>
                   <p>${last[i][0].name}</p>
                   <p>
-                    <span>${last[i][0].price} KRW</span>
+                    <span>${last[i][0].price}</span> KRW
                   </p>
                 </div>
           </a>
         `;
         swiperWrapper02.append(swiperSlide02);
       }
+
       swiper02.append(swiperTitle, swiperWrapper, swiperBtnNext, swiperBtnPrev);
       swiper03.append(
         swiperTitle02,
@@ -214,6 +255,19 @@ fetch("./API/main.json").then((response) =>
       );
       mostPopularWrap.append(swiper02);
       latestReleaseWrap.append(swiper03);
+      const popularLatest = document.querySelectorAll(
+        ".flexCon02 .swiper-slide "
+      );
+      popularLatest.forEach((item) => {
+        item.addEventListener("click", function () {
+          const itemTitle = this.querySelector(
+            ".itemText p:nth-child(2)"
+          ).innerText;
+          const itemObj = subData.detail.filter((i) => i.name === itemTitle);
+          const link = itemObj[0].id;
+          window.location = `./detail-product.html?id=${link}`;
+        });
+      });
       const mySwiper02 = new Swiper(".swiper02", {
         slidesPerView: 4,
         spaceBetween: 20,
@@ -243,20 +297,5 @@ fetch("./API/main.json").then((response) =>
       });
     };
     fetchData();
-    // fetch("./API/detail.json").then((response) =>
-    //   response.json().then((subData) => {
-    //     // const keys = Object.keys(subData.detail);
-    //     const likeCntAll = [];
-    //     // const key = keys[i];
-    //     const likeCnt = subData.detail.LikeCnt;
-    //     likeCntAll.push(likeCnt);
-    //     likeCntAll.sort((a, b) => b - a);
-    //     const popularNum = likeCntAll.slice(0, 10);
-    //     const popularProduct = subData.detail.filter(
-    //       (i) => i.LikeCnt === popularNum
-    //     );
-    //     console.log(popularProduct);
-    //   })
-    // );
   })
 );

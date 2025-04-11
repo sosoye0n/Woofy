@@ -2,13 +2,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
   initSidebarAccordion();
 
-  // 디버깅용 코드 추가
-  console.log("장바구니 초기화 시작");
-  console.log("장바구니 데이터:", localStorage.getItem("cart"));
-
   // 장바구니 렌더링 전에 localStorage 확인
   const cartData = getCartItems();
-  console.log("장바구니 항목 수:", cartData.length);
 
   // 장바구니 렌더링
   await renderCartItems();
@@ -38,7 +33,6 @@ async function fetchProductData() {
     const res = await fetch("./API/detail.json");
     if (!res.ok) throw new Error("데이터를 불러오는 데 실패했습니다.");
     const data = await res.json();
-    console.log("로드된 데이터:", data); // 디버깅용
 
     // 구조 수정 (data.products -> data.detail)
     return data.detail || [];
@@ -66,9 +60,6 @@ async function renderCartItems() {
   const cart = getCartItems();
   productList = await fetchProductData();
 
-  // 디버깅용: 로드된 상품 수 출력
-  console.log("로드된 상품 수:", productList.length);
-
   if (!container) {
     console.warn("장바구니 컨테이너를 찾을 수 없습니다.");
     return;
@@ -81,14 +72,6 @@ async function renderCartItems() {
     return;
   }
 
-  // ID 매칭 문제 디버깅
-  cart.forEach((item) => {
-    console.log(
-      `장바구니 상품 ID ${item.id}:`,
-      productList.find((p) => p.id === item.id) ? "매치됨" : "매치 안됨"
-    );
-  });
-
   container.innerHTML = cart
     .map((item) => {
       const product = productList.find((p) => p.id === item.id);
@@ -98,7 +81,7 @@ async function renderCartItems() {
       }
 
       return `
-     <div class="cart-item" data-id="${item.id}">
+    <div class="cart-item" data-id="${item.id}">
       <div class="select-column">
         <input type="checkbox" id="item${item.id}" checked />
         <label for="item${item.id}"></label>

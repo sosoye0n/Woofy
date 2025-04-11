@@ -65,6 +65,7 @@ header {
   height: 100%;
 }
 .product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide {
+  width: 100%;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -251,18 +252,28 @@ header {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  filter: brightness(0.95);
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
 }
 .more-prodtcts .product-item .product-image:hover img {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 .more-prodtcts .product-item .product-info {
   width: 100%;
 }
 .more-prodtcts .product-item .product-info .product-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 5px;
 }
 .more-prodtcts .product-item .product-info .product-brand {
@@ -272,6 +283,8 @@ header {
   font-weight: bold;
 }
 .more-prodtcts .product-item .product-info .product-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 1.6rem;
   font-weight: 500;
@@ -296,18 +309,24 @@ header {
     padding: 20px;
     gap: 30px;
     min-height: auto;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   /* 갤러리 영역 */
   .product-gallery {
     width: 100%;
-    max-width: 600px;
+    max-width: 601px;
   }
   .product-gallery .gallery-main {
     width: 100%;
   }
   .product-gallery .gallery-main .swiper {
+    width: 100%;
     height: 600px;
+  }
+  .product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide {
+    margin-top: 30px;
   }
   /* 상품 정보 영역 */
   .product-info {
@@ -315,6 +334,8 @@ header {
     max-width: 600px;
     padding: 0;
     position: static;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -354,7 +375,7 @@ header {
     max-width: 500px;
   }
   .product-gallery .gallery-main .swiper {
-    height: 500px;
+    height: 600px;
   }
   /* 상품 정보 영역 - 작은 태블릿 */
   .product-info {
@@ -400,7 +421,7 @@ header {
     width: 100%;
   }
   .product-gallery .gallery-main .swiper {
-    height: 450px;
+    height: 600px;
   }
   /* 상품 정보 영역 - 모바일 중간 사이즈 */
   .product-info {
@@ -470,7 +491,8 @@ header {
     width: 100%;
   }
   .product-gallery .gallery-main .swiper {
-    height: 350px;
+    margin-top: 10px;
+    height: 500px;
   }
   /* 상품 정보 영역 - 모바일 */
   .product-info {
