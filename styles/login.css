@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -28,6 +29,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 main #allContainer {
   width: 100%;
@@ -35,6 +42,16 @@ main #allContainer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 70px 0;
   text-transform: uppercase;
   margin-top: 0;
@@ -48,6 +65,10 @@ main #allContainer #login {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
 }
 main #allContainer #login input:not(input[type=checkbox]) {
@@ -71,6 +92,10 @@ main #allContainer #login input:not(input[type=checkbox]):hover {
 main #allContainer #login #inputContainer {
   display: flex;
   flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 main #allContainer #login #inputContainer .inputBox {
   position: relative;
@@ -93,6 +118,8 @@ main #allContainer #login #inputContainer .inputBox label {
   left: 30px;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-size: 1.4rem;
   font-weight: 700;
 }
@@ -106,6 +133,7 @@ main #allContainer #login #inputContainer #loginBtn {
   background: #000;
   color: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #allContainer #login #inputContainer #loginBtn:focus {
@@ -120,6 +148,12 @@ main #allContainer #login #searchInfo {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.2rem;
   margin-left: 3px;
   color: #a9a9a9;
@@ -133,6 +167,10 @@ main #allContainer #login #searchInfo .border {
 main #allContainer #login #btns {
   display: flex;
   flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 10px;
 }
 main #allContainer #login #btns #kakaoBtn {

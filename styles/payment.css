@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul,
@@ -34,6 +36,10 @@ header {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .checkout-container .checkout-title {
   font-size: 2.4rem;
@@ -63,9 +69,16 @@ section {
   margin-bottom: 20px;
   align-items: center;
   cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
 }
 .checkout-container .shipping-section .address-selector .address-label .recent-address {
   align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 2.2rem;
   font-weight: 400;
   margin-right: 30px;
@@ -82,9 +95,27 @@ section {
   flex-direction: column;
 }
 .checkout-container .shipping-section .address-selector .address-info .user-chioce {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 15px;
 }
 .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input {
@@ -109,6 +140,53 @@ section {
 .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-moz-placeholder {
   opacity: 0;
 }
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::placeholder {
+  opacity: 0;
+  border: none;
+  padding: 5px 0;
+  width: 60%;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-webkit-input-placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-moz-placeholder {
+  color: #999;
+  -moz-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::-ms-input-placeholder {
+  color: #999;
+  -ms-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input::placeholder {
+  color: #999;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus {
+  outline: none;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-moz-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+.checkout-container .shipping-section .address-selector .address-info .user-chioce .address-book-link {
 .checkout-container .shipping-section .address-selector .address-info .user-chioce .recipient-input:focus::placeholder {
   opacity: 0;
 }
@@ -153,6 +231,8 @@ section {
   width: 100%;
 }
 .checkout-container .shipping-section .address-selector .delivery-message select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: 40px;
@@ -183,6 +263,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding: 35px 25px;
   margin: 5px;
   border-top: 1px solid #d9d9d9;
@@ -202,6 +288,9 @@ section {
 }
 .order-products .product-list .product-item .product-info {
   flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   padding: 0 15px;
   font-size: 2rem;
   font-weight: 400;
@@ -259,6 +348,14 @@ section {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 15px;
   padding: 0 10px;
   color: #999999;
@@ -287,6 +384,9 @@ section {
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin-bottom: 20px;
   font-size: 1.4rem;
   color: #dadada;
@@ -298,6 +398,9 @@ section {
 .order-summary .summary-list .summary-row {
   display: flex;
   justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 15px;
   padding: 0 5%;
   color: #a7a7a8;
@@ -331,6 +434,9 @@ section {
   border-bottom: 1px solid #d9d9d9;
   display: flex;
   align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .payment-options .visually-hidden {
   position: absolute;
@@ -345,10 +451,15 @@ section {
 .payment-methods .payment-options .payment-options-list {
   display: flex;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .payment-options .payment-options-list .payment-option {
   cursor: pointer;
@@ -382,6 +493,9 @@ section {
   margin-top: 10px;
   display: flex;
   align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .payment-methods .terms-agreement .agreement-label {
   cursor: pointer;
@@ -415,6 +529,9 @@ section {
   margin: 30px auto;
   display: flex;
   justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .checkout-button-container .checkout-button {
   width: 100%;
@@ -433,6 +550,8 @@ section {
 }
 .checkout-button-container .checkout-button:active {
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .modal, .payment-confirm-modal, .coupon-modal, .address-modal {
