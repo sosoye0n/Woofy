@@ -5,7 +5,6 @@ const url = "./API/detail.json";
 const searchText = document.querySelector("h2");
 const filterWrap = document.querySelector(".filterWrap");
 const length = document.querySelector(".filterWrap span");
-console.log(length);
 searchText.innerHTML = `"${query}"<span>에 대한 검색 결과입니다.</span>`;
 
 const fetchData = async () => {
@@ -24,7 +23,7 @@ const fetchData = async () => {
     matched = [];
     searchResult.innerHTML = `
       <div class="nothingSearch">
-      <i class="fa-solid fa-circle-xmark"></i>
+        <i class="fa-solid fa-circle-xmark"></i>
         <p>죄송합니다, 검색 결과가 없습니다.</p>
         <p>다른 검색어로 다시 시도해보세요.</p>
       </div>
@@ -99,6 +98,17 @@ const fetchData = async () => {
       removeData();
       priceDataRe();
     }
+  });
+  const itemBox = document.querySelectorAll(".itemBox");
+  itemBox.forEach((item) => {
+    item.addEventListener("click", function () {
+      const itemTitle = this.querySelector(
+        ".itemText p:nth-child(2)"
+      ).innerText;
+      const itemObj = data.detail.filter((i) => i.name === itemTitle);
+      const link = itemObj[0].id;
+      window.location = `./detail-product.html?id=${link}`;
+    });
   });
 };
 fetchData();

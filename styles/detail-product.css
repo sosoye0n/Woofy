@@ -84,18 +84,8 @@ header {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(1) {
-  background-image: url("../images/detail/cap-4.jpg");
-}
-.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(2) {
-  background-image: url("../images/detail/cap-dog4.jpg");
-}
-.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(3) {
-  background-image: url("../images/detail/slide-dog1.jpg");
-}
-.product-gallery .gallery-main .swiper .swiper-wrapper .swiper-slide:nth-child(4) {
-  background-image: url("../images/detail/slide-dog2.jpg");
+  -webkit-transition: background-image 0.3s ease;
+  transition: background-image 0.3s ease;
 }
 .product-gallery .gallery-main .swiper .swiper-button-prev,
 .product-gallery .gallery-main .swiper .swiper-button-next {

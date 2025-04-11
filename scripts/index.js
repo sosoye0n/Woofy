@@ -1,6 +1,4 @@
 const mySwiper = new Swiper(".swiper", {
-  // slidesPerView: 1,
-  // loop: true,
   effect: "fade",
   navigation: {
     nextEl: ".swiper-button-next",
@@ -91,7 +89,20 @@ fetch("./API/main.json").then((response) =>
         emisItemList.forEach((e) => {
           addItem(e);
         });
+        var image = document.getElementsByClassName("thumbnail");
+        new simpleParallax(image, {
+          scale: 1.2,
+          orientation: "up",
+          delay: 1,
+        });
+        var image = document.getElementsByClassName("thumbnail2");
+        new simpleParallax(image, {
+          scale: 1.2,
+          orientation: "down",
+          delay: 1,
+        });
       };
+
       fetchData02();
       return flexBox;
     };
@@ -105,21 +116,22 @@ fetch("./API/main.json").then((response) =>
         conBox.append(flexBox);
       });
     }
-    var image = document.getElementsByClassName("thumbnail");
-    new simpleParallax(image, {
-      scale: 1.2,
-      orientation: "up",
-      delay: 1,
-    });
-    var image = document.getElementsByClassName("thumbnail2");
-    new simpleParallax(image, {
-      scale: 1.2,
-      orientation: "down",
-      delay: 1,
-    });
     const fetchData = async () => {
       const response = await fetch("./API/detail.json");
       const subData = await response.json();
+      const itemBoxClick = document.querySelectorAll(".itemBox");
+      itemBoxClick.forEach((item) => {
+        item.addEventListener("click", function () {
+          const itemTitle = this.querySelector(
+            ".itemBox p:nth-child(2)"
+          ).innerText;
+          const itemObj = subData.detail.filter((i) => i.name === itemTitle);
+          const link = itemObj[0].id;
+          window.location = `./detail-product.html?id=${link}`;
+        });
+      });
+
+      // 핀 슬라이더
       const ss01 = document.querySelector(".ss01");
       const ss02 = document.querySelector(".ss02");
       const ss03 = document.querySelector(".ss03");
@@ -138,7 +150,7 @@ fetch("./API/main.json").then((response) =>
         window.location = "./brand.html?brand=emis";
       });
       ss05.addEventListener("click", () => {
-        window.location = "./brand.html?brand=MLB";
+        window.location = "./brand.html?brand=GLOWNY";
       });
       const ToplikeCnt = [];
       const latestRelease = [];
@@ -151,6 +163,7 @@ fetch("./API/main.json").then((response) =>
         const key = keys[i];
         const likeNum = subData.detail[key].LikeCnt;
         const time = subData.detail[key].time;
+        const title = subData.detail[key].title;
         ToplikeCnt.push(likeNum);
         const popularNum = ToplikeCnt.sort((a, b) => b - a);
         latestRelease.push(time);
@@ -232,6 +245,7 @@ fetch("./API/main.json").then((response) =>
         `;
         swiperWrapper02.append(swiperSlide02);
       }
+
       swiper02.append(swiperTitle, swiperWrapper, swiperBtnNext, swiperBtnPrev);
       swiper03.append(
         swiperTitle02,
@@ -241,6 +255,19 @@ fetch("./API/main.json").then((response) =>
       );
       mostPopularWrap.append(swiper02);
       latestReleaseWrap.append(swiper03);
+      const popularLatest = document.querySelectorAll(
+        ".flexCon02 .swiper-slide "
+      );
+      popularLatest.forEach((item) => {
+        item.addEventListener("click", function () {
+          const itemTitle = this.querySelector(
+            ".itemText p:nth-child(2)"
+          ).innerText;
+          const itemObj = subData.detail.filter((i) => i.name === itemTitle);
+          const link = itemObj[0].id;
+          window.location = `./detail-product.html?id=${link}`;
+        });
+      });
       const mySwiper02 = new Swiper(".swiper02", {
         slidesPerView: 4,
         spaceBetween: 20,

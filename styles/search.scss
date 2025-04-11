@@ -42,12 +42,12 @@ main {
       flex-direction: column;
       align-items: center;
       text-align: center;
-      font-size: 2.4rem;
+      font-size: 2rem;
       gap: 10px;
-      color: map-get($map: $color, $key: text);
+      color: map-get($map: $color, $key: input);
       i {
         font-size: 6rem;
-        margin-bottom: 4px;
+        margin-bottom: 30px;
       }
     }
   }
@@ -102,11 +102,28 @@ main {
     }
   }
 }
-footer {
+
+@media screen and (max-width: 1624px) {
+  main {
+    .filterWrap {
+      select {
+        width: 12%;
+      }
+    }
+  }
 }
 // 반응형 tablet
 @media screen and (max-width: 1024px) {
   main {
+    h2 {
+      font-size: 2.4rem;
+      margin-top: 30px;
+    }
+    .filterWrap {
+      select {
+        width: 15%;
+      }
+    }
     section {
       ul {
         width: 100%;
@@ -120,6 +137,11 @@ footer {
 // 반응형 모바일
 @media screen and (max-width: 767px) {
   main {
+    .filterWrap {
+      select {
+        width: 20%;
+      }
+    }
     section {
       ul {
         width: 100%;

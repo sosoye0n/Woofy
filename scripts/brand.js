@@ -98,6 +98,17 @@ fetch("./API/main.json").then((response) =>
           priceDataRe();
         }
       });
+      const itemBox = document.querySelectorAll(".itemBox");
+      itemBox.forEach((item) => {
+        item.addEventListener("click", function () {
+          const itemTitle = this.querySelector(
+            ".itemText p:nth-child(2)"
+          ).innerText;
+          const itemObj = product.detail.filter((i) => i.name === itemTitle);
+          const link = itemObj[0].id;
+          window.location = `./detail-product.html?id=${link}`;
+        });
+      });
     };
     fetchData();
 

@@ -68,13 +68,13 @@ main #searchResult .nothingSearch {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  font-size: 2.4rem;
+  font-size: 2rem;
   gap: 10px;
-  color: #a7a7a8;
+  color: #a9a9a9;
 }
 main #searchResult .nothingSearch i {
   font-size: 6rem;
-  margin-bottom: 4px;
+  margin-bottom: 30px;
 }
 main section {
   width: 100%;
@@ -139,7 +139,19 @@ main section ul .itemBox a .itemText p:nth-child(3) span {
   font-weight: bold;
 }
 
+@media screen and (max-width: 1624px) {
+  main .filterWrap select {
+    width: 12%;
+  }
+}
 @media screen and (max-width: 1024px) {
+  main h2 {
+    font-size: 2.4rem;
+    margin-top: 30px;
+  }
+  main .filterWrap select {
+    width: 15%;
+  }
   main section ul {
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
@@ -147,6 +159,9 @@ main section ul .itemBox a .itemText p:nth-child(3) span {
   }
 }
 @media screen and (max-width: 767px) {
+  main .filterWrap select {
+    width: 20%;
+  }
   main section ul {
     width: 100%;
     grid-template-columns: repeat(2, 1fr);

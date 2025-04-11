@@ -205,12 +205,12 @@ header {
   position: relative;
   cursor: pointer;
   text-align: left;
+  -webkit-transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
-.tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item:hover {
+.tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item.selected {
   color: #99bdff;
-}
-.tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item:hover:active {
-  color: #99bdff;
+  font-weight: 600;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-item.with-dot {
   display: -webkit-box;
@@ -313,8 +313,6 @@ header {
 .sidebar section .subcategory .item {
   width: 50%;
   width: calc(50% - 5px);
-}
-.sidebar section .subcategory .item a {
   text-decoration: none;
   color: #000;
   display: -webkit-box;
@@ -331,10 +329,13 @@ header {
   border-radius: 3px;
   -webkit-transition: background-color 0.2s ease, color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
 }
-.sidebar section .subcategory .item a:hover {
+.sidebar section .subcategory .item.selected {
   background-color: rgba(0, 0, 0, 0.05);
   color: #99bdff;
+  border-color: #99bdff;
+  font-weight: 600;
 }
 .sidebar section .subcategory .color-dot {
   width: 20px;
@@ -393,6 +394,8 @@ header {
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .content-inner .content-area .product-grid .product-row {
   display: contents;
@@ -482,6 +485,9 @@ header {
 }
 .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info i:hover {
   background: #99bdff;
+}
+.content-inner .content-area .product-grid.loading {
+  opacity: 0;
 }
 .content-inner .pagination {
   display: -webkit-box;
@@ -715,12 +721,21 @@ header {
   .content-inner .content-area .product-grid .product-row .product-item .product-link .product-image {
     padding-top: 100%; /* 1:1 비율 유지 */
   }
+  .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner {
+    padding-left: 15px;
+  }
+  .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-brand {
+    font-size: 1.7rem;
+  }
   .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-title {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
+  }
+  .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-price {
+    font-size: 1.7rem;
   }
   .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info i {
     position: absolute;
-    right: 0px;
+    right: 20px;
     bottom: 5px;
   }
   /* 페이지네이션 조정 */
@@ -790,13 +805,21 @@ header {
   .content-inner .content-area .product-grid .product-row .product-item {
     margin-bottom: 15px;
   }
+  .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner {
+    padding-left: 10px;
+  }
   .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-brand {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-title {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info .product-inner .product-price {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+  }
+  .content-inner .content-area .product-grid .product-row .product-item .product-link .product-info i {
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
   }
 }
