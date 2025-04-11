@@ -164,8 +164,6 @@ main #scrollSection {
 }
 main #scrollSection .flexCon01 {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 3%;
   padding: 0 3%;
@@ -195,8 +193,6 @@ main #scrollSection .flexCon01 .flexBox .imgBox img {
   object-fit: cover;
 }
 main #scrollSection .flexCon01 .flexBox .textBox {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;

@@ -130,7 +130,6 @@ main #allContainer #login #inputContainer #loginBtn {
   background: #000;
   color: #fff;
   cursor: pointer;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 main #allContainer #login #inputContainer #loginBtn:focus {

@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 ul,
@@ -23,8 +22,8 @@ main {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 main .brandBanner {
   width: 100%;
@@ -34,15 +33,13 @@ main .brandBanner {
   background-size: cover;
   background-repeat: no-repeat;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   background-attachment: fixed;
   padding: 3%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: -1;
 }
 main .brandBanner::after {
@@ -56,13 +53,8 @@ main .brandBanner::after {
 }
 main .brandBanner .brandText {
   width: 600px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 30px;
   position: relative;
   z-index: 1;
@@ -100,8 +92,8 @@ main section .filterWrap {
   display: flex;
   width: 100%;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin: 40px 0;
   border: 1px solid #d9d9d9;
   padding-left: 10px;
@@ -123,13 +115,8 @@ main section ul {
   gap: 20px;
 }
 main section ul .itemBox a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   width: 100%;
   position: relative;
@@ -150,9 +137,9 @@ main section ul .itemBox a .itemImg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   -webkit-filter: brightness(0.95);
-          filter: brightness(0.95);
+  filter: brightness(0.95);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   aspect-ratio: 1/1;
@@ -166,13 +153,8 @@ main section ul .itemBox a .itemImg img:nth-child(2) {
   height: 100%;
 }
 main section ul .itemBox a .itemText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 30px;
 }
@@ -199,7 +181,7 @@ main section ul .itemBox a .itemText p:nth-child(3) span {
   main .brandBanner {
     height: 800px;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     background-attachment: inherit;
   }
   main section ul {
@@ -213,8 +195,8 @@ main section ul .itemBox a .itemText p:nth-child(3) span {
   }
   main section .filterWrap {
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin: 40px 0;
     border: 1px solid #d9d9d9;
     padding-left: 10px;

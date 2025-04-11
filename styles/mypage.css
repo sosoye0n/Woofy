@@ -42,8 +42,6 @@ main #couponModal {
   position: fixed;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,8 +73,6 @@ main #couponModal .coupon .modalHeader .fa-xmark:hover {
   color: #99bdff;
 }
 main #couponModal .coupon .modalHeader .modalTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,8 +88,6 @@ main #couponModal .coupon .modalHeader .modalTitle span {
   font-weight: 700;
 }
 main #couponModal .coupon .couponContents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -101,8 +95,6 @@ main #couponModal .coupon .couponContents {
   justify-content: space-between;
 }
 main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 {
@@ -115,8 +107,6 @@ main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .coup
   align-items: center;
 }
 main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .couponBox1 .modalInfo .membershipInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   font-size: 2.4rem;
@@ -144,8 +134,6 @@ main #couponModal .coupon .couponContents .modalCouponInfoCon .modalCoupon .coup
   background: #99bdff;
   border-radius: 4px;
   border-left: 0.2px dashed #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,8 +151,6 @@ main #pointModal {
   position: fixed;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -177,8 +163,6 @@ main #pointModal .point {
   background: #fff;
   padding: 73px 0;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,8 +170,6 @@ main #pointModal .point {
 }
 main #pointModal .point .modalHeader .fa-xmark {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: end;
   font-size: 2rem;
@@ -200,8 +182,6 @@ main #pointModal .point .modalHeader .fa-xmark:hover {
   color: #99bdff;
 }
 main #pointModal .point .modalHeader .modalTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,15 +197,11 @@ main #pointModal .point .modalHeader .modalTitle span {
   font-weight: 700;
 }
 main #pointModal .point .pointContents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 main #pointModal .point .pointContents > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   align-items: center;
   gap: 20px;
@@ -237,8 +213,6 @@ main #pointModal .point .pointContents .modalCircle {
   height: 70px;
   background: #99bdff;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -250,8 +224,6 @@ main #pointModal .point .pointContents .modalCircle i {
      object-fit: cover;
 }
 main #pointModal .point .pointContents .membershipInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   font-size: 2rem;
@@ -275,8 +247,6 @@ main #membershipModal {
   position: fixed;
   top: 0;
   left: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,8 +259,6 @@ main #membershipModal .membership {
   background: #fff;
   padding: 73px 0;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -298,8 +266,6 @@ main #membershipModal .membership {
 }
 main #membershipModal .membership .modalHeader .fa-xmark {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: end;
   font-size: 2rem;
@@ -312,8 +278,6 @@ main #membershipModal .membership .modalHeader .fa-xmark:hover {
   color: #99bdff;
 }
 main #membershipModal .membership .modalHeader .modalTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -329,15 +293,11 @@ main #membershipModal .membership .modalHeader .modalTitle span {
   font-weight: 700;
 }
 main #membershipModal .membership .membershipContents {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 main #membershipModal .membership .membershipContents > li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -348,8 +308,6 @@ main #membershipModal .membership .membershipContents .modalCircle {
   height: 70px;
   background: #99bdff;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -360,8 +318,6 @@ main #membershipModal .membership .membershipContents .modalCircle img {
   height: 24px;
 }
 main #membershipModal .membership .membershipContents .membershipInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   font-size: 2rem;
@@ -715,8 +671,6 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
   }
   main #couponModal .coupon .modalHeader .fa-xmark {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: end;
     font-size: 1.6rem;
@@ -771,8 +725,6 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
   }
   main #pointModal .point .modalHeader .fa-xmark {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: end;
     font-size: 1.6rem;
@@ -825,8 +777,6 @@ main #mypage .mypageContainer .detailInfoWrapper .detailInfo:nth-child(2) {
   }
   main #membershipModal .membership .modalHeader .fa-xmark {
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: end;
     font-size: 1.6rem;

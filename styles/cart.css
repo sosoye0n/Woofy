@@ -126,8 +126,6 @@ header {
   margin-bottom: 25px;
 }
 .tablet-navigation .tablet-nav-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -136,8 +134,6 @@ header {
   width: 100%;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-headers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -182,8 +178,6 @@ header {
   background-color: #99bdff;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   -webkit-box-pack: justify;
@@ -195,8 +189,6 @@ header {
   overflow-y: auto;
 }
 .tablet-navigation .tablet-nav-container .tablet-nav-content .nav-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -351,8 +343,6 @@ header {
   margin-bottom: 20px;
 }
 .sidebar section .title-top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -366,8 +356,6 @@ header {
   font-size: 18px;
   font-weight: bold;
   padding: 15px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
@@ -383,8 +371,6 @@ header {
   cursor: pointer;
 }
 .sidebar section .subcategory {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
@@ -394,7 +380,6 @@ header {
   width: 100%;
   gap: 10px;
   padding: 10px;
-  -webkit-transition: height 0.3s ease, opacity 0.3s ease;
   transition: height 0.3s ease, opacity 0.3s ease;
   overflow: hidden;
 }
@@ -403,8 +388,6 @@ header {
   width: calc(50% - 5px);
   text-decoration: none;
   color: #000;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 40px;
   padding: 20px 10px;
@@ -415,7 +398,6 @@ header {
   border: 1px solid #d3d3d3;
   padding: 10px;
   border-radius: 3px;
-  -webkit-transition: background-color 0.2s ease, color 0.2s ease;
   transition: background-color 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
@@ -478,8 +460,6 @@ header {
 .cart-container h2 {
   font-size: 2.5rem;
   font-weight: 600;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: start;
   color: #000;
@@ -489,8 +469,6 @@ header {
 .cart-container .cart-inner {
   width: 85%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -511,8 +489,6 @@ header {
   /* 장바구니 액션 버튼 */
 }
 .cart-container .cart-inner .cart-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 15px 0;
@@ -532,8 +508,6 @@ header {
   padding-top: 30px;
 }
 .cart-container .cart-inner .cart-items .cart-item {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 20px 0;
@@ -642,8 +616,6 @@ header {
   transform: rotate(45deg);
 }
 .cart-container .cart-inner .quantity-selector {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 30px;
   align-items: center;
@@ -669,8 +641,6 @@ header {
   padding: 0 15px;
 }
 .cart-container .cart-inner .cart-summary .summary-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -856,8 +826,6 @@ header {
     padding: 20px;
   }
   .cart-container h2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -871,8 +839,6 @@ header {
     width: 100%;
   }
   .cart-container .cart-inner .cart-summary {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -1463,8 +1429,6 @@ header {
   }
   .cart-container .cart-inner .cart-summary {
     padding: 0 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
