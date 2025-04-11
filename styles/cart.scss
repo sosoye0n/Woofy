@@ -201,7 +201,8 @@ header {
 .sidebar {
   position: fixed;
   width: 350px;
-  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 20px;
   top: 60px;
   left: 0;
   background: map-get($map: $color, $key: light);
@@ -314,7 +315,7 @@ header {
     display: flex;
     text-align: start;
     color: map-get($map: $color, $key: dark);
-    padding: 0 90px;
+    padding: 0 110px;
     margin-bottom: 30px;
   }
   .cart-inner {
@@ -341,6 +342,9 @@ header {
       width: 100%;
       margin-bottom: 30px;
       padding: 0 15px;
+      .empty-cart-message {
+        padding-top: 30px;
+      }
       /* 장바구니 아이템 */
       .cart-item {
         display: flex;
@@ -698,6 +702,9 @@ header {
         display: none;
       }
       .cart-items {
+        .empty-cart-message {
+          text-align: center;
+        }
         .cart-item {
           flex-wrap: nowrap;
           padding: 15px 0;

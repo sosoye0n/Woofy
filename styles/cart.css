@@ -198,7 +198,8 @@ header {
 .sidebar {
   position: fixed;
   width: 350px;
-  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 20px;
   top: 60px;
   left: 0;
   background: #fff;
@@ -312,7 +313,7 @@ header {
   display: flex;
   text-align: start;
   color: #000;
-  padding: 0 90px;
+  padding: 0 110px;
   margin-bottom: 30px;
 }
 .cart-container .cart-inner {
@@ -345,6 +346,9 @@ header {
   margin-bottom: 30px;
   padding: 0 15px;
   /* 장바구니 아이템 */
+}
+.cart-container .cart-inner .cart-items .empty-cart-message {
+  padding-top: 30px;
 }
 .cart-container .cart-inner .cart-items .cart-item {
   display: flex;
@@ -664,6 +668,9 @@ header {
   }
   .cart-container .cart-inner .cart-header {
     display: none;
+  }
+  .cart-container .cart-inner .cart-items .empty-cart-message {
+    text-align: center;
   }
   .cart-container .cart-inner .cart-items .cart-item {
     flex-wrap: nowrap;

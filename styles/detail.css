@@ -199,7 +199,8 @@ header {
 .sidebar {
   position: fixed;
   width: 350px;
-  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 20px;
   top: 60px;
   left: 0;
   background: #fff;
