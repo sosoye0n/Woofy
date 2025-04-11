@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // 버튼 핸들러 설정
   setupButtonHandlers();
-  setupSidebarNavigation();
+
+  // 사이드바 브랜드 필터 내비게이션 설정
+  setupBrandNavigation();
 
   // 수량 버튼 이벤트 리스너 설정
   setupQuantityButtons();
@@ -51,6 +53,11 @@ async function fetchProductData() {
 function getCartItems() {
   // cart 저장소만 사용 (cart-items 사용 안함)
   return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function clearCart() {
+  localStorage.removeItem("cart"); // 완전히 제거
+  updateCartCounter(); // 카운터 업데이트
 }
 
 // ======================== 장바구니 렌더링 ========================
@@ -91,29 +98,29 @@ async function renderCartItems() {
       }
 
       return `
-      <div class="cart-item" data-id="${item.id}">
-        <div class="select-column">
-          <input type="checkbox" id="item${item.id}" checked />
-          <label for="item${item.id}"></label>
+     <div class="cart-item" data-id="${item.id}">
+      <div class="select-column">
+        <input type="checkbox" id="item${item.id}" checked />
+        <label for="item${item.id}"></label>
+      </div>
+      <div class="product-column">
+        <div class="product-image">
+          <img src="${product.thumbnail}" alt="${product.name || ""}" />
         </div>
-        <div class="product-column">
-          <div class="product-image">
-            <img src="${product.thumbnail}" alt="${product.name || ""}" />
-          </div>
-          <div class="product-info">
-            <h3>${product.name || ""}</h3>
-            <p class="option">Option: ${item.option || "기본"}</p>
-          </div>
-        </div>
-        <div class="price-column"><p>${product.price}</p></div>
-        <div class="quantity-column">
-          <div class="quantity-selector">
-            <button class="quantity-btn" data-type="minus">-</button>
-            <div class="num">${item.quantity}</div>
-            <button class="quantity-btn" data-type="plus">+</button>
-          </div>
+        <div class="product-info">
+          <h3>${product.name || ""}</h3>
+          <p class="option">옵션: ${item.option || "기본"}</p>
         </div>
       </div>
+      <div class="price-column"><p>${product.price}</p></div>
+      <div class="quantity-column">
+        <div class="quantity-selector">
+          <button class="quantity-btn" data-type="minus">-</button>
+          <div class="num">${item.quantity}</div>
+          <button class="quantity-btn" data-type="plus">+</button>
+        </div>
+      </div>
+    </div>
     `;
     })
     .join("");
@@ -222,6 +229,8 @@ function removeSelectedItems(ids) {
   let cart = getCartItems();
   cart = cart.filter((item) => !ids.includes(item.id));
   localStorage.setItem("cart", JSON.stringify(cart));
+
+  updateCartCounter();
 }
 
 // ======================== 요약 계산 ========================
@@ -277,14 +286,35 @@ function initSidebarAccordion() {
   });
 }
 
-// ======================== 사이드바 이동 ========================
-function setupSidebarNavigation() {
-  $$(".item").forEach((item) => {
-    const target = item.getAttribute("data-href");
-    if (target) {
-      item.addEventListener("click", () => {
-        location.href = target;
-      });
-    }
+// ======================== 브랜드 필터 내비게이션 ========================
+function setupBrandNavigation() {
+  // 사이드바의 브랜드 항목에 이벤트 리스너 추가
+  $$(".sidebar .item[data-brand]").forEach((item) => {
+    const brand = item.getAttribute("data-brand");
+    item.addEventListener("click", () => {
+      navigateToBrandDetail(brand);
+    });
   });
+
+  // 태블릿 내비게이션의 브랜드 항목에 이벤트 리스너 추가
+  $$(".tablet-navigation .nav-item").forEach((item) => {
+    const brand = item.textContent.trim();
+    item.addEventListener("click", () => {
+      navigateToBrandDetail(brand);
+    });
+  });
+}
+
+// 브랜드 상세 페이지로 이동하는 함수
+function navigateToBrandDetail(brand) {
+  if (!brand) return;
+
+  // 브랜드 이름을 URL 파라미터로 인코딩
+  const encodedBrand = encodeURIComponent(brand);
+
+  // 필터링된 상세 페이지로 이동
+  window.location.href = `detail.html?brand=${encodedBrand}`;
+
+  // 선택된 브랜드를 로컬 스토리지에 저장 (선택 사항)
+  localStorage.setItem("selectedBrand", brand);
 }

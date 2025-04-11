@@ -29,6 +29,7 @@ header {
   padding-bottom: 100px;
   background: #fff;
   position: relative;
+  margin: 0 auto;
 }
 
 /* 상품 상세 페이지 스타일 */
@@ -205,78 +206,85 @@ header {
   border: 1px solid #fedf32;
 }
 
-/* Share Your Moment 섹션 */
-.share-moment {
+/* More Products 섹션 */
+.more-prodtcts {
   width: 100%;
-  max-width: 80%;
-  margin: 100px auto 0;
-  padding: 0 20px 40px;
+  margin-top: 80px;
+  padding: 0 3%;
 }
-.share-moment .section-title {
+.more-prodtcts .section-title {
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 30px;
-  line-height: 1;
-  text-decoration: underline;
-  color: #000;
+  position: relative;
+  display: inline-block;
 }
-.share-moment .moment-grid {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
+.more-prodtcts .section-title:after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
 }
-.share-moment .moment-grid .moment-row {
-  display: flex;
-  flex-direction: row;
+.more-prodtcts .product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+}
+.more-prodtcts .product-item {
   margin-bottom: 20px;
 }
-.share-moment .moment-grid .moment-row .moment-item {
-  width: 33.333%;
-}
-.share-moment .moment-grid .moment-row .moment-item .moment-link {
-  text-decoration: none;
-  color: inherit;
+.more-prodtcts .product-item .product-link {
   display: block;
 }
-.share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image {
+.more-prodtcts .product-item .product-image {
   width: 100%;
-  position: relative;
+  aspect-ratio: 1/1;
+  background-color: #fff;
   overflow: hidden;
+  margin-bottom: 15px;
 }
-.share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image span {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 1.3rem;
-  z-index: 1;
-}
-.share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image img {
+.more-prodtcts .product-item .product-image img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: transform 0.3s ease;
+  filter: brightness(0.95);
 }
-.share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image img:hover {
+.more-prodtcts .product-item .product-image:hover img {
   transform: scale(1.05);
 }
-.share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  margin-top: 10px;
+.more-prodtcts .product-item .product-info {
+  width: 100%;
 }
-.share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags .tag {
-  display: inline-block;
-  background-color: #000;
-  color: #fff;
+.more-prodtcts .product-item .product-info .product-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.more-prodtcts .product-item .product-info .product-brand {
+  font-size: 1.4rem;
+  color: #99bdff;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.more-prodtcts .product-item .product-info .product-title {
+  display: flex;
   font-size: 1.6rem;
-  padding: 5px 10px;
-  border-radius: 15px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.more-prodtcts .product-item .product-info .product-price {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0;
+}
+.more-prodtcts .product-item .product-info .product-price span {
+  font-weight: bold;
 }
 
 /* 반응형 페이지 - 태블릿 (1024px 이하) */
@@ -288,18 +296,25 @@ header {
     padding: 20px;
     gap: 30px;
     min-height: auto;
+    align-items: center;
   }
   /* 갤러리 영역 */
   .product-gallery {
     width: 100%;
+    max-width: 600px;
   }
   .product-gallery .gallery-main {
     width: 100%;
   }
+  .product-gallery .gallery-main .swiper {
+    height: 600px;
+  }
   /* 상품 정보 영역 */
   .product-info {
-    width: 80%;
+    width: 100%;
+    max-width: 600px;
     padding: 0;
+    position: static;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -314,41 +329,17 @@ header {
   .product-info .product-actions {
     width: 80%;
   }
-  /* Share Your Moment 섹션 */
-  .share-moment {
-    max-width: 100%;
-    padding: 0 20px 30px;
-    margin-top: 50px;
+  /* More Products 섹션 */
+  .more-prodtcts {
+    padding: 0 20px;
+    margin-top: 60px;
   }
-  .share-moment .section-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
+  .more-prodtcts .section-title {
+    font-size: 3.2rem;
   }
-  .share-moment .moment-grid {
-    width: 100%;
-  }
-  .share-moment .moment-grid .moment-row {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
-    margin-bottom: 10px;
-  }
-  .share-moment .moment-grid .moment-row .moment-item {
-    width: calc(33.333% - 7px);
-  }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1/1;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags {
-    margin-top: 10px;
-  }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags .tag {
-    font-size: 1.2rem;
-    padding: 3px 8px;
+  .more-prodtcts .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
   }
 }
 /* 반응형 페이지 - 작은 태블릿 (768px 이하) */
@@ -359,12 +350,15 @@ header {
     gap: 25px;
   }
   /* 갤러리 영역 */
-  .product-gallery .gallery-main {
-    width: 100%;
+  .product-gallery {
+    max-width: 500px;
+  }
+  .product-gallery .gallery-main .swiper {
+    height: 500px;
   }
   /* 상품 정보 영역 - 작은 태블릿 */
   .product-info {
-    width: 90%;
+    max-width: 500px;
   }
   .product-info .product-title {
     font-size: 2.2rem;
@@ -372,33 +366,23 @@ header {
   .product-info .product-actions {
     width: 90%;
   }
-  /* Share Your Moment 섹션 - 작은 태블릿 */
-  .share-moment {
-    padding: 0 15px 25px;
+  /* More Products 섹션 - 작은 태블릿 */
+  .more-prodtcts {
+    margin-top: 50px;
+    padding: 0 15px;
   }
-  .share-moment .section-title {
+  .more-prodtcts .section-title {
     font-size: 2.8rem;
   }
-  .share-moment .moment-grid {
-    width: 100%;
+  .more-prodtcts .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
   }
-  .share-moment .moment-grid .moment-row {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 10px;
+  .more-prodtcts .product-item .product-info .product-brand {
+    font-size: 1.3rem;
   }
-  .share-moment .moment-grid .moment-row .moment-item {
-    width: calc(33.333% - 6px);
-  }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image img {
-    aspect-ratio: 1/1;
-    min-height: 350px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags .tag {
-    font-size: 1.4rem;
-    padding: 4px 10px;
+  .more-prodtcts .product-item .product-info .product-title {
+    font-size: 1.5rem;
   }
 }
 /* 반응형 페이지 - 모바일 중간 사이즈 (580px 이하) */
@@ -409,15 +393,18 @@ header {
     gap: 22px;
   }
   /* 갤러리 영역 - 모바일 중간 사이즈 */
+  .product-gallery {
+    max-width: 100%;
+  }
   .product-gallery .gallery-main {
     width: 100%;
   }
   .product-gallery .gallery-main .swiper {
-    height: 500px;
+    height: 450px;
   }
   /* 상품 정보 영역 - 모바일 중간 사이즈 */
   .product-info {
-    width: 95%;
+    width: 100%;
   }
   .product-info .product-title {
     font-size: 2.1rem;
@@ -436,38 +423,39 @@ header {
     font-size: 1.7rem;
   }
   .product-info .product-actions {
-    width: 95%;
+    width: 100%;
   }
-  /* Share Your Moment 섹션 - 모바일 중간 사이즈 */
-  .share-moment {
+  .product-info .product-actions button {
+    padding: 14px 0;
+  }
+  /* More Products 섹션 - 모바일 중간 사이즈 */
+  .more-prodtcts {
     margin-top: 40px;
-    padding: 0 10px 20px;
+    padding: 0 12px;
   }
-  .share-moment .section-title {
+  .more-prodtcts .section-title {
     font-size: 2.4rem;
+    margin-bottom: 20px;
   }
-  .share-moment .moment-grid {
-    width: 100%;
+  .more-prodtcts .product-grid {
+    gap: 12px;
   }
-  .share-moment .moment-grid .moment-row {
-    gap: 30px;
-    flex-direction: column;
+  .more-prodtcts .product-item {
+    margin-bottom: 15px;
   }
-  .share-moment .moment-grid .moment-row .moment-item {
-    width: 100%;
+  .more-prodtcts .product-item .product-image {
     margin-bottom: 10px;
-    padding: 0 10px;
   }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image img {
-    aspect-ratio: 16/9;
-    min-height: 500px;
+  .more-prodtcts .product-item .product-info .product-brand {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
   }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags {
-    gap: 5px;
+  .more-prodtcts .product-item .product-info .product-title {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
   }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags .tag {
-    font-size: 1.6rem;
-    padding: 6px 12px;
+  .more-prodtcts .product-item .product-info .product-price {
+    font-size: 1.3rem;
   }
 }
 /* 반응형 페이지 - 모바일 (375px 이하) */
@@ -482,20 +470,20 @@ header {
     width: 100%;
   }
   .product-gallery .gallery-main .swiper {
-    height: 450px;
+    height: 350px;
   }
   /* 상품 정보 영역 - 모바일 */
   .product-info {
     width: 100%;
   }
   .product-info .product-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .product-info .product-price-info {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .product-info .product-price-info .price-label {
     width: 60px;
@@ -503,7 +491,7 @@ header {
   }
   .product-info .product-options {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .product-info .product-options .option-item {
     margin-bottom: 15px;
@@ -516,7 +504,7 @@ header {
   }
   .product-info .product-accordion {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   .product-info .product-accordion .category .title-top {
     padding: 12px 0;
@@ -534,36 +522,39 @@ header {
     padding: 12px 0;
     font-size: 1.3rem;
   }
-  /* Share Your Moment 섹션 - 모바일 */
-  .share-moment {
+  /* More Products 섹션 - 모바일 */
+  .more-prodtcts {
     margin-top: 30px;
-    padding: 0 10px 20px;
-  }
-  .share-moment .section-title {
-    font-size: 2.4rem;
-    margin-bottom: 15px;
-  }
-  .share-moment .moment-grid {
-    width: 100%;
-  }
-  .share-moment .moment-grid .moment-row {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .share-moment .moment-grid .moment-row .moment-item {
-    width: 100%;
-    margin-bottom: 10px;
     padding: 0 10px;
   }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-image img {
-    aspect-ratio: 16/9;
-    min-height: 450px;
+  .more-prodtcts .section-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
   }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags {
-    gap: 5px;
+  .more-prodtcts .product-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
   }
-  .share-moment .moment-grid .moment-row .moment-item .moment-link .moment-tags .tag {
-    font-size: 1.5rem;
-    padding: 4px 10px;
+  .more-prodtcts .product-item {
+    margin-bottom: 20px;
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .more-prodtcts .product-item .product-image {
+    aspect-ratio: 1/1;
+    max-height: 280px;
+  }
+  .more-prodtcts .product-item .product-info .product-inner {
+    padding: 0 5px;
+  }
+  .more-prodtcts .product-item .product-info .product-brand {
+    font-size: 1.2rem;
+  }
+  .more-prodtcts .product-item .product-info .product-title {
+    font-size: 1.4rem;
+  }
+  .more-prodtcts .product-item .product-info .product-price {
+    font-size: 1.3rem;
   }
 }

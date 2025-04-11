@@ -1,4 +1,4 @@
-// detail.js
+// detail.js - 최종 완성본
 document.addEventListener("DOMContentLoaded", function () {
   const productGrid = document.querySelector(".product-grid");
   if (productGrid) {
@@ -12,9 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (selectedCategory) {
     highlightSelectedCategory(selectedCategory);
   }
-
-  // 부드러운 스크롤링 초기화
-  initSmoothScrolling();
 
   // 사이드바 아코디언 초기화
   initSidebarAccordion();
@@ -56,24 +53,6 @@ function filterByCategory(category) {
 
   // 카테고리 하이라이트
   highlightSelectedCategory(category);
-}
-
-function initSmoothScrolling() {
-  if (window.Lenis) {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      smoothWheel: true,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  }
 }
 
 function addToCart(product) {
@@ -327,6 +306,31 @@ function setupResponsiveLayout() {
   handleResize();
 }
 
+// 장바구니 카운터 업데이트 함수 수정
+function updateCartCounter() {
+  // 모든 가능한 장바구니 카운터 선택자
+  const cartCounters = [
+    document.querySelector(".cart-count"),
+    document.querySelector(".cart-counter"),
+    document.querySelector("#rightGnb ul li a[title='cart'] span:last-child"),
+  ];
+
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let totalItems = 0;
+
+  cart.forEach((item) => {
+    totalItems += item.quantity || 1;
+  });
+
+  // 모든 존재하는 카운터 업데이트
+  cartCounters.forEach((counter) => {
+    if (counter) {
+      counter.textContent = `(${totalItems})`;
+      counter.style.display = "inline-block";
+    }
+  });
+}
+
 // 썸네일 이미지 업데이트 + 페이지네이션
 document.addEventListener("DOMContentLoaded", async function () {
   // 페이지네이션 설정
@@ -341,12 +345,10 @@ document.addEventListener("DOMContentLoaded", async function () {
   const urlParams = new URLSearchParams(window.location.search);
   const selectedCategory = urlParams.get("category");
 
-  // 브랜드 필터 선택자들 (태블릿 네비게이션과 사이드바 모두 포함)
+  // 브랜드 필터 선택자들 - 모든 사이드바 카테고리(BRANDS와 Luxery)의 아이템들과 태블릿 네비게이션 포함
   const brandItems = document.querySelectorAll(
-    ".tablet-nav-container .nav-column:first-child .nav-item, " +
-      ".sidebar .category:first-child .item a, " +
-      ".tablet-nav-container .nav-column:first-child .nav-item, " +
-      ".sidebar .category:first-child .subcategory .item"
+    ".sidebar .category .subcategory .item, " +
+      ".tablet-nav-container .nav-column .nav-item"
   );
 
   // 현재 선택된 브랜드 상태를 저장할 변수
@@ -358,29 +360,33 @@ document.addEventListener("DOMContentLoaded", async function () {
       e.preventDefault();
       const brandName = this.textContent.trim();
 
+      // data-brand 속성이 있으면 그 값을 사용하고, 없으면 텍스트 콘텐츠 사용
+      const brandValue = this.getAttribute("data-brand") || brandName;
+
       // 토글 선택
-      if (selectedBrands.includes(brandName)) {
-        selectedBrands = selectedBrands.filter((brand) => brand !== brandName);
+      if (selectedBrands.includes(brandValue)) {
+        selectedBrands = selectedBrands.filter((brand) => brand !== brandValue);
         this.classList.remove("selected");
       } else {
-        selectedBrands.push(brandName);
+        selectedBrands.push(brandValue);
         this.classList.add("selected");
       }
 
       // 모든 선택된 브랜드 아이템에 대해 선택 상태 동기화
-      syncBrandSelections(brandName);
+      syncBrandSelections(brandValue);
 
       // 필터 적용
       applyFilters();
     });
   });
 
-  // 브랜드 선택 상태 동기화 함수
-  function syncBrandSelections(brandName) {
+  // 브랜드 선택 상태 동기화 함수 - 모든 카테고리(BRANDS, Luxery)에 적용
+  function syncBrandSelections(brandValue) {
     brandItems.forEach((item) => {
-      const itemText = item.textContent.trim();
-      if (itemText === brandName) {
-        if (selectedBrands.includes(brandName)) {
+      const itemBrand =
+        item.getAttribute("data-brand") || item.textContent.trim();
+      if (itemBrand === brandValue) {
+        if (selectedBrands.includes(brandValue)) {
           item.classList.add("selected");
         } else {
           item.classList.remove("selected");
@@ -434,12 +440,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // 첫 페이지 제품 로드 (페이지네이션 초기화 전에 기존 DOM 구조 보존)
     const firstPageProducts = allProducts.slice(0, PRODUCTS_PER_PAGE);
-    updateProductItems(firstPageProducts, false); // 기존 DOM 구조 보존
+    updateProductItems(firstPageProducts, true); // 기존 DOM 구조 보존
 
     // 페이지네이션 초기화 (제품이 로드된 후)
     initPagination(totalPages);
 
-    // 제품 갯수 표시 업데이트 (있다면)
+    // 제품 갯수 표시 업데이트
     updateProductCount(allProducts.length);
   }
 
@@ -636,6 +642,78 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           productGrid.appendChild(productRow);
         }
+
+        // 중요: 제품 그리드가 생성된 후에 플러스 버튼에 이벤트 리스너 재등록
+        const newPlusButtons = productGrid.querySelectorAll(".fa-plus");
+        if (newPlusButtons.length > 0) {
+          newPlusButtons.forEach(function (button) {
+            button.addEventListener("click", function (e) {
+              e.preventDefault();
+              e.stopPropagation();
+              const productItem = this.closest(".product-item");
+              let productId = productItem.getAttribute("data-id");
+
+              if (!productId) {
+                const productLink = productItem.querySelector(".product-link");
+                if (productLink) {
+                  try {
+                    const url = new URL(
+                      productLink.href,
+                      window.location.origin
+                    );
+                    productId = url.searchParams.get("id");
+                  } catch (err) {
+                    console.error("URL 파싱 오류:", err);
+                  }
+                }
+              }
+
+              if (!productId) {
+                productId = Number(Date.now());
+              } else {
+                productId = Number(productId);
+              }
+
+              const productImage =
+                productItem.querySelector(".second-img")?.src ||
+                productItem.querySelector(".first-img").src;
+              const productTitle = productItem
+                .querySelector(".product-title")
+                .textContent.trim();
+              const productPrice = productItem
+                .querySelector(".product-price")
+                .textContent.trim();
+              const productBrand = productItem
+                .querySelector(".product-brand")
+                .textContent.trim();
+
+              const product = {
+                id: productId,
+                title: productTitle,
+                price: productPrice,
+                image: productImage,
+                brand: productBrand,
+                option: "default",
+                quantity: 1,
+              };
+
+              // 공통 함수 사용하여 장바구니에 추가
+              addToCart(product);
+
+              // 모달의 상품 제목 업데이트
+              const cartModal = document.getElementById("cart-modal");
+              if (cartModal) {
+                const itemTitleElement = cartModal.querySelector(".item-title");
+                if (itemTitleElement) {
+                  itemTitleElement.textContent = productTitle;
+                }
+
+                // 모달 표시
+                showCartModal("cart-modal");
+              }
+            });
+          });
+        }
       } else {
         // 기존 DOM 요소 업데이트 방식 (첫 로드 시)
         const productItems = document.querySelectorAll(".product-item");
@@ -774,29 +852,31 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // 기본 템플릿 HTML 구조
     const productItemHTML = `
-    <div class="product-item" data-id="${productData.id}" ${
+      <div class="product-item" data-id="${productData.id}" ${
       productData.category ? `data-category="${productData.category}"` : ""
     }>
-      <a href="./detail-product.html?id=${
-        productData.id || ""
-      }" class="product-link">
-        <div class="product-image">
-          <img class="first-img" src="${productData.thumbnail || ""}" alt="${
+        <a href="./detail-product.html?id=${
+          productData.id || ""
+        }" class="product-link">
+          <div class="product-image">
+            <img class="first-img" src="${productData.thumbnail || ""}" alt="${
       productData.name || ""
     }">
-          ${secondImgHtml}
-        </div>
-        <div class="product-info">
-          <div class="product-inner">
-            <div class="product-brand">${productData.brand || ""}</div>
-            <h3 class="product-title">${productData.name || ""}</h3>
-            <p class="product-price">${productData.price || "0"} KRW</p>
+            ${secondImgHtml}
           </div>
-          <i class="fas fa-plus"></i>
-        </div>
-      </a>
-    </div>
-  `;
+          <div class="product-info">
+            <div class="product-inner">
+              <div class="product-brand">${productData.brand || ""}</div>
+              <h3 class="product-title">${productData.name || ""}</h3>
+              <p class="product-price"><span>${
+                productData.price || "0"
+              }</span> KRW</p>
+            </div>
+            <i class="fas fa-plus"></i>
+          </div>
+        </a>
+      </div>
+    `;
 
     // HTML 문자열을 DOM 요소로 변환
     const tempContainer = document.createElement("div");
